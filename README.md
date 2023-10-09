@@ -25,3 +25,24 @@ A growth mindset is believing your intelligence and abilities can always improve
 2. I tend to also think the worst first and it overshadows the good, so I would like to start assessing aspects of my day or task I’m doing with what I did well on and what I can improve and learn from that criticism.
 3. When I get overwhelmed I tend to start comparing myself to others who understand better than I do, but I need to remind myself that everyone started from somewhere and it’s not a race, but a journey of understanding that comes with failures and that's ok. 
 
+
+
+### Read 1 - Learning Markdown Reflection and Discussion
+###### Resources Link/Pages: 
+1. [Getting Started](https://www.markdownguide.org/getting-started/)
+2. [Markdown Basic Syntax](https://www.markdownguide.org/basic-syntax/)
+3. [Mastering Markdown on Github](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+
+#### Answer 
+1. What is Markdown?
+   - A lightweight markup language that allows you to add syntax to plaintext.
+2. Why do we use Markdown?
+   - Markdown can be used in everything like websites and books and can be found everywhere including big well known websites like reddit. It is useful because markdown files can be transferable and compatible across all operating systems and markdown applications and the format is readable without needing to preview the final product.
+3. What symbol will create a heading in Markdown? How many do you need to create the largest heading? How many do you need to create the smallest heading?
+   - The # is used to create headings. With 1 to create the largest and 6 to create the smallest.
+5. When making text bold or italicized for emphasis, it is best practice to use which symbol?
+   - It is best practice to use asterisks. Two for bold and one for italics. 
+6. How do you create a link with Markdown?
+   - You put the link text of what you want to be clicked on in brackets and then put the URL in parentheses right after. So use [] and () with no space in between. 
+8. What are the three symbols you can use to create an unordered (bulleted) list with Markdown?
+   - You can use a dash (-), a plus sign (+), or an asterisk (*).
