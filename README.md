@@ -1,6 +1,6 @@
 # My Notes and Assignments for Code Fellows Code 102
 ## Class 1 - Markdown
-![Markdown Icon](https://commons.wikimedia.org/wiki/File:Markdown.png)
+![Markdown Icon](https://upload.wikimedia.org/wikipedia/commons/d/d9/Markdown.png)
 ### Lab 1 - Learning Markdown by creating a Github Pages website 
 
 ###### Resources Link/Pages: 
