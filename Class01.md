@@ -1,5 +1,6 @@
 ## Class 1 - Markdown
 ![Markdown Icon](https://upload.wikimedia.org/wikipedia/commons/d/d9/Markdown.png)
+
 #### Introduction
 Hello everyone! My name is Xin Deng and here is the link to my [Github portfolio page!](https://github.com/xind14) The first assignment is to create my first project on Github and make a reading-notes repository after learning markdown for the first time. The different features I've used for this assignment are **heading, lists/nested list, styling: italics and bold, links, images, and emojis 😉** I plan on putting all assignment instructions on here to keep a record because I have a bad memory so it'll be nice to have everything here. 
 
