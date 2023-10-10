@@ -2,7 +2,7 @@
 
 ### Lab 4 - Structure Web Pages with HTML
 
-### Read 4 - Structure Web Pages with HTML
+### Read 4 - Structure Web Pages with HTML Reflection and Discussion
 
 ###### Resources Link/Pages: 
 1. [Wireframe and Design](https://careerfoundry.com/en/blog/ux-design/how-to-create-your-first-wireframe/)
