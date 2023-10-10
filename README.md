@@ -73,6 +73,7 @@ A growth mindset is believing your intelligence and abilities can always improve
    - **code .** opens code editor. There is a space between code and .
    - When creating new directories do not use space either use no space or dashes ex: newFile or new-File. If you do mkdir my folder it will create two folders with those names
    - In VS Code: md should end with one line space, space after heading, emmet abbreviation are "universal" so by adding ! will give you choices and will automatically provide you the basic codes needed ex: !doctype gives you the code people almost always use in HTML
+
 #### Answer 
 1. What are four important features to look for in a text editor?
    - Code completion, syntax highlighting, variety of themes, and extensions to choose from. 
