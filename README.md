@@ -1,6 +1,8 @@
 # My Notes and Assignments for Code Fellows Code 102
+
 ## Class 1 - Markdown
 ![Markdown Icon](https://upload.wikimedia.org/wikipedia/commons/d/d9/Markdown.png)
+
 #### Introduction
 Hello everyone! My name is Xin Deng and here is the link to my [Github portfolio page!](https://github.com/xind14) The first assignment is to create my first project on Github and make a reading-notes repository after learning markdown for the first time. The different features I've used for this assignment are **heading, lists/nested list, styling: italics and bold, links, images, and emojis 😉** I plan on putting all assignment instructions on here to keep a record because I have a bad memory so it'll be nice to have everything here. 
 
@@ -61,10 +63,10 @@ A growth mindset is believing your intelligence and abilities can always improve
 ###### Resources Link/Pages: 
 1. [Choosing a Text Editor](https://codefellows.github.io/code-102-guide/curriculum/class-02/Choosing-A-Text-Editor--The-Older-Coder.pdf)
     - Most important Features to consider when choosing a text editor are code completion, syntax highlighting, variety of themes, and extensions to choose from. 
-3. [The Command Line](https://ryanstutorials.net/linuxtutorial/commandline.php)
+2. [The Command Line](https://ryanstutorials.net/linuxtutorial/commandline.php)
     - A command line or terminal is a text based interface where you can enter in commands that interact with your computer system. 
-5. [Basic Navigation](https://ryanstutorials.net/linuxtutorial/navigation.php)
-6. [About Files](https://ryanstutorials.net/linuxtutorial/aboutfiles.php)
+3. [Basic Navigation](https://ryanstutorials.net/linuxtutorial/navigation.php)
+4. [About Files](https://ryanstutorials.net/linuxtutorial/aboutfiles.php)
 
 #### Written Class Notes
    - Whatever is after the command is called the argument. There needs to be a space between the command and argument
@@ -80,13 +82,13 @@ A growth mindset is believing your intelligence and abilities can always improve
 #### Answer 
 1. What are four important features to look for in a text editor?
    - Code completion, syntax highlighting, variety of themes, and extensions to choose from. 
-3. What do the following commands do?
+2. What do the following commands do?
    - **pwd:** Stands for Print Working Directory and tells you what directory you are currently working on.
    - **ls:** Stands for list and tells you what is in the directory.
    - **cd:** Stands for change directory to a different directory by adding a name as an argument after or leaving it blank will take you back home
    - **mkdir:** Stands for make directory
    - **touch:** Creates a new file where you need to name and add what kind of file it is ex.README.md is markdown file, README.html is an HTML file.
-4. Can you explain what is happening in the following scenario if these commands and arguments are entered into the command line? (Arguments are extra instructions given to a command.)
+3. Can you explain what is happening in the following scenario if these commands and arguments are entered into the command line? (Arguments are extra instructions given to a command.)
    - **cd projects:** You change directory into the projects directory location.
    - **mkdir new-project:** You make a new directory titled new-project
    - **touch new-project/newfile.md:** You make a new markdown file within the new-project directory
