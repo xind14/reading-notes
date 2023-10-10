@@ -3,6 +3,9 @@
 
 ### Lab 2 - Set Up new terminal and VS Code 
 [Computer Setup Guide](https://codefellows.github.io/setup-guide/)
+1. Tree: Allow you to look at directory structure and files within a directory
+2. Node.js: Helps you execute a program in javascript
+3. ESLint: Find and fix problems in javascript 
 
 ### Read 1 - Learning Markdown Reflection and Discussion
 ###### Resources Link/Pages: 
