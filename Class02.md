@@ -1,22 +1,28 @@
-## Class 2 - The Coder's Computer
+# Class 2 - The Coder's Computer
+
 ![Visual Studio Code Icon](https://upload.wikimedia.org/wikipedia/commons/e/e5/Visual_studio_code_updated.png)
 
-### Lab 2 - Set Up new terminal and VS Code 
+## Lab 2 - Set Up new terminal and VS Code
+
 [Computer Setup Guide](https://codefellows.github.io/setup-guide/)
+
 1. Tree: Allow you to look at directory structure and files within a directory
 2. Node.js: Helps you execute a program in javascript
-3. ESLint: Find and fix problems in javascript 
+3. ESLint: Find and fix problems in javascript
 
-### Read 1 - Learning Markdown Reflection and Discussion
-###### Resources Link/Pages: 
+## Read 1 - Learning Markdown Reflection and Discussion
+
+### Resources Link/Pages:
+
 1. [Choosing a Text Editor](https://codefellows.github.io/code-102-guide/curriculum/class-02/Choosing-A-Text-Editor--The-Older-Coder.pdf)
     - Most important Features to consider when choosing a text editor are code completion, syntax highlighting, variety of themes, and extensions to choose from. 
 2. [The Command Line](https://ryanstutorials.net/linuxtutorial/commandline.php)
-    - A command line or terminal is a text based interface where you can enter in commands that interact with your computer system.
+    - A command line or terminal is a text based interface where you can enter in commands that interact with your computer system. 
 3. [Basic Navigation](https://ryanstutorials.net/linuxtutorial/navigation.php)
 4. [About Files](https://ryanstutorials.net/linuxtutorial/aboutfiles.php)
 
-#### Written Class Notes
+### Written Class Notes
+
    - Whatever is after the command is called the argument. There needs to be a space between the command and argument
    - **ls l** gives additional information. ls a shows hidden files as well
    - **Clear** clears the terminal but you can scroll up and whatever you entered is still there
@@ -27,7 +33,8 @@
    - When creating new directories do not use space either use no space or dashes ex: newFile or new-File. If you do mkdir my folder it will create two folders with those names
    - In VS Code: md should end with one line space, space after heading, emmet abbreviation are "universal" so by adding ! will give you choices and will automatically provide you the basic codes needed ex: !doctype gives you the code people almost always use in HTML
 
-#### Answer 
+### Answer 
+
 1. What are four important features to look for in a text editor?
    - Code completion, syntax highlighting, variety of themes, and extensions to choose from. 
 2. What do the following commands do?
