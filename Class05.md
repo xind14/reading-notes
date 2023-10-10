@@ -2,7 +2,7 @@
 
 ### Lab 5 - Design Web Pages with CSS
 
-### Read 5 - Design Web Pages with CSS
+### Read 5 - Design Web Pages with CSS Reflection and Discussion
 
 ###### Resources Link/Pages: 
 1. [What is CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
