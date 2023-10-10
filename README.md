@@ -40,11 +40,11 @@ A growth mindset is believing your intelligence and abilities can always improve
    - Markdown can be used in everything like websites and books and can be found everywhere including big well known websites like reddit. It is useful because markdown files can be transferable and compatible across all operating systems and markdown applications and the format is readable without needing to preview the final product.
 3. What symbol will create a heading in Markdown? How many do you need to create the largest heading? How many do you need to create the smallest heading?
    - The # is used to create headings. With 1 to create the largest and 6 to create the smallest.
-5. When making text bold or italicized for emphasis, it is best practice to use which symbol?
+4. When making text bold or italicized for emphasis, it is best practice to use which symbol?
    - It is best practice to use asterisks. Two for bold and one for italics. 
-6. How do you create a link with Markdown?
+5. How do you create a link with Markdown?
    - You put the link text of what you want to be clicked on in brackets and then put the URL in parentheses right after. So use [] and () with no space in between. 
-8. What are the three symbols you can use to create an unordered (bulleted) list with Markdown?
+6. What are the three symbols you can use to create an unordered (bulleted) list with Markdown?
    - You can use a dash (-), a plus sign (+), or an asterisk (*).
 
 
