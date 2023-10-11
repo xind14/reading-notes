@@ -2,6 +2,14 @@
 
 ## Lab 4 - Structure Web Pages with HTML
 
+### Requirements
+
+1. Partner up, draw a wireframe: keep it low-fidelity (basic elements of final web page), show general content areas
+2. Apply htmml to structure: discuss which html tags to use
+3. Choose content: don't need full sentences, just a plan
+4. Write the code
+   - Each partner creates own repo, index file, write in VS code and use ACP to push to GitHub, link up pages so user can navigate to both pages.
+
 ## Read 4 - Structure Web Pages with HTML Reflection and Discussion
 
 ### Resources Link/Pages: 

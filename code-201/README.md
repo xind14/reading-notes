@@ -1,4 +1,4 @@
-# reading-notes-201
+# My Notes and Assignments for Code Fellows 201
 
 My Future Reading Notes for Class 201 for 102 Lab 3
 

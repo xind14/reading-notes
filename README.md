@@ -1,23 +1,24 @@
-# My Notes and Assignments for Code Fellows Code 102
+# My Notes and Assignments for Code Fellows
 
 ![Growth vs Fixed Mindset Graph](https://upload.wikimedia.org/wikipedia/commons/0/09/Fixed_and_growth_mindsets.png)
 
-## Introduction :wave:
+## Introduction
 
-Hello everyone! My name is Xin Deng and here is the link to my [Github portfolio page!](https://github.com/xind14) The first assignment is to create my first project on Github and make a reading-notes repository after learning markdown for the first time. I plan on putting all assignment instructions on here to keep a record because I have a bad memory so it'll be nice to have everything here. The different features I've used for this assignment are **heading, lists/nested list, styling: italics and bold, links, images, and emojis 😉** You can check it out here in my [Class 01 section](Class01.md) and also make sure to check out my progress in other classes by utilizing the **Table of Contents** below.
+Hello everyone! My name is Xin Deng and here is the link to my [Github portfolio page!](https://github.com/xind14) The first assignment is to create my first project on Github and make a reading-notes repository after learning markdown for the first time. I plan on putting all assignment instructions on here to keep a record because I have a bad memory so it'll be nice to have everything here. The different features I've used for this assignment are **heading, lists/nested list, styling: italics and bold, links, images, and emojis 😉** You can check it out here in my [Class 01 section](code-102/Class01.md) and also make sure to check out my progress in other classes by utilizing the **Table of Contents** below.
 
-## Table of Contents :open_book:
+## Table of Contents
 
-1. Class01: [Learning Markdown](Class01.md)
-2. Class02: [The Coder's Computer](Class02.md)
-3. Class03: [Revisions and the Cloud](Class03.md)
-4. Class04: [Structure Web Pages with HTML](Class04.md)
-5. Class05: [Design Web Pages with CSS](Class05.md)
-6. Class06: [Activate Web Pages with JavaScript](Class06.md)
-7. Class07: [Programming with JavaScript](Class07.md)
-8. Class08: [Operators and Loops](Class08.md)
+1. Class01: [Learning Markdown](code-102/Class01.md)
+2. Class02: [The Coder's Computer](code-102/Class02.md)
+3. Class03: [Revisions and the Cloud](code-102/Class03.md)
+4. Class04: [Structure Web Pages with HTML](code-102/Class04.md)
+5. Class05: [Design Web Pages with CSS](code-102/Class05.md)
+6. Class06: [Activate Web Pages with JavaScript](code-102/Class06.md)
+7. Class07: [Programming with JavaScript](code-102/Class07.md)
+8. Class08: [Operators and Loops](code-102/Class08.md)
+9. Class 201: [Table of Contents Page](code-201/README.md)
 
-## What is a growth mind set and what are 3 reminders to myself to keep myself in a growth mindset? :brain:
+## What is a growth mind set and what are 3 reminders to myself to keep myself in a growth mindset?
 
 A growth mindset is believing your intelligence and abilities can always improve and grow with an effort to learn and a determination to push through obstacles, which comes from running towards challenges as opportunities for growth.
 
