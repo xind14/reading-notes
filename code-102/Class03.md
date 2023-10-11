@@ -62,4 +62,4 @@
 4. What is the command to take a snapshot of your changed files?
    - Use `git commit -m “commit message”`
 5. What is the command to send your changed files to Github?
-   - Use `git push origin master`
+   - Use `git push origin main`

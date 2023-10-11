@@ -1,5 +1,7 @@
 # Class 4 - Structure Web Pages with HTML
 
+![Basic HTML Outline](https://upload.wikimedia.org/wikipedia/commons/c/ca/The_HTML_paragraph_element_HD_Wallpaper.jpg)
+
 ## Lab 4 - Structure Web Pages with HTML
 
 ### Requirements

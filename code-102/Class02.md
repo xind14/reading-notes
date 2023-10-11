@@ -23,15 +23,15 @@
 
 ### Written Class Notes
 
-   - Whatever is after the command is called the argument. There needs to be a space between the command and argument
-   - **ls l** gives additional information. ls a shows hidden files as well
-   - **Clear** clears the terminal but you can scroll up and whatever you entered is still there
-   - **cd** hit tab or enter a few letteres will automate choices and directories for you
-   - Hit enter after each command
-   - **cd ..** is back one, . stay where you are, ... is back two directories
-   - **code .** opens code editor. There is a space between code and .
-   - When creating new directories do not use space either use no space or dashes ex: newFile or new-File. If you do mkdir my folder it will create two folders with those names
-   - In VS Code: md should end with one line space, space after heading, emmet abbreviation are "universal" so by adding ! will give you choices and will automatically provide you the basic codes needed ex: !doctype gives you the code people almost always use in HTML
+- Whatever is after the command is called the argument. There needs to be a space between the command and argument
+- **ls l** gives additional information. ls a shows hidden files as well
+- **Clear** clears the terminal but you can scroll up and whatever you entered is still there
+- **cd** hit tab or enter a few letteres will automate choices and directories for you
+- Hit enter after each command
+- **cd ..** is back one, . stay where you are, ... is back two directories
+- **code .** opens code editor. There is a space between code and .
+- When creating new directories do not use space either use no space or dashes ex: newFile or new-File. If you do mkdir my folder it will create two folders with those names
+- In VS Code: md should end with one line space, space after heading, emmet abbreviation are "universal" so by adding ! will give you choices and will automatically provide you the basic codes needed ex: !doctype gives you the code people almost always use in HTML
 
 ### Answer 
 
