@@ -16,7 +16,8 @@ Hello everyone! My name is Xin Deng and here is the link to my [Github portfolio
 6. Class06: [Activate Web Pages with JavaScript](code-102/Class06.md)
 7. Class07: [Programming with JavaScript](code-102/Class07.md)
 8. Class08: [Operators and Loops](code-102/Class08.md)
-9. Class 201: [Table of Contents Page](code-201/README.md)
+9. Class09: [Career Coaching](code-102/Class09.md)
+10. Class 201: [Table of Contents Page](code-201/README.md)
 
 ## What is a growth mind set and what are 3 reminders to myself to keep myself in a growth mindset?
 
