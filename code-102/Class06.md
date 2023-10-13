@@ -1,6 +1,6 @@
 # Class 6 - Activate Web Pages with JavaScript
 
-![Example CSS for a Header](https://upload.wikimedia.org/wikipedia/commons/3/3b/Javascript_Logo.png)
+![JS logo](https://upload.wikimedia.org/wikipedia/commons/3/3b/Javascript_Logo.png)
 
 ## Lab 6 - Activate Web Pages with JavaScript
 
