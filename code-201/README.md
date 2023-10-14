@@ -2,6 +2,10 @@
 
 My Future Reading Notes for Class 201 for 102 Lab 3
 
+## Prework
+
+[Code 201 Prework](https://codefellows.github.io/code-201-guide/curriculum/prework/)
+
 ## Table of Contents
 
 1. [Class01](Class01.md)
@@ -19,3 +23,4 @@ My Future Reading Notes for Class 201 for 102 Lab 3
 13. [Class13](Class13.md)
 14. [Class14](Class14.md)
 15. [Class15](Class15.md)
+16. [Reading Instructions](ReadingInstructions.md)
