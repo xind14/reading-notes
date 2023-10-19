@@ -1,4 +1,4 @@
-# Reading Notes My Notes and Assignments for Code Fellows 201
+# Reading Notes: My Notes and Assignments for Code Fellows
 
 
 ![Growth vs Fixed Mindset Graph](https://upload.wikimedia.org/wikipedia/commons/0/09/Fixed_and_growth_mindsets.png)
@@ -9,18 +9,12 @@ Hello everyone! My name is Xin Deng and here is the link to my [Github portfolio
 
 ## Table of Contents
 
-1. Class01: [Learning Markdown](code-102/Class01.md)
-2. Class02: [The Coder's Computer](code-102/Class02.md)
-3. Class03: [Revisions and the Cloud](code-102/Class03.md)
-4. Class04: [Structure Web Pages with HTML](code-102/Class04.md)
-5. Class05: [Design Web Pages with CSS](code-102/Class05.md)
-6. Class06: [Activate Web Pages with JavaScript](code-102/Class06.md)
-7. Class07: [Programming with JavaScript](code-102/Class07.md)
-8. Class08: [Operators and Loops](code-102/Class08.md)
-9. Class09: [Career Coaching](code-102/Class09.md)
-10. Class 201: [Table of Contents Page](code-201/README.md)
+1. Class 102: [Table of Contents Page](code-102/README.md)
+2. Class 201: [Table of Contents Page](code-201/README.md)
 
 ## Code 102 - Intro to Software Development
+
+In this class we were introduced to HTML, CSS, JavaScript, and GIT
 
 ## Code 201 - Foundations of Software Development 
 
