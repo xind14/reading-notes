@@ -24,3 +24,4 @@ My Future Reading Notes for Class 201 for 102 Lab 3
 14. [Class14](Class14.md)
 15. [Class15](Class15.md)
 16. [Reading Instructions](ReadingInstructions.md)
+17. [Prompt-Engineering](prompt-engineering.md)
