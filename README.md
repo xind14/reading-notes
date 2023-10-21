@@ -1,7 +1,26 @@
-# Reading Notes: My Notes and Assignments for Code Fellows
-
+# Reading Notes
 
 ![Growth vs Fixed Mindset Graph](https://upload.wikimedia.org/wikipedia/commons/0/09/Fixed_and_growth_mindsets.png)
+
+# Overview
+
+This `reading-notes` repository will contain all my notes and assignments for the entirety of the Code Fellows program. I've taken 102, and will start 201 on October 23rd, 2023! This page as well as others will be updated as the program goes on.
+
+The general layout of my notes will be: 
+
+- A table of contents linked to a `READ.md` file for each class
+- A table of contents under the heading for each class broken down into the individual topics of each lecture days
+- Within each lecture day file there will be all or most of the following depending on the class: 
+
+  - The `Lab` section that includes the setup instructions and links to any additional resources
+
+  - A `Written Class Notes` section for things discussed in lectures
+  
+  - A `Reading` section with links to the resources for the reading assignments, additional responses to the questions of the assignment, and a things I would like to know more about section
+
+  - A `Career` section with the assignment instructions
+
+  - A  `Learning Journal` reflection entry
 
 ## Introduction
 
