@@ -16,7 +16,38 @@ Hello everyone! My name is Xin Deng and here is the link to my [Github portfolio
 
 In this class we were introduced to HTML, CSS, JavaScript, and GIT
 
+### Table of Contents
+
+1. Class01: [Learning Markdown](code-102/Class01.md)
+2. Class02: [The Coder's Computer](code-102/Class02.md)
+3. Class03: [Revisions and the Cloud](code-102/Class03.md)
+4. Class04: [Structure Web Pages with HTML](code-102/Class04.md)
+5. Class05: [Design Web Pages with CSS](code-102/Class05.md)
+6. Class06: [Activate Web Pages with JavaScript](code-102/Class06.md)
+7. Class07: [Programming with JavaScript](code-102/Class07.md)
+8. Class08: [Operators and Loops](code-102/Class08.md)
+9. Class09: [Career Coaching](code-102/Class09.md)
+
+
 ## Code 201 - Foundations of Software Development 
+
+### Table of Contents
+
+1. Class01: [Setup Developer Toolbelt](code-201/Class01.md)
+2. Class02: [Introduction to Web Development](code-201/Class02.md)
+3. Class03: [Lists, The Box Model, and Loops](code-201/Class03.md)
+4. Class04: [Links, Layouts, and Functions](code-201/Class04.md)
+5. Class05: [Images, Color, Text, and More Work with Functions](code-201/Class05.md)
+6. Class06: [Domain Modeling, Intro to the DOM, and Object Literal Notation](code-201/Class06.md)
+7. Class07: [HTML Tables and JS Constructor Functions](code-201/Class07.md)
+8. Class08: [Layout with CSS](code-201/Class08.md)
+9. Class09: [Forms and Events](code-201/Class09.md)
+10. Class10: [Debugging and Error Handling](code-201/Class10.md)
+11. Class11: [Audio and Video in HTML; Domain Modeling Revisited](code-201/Class11.md)
+12. Class12: [Canvas and ChartJS](code-201/Class12.md)
+13. Class13: [Introduction to Persistence with Local Storage](code-201/Class13.md)
+14. Class14: [Documentation, Project Selection, & Team Workflow](code-201/Class14.md)
+15. Class15: [Course Recap & 301 Preview](code-201/Class15.md)
 
 ## Code 301 - Intermediate Software Development
 
