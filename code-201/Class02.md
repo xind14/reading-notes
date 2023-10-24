@@ -148,7 +148,7 @@ Statement on why this topic matter as it relates to what I'm studying in this mo
 
     - `Assignment`: These assign a value to a variable. `=` means assign what came before to what came after the operator.
 
-    - `Logical`: These perform logical operations on **Boolean/true or false** values. For example: `Logical AND "&&"`will return true if both conditions are true. `Logical OR "||" will return true if at least one condition is true.
+    - `Logical`: These perform logical operations on **Boolean/true or false** values. For example: `Logical AND "&&"`will return true if both conditions are true. `Logical OR ||` will return true if at least one condition is true.
 
 3. Describe a real world Problem you could solve with a Function.
     - You could probably make a function where it calculates a group of people's expenses and executes the total amount each person owes or is owed. 
@@ -164,9 +164,8 @@ Statement on why this topic matter as it relates to what I'm studying in this mo
     - `==` is loosely equal meaning if `5 = '5'` even though it's comparing a number and a string it will still be true because it does not look at data type
     - `>` means greater than and will return true if left is greater than right.
 
-
 7. What is the difference between the logical operator `&&` and `||`?
-    - As mentioned above: `Logical AND "&&"`will return true if both conditions are true. `Logical OR "||" will return true if at least one condition is true.
+    - As mentioned above: `Logical AND "&&"`will return true if both conditions are true. `Logical OR ||` will return true if at least one condition is true.
 
 ## Things I want to know more about
 
