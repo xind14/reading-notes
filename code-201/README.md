@@ -1,6 +1,6 @@
 # My Notes and Assignments for Code Fellows 201
 
-My Future Reading Notes for Class 201 created for 102 Lab 3, fixed and formated in 201 Prework.
+My future reading rotes for Class 201 created for Class 102 Lab 3, fixed and formatted in 201 prework.
 
 ## Prework
 
