@@ -193,12 +193,11 @@ Read: [How many jobs are found through networking really?](https://www.payscale.
 
 2. Submit a discussion with a short summary of:
     - who you met with
-
     - how you are connected to them
-
     - what you learned about that person and their work
-
     - and how you can help them.
+
+    - Met with Johnny Jones. He is a senior tech program manager for the security side of Microsoft and a security operations engineer before that. He manages teams that are in charge of making sure systems are protected against malware and viruses etc. I met him through an acting class two years ago. I asked him what the most challenging aspect of his job was since moving up to a manager position. He said the most challenging thing about being a manager are the interpersonal relationships and dynamics. He's been a manager in 3 different companies so far and that is always the hardest part. He said that the technology is always a relatively simple thing, but when you start to deal with people’s feelings and such it makes everything harder. He excels at process creation/management. Currently, he's been promoted several times within the company in order to have a larger impact to the entire organization because he's good at seeing where things can improve especially when others don’t see how they can be improved. I asked him specifically the question "How can someone like me, who will go into a junior developer role, be able to help you and what you do in the future?" He said the best way a jr developer could contribute is to ensure that I work to understand my scope of work and how it contributes to the organization. Also be very curious, because he finds that a lot of jr developers get scared to get out there and coordinate with others. He said if I can understand my work and how it contributes that’ll help me make the informed decisions in how I code.
 
 ## Learning Journal
 
