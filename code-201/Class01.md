@@ -79,7 +79,112 @@ In-class demo for lab:
 
 - Start commit message with a description change word like add, updated, delete etc
 
-- Assignment submit: GH profile, add, new gist = put single piece of code for safe keeping
+- Assignment submit: GH profile, add, new gist = put single piece of code for safe keeping: 
+
+         <!DOCTYPE html>
+         <html lang="en">
+         <head>
+         <meta charset="UTF-8" />
+         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+         <title>Document</title>
+
+         <style>
+            main > h1 {
+            color: orange;
+            background-color: black;
+            }
+         </style>
+         </head>
+
+         <body>
+         <script>
+            let name = prompt("What is your name?").toUpperCase();
+            alert(name + "!! Nice to meet you!");
+            console.log(name);
+
+            let fruit = prompt("What is your favorite fruit?").toLowerCase();
+            alert("Well, " + name + " " + fruit + " my favorite fruit too!");
+            console.log(fruit);
+
+            let color = prompt("What is your favorite color?").toLowerCase();
+            alert(
+            "Wouldn't " + color + " " + fruit + " be interesting " + name + "?"
+            );
+            console.log(color);
+
+            let vacation = prompt(
+            "Where do you want to go on vacation?"
+            ).toUpperCase();
+            alert(
+            vacation + "?!?" + " " + name + ", eating " + color + " " + fruit + " there sounds amazing right now."
+            );
+            console.log(vacation);
+         </script>
+
+         <header></header>
+
+         <main>
+            <h1>Class 1 Lab</h1>
+
+            <p
+            style="
+               color: black;
+               background-color: lightblue;
+               font-size: 20px;
+               padding: 5px;
+            "
+            >
+            <script>
+               document.write(name + "!");
+            </script>
+            !!! Welcome to my page!
+            </p>
+            <p
+            style="
+               color: darkolivegreen;
+               background-color: lightsalmon;
+               font-size: 20px;
+               padding: 5px;
+            "
+            >
+            I think
+            <script>
+               document.write(fruit);
+            </script>
+            the best fruit too!
+            </p>
+            <p
+            style="
+               color: white;
+               background-color: red;
+               font-size: 20px;
+               padding: 5px;
+            "
+            >
+            You have good taste! I think
+            <script>
+               document.write(color);
+            </script>
+            is one of my favorite color too!
+            </p>
+            <p
+            style="
+               color: darkred;
+               background-color: pink;
+               font-size: 20px;
+               padding: 5px;
+            "
+            >
+            <script>
+               document.write(vacation);
+            </script>
+            ! That does sound better than sitting at home right now!
+            </p>
+         </main>
+
+         <footer></footer>
+         </body>
+         </html>
 
 ## Read 1 - Readings Overview
 
