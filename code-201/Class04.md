@@ -119,9 +119,10 @@ Statement on why this topic matter as it relates to what I'm studying in this mo
 
 1. To create a basic link, we wrap text or other content inside what element?
     - To wrap text in a link we use `<a>` element.
+    - For example: `<a href="link">Whatever text you want the link to be clickable</a>.`
 
 2. The `href` attribute contains what information?
-    - The `href` links the web address you are connecting to or the source can be a file locally
+    - The `href` links the web address you are connecting to.
 
 3. What are some ways we can ensure links on our pages are accessible to all readers?
     - `Use clear link wording`: make sure to create concise but still descriptive link texts
@@ -144,8 +145,10 @@ Statement on why this topic matter as it relates to what I'm studying in this mo
     - `Precise Position`: using the `top`, `bottom`, `left`, and `right` properties you can change values around to precisely place the element where you want it.
     - `Isolation`: it allows the element to be in its own "layer" so it doesn't mess with the layout of other elements. 
 
-
 5. What is a key difference between fixed positioning and absolute positioning?
+    - `Fixed Positioning`: the element is positioned relative to the view of the browser window, it doesn't move and stays fixed where it is when a user scrolls. Fixed is useful for elements like a navigation bar that you want always at the top.
+    - `Absolute Positioning`: the element is positioned to the nearest parent element, it moves with the content when the user scrolls.
+
 
 ### Learn JS
 
