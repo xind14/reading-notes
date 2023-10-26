@@ -40,9 +40,224 @@
 
 > In addition to the user stories stated above, continue to use console.logs throughout the code to track the questions that are being asked to the user, and add additional CSS to style your HTML page. Stay within scope of what was taught so far in class. Do not write functions within your application. Avoid the use of “helper” methods such as `.includes()` and `.join()`.
 
-
-
 ## Written Class Notes
+
+ - let letter = name prompt.substring (0,1).toLowercase(); 0=
+console.log(letter)
+if (letter===y)
+text.charAt(0)= starts at letter 0
+
+- use strict: standard JS, keeps you obey strict JS rules 
+
+- Renaming on GH: terminal, instead of git pull origin main, origin = variable, settings rename, git remote remove origin, git remote -v, git remote add origin new https
+
+
+- Side by side 
+    - wrap h2 ul in div
+    - float - moves everything up messy
+    - float two div only within section, div can be used inside semantic 
+    - in section use overflow: hidden
+    - section div: (width % is section 100% of parent which is main, width  - - div 45 of section, in div add margin)
+
+                        section {
+                            border;
+                            margin-bottom;
+                            overflow;
+                            width;
+                        }
+                        section div {
+                            border;
+                            width;
+                            margin;
+                            float: left;
+                        }
+- at top of css *{ box-sizing:border-box;}
+
+- switch check on this thing and do stuff based on it if if this is true then do that 
+
+            Inclass Demo
+        ///// nested if statement, else not required 
+        if (age === 5){
+            if (hair === false) {
+                console.log(Hello)
+            }
+        }
+        console.log (next)
+
+        && = multiple things are true
+        if (age === 55 && hair===hair){
+            console.log(both true)
+        }
+        console.log (next)
+
+        && = multiple things are true
+        if (age === 55 || hair===hair){
+            console.log(either are true)
+        }
+        console.log (next)
+
+        let cats = 0 is undefined but -2 is defined and would still work (0, "", null = falsy)
+
+        .length = index/position in array, each thing in array are called elements, every array index starts at 0
+        - str="John" str.charat(0), str.substring (0,1) both equal J 0=first element of array, 1=produce that many letters. start at 0 go that many. 0, 2 would give Jo
+
+        does the dog array include geno
+        dogs.includes("Geno")
+
+        print the numbers between 0 and 10
+        for (let i=0; i<10; i++){
+            console.log(i);
+        }
+        starts at 0, continue as long as less than 10, increase by 1 each time
+
+        ++i is the pre-increment operator. It increments the value of i before its current value is used in the expression.
+        i++ is the post-increment operator. It increments the value of i after its current value is used in the expression.
+        ++i pluses add 
+        i++ pluse after happens after code is ran
+
+        give 4 chances if answer is right quit the loop
+        for (let i=1; i<=4; i++){
+            if (hasName){
+                console.log(You got it);
+                break
+            }
+        }
+
+- Traverse the array and show me the value of every element, arrays start at 0 [ means at]
+
+        for (let i=0; i<dogs.length; i++)) {
+            console.log(dogs[i]);
+        }
+
+- While something is true, do something else (while loops always do condition inside curly)
+
+        let numberofguesses=0;
+        while (numberof guesses <4){
+            numberofguesses++;
+            console.log("You have guessed" + numberofguesses+"times.");
+        }
+
+- Will keep asking until right answer
+
+        let dogs =[ros, geno rock];
+        let gotiright=false;
+        while (!gotitright){
+            let guess =prompt(What is the name of a dog of mine?)
+            if (dogs.includes(guess)){
+                alert(right);
+                gotitright=true;
+            }
+        }
+        Returns prompt as string 
+        for (let i=1, i<5, i++){
+            let guess=prompt(how old am i);
+            if (guess===55){
+                alert(right);
+
+            }
+
+        Inclass demo 
+        }
+
+        to add guess="55" (turn into string) before if or remove = or add break at the end
+
+        let dogs = ["Rosie", "Geno", "Rocky"];
+
+        let gotItRight = false;
+
+        while( ! gotItRight ) {
+        let guess = prompt("What is the name of a dog of mine?");
+        if( dogs.includes( guess ) ) {
+            alert("Right!");
+            gotItRight = true;
+        }
+        }
+
+        // Let them try 4
+        for( let i = 1; i < 5; i++ ) {
+
+        let guess = prompt("How old am I?");
+        // guess = "55"
+        guess = Number(guess);
+        if( guess === 55 ) {
+            alert("Right!");
+            break;
+        }
+
+        }
+
+        // Add 1 to a number
+
+        let number = 1;
+        // console.log(number + 1);
+        // console.log(number);
+        // console.log(++number);
+
+        console.log('------------------');
+
+        // If - "Conditional" ... if this is true, then do that
+        // Switch - "Check on this thing and do stuff based on it"
+
+        let name = "John Cokos";
+        let hair = true;
+        let age = 56;
+        let cats = -1;
+        let kids = 2;
+
+        let dogs = ["Rosie", "Geno", "Rocky"];
+        // Does the dog array have an element with the value "Geno"?
+        // Does the dog array include "Geno"?
+
+        let guess = "Rocky";
+        let hasName = dogs.includes(guess); 
+            - When a user enters information through the prompt() function in JavaScript, the input is always treated as a string, even if the user enters a number. The Number() function is often used to convert that string representation of a number into an actual numeric value.
+        console.log(hasName);
+
+        // give 4 chances and if the answer is ever right, quit the loop
+        for (let i = 1; i <= 4; i++) {
+        if (hasName) {
+            console.log("You Got It");
+            break;
+        }
+        }
+
+        // Show me all of the things in the array
+        // Traverse the array and show me the value of every element
+        for (let i = 0; i < dogs.length; i++) {
+        console.log(dogs[i]);
+        }
+
+
+        // While something is true, do something else
+        let numberOfGuesses = 0;
+        while (numberOfGuesses < 4) {
+        numberOfGuesses++;
+        console.log("You have guessed " + numberOfGuesses + " times.");
+        }
+
+        // Type Coersion
+        hair = "NONE";
+
+        // If john has hair and is also 55 years old, then call him "OLD"
+
+        if (cats) {
+        console.log("Get a dog.");
+        }
+
+        if (age === 55) {
+        if (hair === false) {
+            console.log("Whassup baldy, lets get you to the hair clinic");
+        }
+        }
+
+        // && = multiple things are true
+        if (age === 55 && hair === false && cats > 1 && kids <= 0) {
+        console.log("all of them are true");
+        }
+
+        if (age === 55 || hair === false || cats > 1 || kids <= 0) {
+        console.log("any of them are true");
+        }
 
 ### Describe and Define
 
@@ -53,13 +268,16 @@
 
 ### Answer
 
-1. Every item in an array is assigned a specific `_________` or location within the array.
+1. Every item in an array is assigned a specific `index` or location within the array.
 
-2. All conditionals evaluate as `_________` or `_________`.
+2. All conditionals evaluate as `true` or `false`.
 
-3. What is control flow in JavaScript?
+3. What is control flow in JavaScript? 
+    - The order in which statements are executed in JS
 
 4. What is a loop? What is an iteration?
+    - `Loop`: code that keeps repeating as long as the conditions are true
+    - `Iteration`: each cycle of a loop
 
 ## Read 3 - HTML Lists, Control Flow with JS, and the CSS Box Model
 
