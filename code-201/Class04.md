@@ -66,11 +66,16 @@
 
 ### Answer
 
-1. A function definition may also be referred to as a function `__________` or a function `___________`.
+1. A function definition may also be referred to as a function `declaration` or a function `statement`.
 
-2. Function `__________` is used to execute the code within the function.
+2. Function `invoke` is used to execute the code within the function.
 
 3. What are some popular values for the position property?
+    - `Static`
+    - `Relative`
+    - `Absolute`
+    - `Fixed`
+    - `Sticky`
 
 ### Resources Link/Pages
 
@@ -82,8 +87,6 @@
 ## Read 4 - HTML Links, JS Functions, and Intro to CSS Layout
 
 ## Resources Link/Pages
-
-
 
 ### Learn HTML
 
@@ -110,28 +113,36 @@
 
 Statement on why this topic matter as it relates to what I'm studying in this module:
 
+- Knowing CSS positioning is important as it helps with layout precision of elements and ensures formatting is consistent across all devices. Knowing how functions work in JS adds to the interactive aspect of web pages. It allows intake of user input, processing, and creating something responsive. Understanding how to do all these together creates an overall well-designed website.
+
 ### Learn HTML
 
 1. To create a basic link, we wrap text or other content inside what element?
-
+    - To wrap text in a link we use `<a>` element.
 
 2. The `href` attribute contains what information?
-
+    - The `href` links the web address you are connecting to or the source can be a file locally
 
 3. What are some ways we can ensure links on our pages are accessible to all readers?
+    - `Use clear link wording`: make sure to create concise but still descriptive link texts
+    - `Keep link text short`: short and to the point words allow visual users to skim the page
+    - `Avoid generic phrase`: still add description to link text. Avoid things like `click-here` or `link`
 
 ### CSS Layout
 
 1. What is meant by “normal flow”?
-
+    - It is the default position elements are laid out on a webpage when no CSS is used. The default display properties follow the two definitions in the next questions. 
 
 2. What are a few differences between `block-level` and `inline` elements?
+    - `Block-level`: these elements can already have existing properties in them like width, height, padding etc. Examples are `h1`, `<p>` and they start on new lines and fill up the full width of space available inside the parent element.
+    - `Inline`: these elements do not have existing properties and do not start on new lines and do not take up all the space, but only as much width as necessary. Examples are `<a>`, `<strong>`
 
-
-3. ___ positioning is the default for every html element.
-
+3. `Static` positioning is the default for every html element.
 
 4. Name a few advantages to using absolute positioning on an element.
+    - `Overlap`: it allows elements to overlap on top of other elements 
+    - `Precise Position`: using the `top`, `bottom`, `left`, and `right` properties you can change values around to precisely place the element where you want it.
+    - `Isolation`: it allows the element to be in its own "layer" so it doesn't mess with the layout of other elements. 
 
 
 5. What is a key difference between fixed positioning and absolute positioning?
@@ -139,25 +150,35 @@ Statement on why this topic matter as it relates to what I'm studying in this mo
 ### Learn JS
 
 1. Describe the difference between a function declaration and a function invocation.
+    - `Function`: something in JS that allows you to store code that does one task and you can call the code when needed instead of typing out the same code over and over.
+    - `Declaration`: when you define a function in JS. Use `function` follow by name of function, parameters in parentheses, and your code in curly brackets. For example:
 
+            function name (parameters) {
+                function code
+            }
+
+    - `Invoking`: this is the process of calling or executing the function. You use the function name and the an argument in parenthesis. `name (argument);`
 
 2. What is the difference between a parameter and an argument?
+    - `Parameter`: it's the variable listed in the function declaration, whereas an
+    - `Argument`: is the actual variable the function uses when invoked.
 
 ### Miscellaneous
 
 1. Pick 2 benefits to pair programming and reflect on how these benefits could help you on your coding journey.
-
-
+    - Greater Efficiency: I need to learn this because I take too much time now and it's bleeding into other aspects of my life. If I can learn to be efficient, I wouldn't need to spend so much time debugging as well. I think working with someone else to help each other detect mistakes could help me see how others work efficiently and I might learn something new at how to look for bugs.
+    - Social skills: I like the long-term career impacts the article listed. I want to work on a skill that makes me seem like I work well with others. I feel like I've lost some of that skill from being at home all the time now. 
 
 ## Things I want to know more about
 
+- It said at the bottom of the positioning article that positioning isn't an ideal method to use for entire layouts, so what other ways are there that are more efficient? 
 
-If you utilize any content directly from the reading sources, be sure to identify what you are quoting, and cite the source.
-
-## Learning Journal 4 
+## Learning Journal
 
 Write a brief reflection on your learning today, or use the prompt below to get started.
 
 > “[Adult learners] demand that their learning is relevant to their real life issues, problems, and tasks, and that their education will boost their performance levels and help them live their lives in a better, and more satisfying way.”
 
 In other words, understanding your motivation for learning contributes to the effectiveness of your learning, and your learning journal is a place to explore those thoughts. What are your motivations for learning?
+
+- If I am completely honest my motivations are money. I am gambling on the chance that I can make a decent income because the average for this industry is on the higher end. But I recognize that is a short-term motivator to have because it might not be a strong driver later. I guess other motivations would be to advance my career or at least start one. I feel like I haven't had an adult job and I need to start building connections that'll give my future more stability. Along with money, I do like problem solving so I hope that becomes a better driving force for me later. I feel like I haven't had the time to sit down and reflect on how to stay motivated in my learning because of how fast pace this program is. I understand these assignments are time set side for those reflections but because I feel so slammed, the journal reflections feel like a chore rather than an opportunity to think. I do recognize it might be too early in the class for me to feel appreciative yet.
