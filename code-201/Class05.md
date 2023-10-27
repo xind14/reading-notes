@@ -22,6 +22,19 @@
 
   - Place no function calls in your code, unless inside of another function. Everything should be run by hand from the console. This is to give you additional practice using the console and practice efficient app-switching processes.
 
+> Submission Instructions
+
+- How did this go, overall?
+
+  - I got stuck on question 3 and it took me forever to figure out I should've used console.log to see what my outputs were after each line because all I was seeing was the red fail on my console. After I realized that writing the rest was easy.
+
+- What observations or questions do you have about what you’ve learned so far?
+
+  - I will need more help on interpreting the english literal and I need to understand the opposite of that first. I'm going to try and find function codes already written and try to interpret that into words to see if it makes more sense for me.
+
+- How long did it take you to complete this assignment? And, before you started, how long did you think it would take you to complete this assignment?
+  - It took me 2 hours to do this assignment. I thought it was going to take shorter, but it was longer because I couldn't see my own mistakes I was writing out for the variables I was assigning.
+
 ### 5b
 
 > Deploy your app to GitHub Pages and add any additional final touches to your CSS. Run a Lighthouse report making sure your site scores between the 50-65 range and add a screenshot of your score to your README.md. Make sure your app is complete and meets all of the requirements from the prior labs. Remove any commented out code or console logs including any commented out console logs that were used in the questionnaire.
@@ -31,8 +44,116 @@
 > Complete all 32 levels of the [CSS Diner](https://flukeout.github.io/) tutorial. Reference [MDN CSS Selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors)
 
 1. [CSS Diner Completed Notes](CSS-Diner.md)
+2. [CSS Diner Completed Screenshot](img/css-diner-finish.png)
 
 ## Written Class Notes
+
+GIT vs GITHUB
+
+- `GIT`: is an application. It has versions, branches, merges, forks, does software version control (VCS)
+- `GITHUB`: is a website that uses git, makes git easier to use
+- `GH in CLI` = specific for github in terminal
+
+Branches:
+
+- Repo: `Aboutme`
+- `Branches`: main (default), whatever is in here usually is good to go live, final version
+  - Add button branch: creates parallel work, if you ACP it won't merge with main, but added another commit to the parallel work space. You need to PR and merge with main for button branch to show up on main
+- `Creating a branch`: `git checkout -b branchName` when ACP its `git push origin newBranchName`
+  - still need to PR and merge
+  - usually you delete branches but keep it for this class for easy grading
+  - then in terminal move back to main branch `git checkout main`
+  - `git pull origin main` to bring those merge changes in
+  - What if you write content but realized it needs to be in a branch
+    - do `git checkout -b newBranchName`, and sends the modified changes to that branch, can only be done before a commit
+
+CSS Practice:
+
+- `Block Elements` by default will go full width of page and stack vertical (div, section, footers,ul, li are block)
+  - give smaller size to make go side by side
+- `Inline Element` takes up space it needs, goes side by side, slams together
+  - `Inline-block`: displays inline, side by side, disobeys block element
+- `Absolute positioning`: the element is positioned to the nearest parent element, it moves with the content when the user scrolls, moves out of original layout
+- `Relative positioning`: element still occupies space in the page, but it's just positioned a bit differently. Other elements on the webpage aren't affected; they stay in their original layout.
+
+               HTML
+               <div class="grandparent">
+                     <div class="parent">
+                        <div class="child">first-child</div>
+                        <div class="child">last-child</div>
+                     </div>
+
+                     <ul>
+                        <li>
+                           <span>Foobar</span>
+                           <span>Foobar</span>
+                           <span>Foobar</span>
+                           <span>Foobar</span>
+                           <span>Foobar</span>
+                           <span>Foobar</span>
+                        </li>
+                     </ul>
+               </div>
+
+
+            CSS
+            body {
+               backgroud: #ccc
+            }
+         div.grandparent {
+            border: 1px solid black
+            height 500 px
+            position: relative
+         }
+         div.parent {
+            border: 1px solid red
+            height 350px `(if no height, it collapses if child has float so add height or add overflow:hidden)`
+            position: relative
+         }
+
+         div.child{
+            border: 1px solid blue
+            display: inline-block `(can get rid of this and add float:left so no margin that comes with inline-block)`
+            height 100px
+            width 100px
+            position: absolute `(absolute only works if parents have a position or If the element doesn't have any positioned ancestors, it uses the document (or the viewport) as the reference point.)`
+            bottom: 0px
+            right: 0px
+         }
+
+         div.child:first-child{
+            position: absolute
+            bottom: 0px `(bottom and left go in play only if positioning is placed)`
+            left: 0px
+         }
+         div.child:last-child{
+            position: absolute
+            bottom: 0px
+            right: 0px
+         }
+         footer {
+            background 222
+            height 100px
+            width 100%
+            position: fixed
+            bottom 0px
+            left 0px
+         }
+
+JS Rules - Omitting`{}` and `;` are legit JS code but shouldn't be optional
+
+      Lab 5a steps:
+      Make a repo from the template
+      Clone it
+      Create a branch called question-1
+      Do teh work for question 1
+      ACP to quesion-1 branch
+      Go to github make a PR
+      Approve and Merge the PR
+      On. your machine, switch back to main
+      Pull main
+      Create a new branch called question-2
+      ... rinse and repeat
 
 ### Describe and Define
 
@@ -161,6 +282,27 @@ Statement on why this topic matter as it relates to what I'm studying in this mo
 3. Share a screenshot of your LinkedIn connection request, including a nicely worded note, sent to the speaker or someone else at their company.
 
 ![Linkedin Connection Message to Dezireé Teague](img/deziree-teague.png)
+
+## Instructor 1-on-1 Meeting Reflection
+
+- What are your goals while taking this course?
+
+  - I just want to be a bit more confident at the basics of HTML, CSS, and JS and be able to make a webpage without looking at my notes.
+
+- Are there any areas of concern, questions about the course or adjustments we might consider?
+
+  - The in-class-demos are done all over the place, so there are different sources and links. It would be helpful if you could copy all those notes and demos into the files you always push into the 201 demo folder on GH. And also when you do coding demos sometimes you write a code to explain a concept and then rewrite that code to explain a different concept, would be helpful to copy that original code and edit that one for new concepts instead of erasing the original one that way your demonstration for previous concepts are still written down somewhere. 
+  - I felt confused this entire past week in lectures because you jump all over the place it feels like the concepts or ideas are harder to learn because it feels very scattered and I have to start after lunch some times self teaching myself or get others to explain in remo. But I don't know if it's just your teaching style and I haven't adjusted yet. 
+  - There seems to be some miscommunication between instructors and TAs. For example: when we created the about me repo, originally I think most of us followed your demo and named it Class 2 lab, and during remo that day when we asked the TAs to confirm if our files and files structures were correct they told my table yes.
+  - Is it possible to get a full hour lunch? Or do we always start back up at 1 pm?
+  - You probably can't do anything about it, but class feels really disruptive some times because of one person. They are very argumentative with you sometimes and interrupts you when you're trying to answer their question.
+
+- What professional proficiency would you consider to be your top strength?
+
+  - Under the Results Competency I think my top strength is dependability and reliability. I can be held accountable for choices made and I produce decent work and don't turn assignments in late.
+
+- What areas of professional competency would you like to improve?
+  - Under the leadership competency I think I need to improve on networking and confidence. I've always been bad at it, especially when it comes to connecting for jobs. My social anxiety flairs.
 
 ## Learning Journal
 
