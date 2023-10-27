@@ -21,7 +21,7 @@ You could also use [Awesome ChatGPT prompts](https://prompts.chat/){:target="\_b
 ## Assignment
 
 1. Confirm you have an active chatbot account
-   - ![Screenshot of my Chatgpt](promptEngPic.png)
+   - ![Screenshot of my Chatgpt](img/promptEngPic.png)
 2. Ask your chatbot to explain a topic or something related to your previous work experience and see how accurate it is.
    - Tried 5 prompts before it gave me something accurate. I asked: Explain the typical responsibilities of a lead receptionist managing a team at a no appointment walk-in only veterinary clinic in one paragraph.
    - ChatGpt Output: A lead receptionist managing a team at a no-appointment, walk-in-only veterinary clinic holds a pivotal role in ensuring the clinic's smooth operation. Their responsibilities encompass overseeing the reception area, managing a team of receptionists, and maintaining a welcoming environment for pet owners. They coordinate client flow, handle walk-in appointments, and manage the administrative aspects of the clinic, such as maintaining patient records and ensuring accurate billing. Additionally, they supervise staff schedules, provide guidance to receptionists, and collaborate closely with the veterinary team to facilitate efficient care. Exceptional organizational and communication skills are essential, enabling them to handle a high volume of clients and ensure seamless collaboration between the reception team and the clinic's practitioners.
