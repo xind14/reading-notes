@@ -156,7 +156,7 @@ Statement on why this topic matter as it relates to what I'm studying in this mo
 
 5. Evaluate the code below. What does the term `this` refer to and what is the advantage to using `this`?
 
-    - `this` is the keyword that refers to the object the code is written inside of
+    - An object named `dog` is created with `name, age, and color` as the properties. It looks like `humanAge` inside the object is a method to calculate the human age equivalent of a dog.c`this` is the keyword that refers to the object that the `humanAge` method is called and it is accessing the properties of the `dog` object. The advantage is that the code is reusable so that the method can app;y to different objects with the same property names. 
 
             const dog = {
               name: 'Spot',
