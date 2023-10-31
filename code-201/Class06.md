@@ -6,11 +6,11 @@
 
 ## Setup
 
-1.  Create a new repository within GitHub called “cookie-stand”. Make sure that this repository is properly set up with a license and a readme. Clone this repo down to your local machine.
+1. Create a new repository within GitHub called “cookie-stand”. Make sure that this repository is properly set up with a license and a readme. Clone this repo down to your local machine.
 
-2.  Create two new pages within your project. One for Sales Data (sales.html) and another for the homepage (index.html). You’ll also need to create at least one JavaScript file.
+2. Create two new pages within your project. One for Sales Data (sales.html) and another for the homepage (index.html). You’ll also need to create at least one JavaScript file.
 
-3.  Sales Data - Within your javascript file, create separate JS object literals for each shop location. Each location will be responsible for generating sales data and providing output on an html document. You should be able to perform the following tasks in your javascript file:
+3. Sales Data - Within your javascript file, create separate JS object literals for each shop location. Each location will be responsible for generating sales data and providing output on an html document. You should be able to perform the following tasks in your javascript file:
 
     - Store the min/max hourly customers, and the average cookies per customer, in object properties.
     - Use a method of that object to generate a random number of customers per hour. [Objects/Math/random](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random)
@@ -48,7 +48,7 @@
 
           These numbers are simply Pat’s estimates for now, but eventually, once there has been some history collected that provides more accurate numbers, we’ll want the ability to update these numbers for each location, and to add/remove locations. But we’ll not build all of that today. Make sure to make each location is its own JavaScript object.
 
-4.  Home Page - In addition to the provided picture of the fish, your index.html file should contain:
+4. Home Page - In addition to the provided picture of the fish, your index.html file should contain:
 
     - A custom sans-serif [Google Font](https://fonts.google.com/) for use in heading tags (`<h# />`)
 
@@ -70,7 +70,7 @@
 
     - Include all of the typical stuff that you’ll find on the home page of a business: locations, hours, contact information, some text about how awesome the business is, etc. Be creative, and again, think about what is meaningful to a typical end user.
 
-5.  Developer Style Guide:
+5. Developer Style Guide:
 
     - For every lab within this project, you will be creating a new branch for every day. Create a new branch name that follows the following format `class##-feature` (example: `class06-Objects`).
 
@@ -85,6 +85,184 @@
     - Use template literals in your JS logic to render the stores as lists on the sales page.
 
 ## Written Class Notes
+
+Card and Decks
+- Card: title, media (img/vid), contetn, links (primary/secondary)
+- Deck: many cards, many arrangements, deck arrange cards, cards arrange content 
+
+        <section class="deck rotator/grid/details etc">
+          <div class="card media-left>
+            <header>
+              <title><h2>Awesome</h2></title> (title)
+            </header>
+            <article>content here</article> (content)
+            <figure> 
+            <img /> 
+            </figure> (media)
+            <nav>
+              <ul>
+                <li>
+                  <a class="primary">link</a>
+                </li> (links)
+              </ul>
+          </div>
+          <div>multiple divs or cards within a section deck</div>
+        </section>
+
+Objects
+ - Properties = value, any valid datatype, arrays "has"
+ - Methods = action, verbs, what you can do, function "can"
+ - Define using {}
+ - Access properties and methods with `dot notation`
+    - `object.property/method`
+
+    let colors = ["red", "blue"];
+    colors.length (object.property)
+    console.log(hello) (object.method) `()` = invoke, key to know it's a method 
+
+
+In Class Demo
+
+      In HTML
+      <!DOCTYPE html>
+      <head>
+      <title>Objects Demo</title>
+      <script src=js/objects.js>
+      <section id=root>
+      </head>
+
+
+      In JS
+      1. Define an object with {}
+      2. Define properties with :
+      3. Use comma after each property
+        - Key/value pairs -  Key:value
+      4. methods are also properties/keys but the value is a function 
+      5. 'this' refers to the instance, from WITHIN the instance 
+      6. Geno becomes a global file, can be used in other .js files we can reference global variables from another script file if we load it in first 
+      , 
+      let geno = {
+      name: "geno",
+      age: 1,
+      breed: "pit",
+      fur: {
+        face: 'spotted',
+        tail: 'white',
+        body: 'white',
+        ears: 'brown',
+      },
+      isGoodWithOther Dogs: true,
+      isGoodWithStranger: false,
+      interests: ['digging', 'counter surfing', 'chewing']
+      speak: function (){
+        console.log('woof!')
+      },
+      // above key names are getter which gets a value
+      // this is a setter which changes a value
+      haveBirthday: function (){
+        this.age++; (this = instance of object you are working with),
+        if (this.age >= 10){
+          this.fur.face='grey';
+        }
+      }
+      };
+      console.log(geno);
+
+      // Display some properties
+      console.log(geno.name);
+      console.log(geno.age);
+      console.log(geno.interests);
+      console.log(geno.interest[2]);
+
+      Invoke a method
+      geno.speak();
+      geno.hadBirthday();
+      console.log(geno.age);
+
+      Can change things outside of object but should never directly change property value, not good practice 
+      geno.age++ 
+
+      // This only works within the instance. It 'is' the instance
+      // out here it has no meaning
+      console.log(this.age); (will turn up undefined)
+
+DOM: document object model 
+- webpage itself is an object called document
+  - within document there are properties or methods: within methods you can change the output or add markup
+- go into consol type in document
+  - document.lots of things you can change 
+
+
+            //Lets find the section with the ID of people
+
+            const john={
+              name: "John"
+              age: 55,
+              weight: getRandomWeight(),
+              hair: false,
+              colors ['black', 'grey']
+            }
+
+            const cathy={
+              name: "Cathy",
+              age: 54,
+              weight: getRandomWeight(),
+              hair: true,
+              colors ['yellow', 'purple']
+            }
+            // look up math random on MDN
+            function getRandonWeight(min, max){
+              return 100; 
+              //(go to console type in Math.floor (Math.random()*200))
+              let max = 200;
+              let min = 1;
+            return Math.floor (Math.random()* (max-min+1)+min);
+            }
+
+
+            // Find section with id of people
+            const peopleSection=document.get ElementById("root");
+            peopleSection.addTextNode("john");
+            peopleSection.textContent = "Hello World";
+
+            // add child node (div or container called johnsArea)
+            const johnsArea= document.createElement('div');
+            firstChild.textContent=john.name;
+            peopleSection.appendChild(johnsArea); (append means add to page or put inside the #root element)
+
+            // create a new ul inside of johns area
+            let johnStats = document.createElement('ul');
+            johnsArea.appendChild(johnStats);
+
+            // in the UL add 2 bullet points from johns object
+
+            const johnsAge = document.createElement('li')
+            johnsAge.textContent= 'Age: ${john.age};
+            johnsStats.appendChild(johnsAge);
+
+            const johnWeight = document.createElement('li');
+            johnsWeight.textContent=john.weight;
+            johnsArea.appendChild(johnsWeight);
+
+
+            Add a child node
+            const cathysArea= document.createElement('h2');
+            firstChild.textContent=cathy.name;
+            peopleSection.appendChild(cathysArea);
+
+            // create a new ul inside of cathys area
+            let cathysStats = document.createElement('ul');
+            cathysArea.appendChild(cathysStats);
+
+            // in the UL add 2 bullet points from johns object
+            const cathysAge = document.createElement('li')
+            johnsAge.textContent= 'Age: ${john.age};
+            johnsStats.appendChild(johnsAge);
+
+            const cathyWeight = document.createElement('li');
+            johnsWeight.textContent=john.weight;
+            johnsArea.appendChild(johnsWeight);
+
 
 ### Answer
 
@@ -103,13 +281,14 @@
 Bookmark and Review: [Understanding the problem domain is the hardest part of programming](https://simpleprogrammer.com/solving-problems-breaking-it-down/) and [What’s the difference between primitive values and object references in JavaScript?](https://betterprogramming.pub/intermediate-javascript-whats-the-difference-between-primitive-values-and-object-references-e863d70677b)
 
 John Sonmez in the first article "How to solve programming problems": 
+
 1. Read the problem completely twice.
 2. Solve the problem manually with 3 sets of sample data.
 3. Optimize the manual steps.
 4. Write the manual steps as comments or pseudo-code.
 5. Replace the comments or pseudo-code with real code.
 6. Optimize the real code.
-- Recommends spending 70% of the 30 minutes to solve just thinking about the problem. 
+7. Recommends spending 70% of the 30 minutes to solve just thinking about the problem. 
 
 ### JavaScript Object Basics
 
