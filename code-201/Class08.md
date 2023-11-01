@@ -94,26 +94,40 @@ Bookmark and Review: [Learn CSS - Layout](https://web.dev/learn/css/layout/)
 
 Statement on why this topic matter as it relates to what I'm studying in this module:
 
+- The modern web is accessible across all kinds of devices and flexbox is a way to create layouts that adapt to different screen sizes and devices. It could make a developers life easier because it simplifies complex layouts and reduces the need fo many CSS codes.
+
 ### Learn CSS - Flexbox
 
-1. Flexbox is designed for one-dimensional content. Explain what this means.
+1. `Flexbox` is designed for one-dimensional content. Explain what this means.
 
+  - It means that `flexbox` is great for making a bunch of elements with different sizes and providing the best layout options instead of setting individual dimensions for each item it deals with them in one direction at a time. It is a layout method that allows arranging things in rows or columns and they can fill additional spaces or shrink to fit into smaller spaces. 
 
 2. Explain the difference between the main axis and cross axis.
 
+  - `Main axis`: The primary direction or axis that flex items are laid out. It is set by using the `flex-direction` property. `Flex` items move as one group on the `main axis` so when the `flex-direction` is set to `row` they are laid out in a row the `main axis` is horizontal and when they are laid out in a column the `main axis` is vertical. `Flexbox` gives you the control of how elements are aligned along the `main axis` creating proportional layouts for various screen sizes. The start and end of the `main axis` is called `main start` and `main end`. 
+  - `Cross axis`: is the axis perpendicular to the `main axis` so perpendicular to the direction the flex items are in. Similar to `main axis` the start and end of the `cross axis` is `cross start` and `cross end`.
 
 3. How can using certain properties of flexbox negatively impact accessibility?
+
+  - Certain properties like `order` allows you to visually reorder flex items, but not logically in HTML and that's what screen readers follow.
 
 ### CSS Layout - Flexbox
 
 1. What are some advantages of using flexbox over float?
 
+  - Less CSS code needed to create complex layouts compared to floats
+  - Automatically distributes space without needing to individually change dimensions
+  - Can create easier alignment of items 
+  - Allows you to change the order of elements without changing their position in HTML
+
 
 2. How does this topic connect with your long term goals?
 
+ - It will simplify the process of creating a dynamic webpage. It can create cleaner code and still create a visually appealing page. If I ever wanted to go in more of the front end direction, It can help with marketing and understanding what makes compelling content. 
+
 ## Things I want to know more about
 
-If you utilize any content directly from the reading sources, be sure to identify what you are quoting, and cite the source.
+ - How are you suppose to use flexbox to visually reorder items so it can still help screen readers? 
 
 ## Career 8 - Targeted Job Search
 
