@@ -23,6 +23,546 @@
 
 ## Written Class Notes
 
+Objects Review
+Properties: nouns or "Has"
+Methods: verbs or "Can"
+
+        Home HTML
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <title>Code Review</title>
+                <link rel="stylesheet" href="css/reset.css" />
+                <link rel="stylesheet" href="css/style.css" />
+            </head>
+            <body>
+
+            <header>
+                <h1>Pats Salmon Cookies</h1>
+                <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sales.html">Sales</a></li>
+                </ul>
+                </nav>
+            </header>
+
+            <main>
+                <div id="root">
+                <section class="hero">
+                    <img src="images/salmon.png" />
+                </section>
+                </div>
+            </main>
+
+            <footer>
+                &copy; 2023 John
+            </footer>
+
+            <script src="home.js"></script>
+            </body>
+        </html>
+
+    Home JS
+    // DOM: Document OBJECT Model
+    // Objects:
+    //   Key/Value Pairs
+    //   properties: Nouns or "Has"
+    //   methods: Verbs or "Can"
+
+    // Create a store object
+    // NOTE: seattle.phoneNumbers[0] is "main"
+    // These stores can "render" themselves ... "component"
+    // NOTE: Both have the same render method
+    //       this is not very "DRY"
+    //       "Don't Repeat Yourself"
+    //       sales.js and the sales.html does this differently...
+
+    const seattle = {
+    name: "Seattle",
+    phoneNumbers: ["Main: 555-1212", "Fax: 555-6363"],
+    render: function() {
+        // Looks for any element with an id="root", i.e.
+        // <section id="root">
+        const rootElement = document.getElementById("root");
+
+        // Create a new, empty section for a store
+        const storeSection = document.createElement("section");
+        storeSection.classList.add("location")
+        rootElement.appendChild(storeSection);
+
+        const firstTitle = document.createElement("h2");
+        // Give it some content
+        firstTitle.textContent = this.name;
+        // Add it to the page, as a child of rootElement
+        storeSection.appendChild(firstTitle);
+
+        // Add a unordered list to show the address...
+        const storeDataList = document.createElement("ul");
+        storeSection.appendChild(storeDataList);
+
+        // Put the phone numbers in the UL
+        for( let i=0; i<this.phoneNumbers.length; i++ ) {
+        const phoneItem = document.createElement('li');
+        // Add the actual number, from the store object
+        phoneItem.textContent = this.phoneNumbers[i];
+        // Append that to the UL
+        storeDataList.appendChild(phoneItem);
+        }
+    }
+    }
+
+    const tokyo = {
+    name: "Tokyo",
+    phoneNumbers: ["Main: 333-1212", "Fax: 333-6363"],
+    render: function() {
+        // Looks for any element with an id="root", i.e.
+        // <section id="root">
+        const rootElement = document.getElementById("root");
+
+        // Create a new, empty section for a store
+        const storeSection = document.createElement("section");
+        rootElement.appendChild(storeSection);
+
+        const firstTitle = document.createElement("h2");
+        // Give it some content
+        firstTitle.textContent = this.name;
+        // Add it to the page, as a child of rootElement
+        storeSection.appendChild(firstTitle);
+
+        // Add a unordered list to show the address...
+        const storeDataList = document.createElement("ul");
+        storeSection.appendChild(storeDataList);
+
+        // Put the phone numbers in the UL
+        for( let i=0; i<this.phoneNumbers.length; i++ ) {
+        const phoneItem = document.createElement('li');
+        // Add the actual number, from the store object
+        phoneItem.textContent = this.phoneNumbers[i];
+        // Append that to the UL
+        storeDataList.appendChild(phoneItem);
+        }
+    }
+    }
+
+
+    seattle.render();
+    tokyo.render();
+
+    Sales HTML
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>Code Review</title>
+            <link rel="stylesheet" href="css/reset.css" />
+            <link rel="stylesheet" href="css/style.css" />
+        </head>
+        <body>
+
+        <header>
+            <h1>Pats Salmon Cookies</h1>
+            <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sales.html">Sales</a></li>
+            </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div id="root">
+            </div>
+        </main>
+
+        <footer>
+            &copy; 2023 John
+        </footer>
+
+        <script src="sales.js"></script>
+        </body>
+        </html>
+
+    Sales JS
+    // DOM: Document OBJECT Model
+    // Objects:
+    //   Key/Value Pairs
+    //   properties: Nouns or "Has"
+    //   methods: Verbs or "Can"
+
+    // Create a store object
+    // NOTE: seattle.phoneNumbers[0] is "main"
+    // These stores can "render" themselves ... "component"
+
+    let hours = ["6am", "7am", "8am"];
+
+    const seattle = {
+    name: "Seattle",
+    phoneNumbers: ["Main: 555-1212", "Fax: 555-6363"],
+    minCustomersPerHour: 23,
+    maxCustomersPerHour: 65,
+    averageCookies: 6.3,
+    estimatedSales: [],
+    render: function() {
+        renderStore(this);
+    },
+    estimate: function() {
+        this.estimatedSales = estimate(this);
+    }
+    }
+
+    const tokyo = {
+    name: "Tokyo",
+    phoneNumbers: ["Main: 333-1212", "Fax: 333-6363"],
+    minCustomersPerHour: 3,
+    maxCustomersPerHour: 24,
+    averageCookies: 1.2,
+    estimatedSales: [],
+    render: function() {
+        renderStore(this);
+    },
+    estimate: function() {
+        this.estimatedSales = estimate(this);
+    }
+    }
+
+
+    function random(min,max) {
+    return Math.floor( Math.random() * (max-min+1)) + min;
+    }
+
+    // Based on the min/max and average
+    // return an array of estimated sales per hour
+    function estimate(store) {
+    let estimatedSales = [];
+    // loop over the hours array
+    // for each, do the math and add that to the estimated sales
+    for( let i=0; i < hours.length; i++ ) {
+        const numCustomers = random( store.minCustomersPerHour, store.maxCustomersPerHour);
+        const hourlySales = Math.ceil(numCustomers * store.averageCookies);
+        estimatedSales.push( hourlySales );
+    }
+    return estimatedSales;
+    }
+
+    function renderStore( store ) {
+
+    console.log("In the renderStore(), store is: ", store);
+
+    // Looks for any element with an id="root", i.e.
+    // <section id="root">
+    const rootElement = document.getElementById("root");
+
+    // Create a new, empty section for a store
+    const storeSection = document.createElement("section");
+    rootElement.appendChild(storeSection);
+
+    const firstTitle = document.createElement("h2");
+    // Give it some content
+    firstTitle.textContent = store.name;
+    // Add it to the page, as a child of rootElement
+    storeSection.appendChild(firstTitle);
+
+    // Add a unordered list to show the address...
+    const storeDataList = document.createElement("ul");
+    storeSection.appendChild(storeDataList);
+
+    // Put the estimates in the UL
+    let total = 0;
+    for( let i=0; i < hours.length; i++ ) {
+        total += store.estimatedSales[i];
+        const est = document.createElement('li');
+        // Add the actual number, from the store object
+        est.textContent = `${hours[i]}: ${store.estimatedSales[i]}`
+        // Append that to the UL
+        storeDataList.appendChild(est);
+    }
+
+    const totalElement = document.createElement('li');
+    totalElement.textContent = `Total: ${total}`;
+    storeDataList.appendChild(totalElement);
+
+    }
+
+
+    // Way #1
+    seattle.estimate();
+    seattle.render();
+
+    tokyo.estimate();
+    tokyo.render();
+
+    // Way #2
+    // Make an array of stores and loop them.
+
+    // Call the render function with different objects
+    // let stores = [ seattle, tokyo ];
+
+    // // Loop over the stores
+    // for( let i=0; i < stores.length; i++ ) {
+    //   stores[i].estimate();
+    //   stores[i].render();
+    // }
+
+
+
+
+Constructors In Class Demo
+Object={}="POJO" Plain old JS Object like john={hair:false, ....}
+
+(Object name is capitalized so developers can identify it is being used as a constructor)
+function Car(1,2,3,4){
+this.engine=1
+this.color=2
+this.interior=3
+this.power=4
+}
+let johnsCar=newCar (1.1,2.1,3.1,4.1)
+let cathyCar=newCar(1.2,2.2,3.2,4.2)
+
+HTML
+
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>Code Review</title>
+            <link rel="stylesheet" href="css/reset.css" />
+            <link rel="stylesheet" href="css/style.css" />
+        </head>
+        <body>
+
+      <header>
+        <h1>John's Dogs</h1>
+      </header>
+
+      <main>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Breed</th>
+              <th>Is Good With People</th>
+              <th>Is Good With Dogs</th>
+              <th>Is Good With Cats</th>
+            </tr>
+          </thead>
+
+          <tbody id="dogs">
+            <!-- DOGS RENDER IN HERE .... -->
+          </tbody>
+
+          <tfoot>
+          </tfoot>
+        </table>
+
+        <div id="root">
+        </div>
+      </main>
+
+      <footer>
+        &copy; 2023 John
+      </footer>
+
+      <script src="dogs.js"></script>
+    </body>
+    </html>
+
+    JS
+    let isGoodWithTitles = ["People", "Dogs", "Cats"];
+
+    // Define a class called "Dog" using a constructor function
+    function Dog( name, breed, isGoodWithPeople, isGoodWithDogs, isGoodWithCats ) {
+    this.name = name;
+    this.breed = breed;
+    this.isGoodWith = [ isGoodWithPeople, isGoodWithDogs, isGoodWithCats ];
+    }
+
+    // Prototype method of the Dog Constructor
+    // All instances can call it natively and "this" is in context
+    Dog.prototype.walk = function() {
+    console.log(`${this.name} is Jogging`);
+    }
+
+    Dog.prototype.render = function() {
+
+    /*
+    This used to draw the whole table ....
+    But we don't need that, because we declared it in the markup
+
+    let rootElement = document.getElementById("root");
+    let dogContainer = document.createElement("section");
+    dogContainer.classList.add('dog');
+    rootElement.appendChild(dogContainer);
+
+    let nameElement = document.createElement("h2");
+    nameElement.textContent = this.name;
+    dogContainer.appendChild(nameElement)
+
+    let table = document.createElement("table");
+
+    let header = document.createElement("thead")
+    let headerRow = document.createElement("tr");
+    header.appendChild(headerRow);
+
+    headerName = document.createElement('th');
+    headerName.textContent = "Name";
+    headerRow.appendChild(headerName);
+
+    headerBreed = document.createElement('th');
+    headerBreed.textContent = "Breed";
+    headerRow.appendChild(headerBreed);
+
+    For each of the "is good with", and a header cell
+    for( let i = 0; i < isGoodWithTitles.length; i++ ) {
+        let cell = document.createElement("th");
+        cell.textContent = isGoodWithTitles[i];
+        headerRow.appendChild(cell);
+    }
+     let table = document.createElement("table");
+    let body = document.createElement("tbody");
+
+    dogContainer.appendChild(table);
+    table.appendChild(header);
+    table.appendChild(body);
+    table.appendChild(footer);
+    */
+
+    let body = document.getElementById("dogs");
+    let dogRow = document.createElement('tr');
+    body.appendChild(dogRow);
+
+    let nameCell = document.createElement('td');
+    nameCell.textContent = this.name;
+    dogRow.appendChild(nameCell);
+
+    let breedCell = document.createElement('td');
+    breedCell.textContent = this.breed;
+    dogRow.appendChild(breedCell);
+
+    for( let i = 0; i < this.isGoodWith.length; i++ ) {
+        let cell = document.createElement("td");
+        cell.textContent = this.isGoodWith[i].toString(); (boolean wont render so need to turn into string)
+        dogRow.appendChild(cell);
+    }
+
+    }
+
+    let geno = new Dog("Geno", "Pit Bull", false, false, false);
+    let rosie = new Dog("Rosie", "Lab", true, true, false);
+
+
+
+    geno.render();
+    rosie.render();
+
+    // try rendering from that array instead of 1 by 1
+    let alldogs = {
+    dogs: [geno, rosie]
+    }
+    // How do I do the totals across the <tfoot> ???
+
+
+HTML Table <table>
+header <thead>
+header cells <th>
+body <tbody>
+row <tr> (table row)
+cell <td>
+footer <tfoot>
+
+<table>
+<thead>
+<tr>
+<th>name
+<th>age
+<tbody>
+<tr>
+<td>John
+
+<tr>
+<td>cathy
+<tfoot>
+<tr>
+<td> all of us
+<td>sum of age
+
+
+
+header {
+  background: #111;
+  color: salmon;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 40px;
+  font-weight: bold;
+  padding: .5em 0;
+}
+
+header nav {
+  background: salmon;
+  padding: .25em;
+  text-align: left;
+}
+
+header nav li {
+  display:inline-block;
+}
+
+header nav li a {
+  color: #111;
+  text-decoration: none;
+}
+
+main {
+  margin: 2em;
+}
+
+.hero img{
+  max-width: 100%;
+}
+
+.location {
+  margin: 1em 0;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: .5em;
+}
+
+section li {
+  margin-left: 1.5em;
+}
+
+footer {
+  background: #ccc;
+  padding: 1em;
+  text-align: center;
+}
+
+
+table * {
+  border: 1px solid #111;
+  padding: .5em;
+}
+
+table thead {
+  background: silver;
+}
+
+table tbody td {
+  background: #111;
+  color: ivory;
+}
+
+table tfoot {
+  background: greenyellow;
+}
+
+
 ### Describe and Define
 
 - Constructor functions
@@ -37,11 +577,6 @@
 2. How does the term `this` differ when reference an object literal versus a Constructor function?
 
 3. What are some HTML elements that make up an HTML table?
-
-
-
-
-
 
 
 ## Read 7 - Object-Oriented Programming, HTML Tables
