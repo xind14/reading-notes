@@ -80,32 +80,57 @@ Bookmark and Review: [HTML5 Input Types](https://developer.mozilla.org/en-US/doc
 
 Statement on why this topic matter as it relates to what I'm studying in this module:
 
+- JS events and HTML forms both make a webpage interactive, allowing responses to user actions like clicks and form submissions. The both allow user validation and also other web development frameworks like react rely on them both. 
+
 ### HTML Forms
 
 1. Why are forms so important in web development?
 
+    - They are a main point of interaction between a user and a website. They allow users to provide information and can be used for a variety of purpose like user registration, feedback, online shopping etc. Forms are needed because it wouldn't allow users to communicate their need. 
+
 
 2. When designing a form, what are some key things to keep in mind when it comes to user experience?
 
+    - Try to make sure your form isn't big or else you risk losing users. 
+    - Keep it simple so you only ask for data you need to avoid overwhelming users.
+    - Use clear labels for instructions so users understand what is expected in each form field
+    - Make it easy like start with simple questions first before harder ones
+    - Helpful error messages to inform users if inputs are invalid
 
 3. List 5 form elements and explain their importance.
+
+    - `<form>`: this element defines and contain forms. 
+    - `<button>`: this element creates an action like submitting a form or resetting the form
+    - `<label>`: they add a text description for form elements so users get the purpose of each input field
+    - `<textarea>`: this gives users a bigger space to input longer text
+    - `<input>`: creates an input field for users to enter data
 
 ### Learn JS
 
 1. How would you describe events to a non-technical friend?
 
+    - Anything that happens in the thing you are programming. They are notifications or pings that something happened and can range from things like a user clicked a button or a page finished loading. They allow the webpage to respond to the event trigger. 
 
 2. When using the `addEventListener()` method, what 2 arguments will you need to provide?
 
+    - The type of even you want to `listen` for like `click` when a user clicks a button, `mouseover` when a user moves their mouse over a button
+    - `Event handler`: the next argument which is the function that is executed when the first even occurs 
 
 3. Describe the event object. Why is the target within the event object useful?
+
+    - They are parameters with different names that `event handlers` use to provide extra information.
+    - `Target`: this refers to the element on which the event was triggered. It shows you which element triggered the event so if you have a lot of buttons on a page the `target` shows you which button was clicked. 
 
 
 4. What is the difference between event bubbling and event capturing?
 
+    - They are the two main phases of even propagation which is the process of how events are passed through the DOM structure.
+    - `bubbling`: when the event is triggered on a specific element and the message moves back up through the elements so the event travels back up from the target element to the root of the DOM tree. 
+    - `capturing`: when events start at the very top and move down elements to find the element that triggered the event so the event travels from the root of the DOM tree down to the target element that triggered the event. 
+
 ## Things I want to know more about
 
-If you utilize any content directly from the reading sources, be sure to identify what you are quoting, and cite the source.
+- Still not quite sure how server side processing works with forms, like the backend checking database for wrong user input. 
 
 ## Learning Journal
 
@@ -115,3 +140,4 @@ Consider the “learning pyramid as shown in the image below. Do you find that m
 
 ![Learning Pyramid Retention Rates](https://codefellows.github.io/common_curriculum/readings_and_reflections/learning-pyramid.jpg)
 
+ - I mainly learn byt practice by doing, discussion groups, and demonstration. I weigh audio and reading below lectures. I find that I zone out more listening and reading by myself, but lectures feel more interactive. I've always been told that teaching others will help you retain more and I've seen it work for others but haven't seen it work for me or done it enough to really find the value in it. It's a lot harder to teach others when you're in an environment where you are alone for most of the time. 
