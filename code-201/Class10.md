@@ -101,29 +101,43 @@ Bookmark and Review: [Debugging HTML](https://developer.mozilla.org/en-US/docs/L
 
 Statement on why this topic matter as it relates to what I'm studying in this module:
 
+- Bugs or errors in your code are inevitable and knowing how to troubleshoot or use the debugger helps developers identify and fix code efficiently. Efficient debugging also leads to better quality of code and optimize a better performance of a webpage. 
+
 ### What Went Wrong? Troubleshooting JavaScript
 
 1. Name some key differences between a **Syntax Error** and a **Logic Error**.
 
+  - `syntax error`: these are errors in the structure of the code. They are usually wrong punctuation or grammar rules. These prevent the code from running at all. 
+  - `logic error`: these are errors in the logic of the code. They still run but do not produce the expected output. 
+
 
 2. List a few types of errors that you have encountered in past lab assignments and explain how you were able to correct them.
 
+  - I've gotten a few like blank is undefined. It occurs when I didn't understand the logic of the code and did not declare the variable. I've corrected them by using console.log and checking that variable names match. 
+  - I've gotten syntax errors where brackets are missing and I couldn't find where they were missing. I had to input my code into gpt and asked why my code isn't working and it would show me where the missing brackets were. 
+  - In the beginning I always had syntax errors where I was missing the `;` after each line of code and it wouldn't run. Again, gpt was great in helping me locate the errors.
 
 3. How will this topic continue to influence your long term goals?
+
+- It gives me the opportunity to enhance my problem solving skills and knowing how to debug code is valuable for all projects in helping fix errors. And being able to solve issues can help with my confidence in coding. 
 
 ### The JavaScript Debugger
 
 1. How would you describe the JavaScript Debugger tool and how it works to someone just starting out in software development?
 
+  - It helps you examine your JS code by allowing you to pause your code from executing at certain points so you are able to look at the variables, functions, and understand the flow of the code. 
 
 2. Define what a breakpoint is.
 
+  - It is the point in the code where you tell the debugger to stop at to stop the execution of the code. At the breakpoint is where you can look at the code closer and help you understand how it runs at specific points, allowing you to find and fix bugs more effectively. 
 
 3. What is the call stack?
 
+  - It is the section that shows you the code that was already executed to get to the current line of code you are in. It keeps track of functions that are running and when you set `breakpoints`, the call stack can show you the process of how your program has performed at that point. 
+
 ## Things I want to know more about
 
-If you utilize any content directly from the reading sources, be sure to identify what you are quoting, and cite the source.
+- Is there one specific place where you can debug all three HTML, CSS, and JS. I see in the console that it is helpful for CSS, but can you use that for JS and HTML too? 
 
 ## Career 10 - Partner Power Hour: Report 2
 
@@ -135,14 +149,25 @@ If you utilize any content directly from the reading sources, be sure to identif
 
 [Dealing with Workplace Ambiguity - Amanda Iverson](https://www.youtube.com/watch?v=mndjhcnChGI)
 
+`CSS 101: Transitions & Animations - Brian Nations`
+
 1. Share one or two ways the speaker’s information will change your approach to your career transition.
+
+  - There wasn't really anything because it was a workshop for CSS animations, but he did say at the end to conform to company style and keep animations as simple as possible, which are both good tips to keep in mind. It's kind of like the whole following the company's vision or goals competency. 
 
 2. List a few key take-aways from this presentation.
 
+  - Check out the website codepen. It's good for practicing CSS
+  - Sometimes simple animations can be done in CSS because CSS is already loaded in but JS can be slow because it still has to run
+  - CSS3 allows animation in CSS without JS
+
 3. Share a screenshot of your LinkedIn connection request, including a nicely worded note, sent to the speaker or someone else at their company.
+![Screenshot of LinkedIn message](img/brian-nations.png)
 
 ## Learning Journal 
 
 Write a brief reflection on your learning today, or use the prompt below to get started.
 
 Read this [short article](https://asana.com/resources/impostor-syndrome) on Imposter Syndrome. On a scale from 1 (least) to 10 (most), to what extent do you experience these feelings? Have you always felt the way you do now? If you have successfully lowered the number you’d use to rate your Imposter Syndrome, how have you done so?
+
+- Right now I am at a 1. I haven't experienced this often and I think I've always felt this way. I think the reason it is low is because I celebrate the wins and don't focus on the failures a lot. I also kind of recognize, for example in jobs, like this is just a job, I really do not need to be doing so much and just do my own responsibilities. There is no need to be a perfectionist or overachiever if you're not compensated for it. 
