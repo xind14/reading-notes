@@ -57,31 +57,110 @@ Bookmark and Review: [The Past, Present, and Future of Local Storage for Web App
 
 Statement on why this topic matter as it relates to what I'm studying in this module:
 
+Local Storage offers a way to store and retrieve data without relying solely on server-side technologies so it can create a seamless use experience by allowing faster reload.
+
 ### Local Storage and How to Use it on Websites
 
 1. Why would a developer use local storage for a web application?
 
+- HTTP is stateless meaning that when you use an application and close it, it will be reset on the next open. Local storage maintains the application's state even after the user closes and reopens the application. So it's useful when developers don't want to force users to sign up for accounts to maintain their application preferences. Local storage allows developers to store data on the user's device, ensuring a seamless user experience across sessions.
+
 
 2. What information should not be stored in local storage?
 
+- Sensitive or personally identifiable information should not be stored in local storage and should be in server-side to prevent unauthorized access.
 
 3. Local storage can store what type of data? How would you convert it to that type before storing?
 
+- It stores only strings. If you want to store complex data types like objects or arrays, you need to convert them to strings before storing and parse them back into their original data types when retrieving them. Use `JSON.stringify()` method to convert objects or arrays to JSON strings before storing them in local storage. To convert the stored JSON string back to the original object or array, `the JSON.parse()` method is used.
 
 ## Things I want to know more about
 
-
-If you utilize any content directly from the reading sources, be sure to identify what you are quoting, and cite the source.
-
+I don't know if this is outside of our scope and more for the OPS people but do we have to take into consideration of the people who can exploit local storage data? 
 
 ## Career 13 - Stage Fright
 
 > Here are two articles that will help you understand the science behind the fear and approaches to take when feeling anxious about presenting:
 
 - [Conquering Stage Fright](https://adaa.org/understanding-anxiety/social-anxiety-disorder/treatment/conquering-stage-fright)
+
+- Try these 10 tips to reduce your stage fright:
+
+1. Shift the focus from yourself and your fear to your true purpose—contributing something of value to your audience.
+2. Stop scaring yourself with thoughts about what might go wrong. Instead, focus your attention on thoughts and images that are calming and reassuring.
+3. Refuse to think thoughts that create self-doubt and low confidence.
+4. Practice ways to calm and relax your mind and body, such as deep breathing, relaxation exercises, yoga, and meditation.
+5. Exercise, eat well, and practice other healthful lifestyle habits. Try to limit caffeine, sugar, and alcohol as much as possible.
+6. Visualize your success: Always focus on your strength and ability to handle challenging situations.
+7. Prepare your material in advance and read it aloud to hear your voice.
+8. Make connections with your audience: Smile and greet people, thinking of them as friends rather than enemies.
+9. Stand or sit in a self-assured, confident posture. Remain warm and open and make eye contact.
+10. Give up trying to be perfect and know that it is OK to make mistakes. Be natural, be yourself.
+
 - [The Science Behind Public Speaking](https://www.scienceofpeople.com/public-speaking-tips/)
 
+1. **Use Charismatic Verbal Tactics:**
+   - Incorporate metaphors, similes, and analogies to convey ideas effectively.
+   - Organize your speech into 3-part lists for easy understanding and retention.
+   - Use rhetorical questions to engage the audience mentally.
+
+2. **Warm-Up Right:**
+   - Develop a pre-performance ritual to beat performance anxiety before speaking.
+
+3. **Use the Sparkline Structure:**
+   - Start by explaining the current situation or problem ("what is").
+   - Present the desired future state or solution ("what could be").
+
+4. **Avoid Caveats and Apologies:**
+   - Avoid apologizing or adding qualifiers to your speech.
+   - Controversial speeches can evoke emotions and engage the audience effectively.
+
+5. **Master Nonverbal Behavior:**
+   - Be mindful of body language cues to appear confident and engaged.
+   - Avoid self-touch gestures like wringing hands, touching face, or biting lips.
+
+6. **Channel Your Fear:**
+   - Channel nervous energy into passion for the topic.
+   - Reframe nervousness as excitement.
+
+7. **Work the Stage:**
+   - Purposefully move instead of pacing to engage the audience effectively.
+
+8. **Master Stage Presence:**
+   - Learn key aspects of public speaking, including body language, voice modulation, and hand gestures.
+
+9. **Include the Audience:**
+   - Use inclusive language and collaborative words to involve the audience.
+   - Conduct activities, Q/A sessions, or call-outs to engage the audience.
+
+10. **Move People Emotionally:**
+    - Use emotions like passion, vulnerability, awe, regret, excitement, and fear to spice up your speech.
+    - Encourage audience participation before the end of the speech to prepare for a standing ovation.
+
+11. **Solve a Problem:**
+    - Frame your speech around a recognized problem and offer solutions.
+    - Illustrate points with stories to make them relatable and memorable.
+
+12. **Utilize Stories:**
+    - Use stories to demonstrate problems and solutions effectively.
+
+13. **Use an App:**
+    - Leverage technology and apps to enhance your public speaking skills.
+
+14. **Rehearse Thoroughly:**
+    - Rehearse in phases, focusing on content, movements, and full dress rehearsal.
+
+15. **Adopt a Laughing Mindset:**
+    - Create an inside joke or act out aspects of your stories.
+    - Smile and use expressions to engage the audience and inspire laughter.
+
+16. **Learn from the Best:**
+    - Watch and analyze speeches by talented public speakers to gain inspiration and insights.
+
 1. Write about two things that you will implement to improve your anxiety when giving a presentation.
+
+- I will prepare my material in advance and practice out loud but I should also realized that too much practice can still be harmful and give up trying to be perfect and know that what I have is enough and that it is ok to make mistakes.
+
 
 ## Learning Journal
 
