@@ -140,10 +140,10 @@ CSS animations, transitions, and transforms can enhance the user experience on w
 3. What impact do teams that operate with a high degree of psychological safety have on their company and the team members?
 
 - They have a positive impact by increasing the following:
-        - `Enhanced Collaboration`: Team members collaborate more effectively towards a common goal and share diverse ideas
-        - `Increased Innovation`: Team members feel comfortable suggesting ideas without fear of judgement, fostering a culture of continuous improvement.
-        - `Higher Productivity`: When team members are emotionally comfortable and can communicate freely, they are more engaged and motivated, leading to increased productivity and efficiency in completing tasks and projects.
-        - `Employee Health`: Safer teams mean lower stress levels and higher job satisfaction. They are more likely to stay with the company, reducing turnover rates and preserving institutional knowledge.
+    - `Enhanced Collaboration`: Team members collaborate more effectively towards a common goal and share diverse ideas
+    - `Increased Innovation`: Team members feel comfortable suggesting ideas without fear of judgement, fostering a culture of continuous improvement.
+    - `Higher Productivity`: When team members are emotionally comfortable and can communicate freely, they are more engaged and motivated, leading to increased productivity and efficiency in completing tasks and projects.
+    - `Employee Health`: Safer teams mean lower stress levels and higher job satisfaction. They are more likely to stay with the company, reducing turnover rates and preserving institutional knowledge.
    
 
 
