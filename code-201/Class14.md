@@ -88,36 +88,67 @@ Bookmark and Review: [Pure CSS Bounce Animation](http://codepen.io/dp_lewis/pen/
 
 Statement on why this topic matter as it relates to what I'm studying in this module:
 
+CSS animations, transitions, and transforms can enhance the user experience on websites by adding visually appealing and interactive elements. And can create visually appealing effects without relying on JavaScript or other scripting languages.
+
 ### CSS Transforms
 
 1. What does a CSS transform allow the developer to do to an element?
 
+- It can be used to change the appearance and position of an element in a 2D or 3D space. You can do transformations like rotate, scale, translate without changing document flow. 
 
 2. Provide an example of a transform and how you could see that being used on a website.
+
+- You can use 2D scaling and it might be on websites where you hover over something and it scales the image to emphasize and image.
 
 ### CSS Transitions & Animations
 
 1. What does a CSS transition allow the developer to do to an element?
 
+- Change the appearance and behavior of an element whenever a state change occurs, such as when it is hovered over, focused on, active, or targeted. It can change the element's style over a specified duration and with a defined timing function. There are four transition related properties in total, including `transition-property`, `transition-duration`, `transition-timing-function`, and `transition-delay`. 
 
 2. How does a CSS animation differ from a CSS transition?
+
+- Animations allow for more complex movements. Transitions have a limited start and end state but animations can have multiple keyframes or points where elements can change. 
 
 ### 8 simple CSS3 transitions that will wow your users
 
 1. What are some benefits to using CSS transitions on websites?
 
+ - You can create smooth and visually appealing animations
+ - Increases interactivity by adding them to buttons or menus to do things like hover or click provides immediate visual feedback
+ - Compared to JS it leads to better loading time
+ - They are supported across various devices.
 
 2. How this topic fit in with your long-term goals?
+
+- Since I'm starting to get interested in graphic design or user experience design aspect of programming, CSS transitions can help make interactive and visually appealing sites and a general more user-friendly interface.
 
 ### What Google Learned From Its Quest to Build the Perfect Team
 
 1. What are three key factors that contribute to psychologically safe teams?
 
+- `Equal Participation`: every member has an opportunity to speak and be heard. Conversational turn-taking ensures that all voices are valued and respected.
+- `Average Social Sensitivity`: teams with high social sensitivity can intuitively understand and respond to their colleagues' emotions, fostering empathy and trust within the team.
+- `Shared Norms and Emotional Conversations`: teams with established norms for open communication and emotional conversations create an environment where members feel safe to express their thoughts, concerns, and feelings without fear of judgment.
+
 
 2. Evaluate, with details, a previous professional setting (or team) you were in with regards to psychological safety.
 
+- In my previous job, I ensured people in my team had equal participation by holding round table meetings and a reminder at the beginning that they can say whatever they want. However, how our team functioned within the overall company was not great because the people in charge of use did not provide a psychologically safe environment. Our productivity was low because we all agreed the job was just a paycheck because the bosses wouldn't listen to our concerns. We did bond over how the bosses were treating us so that opened up to more emotional conversations which made work not feel like work sometimes. 
+
 
 3. What impact do teams that operate with a high degree of psychological safety have on their company and the team members?
+
+- They have a positive impact by increasing the following:
+        - `Enhanced Collaboration`: Team members collaborate more effectively towards a common goal and share diverse ideas
+        - `Increased Innovation`: Team members feel comfortable suggesting ideas without fear of judgement, fostering a culture of continuous improvement.
+        - `Higher Productivity`: When team members are emotionally comfortable and can communicate freely, they are more engaged and motivated, leading to increased productivity and efficiency in completing tasks and projects.
+        - `Employee Health`: Safer teams mean lower stress levels and higher job satisfaction. They are more likely to stay with the company, reducing turnover rates and preserving institutional knowledge.
+   
+
+
+
+
 
 ## Things I want to know more about
 
