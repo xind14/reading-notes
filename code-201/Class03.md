@@ -156,7 +156,7 @@ text.charAt(0)= starts at letter 0
 
             }
 
-        Inclass demo 
+        In class demo 
         }
 
         to add guess="55" (turn into string) before if or remove = or add break at the end
@@ -347,9 +347,11 @@ Statement on why this topic matter as it relates to what I'm studying in this mo
 ### Learn CSS
 
 1. Describe the CSS properties of `margin` and `padding` as characters in a story. What is their role in a story titled: “The Box Model”?
+
     - Marg and Paddy both work together to protect the content within their space. Paddy is the closest to content and always embraced things with his padding. Marg is very protective and wraps Paddy and content inside from others like Marg. She just creates extra spaces and walls so others don't intrude. 
 
 2. List and describe the four parts of an HTML elements box as referred to by the `box model`.
+
     - In order from the inside to the outside of the box:
     1. `Content Box`: the place when your content is written
     2. `Padding Box`: the white space around the contents box and it gives extra space between the content and border. 
@@ -359,6 +361,7 @@ Statement on why this topic matter as it relates to what I'm studying in this mo
 ### Learn JS
 
 1. What `data types` can you store inside of an `Array`?
+
     - An `array` is a way to store a list of items inside a variable. You use square brackets `[ ]` and list items inside with quotes if they are `string` separated by a comma. You can store many types of data like `strings, numbers, objects etc`
         - `const trees = ["oak", "maple", "fir"];`
         - `const numbers = [1, 2, 3];`
@@ -367,12 +370,13 @@ Statement on why this topic matter as it relates to what I'm studying in this mo
 
         `const people = [['pete', 32, 'librarian', null], ['Smith', 40, 'accountant', 'fishing:hiking:rock_climbing'], ['bill', null, 'artist', null]];`
     
-    - I believe this should be a valid JS array because it's a `multidimentionsal array` with data of three people. You can access values stored inside other arrays by combining two sets of square brackets together. For example:
+    - I believe this should be a valid JS array because it's a `multidimensional array` with data of three people. You can access values stored inside other arrays by combining two sets of square brackets together. For example:
 
             people[0][0]; the first bracket would access the first inner array which is pete's information. The second bracket would access the first value of that inner array which would be the name pete
 
 
 3. List five shorthand operators for assignment in javascript and describe what they do.
+
     - `Assignment`: `=` assigns the value on right to a variable on the left. For example: `let x = 10;`
     - `Addition Assignment`: `+=` adds the value on the right to the variable on the left and assigns result back to variable on the left. For example: `let num=2; num += 1` `num` would now be 3
     - `Subtraction Assignment`: `-=` subtracts the value on the right to the variable on the left and assigns result back to variable on the left. For example: `let num=2; num -= 1` `num` would now be 1
@@ -394,9 +398,11 @@ Statement on why this topic matter as it relates to what I'm studying in this mo
     - `b` is a string and when `+` is used with a number it will turn the number into a string so the final result would be the string `'10dog'`
 
 5. Describe a real world example of when a conditional statement should be used in a JavaScript program.
+
     - In user authentication, conditional statements would be able to check the users input of user name and password and compare it to what is saved in the records. If they match, then a person can log in, but if it doesn't match you can make it display an error message or ask the user to try again.
 
 6. Give an example of when a `Loop` is useful in JavaScript.
+
     - Like the example above a loop is useful in asking a user for multiple inputs until they enter a valid or correct answer. Or do something simple like print a certain amount of something.
 
 ## Things I want to know more about
@@ -410,12 +416,13 @@ Read: [How many jobs are found through networking really?](https://www.payscale.
 1. Arrange a 1:1 informational meeting with someone already in your network. 
 
 2. Submit a discussion with a short summary of:
+
     - who you met with
     - how you are connected to them
     - what you learned about that person and their work
     - and how you can help them.
 
-    - Met with Johnny Jones. He is a senior tech program manager for the security side of Microsoft and a security operations engineer before that. He manages teams that are in charge of making sure systems are protected against malware and viruses etc. I met him through an acting class two years ago. I asked him what the most challenging aspect of his job was since moving up to a manager position. He said the most challenging thing about being a manager are the interpersonal relationships and dynamics. He's been a manager in 3 different companies so far and that is always the hardest part. He said that the technology is always a relatively simple thing, but when you start to deal with people’s feelings and such it makes everything harder. He excels at process creation/management. Currently, he's been promoted several times within the company in order to have a larger impact to the entire organization because he's good at seeing where things can improve especially when others don’t see how they can be improved. I asked him specifically the question "How can someone like me, who will go into a junior developer role, be able to help you and what you do in the future?" He said the best way a jr developer could contribute is to ensure that I work to understand my scope of work and how it contributes to the organization. Also be very curious, because he finds that a lot of jr developers get scared to get out there and coordinate with others. He said if I can understand my work and how it contributes that’ll help me make the informed decisions in how I code.
+ - Met with Johnny Jones. He is a senior tech program manager for the security side of Microsoft and a security operations engineer before that. He manages teams that are in charge of making sure systems are protected against malware and viruses etc. I met him through an acting class two years ago. I asked him what the most challenging aspect of his job was since moving up to a manager position. He said the most challenging thing about being a manager are the interpersonal relationships and dynamics. He's been a manager in 3 different companies so far and that is always the hardest part. He said that the technology is always a relatively simple thing, but when you start to deal with people’s feelings and such it makes everything harder. He excels at process creation/management. Currently, he's been promoted several times within the company in order to have a larger impact to the entire organization because he's good at seeing where things can improve especially when others don’t see how they can be improved. I asked him specifically the question "How can someone like me, who will go into a junior developer role, be able to help you and what you do in the future?" He said the best way a jr developer could contribute is to ensure that I work to understand my scope of work and how it contributes to the organization. Also be very curious, because he finds that a lot of jr developers get scared to get out there and coordinate with others. He said if I can understand my work and how it contributes that’ll help me make the informed decisions in how I code.
 
 ## Learning Journal
 

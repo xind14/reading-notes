@@ -18,7 +18,7 @@ The general layout of my notes will be:
   
   - A `Reading` section with links to the resources for the reading assignments, additional responses to the questions of the assignment, and a things I would like to know more about section
 
-  - A `Career` section with the assignment instructions
+  - A `Career` section with the assignment instructions and/or a `Power Hour` section
 
   - A  `Learning Journal` reflection entry
 
@@ -49,6 +49,8 @@ In this class we were introduced to HTML, CSS, JavaScript, and GIT
 
 
 ## Code 201 - Foundations of Software Development 
+
+In This Class we went more in depth and started learning about functions, objects, constructors.
 
 ### Table of Contents
 

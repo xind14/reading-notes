@@ -4,11 +4,13 @@
 
 ## Setup
 
+```
 Build out an “About Me” webpage that quizzes the user on fun facts gives the user some basic information about who you are and where you came from.
 
 - **User stories** are a device commonly used in software development to identify what the functionality and design of a product should be by considering the interests and motivations of people with varied multiple points of view. They are presented in the manner of `As a __, I want __, so that____`
 
 - This layout allows a client to communicate to a team what type of behavior they are looking for and allow the developer team to think up a solution that best fits the the clients need. The development team will then create sub-bullets called **Feature Tasks** which are individual tasks that must be completed by the developer to accomplish the user story. Once all of the feature tasks for an individual user story is completed, so is the story.
+```
 
 1. As a user, I would like to learn about the site owner so I can get to know them better...
 
@@ -56,6 +58,7 @@ A style guide is a series of standards and practices that must be followed in or
 ## Written Class Notes
 
 - `Agile`: working on a project one small part at a time and improving it as you go along instead of all of it at the same time.
+
 - User stories breakout room practice:
 
   - As a user I want an intro paragraph so I know your background
@@ -372,7 +375,7 @@ Statement on why this topic matter as it relates to what I'm studying in this mo
 
 ### Learn CSS
 
-1.  What are ways we can apply CSS to our HTML?
+1. What are ways we can apply CSS to our HTML?
 
     - `Externally`: A separate file with a CSS extension needs to be created like `style.css` and CSS code is written in that file separate from the HTML file. This is the preferred method as it prevents messy and cluttered code.
 
@@ -382,28 +385,29 @@ Statement on why this topic matter as it relates to what I'm studying in this mo
 
     - `Inline`: When the `<style>` attribute is used to directly apply CSS inside a single HTML element. For example: `<h1 style="color: orange;">`. It is best to avoid this method.
 
-2.  Why should we avoid using inline styles?
+2. Why should we avoid using inline styles?
 
     - It's difficult and not efficient to edit each individual element and it makes the HTML document messy to read.
 
-3.  Review the block of code below and answer the following questions:
+3. Review the block of code below and answer the following questions:
 
-            ```
-            h2 {
-                color: black;
-                padding: 5px;
-              }
-              ```
+```
+h2 {
+      color: black;
+      padding: 5px;
+   }
+   ```
 
-    - What is representing the selector?
+   - What is representing the selector?
 
       - `h2`
 
-    - Which components are the CSS declarations?
+   - Which components are the CSS declarations?
 
       - The content inside the curly brackets `{ }` which would be `color:black;` and `padding: 5px;`
 
-    - Which components are considered properties?
+   - Which components are considered properties?
+
       - Properties are the different aspects of the element's style you want to change so `color` and `padding`
 
 ### Learn JS
@@ -441,6 +445,7 @@ Statement on why this topic matter as it relates to what I'm studying in this mo
    - `>` means greater than and will return true if left is greater than right.
 
 7. What is the difference between the logical operator `&&` and `||`?
+
    - As mentioned above: `Logical AND "&&"`will return true if both conditions are true. `Logical OR ||` will return true if at least one condition is true.
 
 ## Things I want to know more about

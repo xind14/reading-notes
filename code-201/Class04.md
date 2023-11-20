@@ -59,6 +59,7 @@
    - In the case of an odd number of students, one group will have three members and you should rotate through three roles: Driver, Navigator, Observer. Each person should take on each role one time. You will need to be even more mindful about watching the clock to ensure that equal time is devoted to all three projects.
 
 5. Submission Instructions
+
    - In the text box on this assignment, enter the URLs from the repos that you worked on in this format:
      - I was Navigator on: link-to-the-last-PR-your-partner-made
      - I was Driver on: link-to-the-last-PR-you-made-as-Navigator
@@ -267,12 +268,13 @@ Statement on why this topic matter as it relates to what I'm studying in this mo
    - `Isolation`: it allows the element to be in its own "layer" so it doesn't mess with the layout of other elements.
 
 5. What is a key difference between fixed positioning and absolute positioning?
+
    - `Fixed Positioning`: the element is positioned relative to the view of the browser window, it doesn't move and stays fixed where it is when a user scrolls. Fixed is useful for elements like a navigation bar that you want always at the top.
    - `Absolute Positioning`: the element is positioned to the nearest parent element, it moves with the content when the user scrolls.
 
 ### Learn JS
 
-1.  Describe the difference between a function declaration and a function invocation.
+1. Describe the difference between a function declaration and a function invocation.
 
     - `Function`: something in JS that allows you to store code that does one task and you can call the code when needed instead of typing out the same code over and over.
     - `Declaration`: when you define a function in JS. Use `function` follow by name of function, parameters in parentheses, and your code in curly brackets. For example:
@@ -283,13 +285,15 @@ Statement on why this topic matter as it relates to what I'm studying in this mo
 
     - `Invoking`: this is the process of calling or executing the function. You use the function name and the an argument in parenthesis. `name (argument);`
 
-2.  What is the difference between a parameter and an argument?
+2. What is the difference between a parameter and an argument?
+
     - `Parameter`: it's the variable listed in the function declaration, whereas an
     - `Argument`: is the actual variable the function uses when invoked.
 
 ### Miscellaneous
 
 1. Pick 2 benefits to pair programming and reflect on how these benefits could help you on your coding journey.
+
    - Greater Efficiency: I need to learn this because I take too much time now and it's bleeding into other aspects of my life. If I can learn to be efficient, I wouldn't need to spend so much time debugging as well. I think working with someone else to help each other detect mistakes could help me see how others work efficiently and I might learn something new at how to look for bugs.
    - Social skills: I like the long-term career impacts the article listed. I want to work on a skill that makes me seem like I work well with others. I feel like I've lost some of that skill from being at home all the time now.
 

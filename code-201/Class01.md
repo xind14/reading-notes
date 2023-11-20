@@ -237,6 +237,7 @@ Statement on why this topic matter as it relates to what I'm studying in this mo
    - `Number`: use any number with no quotes `10`
 
 5. What is a `Variable` and why are they important in JavaScript?
+
    - It's a container that stores value after you assign something to it and it's important because you can store and change data to make a website dynamic.
 
 ### Introduction to HTML
@@ -272,6 +273,7 @@ Statement on why this topic matter as it relates to what I'm studying in this mo
    - It gives more data about a webpage that allows search engines to understand the content more, and therefore affecting ranks in visibility. The more it understands the content the more it can determine relevancy and push the webpage higher.
 
 6. How is the `<meta>` HTML tag used when specifying metadata?
+
    - It provides additional info like character encoding, which helps display proper characters in the human language.
 
 ### Miscellaneous
@@ -298,6 +300,7 @@ Statement on why this topic matter as it relates to what I'm studying in this mo
    - Validate user input like producing error messages when trying to enter a password
 
 6. How can you add JavaScript to an HTML document?
+
    - Externally: create a separate JS file `script.js` and use `<script>` element to link it.
    - Internally: use `<script>` element and write JS in HTML file
 

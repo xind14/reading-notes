@@ -15,7 +15,7 @@
 5. The header row and footer row are each created in their own stand-alone function
     - NOTE: Please use a header cell for both the header row ( containing store hours ), and the footer row ( hourly and grand totals across all stores ).
 
-6. Developer Style Guide: 
+6. Developer Style Guide:
     - Good use of a constructor function; style and syntax are correctly implemented
 
     - Duplicate code has been removed and DRY principles are evident
@@ -307,19 +307,20 @@ Methods: verbs or "Can"
 
 
 Constructors In Class Demo
-Object={}="POJO" Plain old JS Object like john={hair:false, ....}
 
-(Object name is capitalized so developers can identify it is being used as a constructor)
-function Car(1,2,3,4){
-this.engine=1
-this.color=2
-this.interior=3
-this.power=4
-}
-let johnsCar=newCar (1.1,2.1,3.1,4.1)
-let cathyCar=newCar(1.2,2.2,3.2,4.2)
+    Object={}="POJO" Plain old JS Object like john={hair:false, ....}
 
-HTML
+    (Object name is capitalized so developers can identify it is being used as a constructor)
+    function Car(1,2,3,4){
+    this.engine=1
+    this.color=2
+    this.interior=3
+    this.power=4
+    }
+    let johnsCar=newCar (1.1,2.1,3.1,4.1)
+    let cathyCar=newCar(1.2,2.2,3.2,4.2)
+
+    HTML
 
     <!DOCTYPE html>
     <html>
@@ -462,105 +463,105 @@ HTML
     // How do I do the totals across the <tfoot> ???
 
 
-HTML Table <table>
-header <thead>
-header cells <th>
-body <tbody>
-row <tr> (table row)
-cell <td>
-footer <tfoot>
+    HTML Table <table>
+    header <thead>
+    header cells <th>
+    body <tbody>
+    row <tr> (table row)
+    cell <td>
+    footer <tfoot>
 
-<table>
-<thead>
-<tr>
-<th>name
-<th>age
-<tbody>
-<tr>
-<td>John
+    <table>
+    <thead>
+    <tr>
+    <th>name
+    <th>age
+    <tbody>
+    <tr>
+    <td>John
 
-<tr>
-<td>cathy
-<tfoot>
-<tr>
-<td> all of us
-<td>sum of age
-
-
-
-header {
-  background: #111;
-  color: salmon;
-  text-align: center;
-}
-
-header h1 {
-  font-size: 40px;
-  font-weight: bold;
-  padding: .5em 0;
-}
-
-header nav {
-  background: salmon;
-  padding: .25em;
-  text-align: left;
-}
-
-header nav li {
-  display:inline-block;
-}
-
-header nav li a {
-  color: #111;
-  text-decoration: none;
-}
-
-main {
-  margin: 2em;
-}
-
-.hero img{
-  max-width: 100%;
-}
-
-.location {
-  margin: 1em 0;
-}
-
-h2 {
-  font-size: 1.5em;
-  font-weight: bold;
-  margin-bottom: .5em;
-}
-
-section li {
-  margin-left: 1.5em;
-}
-
-footer {
-  background: #ccc;
-  padding: 1em;
-  text-align: center;
-}
+    <tr>
+    <td>cathy
+    <tfoot>
+    <tr>
+    <td> all of us
+    <td>sum of age
 
 
-table * {
-  border: 1px solid #111;
-  padding: .5em;
-}
 
-table thead {
-  background: silver;
-}
+    header {
+      background: #111;
+      color: salmon;
+      text-align: center;
+    }
 
-table tbody td {
-  background: #111;
-  color: ivory;
-}
+    header h1 {
+      font-size: 40px;
+      font-weight: bold;
+      padding: .5em 0;
+    }
 
-table tfoot {
-  background: greenyellow;
-}
+    header nav {
+      background: salmon;
+      padding: .25em;
+      text-align: left;
+    }
+
+    header nav li {
+      display:inline-block;
+    }
+
+    header nav li a {
+      color: #111;
+      text-decoration: none;
+    }
+
+    main {
+      margin: 2em;
+    }
+
+    .hero img{
+      max-width: 100%;
+    }
+
+    .location {
+      margin: 1em 0;
+    }
+
+    h2 {
+      font-size: 1.5em;
+      font-weight: bold;
+      margin-bottom: .5em;
+    }
+
+    section li {
+      margin-left: 1.5em;
+    }
+
+    footer {
+      background: #ccc;
+      padding: 1em;
+      text-align: center;
+    }
+
+
+    table * {
+      border: 1px solid #111;
+      padding: .5em;
+    }
+
+    table thead {
+      background: silver;
+    }
+
+    table tbody td {
+      background: #111;
+      color: ivory;
+    }
+
+    table tfoot {
+      background: greenyellow;
+    }
 
 
 ### Describe and Define
@@ -606,7 +607,7 @@ Bookmark and Review: [HTML Table Advanced Features and Accessibility](https://de
 
 Statement on why this topic matter as it relates to what I'm studying in this module:
 
-- Domain modeling analyzes a problem domain and creates a structure model that developers can work with. Tables are important to learn because they display data in a structural way. Constructors and prototypes are important concepts in JS that allow the creation of reusable code. 
+- Domain modeling analyzes a problem domain and creates a structure model that developers can work with. Tables are important to learn because they display data in a structural way. Constructors and prototypes are important concepts in JS that allow the creation of reusable code.
 
 ### Domain Modeling
 
@@ -616,7 +617,7 @@ Statement on why this topic matter as it relates to what I'm studying in this mo
 ### HTML Table Basics
 
 1. Why should tables not be used for page layouts?
-    - They are not semantic and shouldn't be used to structure a visual layout. That is what CSS is for. Tables for layouts can decrease accessibility because it can confuse screen readers, they get too complicated and hard to maintain because changes require modification to multiple cells and rows, and tables do not adapt to different screen sizes. 
+    - They are not semantic and shouldn't be used to structure a visual layout. That is what CSS is for. Tables for layouts can decrease accessibility because it can confuse screen readers, they get too complicated and hard to maintain because changes require modification to multiple cells and rows, and tables do not adapt to different screen sizes.
 
 2. List and describe 3 different semantic HTML elements used in an HTML `<table>`.
     - `th`: the element that defines a header in a table for columns or rows. They are bold and centered by default
@@ -628,26 +629,26 @@ Statement on why this topic matter as it relates to what I'm studying in this mo
 1. What is a constructor and what are some advantages to using it?
     - A function that is called using the `key` keyword and it creates a new object, binds `this` to the new object so you can refer back to it. It create objects with shared methods and properties.
     - Advantages:
-        - Multiple objects can be created using the same constructor so you don't need to write the same code again. 
-        - They help code organization by grouping relevant data and functions together. 
-        - It makes sure your objects start with the right values 
+        - Multiple objects can be created using the same constructor so you don't need to write the same code again.
+        - They help code organization by grouping relevant data and functions together.
+        - It makes sure your objects start with the right values
 
 2. How does the term `this` differ when used in an object literal versus when used in a constructor?
     - `Object literal this`: when used in the objects methods, `this` is referring to the object itself. It is saying `this object` or `the object you are working with right now`
-    - `Constructor this`: in a constructor function `this` refers to the different kinds of objects the constructor is making. 
+    - `Constructor this`: in a constructor function `this` refers to the different kinds of objects the constructor is making.
 
 ### Object Prototypes Using A Constructor
 
 1. Explain prototypes and inheritance via an analogy from your previous work experience.
     - NOTE: This is a very common front end developer interview question
-    - I did have a receptionist training manual made, which would be the prototype. It had all the info and responsibilities a receptionist needed to do and how to do those steps. Inheritance would be a new hire using that manual to learn. They inherit the tasks in the manual. 
+    - I did have a receptionist training manual made, which would be the prototype. It had all the info and responsibilities a receptionist needed to do and how to do those steps. Inheritance would be a new hire using that manual to learn. They inherit the tasks in the manual.
 
 
     - `Prototype`: Objects in JS have a prototype, which is an object from which it inherits properties. Prototype inheritance allows objects to inherit properties and methods from other objects, creating a hierarchy of objects. Methods and properties that are meant to be shared are added to the constructor function's `prototype` property.
 
 ## Things I want to know more about
 
-- About the bookmark and review reading, I just want to know how to start keeping accessibility in mind every time I write code, so it isn't an after thought and I need to go back to revise every time. 
+- About the bookmark and review reading, I just want to know how to start keeping accessibility in mind every time I write code, so it isn't an after thought and I need to go back to revise every time.
 
 ## Learning Journal
 
@@ -655,4 +656,4 @@ Write a brief reflection on your learning today, or use the prompt below to get 
 
 Motivation and goals are an important part of adult learning; so is adapting to and gaining insight from things you did not anticipate. What would you say is the most unexpected part of this experience, and how have you learned from it?
 
-- The most unexpected part so far is that I was not prepared for the intensity of it. I knew though a few months to learn coding was already too short because there is just so much to learn, and I knew it was an intensive bootcamp, but I still was not ready for it. There is just so much homework that I don't have time for myself sometimes which is fine. I'm also surprised I can keep up with the pace so far. I'm liking the new concepts learned in week two so far. 
+- The most unexpected part so far is that I was not prepared for the intensity of it. I knew though a few months to learn coding was already too short because there is just so much to learn, and I knew it was an intensive bootcamp, but I still was not ready for it. There is just so much homework that I don't have time for myself sometimes which is fine. I'm also surprised I can keep up with the pace so far. I'm liking the new concepts learned in week two so far.

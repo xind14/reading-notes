@@ -33,6 +33,7 @@
   - I will need more help on interpreting the english literal and I need to understand the opposite of that first. I'm going to try and find function codes already written and try to interpret that into words to see if it makes more sense for me.
 
 - How long did it take you to complete this assignment? And, before you started, how long did you think it would take you to complete this assignment?
+  
   - It took me 2 hours to do this assignment. I thought it was going to take shorter, but it was longer because I couldn't see my own mistakes I was writing out for the variables I was assigning.
 
 ### 5b
@@ -98,7 +99,7 @@ CSS Practice:
 
             CSS
             body {
-               backgroud: #ccc
+               background: #ccc
             }
          div.grandparent {
             border: 1px solid black
@@ -147,7 +148,7 @@ JS Rules - Omitting`{}` and `;` are legit JS code but shouldn't be optional
       Clone it
       Create a branch called question-1
       Do teh work for question 1
-      ACP to quesion-1 branch
+      ACP to question-1 branch
       Go to github make a PR
       Approve and Merge the PR
       On. your machine, switch back to main
@@ -245,6 +246,7 @@ Statement on why this topic matter as it relates to what I'm studying in this mo
    - `font-style`: changes the italics of text
 
 5. Describe two ways you could add spacing around the characters displayed in an `h1` element.
+
    - `letter-spacing`: changes the horizontal spread between characters. It causes characters to spread apart when positive value or brings letters closer when negative value.
    - `word-spacing`: changes the space between words and similar to `letter-spacing` words spread apart when positive value and come closer together when negative.
 
