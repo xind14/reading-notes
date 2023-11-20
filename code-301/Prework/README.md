@@ -33,3 +33,21 @@ Note that the tasks below have a corresponding assignment to submit in your Canv
 
 [Familiarize yourself with the Career Coaching program](https://codefellows.github.io/common_curriculum/career_coaching), and review the [Code 301 Career Coaching Syllabus](https://codefellows.github.io/common_curriculum/career_coaching/301/301-career-coaching-syllabus).
 
+## Finished Prework
+
+1. [Assignment 1](prework/Assignment1.md)
+1. [Assignment 2](prework/Assignment2.md)
+1. [Assignment 3](prework/Assignment3.md)
+1. [Assignment 4](prework/Assignment4.md)
+1. [Assignment 5](prework/Assignment5.md)
+1. [Assignment 6](prework/Assignment6.md)
+1. [Assignment 7](prework/Assignment7.md)
+1. [Assignment 8](prework/Assignment8.md)
+1. [Assignment 9](prework/Assignment9.md)
+1. [Assignment 10](prework/Assignment10.md)
+1. [Assignment 11](prework/Assignment11.md)
+1. [Assignment 12](prework/Assignment12.md)
+1. [Assignment 13](prework/Assignment13.md)
+1. [Assignment 14](prework/Assignment14.md)
+1. [Assignment 15](prework/Assignment15.md)
+1. [Assignment 16](prework/Assignment16.md)

@@ -1,12 +1,10 @@
-# My Notes and Assignments for Code Fellows 201
+# My Notes and Assignments for Code Fellows 301
 
-My future reading rotes for Class 201 created for Class 102 Lab 3, fixed and formatted in 201 prework.
+My future reading rotes for Class 301 created for Class 102 Lab 3, fixed and formatted in 301 prework.
 
 ## Prework
 
-1. [Code 201 Prework](https://codefellows.github.io/code-201-guide/curriculum/prework/)
-2. [Reading Instructions](ReadingInstructions.md)
-3. [Prompt-Engineering](prompt-engineering.md)
+1. [Code 301 Prework](https://codefellows.github.io/code-301-guide/curriculum/prework/)
 
 ## Table of Contents
 
