@@ -1,12 +1,248 @@
-# Class 1 -
+# Class 1 - React and Component-Based Architecture
 
-## Lab 1 - 
+## Lab 1 -
 
 ## Setup
 
+By the end of this module, you will create an application that displays images and information of horned animals. This application will allow you to filter the images by number of horns and chose your favorite image.
 
+For this class we will just be focusing on the component structure of the application. You will create a new React application using Vite and fill it with components. Refer to ‘Feature Tasks’ to see exactly which components to build and where to display them.
+
+Resources
+[React Official Documentation](https://legacy.reactjs.org/docs/getting-started.html)
+[Vite Official Documentation](https://vitejs.dev/)
+
+Configuration
+Your repository must include the following config files:
+
+1. README.md - Add the README from our configs folder, but edited by you to include an overview of the project for a new visitor to your repo. Name all collaborators.
+2. .gitignore - provided by Vite.
+3. Create a React application using Vite as demonstrated in class.
+4. Use the command npm create vite@latest.
+5. Create a new repository on GitHub named “Gallery of Horns” WITHOUT a README.md. We will import an “existing” repository with its own README.
+6. Follow the instructions given by GitHub to “push an existing repository from the command line”.
+be sure to select HTTPS or SSH, whichever is relevant for you.
+7. Create a Branch and begin your work. As always, ACP often.
+8. Your App component should render a Header, Footer and Gallery component, each of which is defined in their own files.
+
+9. Your Header component needs to have an <h1> with a title.
+
+10. Your Footer component needs to contain your name as the author.
+
+11. The Gallery component needs to render at least two copies of a component called HornedBeast.
+
+12. The Gallery component needs to pass title, imageUrl, and description into each HornedBeast component. For the purpose of this lab, you can pass whatever title, url and description that you want into each HornedBeast component.
+
+13. The HornedBeast component needs to contain an <h2> that displays the title of the animal, an <img> element with src, alt and title attributes, and a <p> that displays the description.
+    - NOTE: Rendering an image in React is a little tricky. Try to figure out how to do this on your own and we will go over it in the next code review
+
+- Stretch Goal
+
+        - Given the following array, loop over the data to display three HornedBeast components:
+        [{
+            "_id": 1,
+            "image_url": "http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg",
+            "title": "UniWhal",
+            "description": "A unicorn and a narwhal nuzzling their horns",
+            "keyword": "narwhal",
+            "horns": 1
+          },
+
+          {
+            "_id": 2,
+            "image_url": "https://images.unsplash.com/photo-1512636618879-bbe79107e9e3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bd9460ee6d1ddbb6b1ca7be86dfc4590&auto=format&fit=crop&w=1825&q=80",
+            "title": "Rhino Family",
+            "description": "Parent rhino with two babies",
+            "keyword": "rhino",
+            "horns": 2
+          },
+
+          {
+            "_id": 3,
+            "image_url": "https://www.dhresource.com/0x0s/f2-albu-g5-M00-1A-11-rBVaI1hsIIiALxKzAAIHjSU3VkE490.jpg/wholesale-halloween-costume-prop-unicorn.jpg",
+            "title": "Unicorn Head",
+            "description": "Someone wearing a very silly unicorn head mask",
+            "keyword": "unicorn",
+            "horns": 1
+        }]
+
+Submission Instructions
+
+1. Complete your Feature Tasks for the day.
+2. Run your Lighthouse Accessibility report looking for a score of 65 or higher. Make adjustments as needed.
+3. Create a Pull Request (PR) back to the main branch of your repository.
+Submit your assignment as a link to your PR, and a comment describing how much time you spent on the lab.
+
+
+
+## Code Challenge
+
+Overview
+[Read this overview.](https://codefellows.github.io/code-301-guide/curriculum/class-01/challenges/)
+
+Video
+[Watch the video for this class from the demo playlist.](https://www.youtube.com/playlist?list=PLVngfM2hsbi-L6G8qlWd8RyRbuTamHt3k)
+
+Demonstration
+[Look through these sample problems.](https://codefellows.github.io/code-301-guide/curriculum/class-01/challenges/DEMO.html)
+
+Challenges
+
+1. Navigate to the javascript folder within your data-structures-and-algorithms repository.
+2. Create a new branch for this challenge called for-each
+git checkout -b for-each
+3. Retrieve the code challenge from the system
+npm run get-challenge 01
+4. In your terminal, from the javascript folder, run npm test 01 to execute the tests in this file for this challenge.
+5. At this point you will see the failed tests scroll through your terminal window with a brief report of the number of failed tests at the bottom.
+6. If you do not see this, verify your installation of Jest by typing npx jest --version in your terminal. Filename typos can make things break!
+7. Write code to make the tests pass, one at a time. Let the error messages guide you.
+8. Once the test is passing, refactor as needed, then move on to the next challenge.
+9. Note, you can also run npm test (without a challenge number) to run all of the tests for every code challenge file assignment during the course all at once. This can get “noisy”, but it’s an opportunity to get a view of your overall progress
+
+Submission
+When you have completed the entire set of code challenges and all tests pass, create a pull request from your current branch to the main branch and merge it into main.
+
+You will be able to see a test coverage report in GitHub on the Actions tab of your data-structures-and-algorithms repository. It should match what you saw on your terminal in the above steps. Your graders will be looking at this as well.
+
+Submit a link to your pull request.
 
 ## Written Class Notes
+
+
+
+**forEach**
+Array methods - iterate array and run a callback functions (function(event)=call back function we did in 201)
+
+    let arr = [1,2,3,4];
+    let newArray = [];
+
+    function addOne( value, index) {
+      newArray.push( value + 1 );
+    }
+
+    // Old Fashioned way
+    for( let i = 0; i < arr.length; i++ ) {
+      addOne( arr[i], i );
+    }
+
+    // Newer way
+    // .forEach iterates an array. Does not return. Does not modify the original.
+    arr.forEach( addOne );
+
+    // Newer way but inline...
+    arr.forEach( function(value,index) {
+      newArray.push( value + 1  );
+    });
+
+    // Newer way, but with arrows ...
+    arr.forEach( (value,index) => newArray.push( value + 1) );
+
+    // Arrow functions are interesting
+    let f1 = (value, index) => { newArray.push( value + 1 ); };
+
+    // If you only have 1 param, you don't need parens
+    let f2 = value => { newArray.push(value + 1); };
+
+    // If you only have 1 line of code, you don't need braces AND ... that will also be the return value
+    let f3 = value => newArray.push(value+1);
+
+    // Implicitly return
+    let f4 = name = name.toUpperCase();
+
+    // f4("john");  Return would be "JOHN"
+
+
+
+
+Clients and Servers
+Client - wants information, data
+Servers - has the data for the client
+protocol that we use to exchange
+
+Local and Remote
+Local - VScode, terminal, live server, HTML, CSS, JS
+
+WRRC
+Web remote request cycle
+
+server - hw hd sw-when client goes to/homepage send markup
+client ask for homepage sw chrome turns markup to things
+
+
+React
+npm create vite@latest counter
+dont touch index.html and main.jsx (get rid of import .index.css)
+jsx for react component - can import one js to other js
+    - component with HTML CSS JS all inside markup it made
+
+get rid of app.jsx
+
+      import React, {useState} from 'react';
+
+    function App() {
+
+      // count is a "getter"
+      // setCount is a "setter"
+      const [count, setCount] = useState(0);
+
+      function increment() {
+        // Adds 1 to the current 'count' in state
+        setCount( count + 1);
+      }
+
+      function decrement() {
+        setCount( count - 1);
+      }
+
+
+      // When the value of {count} changes, React will automatically
+      // re-render THIS COMPONENT
+      return (
+        <div>
+          <h1>{count}</h1>
+          <button onClick={decrement}> - </button>
+          <button onClick={increment}> + </button>
+        </div>
+      );
+
+    }
+
+    export default App;
+
+
+Import needs export
+
+index requires main.jsx which brings in app from app.jsx, app just has a function to return a markup
+
+
+
+        import React from 'react';
+
+    import Header from './components/Header/Header.jsx';
+    import Family from './components/Family/Family.jsx';
+    import Footer from './components/Footer/Footer.jsx';
+
+    function App() {
+
+      return (
+        //can't return three parent things only one need to put in into something
+        <> //something there that renders nothing
+          <Header title="Code 301" />
+          <Family />
+          <Footer />
+        </>
+      )
+
+    }
+
+    export default App;
+
+components folder with three folders inside folder put file for each Footer.jsx and footer.module.css import the css in jsx and in jsx add className
+
+start at main, delete app.jsx and app.css,
+
+
 
 
 ## Read 1 - Introduction to React and Components
@@ -14,11 +250,12 @@
 ## Resources Link/Pages
 
 **Bookmark and Review**
-[React Tutorial through ‘Passing Data Through Props’](https://react.dev/learn/tutorial-tic-tac-toe)
-[React Docs - Hello world](https://legacy.reactjs.org/docs/hello-world.html)
-[React Docs - Introducing JSX](https://legacy.reactjs.org/docs/introducing-jsx.html)
-[React Docs - Rendering elements](https://legacy.reactjs.org/docs/rendering-elements.html)
-[React Docs - Components and props](https://legacy.reactjs.org/docs/components-and-props.html)
+
+- [React Tutorial through ‘Passing Data Through Props’](https://react.dev/learn/tutorial-tic-tac-toe)
+- [React Docs - Hello world](https://legacy.reactjs.org/docs/hello-world.html)
+- [React Docs - Introducing JSX](https://legacy.reactjs.org/docs/introducing-jsx.html)
+- [React Docs - Rendering elements](https://legacy.reactjs.org/docs/rendering-elements.html)
+- [React Docs - Components and props](https://legacy.reactjs.org/docs/components-and-props.html)
 
 ### Component-Based Architecture
 
@@ -75,8 +312,13 @@ Adding on to what was learned in 201, components are like JavaScript functions. 
 
 - How does React handle the communication of data between sibling components if it's unidirectional?
 
-## Learning Journal
 
 
 ## Career 1 - Identify Your Accountability Partners
+
+
+
+
+
+
 
