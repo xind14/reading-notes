@@ -8,26 +8,26 @@ My future reading rotes for Class 301 created for Class 102 Lab 3, fixed and for
 
 ## Table of Contents
 
-### Module01: Introduction to Web Development
+### Module01: Building the Front End
 
-1. Class01: [Setup Developer Toolbelt](Class01.md)
-2. Class02: [Introduction to Web Development](Class02.md)
-3. Class03: [Lists, The Box Model, and Loops](Class03.md)
-4. Class04: [Links, Layouts, and Functions](Class04.md)
-5. Class05: [Images, Color, Text, and More Work with Functions](Class05.md)
+1. Class01: [React and Component-Based Architecture](Class01.md)
+2. Class02: [State and Props](Class02.md)
+3. Class03: [Passing Functions as Props](Class03.md)
+4. Class04: [React and Forms](Class04.md)
+5. Class05: [ Putting it all together](Class05.md)
 
-### Module02: The DOM, and Domain Modeling with Object Literals
+### Module02: Integrating the Back End
 
-6. Class06: [Domain Modeling, Intro to the DOM, and Object Literal Notation](Class06.md)
-7. Class07: [HTML Tables and JS Constructor Functions](Class07.md)
-8. Class08: [Layout with CSS](Class08.md)
-9. Class09: [Forms and Events](Class09.md)
-10. Class10: [Debugging and Error Handling](Class10.md)
+6. Class06: [Asynchronous Code and Third Party APIs](Class06.md)
+7. Class07: [Express Servers](Class07.md)
+8. Class08: [APIs](Class08.md)
+9. Class09: [Advanced Topics](Class09.md)
+10. Class10: [Persistence](Class10.md)
 
-### Module03: Libraries and Local Storage
+### Module03: Full-Stack Applications
 
-11. Class11: [Audio and Video in HTML; Domain Modeling Revisited](Class11.md)
-12. Class12: [Canvas and ChartJS](Class12.md)
-13. Class13: [Introduction to Persistence with Local Storage](Class13.md)
-14. Class14: [Documentation, Project Selection, & Team Workflow](Class14.md)
-15. Class15: [Course Recap & 301 Preview](Class15.md)
+11. Class11: [MongoDB, Mongoose and Data Modeling](Class11.md)
+12. Class12: [Creating and Deleting Resources](Class12.md)
+13. Class13: [Updating Resources](Class13.md)
+14. Class14: [Diversity, Equity, and Inclusion](Class14.md)
+15. Class15: [Final Project Kick-off](Class15.md)
