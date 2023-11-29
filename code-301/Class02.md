@@ -1,6 +1,6 @@
 # Class 2 - State and Props
 
-## Lab 2 -
+## Lab 2 - React State and Props
 
 ## Setup
 
@@ -11,7 +11,8 @@ In this class, your goal is to use the JSON file provided to display the title, 
 Resources
 [data.json](https://codefellows.github.io/code-301-guide/curriculum/class-02/lab/assets/data.json)
 
-Time Estimate
+**Time Estimate**
+
 For each of the features listed below, make an estimate of the time it will take you to complete the feature, and record your start and finish times for that feature:
 
 Number and name of feature: ________________________________
@@ -107,6 +108,255 @@ Submit a link to your pull request.
 
 ## Written Class Notes
 
+    let numbers = [1, 2, 3, 4, 5];
+
+    // .forEach does not return anything
+    let forEachSquares = numbers.forEach((value, idx) => {
+      let s = value * value;
+      return s;
+    })
+
+
+    // .map returns a new array of the same size as the original array.
+    // That array containsn whatever gets returned;
+    let squares = numbers.map((value, idx) => {
+      // An array of bunnies
+      return "Bunnies";
+
+      // And array of numbers based on the original array
+      // return value * value;
+    });
+
+    console.log(squares);
+
+
+Family Demo
+
+main.jsx
+
+    import React from 'react'
+    import ReactDOM from 'react-dom/client'
+    import App from './App.jsx'
+
+    ReactDOM.createRoot(document.getElementById('root')).render(
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>,
+    )
+
+App.jsx
+
+    import { useState } from 'react'
+
+    import Header from './components/Header.jsx';
+    import Footer from './components/Footer.jsx';
+    import People from './components/People.jsx';
+
+    import people from './assets/family.json'
+
+    import 'bootstrap/dist/css/bootstrap.min.css';
+
+    function App() {
+
+      return (
+        <main>
+          <Header title="Our Family!" members={people.length} />
+          <People list={people} />
+          <Footer content="Copyright 2023: John and the 301's" />
+        </main>
+      )
+
+    }
+
+    export default App;
+
+Header.jsx
+
+    import React from 'react';
+
+    /*
+      props is:
+
+      {
+        title:"Our Family!"
+      }
+
+    */
+
+    function Header(props) {
+
+      return (
+        <header>
+          <h1>{props.title}</h1>
+          <div>We have {props.members} family members for you to meet</div>
+        </header>
+      )
+
+    }
+
+    export default Header;
+
+People.jsx
+
+    import React from 'react';
+
+    import Person from './Person.jsx';
+
+    // Bringing our data from an external source puts THAT source in
+    // control of it, so it can change independently of this component
+    // import people from "../assets/family.json";
+
+    // Declaring a people array in the component is cool but
+    // only this component can show them, and this component is
+    // now a "God Component"
+
+    // let people = [
+    //   {
+    //     name: "John",
+    //     hair: "Black"
+    //   },
+    //   {
+    //     name:"Cathy",
+    //     hair:"Blonde",
+    //   },
+    //   {
+    //     name: "Allie",
+    //     hair: "Dark Brown"
+    //   }
+    // ]
+
+    // When the <Person /> components were hard-coded ...
+    //    <Person name="John" hair="None" />
+    // This component is not scalable
+
+
+    // If we're going to loop over the names, you can, but keep
+    // this rule in mind:
+    // REACT ONLY RENDERS WHAT IS RETURNED from inside a {}!
+
+    function People(props) {
+
+      return (
+        <>
+          {/* <Person name={people[0].name} hair={people[0].hair} />
+          <Person name={people[1].name} hair={people[1].hair} />
+          <Person name={people[2].name} hair={people[2].hair} /> */}
+
+          {
+            props.list.map( (person,index) => {
+              return <Person key={index} name={person.name} hair={person.hair} />
+            })
+          }
+
+        </>
+      )
+
+    }
+
+    export default People;
+
+
+PeopleClean.jsx
+
+    import React from 'react';
+
+    import Person from './Person.jsx';
+
+    function People(props) {
+
+      return (
+        <>
+          {
+            props.list.map( (person,index) =>
+              <Person
+                key={index}
+                name={person.name}
+                hair={person.hair} />
+            )
+          }
+
+        </>
+      )
+
+    }
+
+    export default People;
+
+
+Person.jsx
+
+    import React, {useState} from 'react';
+    import Button from 'react-bootstrap/Button';
+    import Card from 'react-bootstrap/Card';
+
+    function Person( props ) {
+
+      const [color, setColor] = useState("grey");
+      const [visible, setVisible] = useState("block");
+
+      function vote() {
+        setVisible("none");
+      }
+
+      return (
+        <Card style={{ width: '18rem', margin:"1em", display: `${visible}` }}>
+          <Card.Img variant="top" src="https://placehold.co/100x100" />
+          <Card.Body>
+            <Card.Title>{props.name}</Card.Title>
+            <Card.Text>
+              Hair Color: {props.hair}
+            </Card.Text>
+            <Button onClick={vote} variant="primary">Vote for {props.name}</Button>
+          </Card.Body>
+        </Card>
+      );
+
+    }
+
+    export default Person;
+
+
+Footer.jsx
+
+    import React from 'react';
+
+    function footer(props) {
+
+      return (
+        <footer>
+          <div>
+            {props.content}
+          </div>
+        </footer>
+      )
+
+    }
+
+    export default footer;
+
+
+
+
+
+
+
+
+
+    Dont touch index.html
+    remove css pages
+    delete all in app.jsx
+    remove import app css from main.jsx
+
+    can write export default function app () or at the bottom export default app;
+
+    extension added = file you wrote if not outside import so ex
+    import userstate from react is outside vs import header from './component/header.jsx'
+
+    json file are raw data
+
+    cant do for loops in react component
+
+    if you map over something put a key in it usually key={index}
 
 ## Read 2 - Readings Overview
 
@@ -179,12 +429,17 @@ Retrospectives are a critical part of Agile, and typically take the form of meet
 This [article](https://www.benlinders.com/2013/which-questions-do-you-ask-in-retrospectives/) gives a nice overview to the role of retrospectives.
 
 1. What went well, that I might forget if I don’t write down?
+    - I definitely forgot all the steps of how to run the code challenges again, and how bootstrap set up occurs so I had to go back to the recording for it. I wasn't able to take notes because he went so fast I just had to follow along as best as I could and written notes slows me down since I'm not fully paying attention.
 2. What did I learn today?
+    - I understand props a lot better now and the import hierarchy.
+
 3. What should I do differently next time?
+    - I was really focused on a CSS that wasn't part of the assignment. I should really just get the featured tasks done and turn it in instead of making it perfect.
 4. What still puzzles me, or what do I need to learn more about?
+    - All of react bootstrap structure and code and how it works. We just copied a big chunk of code from there but I still don't know what to do with it.
 5. Thinking about each of your assignments for the day, reflect on:
     - Is the assignment complete? If not, where exactly did you leave off, and what work remains?
-    - Do not get bogged down in written analysis; instead, focus on capturing the moment with an eye toward how your observations can guide you toward future productivity.
+      - All of my assignments are complete. My lab still doesn't look presentable but that's ok for now.
 
 
 
