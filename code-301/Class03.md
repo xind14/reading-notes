@@ -1,6 +1,6 @@
 # Class 3 - Passing Functions as Props
 
-## Lab 3 -
+## Lab 3 - Passing Functions in Props
 
 ## Setup
 
@@ -38,9 +38,10 @@ Add this information to your README.
       - Send a function into your Gallery component that allows the user to update state in the App
       - Create a SelectedBeast component and include it in your App
       - Use the state in the App to render an individual beast in a Modal in the SelectedBeast component using React Bootstrap
-      - Stretch Goal: Fuzzy search
 
-2. Feature #2: Allow Users to Favorite Individual Beasts?
+Stretch Goal: Fuzzy search
+
+1. Feature #2: Allow Users to Favorite Individual Beasts?
     - Why are we implementing this feature?
       - As a user, I want the ability to search my images so that I can view only the images containing specific titles or keywords.
 
@@ -100,6 +101,229 @@ You will be able to see a test coverage report in GitHub on the Actions tab of y
 Submit a link to your pull request.
 
 ## Written Class Notes
+
+
+Grid Overview
+
+- xs s md lg = set numbers inside are how many columns you want shown on the screen sizes
+
+Filter - runs array returns an array. The purpose of filter is to create a new array containing only the elements that satisfy a specified condition. It does not modify the original array but returns a new one.
+
+forEach, Map, Filter Demo
+
+    let arr = [1, 2, 3, 4, 5, 6];
+    let family = [
+    {
+        name: "John",
+        species: "Person"
+    },
+    {
+        name: "Rosie",
+        species: "Dog",
+    },
+    {
+        name: "Geno",
+        species: "Dog"
+    }
+    ]
+
+
+    function addThemUp(value, idx) {
+    console.log(value);
+    return value * idx;
+    }
+
+    // forEach just runs for each element
+    let forEachArray = arr.forEach(addThemUp)
+    console.log('forEach', forEachArray);
+
+
+    // map runs for each element, creates
+    // a new array based on what's returned
+    // always the same size as the original
+    let mappedArray = arr.map(addThemUp);
+    console.log('Mapped', mappedArray);
+
+    // filter runs for each element, creates
+    // a new array based on what's returned
+    // based on a condition
+
+    let filterArray = family.filter((value, idx) => {
+    if (value.species === "Person") { return true; }
+    });
+    console.log("Filtered", filterArray);
+
+- React is unidirectional from  state down but you can write call back functions to affect the parent/state which will pass on changes to other children, for example no sibling communications if one sibling wants to affect another child first child changes parent with function and parent can then affect child 2.
+
+Demo
+
+        // Parameters:
+        // Name - String
+
+        function sayHello(name) {
+        console.log(`Hello, ${name}!`);
+        }
+
+        function sayHey(name) {
+        console.log(`Hey there, ${name}`);
+        }
+
+
+        // Parameters:
+        // person - String
+        // greetingFunction - Function
+        // Functions can be passed in as arguments, which means
+        //           they are "1st Class Citizens"
+        function greet(person, greetingFunction) {
+        greetingFunction(person);
+        }
+
+        greet("John", sayHello);
+        greet("Cathy", sayHey);
+
+        /*
+
+        what actually happens in react...
+
+        1. const content = App();
+            1. props = { name:"Zach", age:25, handleBirthday: haveBirthday }
+            2. const childContent = Child( props );
+            3. Child will return that div
+            4. App will return the div it got from Child
+        2. Append content to div with id of "root"
+
+        function App() {
+
+            function haveBirthday() {
+            console.log("hooray");
+            }
+
+            return (
+            <Child name="Zach", age=25, handleBirthday={haveBirthday} />
+            );
+        }
+
+        function Child(props) {
+        props.handleBirthday();
+        return (
+            <div>{props.name}</div>
+        )
+        }
+
+        */
+
+
+Family Demo with added child component function passing
+
+App.jsx
+
+    import { useState } from 'react'
+
+    import Header from './components/Header.jsx';
+    import Footer from './components/Footer.jsx';
+    import People from './components/People.jsx';
+
+    import database from './assets/family.json';
+
+    import 'bootstrap/dist/css/bootstrap.min.css';
+
+    function App() {
+
+    const [people, setPeople] = useState(database);
+
+    function voteFor(person) {
+
+        console.log('People', people);
+
+        // Iterate the people array and find "person"
+        let newPeople = people.map( (obj, idx) => {
+        // Increase their vote count
+        if( obj.name === person ) {
+            obj.votes++;
+            return obj;
+        }
+        return obj;
+        });
+
+        console.log("newPeople", newPeople);
+
+        // Update State
+        setPeople(newPeople);
+
+        console.log(people);
+    }
+
+    return (
+        <main>
+        <Header title="Our Family!" members={people.length} />
+        <People list={people} handleVote={voteFor} />
+        <Footer content="Copyright 2023: John and the 301's" />
+        </main>
+    )
+
+    }
+
+    export default App;
+
+People.jsx
+
+    import React from 'react';
+
+    import Person from './Person.jsx';
+
+    function People(props) {
+
+    return (
+        <>
+        {
+            props.list.map( (person,index) =>
+            <Person
+                key={index}
+                name={person.name}
+                hair={person.hair}
+                votes={person.votes}
+                handleVote={props.handleVote}
+            />
+            )
+        }
+
+        </>
+    )
+
+    }
+
+    export default People;
+
+Person.jsx
+
+    import React, {useState} from 'react';
+    import Button from 'react-bootstrap/Button';
+    import Card from 'react-bootstrap/Card';
+
+    function Person( props ) {
+
+    function vote() {
+        // Call a method in the parent that does the voting...
+        props.handleVote(props.name);
+    }
+
+    return (
+        <Card style={{ width: '18rem', margin:"1em"}}>
+        <Card.Img variant="top" src="https://placehold.co/100x100" />
+        <Card.Body>
+            <Card.Title>{props.name}</Card.Title>
+            <Card.Text>
+            Votes: {props.votes}
+            </Card.Text>
+            <Button onClick={vote} variant="primary">Vote for {props.name}</Button>
+        </Card.Body>
+        </Card>
+    );
+
+    }
+
+    export default Person;
+
 
 
 ## Read 3 - Readings Overview
@@ -186,12 +410,18 @@ Retrospectives are a critical part of Agile, and typically take the form of meet
 This [article](https://www.benlinders.com/2013/which-questions-do-you-ask-in-retrospectives/) gives a nice overview to the role of retrospectives.
 
 1. What went well, that I might forget if I don’t write down?
-2. What did I learn today?
-3. What should I do differently next time?
-4. What still puzzles me, or what do I need to learn more about?
-5. Thinking about each of your assignments for the day, reflect on:
-    - Is the assignment complete? If not, where exactly did you leave off, and what work remains?
-    - Do not get bogged down in written analysis; instead, focus on capturing the moment with an eye toward how your observations can guide you toward future productivity.
+    - I somewhat know how to write useState and event functions but still don't quite know where to apply those correctly and how to scope them. 
+1. What did I learn today?
+    - I learned that child components can change if you affect state somehow to pass down to other children. I also understand  grid in react bootstrap about what xs/sm/md etc {number} means 
+1. What should I do differently next time?
+    - I should ask for lab direction clarification before hand because that's where a lot of my constant restructuring of my code took the longest time.
+1. What still puzzles me, or what do I need to learn more about?
+    - I still don't understand useState in App and how to apply it downwards, I tried but nothing was rendering.
+
+Thinking about each of your assignments for the day, reflect on:
+
+1. Is the assignment complete? If not, where exactly did you leave off, and what work remains?
+    - The assignment met the requirements but I didn't do any CSS because the feature goal already took a long time. 
 
 
 
