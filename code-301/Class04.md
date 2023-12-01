@@ -37,19 +37,6 @@ Add this information to your README.
       - When the user chooses one of the options, the correct images should be displayed.
 
 
-2. Feature #2: Allow Users to Favorite Individual Beasts?
-    - Why are we implementing this feature?
-      - As a user, I want the ability to search my images so that I can view only the images containing specific titles or keywords.
-
-    - What are we going to implement?
-      - Given that a user wants to view specific images
-      - When the user enters a character into the search field
-      - Then only the images matching the current set of characters should be displayed on the screen
-
-    - How are we implementing it?
-      - Create an input element to allow users to search for an image. It is up to you to decide if the user should be able to search by title, keyword, or both.
-      - Write a regular expression pattern to create a fuzzy search so that the results are narrowed down and displayed every time the user enters or removes a character from the input.
-
 3. Submission Instructions
     - Complete your Feature Tasks for the day
     - Run your Lighthouse Accessibility report looking for a score of 65 or higher. Make adjustments as needed.
@@ -104,6 +91,262 @@ Submit a link to your pull request.
 
 
 ## Written Class Notes
+
+Filter Demo
+
+App.jsx
+
+    // useState is a "hook"
+    // It's a function that returns state and an update function
+    import { useState } from 'react'
+
+    import 'bootstrap/dist/css/bootstrap.min.css';
+
+    import People from './components/People.jsx';
+    import SelectedPerson from './components/SelectedPerson.jsx';
+
+    import originalFamilyData from "./assets/family.json";
+
+    function App() {
+
+      const [family, setFamily] = useState(originalFamilyData);
+      const [selectedPerson, setSelectedPerson] = useState({});
+      const [isSelectedPersonVisible, setIsSelectedPersonVisible] = useState(false);
+
+      // In the future (tomorrow)
+      // Instead of reading a file, we will run a database query or an API call to fetch data
+      // as soon as the application starts.
+
+      function addFamilyMember() {
+        let newPerson = {
+          _id: Math.random(),
+          name: "Fred",
+          hair: "Grey",
+          pets: [],
+          age: 42,
+          votes: 0
+        };
+        // This will NOT update application state
+        // familyData.push(newPerson);
+
+        // The right way is to use the state setting function (setFamily) to do this.
+        // let copyOfFamily = [...family];
+        // copyOfFamily.push(newPerson);
+        // setFamily( copyOfFamily ); // changes state AND re-renders
+        setFamily( [...family, newPerson] ); // changes state AND re-renders
+
+      }
+
+      function selectPerson(person) {
+        setSelectedPerson(person);
+        setIsSelectedPersonVisible(true);
+      }
+
+      function handleCloseModal() {
+        setIsSelectedPersonVisible(false);
+      }
+
+      function handleVote(data) {
+        let newFamily = family.map( person => {
+          if( data._id === person._id) {
+            person.votes++;
+          }
+          return person;
+        });
+
+        setFamily( newFamily );
+        handleCloseModal();
+      }
+
+      return (
+        <>
+          <div>Family Members: {family.length}</div>
+          <button onClick={addFamilyMember}>Add One</button>
+          <People handleSelectPerson={selectPerson} list={family} />
+          <SelectedPerson
+            show={isSelectedPersonVisible}
+            handleClose={handleCloseModal}
+            handleVote={handleVote}
+            person={selectedPerson}
+          />
+        </>
+      )
+    }
+
+    export default App
+
+
+    /*
+
+    Thisis a pretend version of how useState works
+
+    function useState( defaultValue ) {
+      let state = defaultValue;
+
+      function changeState(nextState) {
+        state = nextState;
+        // re-render the page
+      }
+
+      return [state, changeState];
+
+    }
+
+    */
+
+People.jsx
+
+    import React from 'react';
+
+    import CardGroup from 'react-bootstrap/CardGroup';
+    import Form from 'react-bootstrap/Form';
+    import Person from './Person.jsx';
+
+    class People extends React.Component {
+
+      constructor(props) {
+        super(props);
+        this.state = {
+          name: 'The Cokos Clan',
+          address: 'Lynnwood, Wa',
+          family: props.list,
+          displayFamily: props.list,
+        };
+
+      }
+
+      changeAddress = () => {
+        // setAddress isn't a thing
+        // We have to use this.setState()
+        this.setState( {...this.state, address:"Wenatchee, WA"} );
+      }
+
+      handleFilter = (e) => {
+        let age = e.target.value;
+        let filteredFamily = this.state.family.filter( person => person.age >= age );
+        console.log(filteredFamily);
+        this.setState( {...this.state, displayFamily:filteredFamily} );
+      }
+
+      render() {
+
+        return (
+          <>
+            <h2>Meet {this.state.name} from {this.state.address}</h2>
+            <div>
+              <button onClick={this.changeAddress}>Change</button>
+            </div>
+            <Form>
+              <Form.Label htmlFor="inputPassword5">Password</Form.Label>
+              <Form.Control
+                type="number"
+                id="age"
+                placeholder="Enter Age"
+                onChange={this.handleFilter}
+                aria-describedby="passwordHelpBlock"
+              />
+            </Form>
+
+            <CardGroup>
+
+              {
+                this.state.displayFamily.map( person =>
+                  <Person
+                    handleSelectPerson={this.props.handleSelectPerson}
+                    key={person._id}
+                    person={person}
+                  />
+                )
+              }
+            </CardGroup>
+          </>
+        )
+
+      }
+
+    }
+
+
+    export default People;
+
+Person.jsx
+
+    import Card from 'react-bootstrap/Card';
+    import Button from 'react-bootstrap/Button';
+
+
+    /*
+      This component uses a Ternary to conditionally render the vote button:
+
+      statement ? true do this : false do this
+
+      1===1 ? console.log("Yes") : console.log("no");
+
+    */
+
+    function Person(props) {
+
+      function handleClick() {
+        // props.person is "me"
+        // Tell App.jsx that this person was selected
+        props.handleSelectPerson( props.person );
+      }
+
+      return (
+        <Card style={{ width: '18rem' }}>
+          <Card.Body>
+            <Card.Title>{props.person.name}</Card.Title>
+            <Card.Text>
+              Votes: {props.person.votes}
+            </Card.Text>
+            {
+              props.person.votes >= 1 ? null : <Button variant="primary" onClick={handleClick}>Pick Me!</Button>
+            }
+          </Card.Body>
+        </Card>
+      )
+
+    }
+
+    export default Person;
+
+
+
+
+
+SelectedPerson.jsx
+
+    import Card from 'react-bootstrap/Card';
+    import Modal from 'react-bootstrap/Modal';
+    import Button from 'react-bootstrap/Button';
+
+    function Person(props) {
+
+
+
+      return (
+        <Modal show={props.show} onHide={props.handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>{props.person.name}</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Votes: {props.person.votes}</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={props.handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={() => props.handleVote(props.person)}>
+            Vote For Me
+          </Button>
+        </Modal.Footer>
+        </Modal>
+
+      )
+
+    }
+
+    export default Person;
+
+
 
 
 ## Read 4 - Readings Overview
@@ -169,14 +412,20 @@ Retrospectives are a critical part of Agile, and typically take the form of meet
 This [article](https://www.benlinders.com/2013/which-questions-do-you-ask-in-retrospectives/) gives a nice overview to the role of retrospectives.
 
 1. What went well, that I might forget if I don’t write down?
+    - I figured out that the easiest way possible to make functions be passed down is to just create an entirely new component that only references one place which is the state in app. 
 2. What did I learn today?
+    - I learned about the spread operator during todays code challenge but I'm still not confident on anything this week. 
+
 3. What should I do differently next time?
+    - I keep forgetting to ask for help earlier past the 15 minute mark because I get so into, I need to do that next time because a lot of time is just me trying to troubleshoot with no results.
+
 4. What still puzzles me, or what do I need to learn more about?
+    - Everything. I feel like I need to self teach myself and watch some outside videos. At least in 20 at the end of the week where where the project is finished, I actually get it, but now at the end of this week I would not be able to produce anything on my own. 
+
 5. Thinking about each of your assignments for the day, reflect on:
     - Is the assignment complete? If not, where exactly did you leave off, and what work remains?
     - Do not get bogged down in written analysis; instead, focus on capturing the moment with an eye toward how your observations can guide you toward future productivity.
-
-
+    - I think it's complete. Again I was not worried about the CSS because I just wanted to get the task down. I want to refine this project at the end of this class.
 
 
 
