@@ -4,64 +4,69 @@
 
 ## Setup
 
-
 For this class you will be adding a feature to your Gallery Of Horns that allows the user to click on an image and display it as a modal.
 
 **Time Estimate**
 
 For each of the features listed below, make an estimate of the time it will take you to complete the feature, and record your start and finish times for that feature:
 
-Number and name of feature: ________________________________
+Number and name of feature:
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete:
 
-Start time: _____
+Start time:
 
-Finish time: _____
+Finish time:
 
-Actual time needed to complete: _____
+Actual time needed to complete:
+
 Add this information to your README.
 
 1. Feature #1: Display a Modal
 
-    - Why are we implementing this feature?
-      - As a user, I want the image to be displayed in a larger size and with the description shown so that I can view the details of a single image.
+   - Why are we implementing this feature?
 
-    - What are we going to implement?
-      - Given that a user wants to view the details of the image
+     - As a user, I want the image to be displayed in a larger size and with the description shown so that I can view the details of a single image.
 
-      - When the user clicks on an individual image Then the image should render larger on the screen with the description displayed
+   - What are we going to implement?
 
-    - How are we implementing it?
-      - Import the data.json file into your App component and send that data into the Gallery component
-      - Map over the JSON data in your Gallery component to render each beast
-      - Send a function into your Gallery component that allows the user to update state in the App
-      - Create a SelectedBeast component and include it in your App
-      - Use the state in the App to render an individual beast in a Modal in the SelectedBeast component using React Bootstrap
+     - Given that a user wants to view the details of the image
+
+     - When the user clicks on an individual image Then the image should render larger on the screen with the description displayed
+
+   - How are we implementing it?
+     - Import the data.json file into your App component and send that data into the Gallery component
+     - Map over the JSON data in your Gallery component to render each beast
+     - Send a function into your Gallery component that allows the user to update state in the App
+     - Create a SelectedBeast component and include it in your App
+     - Use the state in the App to render an individual beast in a Modal in the SelectedBeast component using React Bootstrap
 
 Stretch Goal: Fuzzy search
 
 1. Feature #2: Allow Users to Favorite Individual Beasts?
-    - Why are we implementing this feature?
-      - As a user, I want the ability to search my images so that I can view only the images containing specific titles or keywords.
 
-    - What are we going to implement?
-      - Given that a user wants to view specific images
-      - When the user enters a character into the search field
-      - Then only the images matching the current set of characters should be displayed on the screen
+   - Why are we implementing this feature?
 
-    - How are we implementing it?
-      - Create an input element to allow users to search for an image. It is up to you to decide if the user should be able to search by title, keyword, or both.
-      - Write a regular expression pattern to create a fuzzy search so that the results are narrowed down and displayed every time the user enters or removes a character from the input.
+     - As a user, I want the ability to search my images so that I can view only the images containing specific titles or keywords.
 
-3. Submission Instructions
-    - Complete your Feature Tasks for the day
-    - Run your Lighthouse Accessibility report looking for a score of 65 or higher. Make adjustments as needed.
-    - Create a Pull Request (PR) back to the main branch of your repository
-    - On Canvas, submit a link to your PR and a link to your deployed application on Netlify. Add a comment in your Canvas assignment which includes the following:
-      - A question within the context of the lab assignment
-      - An observation about the lab assignment, or related ‘Ah-hah!’ moment
-      - How long you spent working on this assignment
+   - What are we going to implement?
+
+     - Given that a user wants to view specific images
+     - When the user enters a character into the search field
+     - Then only the images matching the current set of characters should be displayed on the screen
+
+   - How are we implementing it?
+     - Create an input element to allow users to search for an image. It is up to you to decide if the user should be able to search by title, keyword, or both.
+     - Write a regular expression pattern to create a fuzzy search so that the results are narrowed down and displayed every time the user enters or removes a character from the input.
+
+2. Submission Instructions
+   - Complete your Feature Tasks for the day
+   - Run your Lighthouse Accessibility report looking for a score of 65 or higher. Make adjustments as needed.
+   - Create a Pull Request (PR) back to the main branch of your repository
+   - On Canvas, submit a link to your PR and a link to your deployed application on Netlify. Add a comment in your Canvas assignment which includes the following:
+     - A question within the context of the lab assignment
+     - An observation about the lab assignment, or related ‘Ah-hah!’ moment
+     - How long you spent working on this assignment
 
 ## Code Challenge
 
@@ -80,7 +85,7 @@ Navigate to the javascript folder within your data-structures-and-algorithms rep
 1. Create a new branch for this challenge called git checkout -b filter
 
 2. Retrieve the code challenge from the system
-npm run get-challenge 03
+   npm run get-challenge 03
 3. In your terminal, from the javascript folder, run npm test 03 to execute the tests in this file for this challenge.
 
 4. At this point you will see the failed tests scroll through your terminal window with a brief report of the number of failed tests at the bottom.
@@ -101,7 +106,6 @@ You will be able to see a test coverage report in GitHub on the Actions tab of y
 Submit a link to your pull request.
 
 ## Written Class Notes
-
 
 Grid Overview
 
@@ -153,7 +157,51 @@ forEach, Map, Filter Demo
     });
     console.log("Filtered", filterArray);
 
-- React is unidirectional from  state down but you can write call back functions to affect the parent/state which will pass on changes to other children, for example no sibling communications if one sibling wants to affect another child first child changes parent with function and parent can then affect child 2.
+Form demo
+
+    function ResponsiveAutoExample() {
+      const [name, setName] = useState('');
+
+      function handleChange(event) {
+        let search = event.target.value;
+        setName(search);
+
+        let names = ["John", "Cathy", "Zach", "Allie"];
+        let found = names.filter( (value) => {
+          return value === search;
+        })
+        console.log(found);
+
+      }
+
+      return (
+        <>
+          <h1>Welcome, {name}</h1>
+          <input onChange={handleChange} />
+          <Container>
+            <Row>
+              <Col sm={3}>sm=4</Col>
+              <Col sm={3}>sm=4</Col>
+              <Col sm={3}>sm=4</Col>
+              <Col sm={3}>sm=4</Col>
+              <Col sm={3}>sm=4</Col>
+              <Col sm={3}>sm=4</Col>
+              <Col sm={3}>sm=4</Col>
+              <Col sm={3}>sm=4</Col>
+              <Col sm={3}>sm=4</Col>
+              <Col sm={3}>sm=4</Col>
+              <Col sm={3}>sm=4</Col>
+              <Col sm={3}>sm=4</Col>
+              <Col sm={3}>sm=4</Col>
+            </Row>
+          </Container>
+        </>
+      );
+    }
+
+    export default ResponsiveAutoExample;
+
+- React is unidirectional from state down but you can write call back functions to affect the parent/state which will pass on changes to other children, for example no sibling communications if one sibling wants to affect another child first child changes parent with function and parent can then affect child 2.
 
 Demo
 
@@ -211,7 +259,6 @@ Demo
         }
 
         */
-
 
 Family Demo with added child component function passing
 
@@ -324,8 +371,6 @@ Person.jsx
 
     export default Person;
 
-
-
 ## Read 3 - Readings Overview
 
 ## Resources Link/Pages
@@ -335,12 +380,9 @@ Person.jsx
 
 ### React Docs - lists and keys
 
-
 1. [React Docs - lists and keys](https://legacy.reactjs.org/docs/lists-and-keys.html)
 
-
 ### The Spread Operator
-
 
 1. [The Spread Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 
@@ -356,48 +398,47 @@ The spread operator and the passing of functions between components are essentia
 
 ### React Docs - lists and keys
 
-
 1. What does `.map()` return?
-    - It's a function that returns a new array with the results of applying a provided function to each element of the original array.
+   - It's a function that returns a new array with the results of applying a provided function to each element of the original array.
 2. If I want to loop through an array and display each value in JSX, how do I do that in React?
-    - Use the `.map()` function
-3. Each list item needs a unique ____.
-    - `key`
+   - Use the `.map()` function
+3. Each list item needs a unique \_\_\_\_.
+   - `key`
 4. What is the purpose of a `key`?
-    - It's so React can identify which items in a list have changed, been added, or been removed. It gives elements in the array a stable identity. Keys should be unique among their siblings but do not need to be globally unique. Keys are not passed to components but used internally by React.
+   - It's so React can identify which items in a list have changed, been added, or been removed. It gives elements in the array a stable identity. Keys should be unique among their siblings but do not need to be globally unique. Keys are not passed to components but used internally by React.
 
 ### The Spread Operator
 
 1. What is the spread operator?
-    - The spread operator (...) is a syntax that allows an iterable (such as an array or string) to be expanded in places where zero or more arguments or elements are expected. It is used to make a shallow copy of an iterable or to include its elements individually.
+   - The spread operator (...) is a syntax that allows an iterable (such as an array or string) to be expanded in places where zero or more arguments or elements are expected. It is used to make a shallow copy of an iterable or to include its elements individually.
 2. List 4 things that the spread operator can do.
-    - Expand elements of an array or string in a function call's arguments list.
-    - Include all elements of an array in a new array literal.
-    - Include all properties of an object in a new object literal.
-    - Make a shallow copy of an array or object.
+   - Expand elements of an array or string in a function call's arguments list.
+   - Include all elements of an array in a new array literal.
+   - Include all properties of an object in a new object literal.
+   - Make a shallow copy of an array or object.
 3. Give an example of using the spread operator to combine two arrays.
-    - const array1 = [1, 2, 3];
-    const array2 = [4, 5, 6];
-    const combinedArray = [...array1, ...array2];
+   - const array1 = [1, 2, 3];
+     const array2 = [4, 5, 6];
+     const combinedArray = [...array1, ...array2];
 4. Give an example of using the spread operator to add a new item to an array.
-    - const originalArray = [1, 2, 3];
-    - const newArray = [...originalArray, 4];
+   - const originalArray = [1, 2, 3];
+   - const newArray = [...originalArray, 4];
 5. Give an example of using the spread operator to combine two objects into one.
-      The reading gives this as an example:
-    - const obj1 = { foo: 'bar', x: 42 };
-      const obj2 = { bar: 'baz', y: 13 };
-      const combinedObject = { ...obj1, ...obj2 };
+   The reading gives this as an example:
+   - const obj1 = { foo: 'bar', x: 42 };
+     const obj2 = { bar: 'baz', y: 13 };
+     const combinedObject = { ...obj1, ...obj2 };
 
 ### How to Pass Functions Between Components
 
 1. In the video, what is the first step that the developer does to pass functions between components?
-    - He created the `increment` function in the parent component where the state is located, which is used to update the state.
+   - He created the `increment` function in the parent component where the state is located, which is used to update the state.
 2. In your own words, what does the increment function do?
-    - It takes a person object as a parameter, which includes a name and a count. It loops through an array of people, finds the person with a matching name, increments their count, and updates the state with the modified array.
+   - It takes a person object as a parameter, which includes a name and a count. It loops through an array of people, finds the person with a matching name, increments their count, and updates the state with the modified array.
 3. How can you pass a method from a parent component into a child component?
-    - The parent component includes the method in the props passed to the child component. The child component can then access and invoke the method using props.method.
+   - The parent component includes the method in the props passed to the child component. The child component can then access and invoke the method using props.method.
 4. How does the child component invoke a method that was passed to it from a parent component?
-    - Using this.props.method to call the method and trigger something like updating the state in the parent component.
+   - Using this.props.method to call the method and trigger something like updating the state in the parent component.
 
 ## Things I want to know more about
 
@@ -410,21 +451,18 @@ Retrospectives are a critical part of Agile, and typically take the form of meet
 This [article](https://www.benlinders.com/2013/which-questions-do-you-ask-in-retrospectives/) gives a nice overview to the role of retrospectives.
 
 1. What went well, that I might forget if I don’t write down?
-    - I somewhat know how to write useState and event functions but still don't quite know where to apply those correctly and how to scope them. 
+   - I somewhat know how to write useState and event functions but still don't quite know where to apply those correctly and how to scope them.
 1. What did I learn today?
-    - I learned that child components can change if you affect state somehow to pass down to other children. I also understand  grid in react bootstrap about what xs/sm/md etc {number} means 
+   - I learned that child components can change if you affect state somehow to pass down to other children. I also understand  grid in react bootstrap about what xs/sm/md etc {number} means
 1. What should I do differently next time?
-    - I should ask for lab direction clarification before hand because that's where a lot of my constant restructuring of my code took the longest time.
+   - I should ask for lab direction clarification before hand because that's where a lot of my constant restructuring of my code took the longest time.
 1. What still puzzles me, or what do I need to learn more about?
-    - I still don't understand useState in App and how to apply it downwards, I tried but nothing was rendering.
+   - I still don't understand useState in App and how to apply it downwards, I tried but nothing was rendering.
 
 Thinking about each of your assignments for the day, reflect on:
 
 1. Is the assignment complete? If not, where exactly did you leave off, and what work remains?
-    - The assignment met the requirements but I didn't do any CSS because the feature goal already took a long time. 
-
-
-
+   - The assignment met the requirements but I didn't do any CSS because the feature goal already took a long time.
 
 ## Career 3 - Stage Fright (O_O)
 

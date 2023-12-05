@@ -1,6 +1,6 @@
 # Class 1 - React and Component-Based Architecture
 
-## Lab 1 -
+## Lab 1 - Component structure of the application
 
 ## Setup
 
@@ -21,7 +21,7 @@ Your repository must include the following config files:
 4. Use the command npm create vite@latest.
 5. Create a new repository on GitHub named “Gallery of Horns” WITHOUT a README.md. We will import an “existing” repository with its own README.
 6. Follow the instructions given by GitHub to “push an existing repository from the command line”.
-be sure to select HTTPS or SSH, whichever is relevant for you.
+   be sure to select HTTPS or SSH, whichever is relevant for you.
 7. Create a Branch and begin your work. As always, ACP often.
 8. Your App component should render a Header, Footer and Gallery component, each of which is defined in their own files.
 
@@ -71,9 +71,7 @@ Submission Instructions
 1. Complete your Feature Tasks for the day.
 2. Run your Lighthouse Accessibility report looking for a score of 65 or higher. Make adjustments as needed.
 3. Create a Pull Request (PR) back to the main branch of your repository.
-Submit your assignment as a link to your PR, and a comment describing how much time you spent on the lab.
-
-
+   Submit your assignment as a link to your PR, and a comment describing how much time you spent on the lab.
 
 ## Code Challenge
 
@@ -90,9 +88,9 @@ Challenges
 
 1. Navigate to the javascript folder within your data-structures-and-algorithms repository.
 2. Create a new branch for this challenge called for-each
-git checkout -b for-each
+   git checkout -b for-each
 3. Retrieve the code challenge from the system
-npm run get-challenge 01
+   npm run get-challenge 01
 4. In your terminal, from the javascript folder, run npm test 01 to execute the tests in this file for this challenge.
 5. At this point you will see the failed tests scroll through your terminal window with a brief report of the number of failed tests at the bottom.
 6. If you do not see this, verify your installation of Jest by typing npx jest --version in your terminal. Filename typos can make things break!
@@ -108,8 +106,6 @@ You will be able to see a test coverage report in GitHub on the Actions tab of y
 Submit a link to your pull request.
 
 ## Written Class Notes
-
-
 
 **forEach**
 Array methods - iterate array and run a callback functions (function(event)=call back function we did in 201)
@@ -152,9 +148,6 @@ Array methods - iterate array and run a callback functions (function(event)=call
 
     // f4("john");  Return would be "JOHN"
 
-
-
-
 Clients and Servers
 Client - wants information, data
 Servers - has the data for the client
@@ -169,12 +162,10 @@ Web remote request cycle
 server - hw hd sw-when client goes to/homepage send markup
 client ask for homepage sw chrome turns markup to things
 
-
 React
 npm create vite@latest counter
 dont touch index.html and main.jsx (get rid of import .index.css)
-jsx for react component - can import one js to other js
-    - component with HTML CSS JS all inside markup it made
+jsx for react component - can import one js to other js - component with HTML CSS JS all inside markup it made
 
 get rid of app.jsx
 
@@ -210,12 +201,9 @@ get rid of app.jsx
 
     export default App;
 
-
 Import needs export
 
 index requires main.jsx which brings in app from app.jsx, app just has a function to return a markup
-
-
 
         import React from 'react';
 
@@ -242,9 +230,6 @@ components folder with three folders inside folder put file for each Footer.jsx 
 
 start at main, delete app.jsx and app.css,
 
-
-
-
 ## Read 1 - Introduction to React and Components
 
 ## Resources Link/Pages
@@ -261,7 +246,6 @@ start at main, delete app.jsx and app.css,
 
 1. [Component-Based Architecture](https://www.tutorialspoint.com/software_architecture_design/component_based_architecture.htm)
 
-
 ### What is Props and How to Use it in React
 
 1. [What is Props and How to Use it in React](https://itnext.io/what-is-props-and-how-to-use-it-in-react-da307f500da0)
@@ -276,49 +260,53 @@ Adding on to what was learned in 201, components are like JavaScript functions. 
 
 1. What is a "component"?
 
-    - A replaceable and reusable set of functionality. It is a software object, interacting with other components. Components are designed to be independent, allowing them to be deployed and composed individually.
+   - A replaceable and reusable set of functionality. It is a software object, interacting with other components. Components are designed to be independent, allowing them to be deployed and composed individually.
 
 2. What are the characteristics of a component?
 
-    - Reusability: Designed to be reused in various applications or situations.
-    - Replaceable: Can be substituted with similar components.
-    - Not context specific: Operates effectively in diverse environments and contexts.
-    - Extensible: Allows the addition of new functionalities through modification or extension.
-    - Encapsulated: Hides internal complexities, exposing only a well-defined external interface.
-    - Independent: Minimizes dependencies on other components.
+   - Reusability: Designed to be reused in various applications or situations.
+   - Replaceable: Can be substituted with similar components.
+   - Not context specific: Operates effectively in diverse environments and contexts.
+   - Extensible: Allows the addition of new functionalities through modification or extension.
+   - Encapsulated: Hides internal complexities, exposing only a well-defined external interface.
+   - Independent: Minimizes dependencies on other components.
 
 3. What are the advantages of using component-based architecture?
 
-    - Ease of deployment: Easy replacement of versions without disrupting other components.
-    - Reduced cost: Third-party components use spreads the cost of development and maintenance.
-    - Ease of development: Provides clear interfaces, promoting focused development without affecting the broader system.
-    - Reusable: Reused across applications, leading to cost-effective development and maintenance.
-    - Modification of technical complexity: Components manage complexity through specialized containers and services.
-    - Reliability: The reliability of individual components contributes to the overall system's robustness through reuse.
-    - System Maintenance and Evolution: Allows for easy updates and modifications.
-    - Independent: Independent development and flexible connectivity, fostering productivity in software development.
+   - Ease of deployment: Easy replacement of versions without disrupting other components.
+   - Reduced cost: Third-party components use spreads the cost of development and maintenance.
+   - Ease of development: Provides clear interfaces, promoting focused development without affecting the broader system.
+   - Reusable: Reused across applications, leading to cost-effective development and maintenance.
+   - Modification of technical complexity: Components manage complexity through specialized containers and services.
+   - Reliability: The reliability of individual components contributes to the overall system's robustness through reuse.
+   - System Maintenance and Evolution: Allows for easy updates and modifications.
+   - Independent: Independent development and flexible connectivity, fostering productivity in software development.
 
 ### What is Props and How to Use it in React
 
 1. What is “props” short for?
-    - It is short for "properties." It is a special keyword used to pass data from one component to another.
+   - It is short for "properties." It is a special keyword used to pass data from one component to another.
 2. How are props used in React?
-    - They are used to pass data from a parent component to a child component. They are objects and are passed to components like function arguments.
+   - They are used to pass data from a parent component to a child component. They are objects and are passed to components like function arguments.
 3. What is the flow of props?
-    - The flow of props in React is unidirectional, meaning it goes from parent to child components. Data is passed from the parent component as props, and child components receive and use these props. Props are read-only, and modifications to them should be made in the parent component. Data from parent should not be changed by child components.
-
+   - The flow of props in React is unidirectional, meaning it goes from parent to child components. Data is passed from the parent component as props, and child components receive and use these props. Props are read-only, and modifications to them should be made in the parent component. Data from parent should not be changed by child components.
 
 ## Things I want to know more about
 
 - How does React handle the communication of data between sibling components if it's unidirectional?
 
+## Retrospective
 
+Retrospectives are a critical part of Agile, and typically take the form of meetings held by a team at the end of a sprint cycle. To get us acclimated to that process, we will use the format of a retrospectives to guide today’s reflection.
+
+This [article](https://www.benlinders.com/2013/which-questions-do-you-ask-in-retrospectives/) gives a nice overview to the role of retrospectives.
+
+1. What went well, that I might forget if I don’t write down?
+2. What did I learn today?
+3. What should I do differently next time?
+4. What still puzzles me, or what do I need to learn more about?
+5. Thinking about each of your assignments for the day, reflect on:
+   - Is the assignment complete? If not, where exactly did you leave off, and what work remains?
+   - Do not get bogged down in written analysis; instead, focus on capturing the moment with an eye toward how your observations can guide you toward future productivity.
 
 ## Career 1 - Identify Your Accountability Partners
-
-
-
-
-
-
-

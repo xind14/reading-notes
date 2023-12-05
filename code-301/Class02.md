@@ -15,65 +15,67 @@ Resources
 
 For each of the features listed below, make an estimate of the time it will take you to complete the feature, and record your start and finish times for that feature:
 
-Number and name of feature: ________________________________
+Number and name of feature:
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete:
 
-Start time: _____
+Start time:
 
-Finish time: _____
+Finish time:
 
-Actual time needed to complete: _____
+Actual time needed to complete:
+
 Add this information to your README.
 
 1. Feature #1: Display Images
 
-    - Why are we implementing this feature?
-      - As a user, I want to view the images on the page so that I can browse the photo collection.
-    - What are we going to implement?
-      - Given that a user opens the application in the browser When the user navigates to the home page
-      - Then the photo gallery should display all of the beasts' images in the gallery.
-    - How are we implementing it?
-      - The Gallery component should pass props for the title, image and description to each HornedBeast component. You will find this information in the provided JSON file.
+   - Why are we implementing this feature?
+     - As a user, I want to view the images on the page so that I can browse the photo collection.
+   - What are we going to implement?
+     - Given that a user opens the application in the browser When the user navigates to the home page
+     - Then the photo gallery should display all of the beasts' images in the gallery.
+   - How are we implementing it?
+     - The Gallery component should pass props for the title, image and description to each HornedBeast component. You will find this information in the provided JSON file.
+
 2. Feature #2: Allow Users to Favorite Individual Beasts
-    - Why are we implementing this feature?
-      - As a user, I want to be able to interact with the site and favorite beasts.
-    - What are we going to implement?
-      - Given that a user opens the application in the browser
-      - When a user clicks on an image of a beast
-      - Then the number of "Favorites" displayed on that beast will increase by one.
-    - How are we implementing it?
-      - Create state inside of the HornedBeast component that keeps track of the number of times each beast has been favorited.
-      - Put a heart in each HornedBeast component with the number of “Favorites” next to it.
+
+   - Why are we implementing this feature?
+     - As a user, I want to be able to interact with the site and favorite beasts.
+   - What are we going to implement?
+     - Given that a user opens the application in the browser
+     - When a user clicks on an image of a beast
+     - Then the number of "Favorites" displayed on that beast will increase by one.
+   - How are we implementing it?
+     - Create state inside of the HornedBeast component that keeps track of the number of times each beast has been favorited.
+     - Put a heart in each HornedBeast component with the number of “Favorites” next to it.
 
 3. Feature 3: Bootstrap
-    - Why are we implementing this feature?
-      - As a user, I want to see a visually pleasing application that is also responsive when I view this application on different screen sizes.
-    - What are we going to implement?
-      - Given that a user opens the application in the browser
-      - When the images are displayed on the screen
-      - Then each image should be rendered in a visually pleasing way: - in columns, as screen width allows.
-    - How are we implementing it?
-      - Bring in the react-bootstrap library and use it to style your application making sure that it is responsive.
-    - Stretch Goal: Add Interaction
-    - Why are we implementing this feature?
-    - As a user, I want to be able to interact with each item on the page.
-    - What are we going to implement?
-        - Given that a user opens the application in the browser
-        - When a user clicks on an item other than the horned beasts, - such as the title of the page or the footer,
-        - Then the information and styles should change.
-    - How are we implementing it?
-      - When the user clicks on elements such as the header, footer or title of page, make something change using state.
-      - You can update the words, change the styles or add something new. Be creative.
+   - Why are we implementing this feature?
+     - As a user, I want to see a visually pleasing application that is also responsive when I view this application on different screen sizes.
+   - What are we going to implement?
+     - Given that a user opens the application in the browser
+     - When the images are displayed on the screen
+     - Then each image should be rendered in a visually pleasing way: - in columns, as screen width allows.
+   - How are we implementing it?
+     - Bring in the react-bootstrap library and use it to style your application making sure that it is responsive.
+   - Stretch Goal: Add Interaction
+   - Why are we implementing this feature?
+   - As a user, I want to be able to interact with each item on the page.
+   - What are we going to implement?
+     - Given that a user opens the application in the browser
+     - When a user clicks on an item other than the horned beasts, - such as the title of the page or the footer,
+     - Then the information and styles should change.
+   - How are we implementing it?
+     - When the user clicks on elements such as the header, footer or title of page, make something change using state.
+     - You can update the words, change the styles or add something new. Be creative.
 4. Submission Instructions
-    - Complete your Feature Tasks for the day
-    - Run your Lighthouse Accessibility report looking for a score of 65 or higher. Make adjustments as needed.
-    - Create a Pull Request (PR) back to the main branch of your repository
-    - On Canvas, submit a link to your PR and a link to your deployed application on Netlify. Add a comment in your Canvas assignment which includes the following:
-      - A question within the context of the lab assignment
-      - An observation about the lab assignment, or related ‘Ah-hah!’ moment
-      - How long you spent working on this assignment
-
+   - Complete your Feature Tasks for the day
+   - Run your Lighthouse Accessibility report looking for a score of 65 or higher. Make adjustments as needed.
+   - Create a Pull Request (PR) back to the main branch of your repository
+   - On Canvas, submit a link to your PR and a link to your deployed application on Netlify. Add a comment in your Canvas assignment which includes the following:
+     - A question within the context of the lab assignment
+     - An observation about the lab assignment, or related ‘Ah-hah!’ moment
+     - How long you spent working on this assignment
 
 ## Code Challenge
 
@@ -91,7 +93,7 @@ Navigate to the javascript folder within your data-structures-and-algorithms rep
 
 1. Create a new branch for this challenge called map git checkout -b map
 2. Retrieve the code challenge from the system
-npm run get-challenge 02
+   npm run get-challenge 02
 3. In your terminal, from the javascript folder, run npm test 02 to execute the tests in this file for this challenge.
 4. At this point you will see the failed tests scroll through your terminal window with a brief report of the number of failed tests at the bottom.
 5. If you do not see this, verify your installation of Jest by typing npx jest --version in your terminal. Filename typos can make things break!
@@ -128,7 +130,6 @@ Submit a link to your pull request.
     });
 
     console.log(squares);
-
 
 Family Demo
 
@@ -255,7 +256,6 @@ People.jsx
 
     export default People;
 
-
 PeopleClean.jsx
 
     import React from 'react';
@@ -281,7 +281,6 @@ PeopleClean.jsx
     }
 
     export default People;
-
 
 Person.jsx
 
@@ -314,7 +313,6 @@ Person.jsx
     }
 
     export default Person;
-
 
 Footer.jsx
 
@@ -372,18 +370,13 @@ Footer.jsx
 - [Bootstrap Shuffle - a class “sandbox”](https://bootstrapshuffle.com/classes)
 - [Netlify](https://www.netlify.com/)
 
-
-
 ### React lifecycle
 
 1. [React lifecycle](https://medium.com/@joshuablankenshipnola/react-component-lifecycle-events-cb77e670a093)
 
-
 ### React State Vs Props
 
-
 1. [React State Vs Props](https://www.youtube.com/watch?v=IYvD9oBCuJI)
-
 
 ## Answer
 
@@ -394,29 +387,28 @@ Understanding React's component lifecycle and effective state management is cruc
 ### React lifecycle
 
 1. Based off the diagram, what happens first, the ‘render’ or the ‘componentDidMount’?
-    - It looks like render comes before componentDidMount. Mounting, Updating, and Unmounting are the three phases of the component lifecycle. And in Mounting is when an instance of a component is being created and the order there is `constructor`, `static getDerivedStateFromProps`, `render`, `componentDidMount`.
+   - It looks like render comes before componentDidMount. Mounting, Updating, and Unmounting are the three phases of the component lifecycle. And in Mounting is when an instance of a component is being created and the order there is `constructor`, `static getDerivedStateFromProps`, `render`, `componentDidMount`.
 2. What is the very first thing to happen in the lifecycle of React?
-    - The `constructor` method is called.
+   - The `constructor` method is called.
 3. Put the following things in the order that they happen: `componentDidMount`, `render`, `constructor`, `componentWillUnmount`, `React Updates`
-    - `constructor`
-    - `render`
-    - `componentDidMount`
-    - `componentWillUnmount`
-    - `React Updates`
+   - `constructor`
+   - `render`
+   - `componentDidMount`
+   - `componentWillUnmount`
+   - `React Updates`
 4. What does `componentDidMount` do?
-    - It is a method that is invoked immediately after a component is mounted. It is used for loading data from a network request, initializing the DOM, or setting up subscriptions.
-
+   - It is a method that is invoked immediately after a component is mounted. It is used for loading data from a network request, initializing the DOM, or setting up subscriptions.
 
 ### React State Vs Props
 
 1. What types of things can you pass in the props?
-    - Initial values, configuration settings, or any data that a component needs to render.
+   - Initial values, configuration settings, or any data that a component needs to render.
 2. What is the big difference between props and state?
-    - Props are passed into a component from outside, while state is handled and managed inside the component. Props are used for information that comes from a parent or external source, and state is used for managing internal component data that can change.v
+   - Props are passed into a component from outside, while state is handled and managed inside the component. Props are used for information that comes from a parent or external source, and state is used for managing internal component data that can change.v
 3. When do we re-render our application?
-    - When there is a change in the state. Changing the state triggers a re-render of the corresponding section of the application.
+   - When there is a change in the state. Changing the state triggers a re-render of the corresponding section of the application.
 4. What are some examples of things that we could store in state?
-    - Current count in a counter application, user input from form data, or any data that may change over time and needs to trigger a re-render when modified.
+   - Current count in a counter application, user input from form data, or any data that may change over time and needs to trigger a re-render when modified.
 
 ## Things I want to know more about
 
@@ -429,19 +421,18 @@ Retrospectives are a critical part of Agile, and typically take the form of meet
 This [article](https://www.benlinders.com/2013/which-questions-do-you-ask-in-retrospectives/) gives a nice overview to the role of retrospectives.
 
 1. What went well, that I might forget if I don’t write down?
-    - I definitely forgot all the steps of how to run the code challenges again, and how bootstrap set up occurs so I had to go back to the recording for it. I wasn't able to take notes because he went so fast I just had to follow along as best as I could and written notes slows me down since I'm not fully paying attention.
+   - I definitely forgot all the steps of how to run the code challenges again, and how bootstrap set up occurs so I had to go back to the recording for it. I wasn't able to take notes because he went so fast I just had to follow along as best as I could and written notes slows me down since I'm not fully paying attention.
 2. What did I learn today?
-    - I understand props a lot better now and the import hierarchy.
+
+   - I understand props a lot better now and the import hierarchy.
 
 3. What should I do differently next time?
-    - I was really focused on a CSS that wasn't part of the assignment. I should really just get the featured tasks done and turn it in instead of making it perfect.
+   - I was really focused on a CSS that wasn't part of the assignment. I should really just get the featured tasks done and turn it in instead of making it perfect.
 4. What still puzzles me, or what do I need to learn more about?
-    - All of react bootstrap structure and code and how it works. We just copied a big chunk of code from there but I still don't know what to do with it.
+   - All of react bootstrap structure and code and how it works. We just copied a big chunk of code from there but I still don't know what to do with it.
 5. Thinking about each of your assignments for the day, reflect on:
-    - Is the assignment complete? If not, where exactly did you leave off, and what work remains?
-      - All of my assignments are complete. My lab still doesn't look presentable but that's ok for now.
-
-
+   - Is the assignment complete? If not, where exactly did you leave off, and what work remains?
+     - All of my assignments are complete. My lab still doesn't look presentable but that's ok for now.
 
 ## Career 2 - Generating Opportunities
 
@@ -459,5 +450,3 @@ Share with your classmates a list of 5 different off-campus networking opportuni
 1. [Data and AI trends for 2024](https://www.meetup.com/microsoft-reactor-san-francisco/events/296683385/) Tuesday, December 12, 2023 at 9:30 AM to Tuesday, December 12, 2023 at 10:00 AM PST
 
 1. [Exploring The Use Of Netlify For Launching Your Next Web Development Project](https://www.meetup.com/seattle-web-development-club/events/296905531/) Thursday, November 30, 2023 at 6:00 PM to Thursday, November 30, 2023 at 7:30 PM PST
-
-

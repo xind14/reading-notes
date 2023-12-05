@@ -9,45 +9,43 @@ This is the last class of our Gallery Of Horns. You have horned creatures displa
 Time Estimate
 For each of the features listed below, make an estimate of the time it will take you to complete the feature, and record your start and finish times for that feature:
 
-Number and name of feature: ________________________________
+Number and name of feature:
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete:
 
-Start time: _____
+Start time:
 
-Finish time: _____
+Finish time:
 
-Actual time needed to complete: _____
+Actual time needed to complete:
+
 Add this information to your README.
 
 1. Feature #1: Filter by Numbers of Horns
 
-    - Why are we implementing this feature?
-      - As a user, I want to be able to view the beasts by the number of horns
+   - Why are we implementing this feature?
 
+     - As a user, I want to be able to view the beasts by the number of horns
 
-    - What are we going to implement?
-      - Given that a user is presented with filtering options
+   - What are we going to implement?
 
-      - When the user clicks on one option. Then the images should be filtered accordingly
+     - Given that a user is presented with filtering options
 
+     - When the user clicks on one option. Then the images should be filtered accordingly
 
-    - How are we implementing it?
-      - Using the Form component of react-bootstrap, build a drop down menu so that the user can choose to filter by number of horns.
-      - When the user chooses one of the options, the correct images should be displayed.
+   - How are we implementing it?
+     - Using the Form component of react-bootstrap, build a drop down menu so that the user can choose to filter by number of horns.
+     - When the user chooses one of the options, the correct images should be displayed.
 
-
-3. Submission Instructions
-    - Complete your Feature Tasks for the day
-    - Run your Lighthouse Accessibility report looking for a score of 65 or higher. Make adjustments as needed.
-    - Create a Pull Request (PR) back to the main branch of your repository
-    - On Canvas, submit a link to your PR and a link to your deployed application on Netlify. Add a comment in your Canvas assignment which includes the following:
-      - A link to the deployed version of your latest code.
-      - A question within the context of the lab assignment
-      - An observation about the lab assignment, or related ‘Ah-hah!’ moment
-      - How long you spent working on this assignment
-
-
+2. Submission Instructions
+   - Complete your Feature Tasks for the day
+   - Run your Lighthouse Accessibility report looking for a score of 65 or higher. Make adjustments as needed.
+   - Create a Pull Request (PR) back to the main branch of your repository
+   - On Canvas, submit a link to your PR and a link to your deployed application on Netlify. Add a comment in your Canvas assignment which includes the following:
+     - A link to the deployed version of your latest code.
+     - A question within the context of the lab assignment
+     - An observation about the lab assignment, or related ‘Ah-hah!’ moment
+     - How long you spent working on this assignment
 
 ## Code Challenge
 
@@ -65,10 +63,10 @@ Challenges
 Navigate to the javascript folder within your data-structures-and-algorithms repository.
 
 1. Create a new branch for this challenge called sort
-git checkout -b sort
+   git checkout -b sort
 
 2. Retrieve the code challenge from the system
-npm run get-challenge 04
+   npm run get-challenge 04
 
 3. In your terminal, from the javascript folder, run npm test 04 to execute the tests in this file for this challenge.
 
@@ -88,7 +86,6 @@ When you have completed the entire set of code challenges and all tests pass, cr
 You will be able to see a test coverage report in GitHub on the Actions tab of your data-structures-and-algorithms repository. It should match what you saw on your terminal in the above steps. Your graders will be looking at this as well.
 
 Submit a link to your pull request.
-
 
 ## Written Class Notes
 
@@ -310,10 +307,6 @@ Person.jsx
 
     export default Person;
 
-
-
-
-
 SelectedPerson.jsx
 
     import Card from 'react-bootstrap/Card';
@@ -346,9 +339,6 @@ SelectedPerson.jsx
 
     export default Person;
 
-
-
-
 ## Read 4 - Readings Overview
 
 ## Resources Link/Pages
@@ -360,11 +350,9 @@ SelectedPerson.jsx
 
 1. [React Docs - Forms](https://legacy.reactjs.org/docs/forms.html)
 
-
 ### The Conditional (Ternary) Operator Explained
 
 1. [The Conditional (Ternary) Operator Explained](https://codeburst.io/javascript-the-conditional-ternary-operator-explained-cac7218beeff)
-
 
 ## Answer
 
@@ -375,22 +363,21 @@ React forms enables efficient management of user input and state and ternary ope
 ### React Docs - Forms
 
 1. What is a ‘Controlled Component’?
-    -  Refers to a form element, such as `<input>`, `<textarea>`, or `<select>`, whose value is controlled by React state. The component maintains its own state and updates it based on user input, allowing React to be the "single source of truth" for the form's data.
+   - Refers to a form element, such as `<input>`, `<textarea>`, or `<select>`, whose value is controlled by React state. The component maintains its own state and updates it based on user input, allowing React to be the "single source of truth" for the form's data.
 2. Should we wait to store the users responses from the form into state when they submit the form OR should we update the state with their responses as soon as they enter them? Why.
-    - There was no answers in the reading so I asked ChatGpt and it said:
-    - It is generally preferable to update the state with the user's responses as soon as they enter them. This approach, known as real-time or immediate updating, allows for a more responsive user interface. Storing responses in state as they are entered ensures that the component's state reflects the latest user input and facilitates seamless interaction.
+   - There was no answers in the reading so I asked ChatGpt and it said:
+   - It is generally preferable to update the state with the user's responses as soon as they enter them. This approach, known as real-time or immediate updating, allows for a more responsive user interface. Storing responses in state as they are entered ensures that the component's state reflects the latest user input and facilitates seamless interaction.
 3. How do we target what the user is entering if we have an event handler on an input field?
-    - Enter the value through the event.target.value property. This value represents the current content of the input field and can be used to update the React state accordingly.
-
-
+   - Enter the value through the event.target.value property. This value represents the current content of the input field and can be used to update the React state accordingly.
 
 ### The Conditional (Ternary) Operator Explained
 
-1. Why would we use a ternary operator?
+1.  Why would we use a ternary operator?
+
     - It's a concise way to write conditional statements. It is often used when you have a simple condition and want to assign a value based on whether that condition is true or false.
     - syntax: condition ? value if true : value if false
 
-2. Rewrite the following statement using a ternary statement:
+2.  Rewrite the following statement using a ternary statement:
 
         if(x===y){
           console.log(true);
@@ -399,7 +386,6 @@ React forms enables efficient management of user input and state and ternary ope
         }
 
 - x === y ? console.log(true) : console.log(false);
-
 
 ## Things I want to know more about
 
@@ -412,23 +398,19 @@ Retrospectives are a critical part of Agile, and typically take the form of meet
 This [article](https://www.benlinders.com/2013/which-questions-do-you-ask-in-retrospectives/) gives a nice overview to the role of retrospectives.
 
 1. What went well, that I might forget if I don’t write down?
-    - I figured out that the easiest way possible to make functions be passed down is to just create an entirely new component that only references one place which is the state in app. 
+   - I figured out that the easiest way possible to make functions be passed down is to just create an entirely new component that only references one place which is the state in app.
 2. What did I learn today?
-    - I learned about the spread operator during todays code challenge but I'm still not confident on anything this week. 
+
+   - I learned about the spread operator during todays code challenge but I'm still not confident on anything this week.
 
 3. What should I do differently next time?
-    - I keep forgetting to ask for help earlier past the 15 minute mark because I get so into, I need to do that next time because a lot of time is just me trying to troubleshoot with no results.
+   - I keep forgetting to ask for help earlier past the 15 minute mark because I get so into, I need to do that next time because a lot of time is just me trying to troubleshoot with no results.
 
 4. What still puzzles me, or what do I need to learn more about?
-    - Everything. I feel like I need to self teach myself and watch some outside videos. At least in 20 at the end of the week where where the project is finished, I actually get it, but now at the end of this week I would not be able to produce anything on my own. 
+
+   - Everything. I feel like I need to self teach myself and watch some outside videos. At least in 20 at the end of the week where where the project is finished, I actually get it, but now at the end of this week I would not be able to produce anything on my own.
 
 5. Thinking about each of your assignments for the day, reflect on:
-    - Is the assignment complete? If not, where exactly did you leave off, and what work remains?
-    - Do not get bogged down in written analysis; instead, focus on capturing the moment with an eye toward how your observations can guide you toward future productivity.
-    - I think it's complete. Again I was not worried about the CSS because I just wanted to get the task down. I want to refine this project at the end of this class.
-
-
-
-
-
-
+   - Is the assignment complete? If not, where exactly did you leave off, and what work remains?
+   - Do not get bogged down in written analysis; instead, focus on capturing the moment with an eye toward how your observations can guide you toward future productivity.
+   - I think it's complete. Again I was not worried about the CSS because I just wanted to get the task down. I want to refine this project at the end of this class.
