@@ -1,70 +1,186 @@
-# Class 1 - Setup Developer Toolbelt
+# Class 13 - Updating Resources
 
-## Lab 1 - Let's Get Started
+## Lab 13 - Update a Resource
+
 
 ## Setup
+
+In this class you will complete your full stack CRUD application by adding an UPDATE route. You will add a button to each book that, when clicked, will display a form where the user can change information about that book. That information will be sent to the server where it will replace what’s already in the database for that record.
+
+
+**Feature Tasks**
+
+1. CREATE and DELETE of CRUD. See your team’s Trello board for this lab’s feature tasks.
+
+**Documentation**
+
+Your README.md must include:
+
+# Project Name
+
+**Author**: Your Name Goes Here
+**Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
+
+## Overview
+<!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
+
+## Getting Started
+<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
+
+## Architecture
+<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
+
+## Change Log
+<!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
+
+01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
+
+## Credit and Collaborations
+<!-- Give credit (and a link) to other people or resources that helped you build this application. -->
+
+**Time Estimates**
+
+For each of the lab features, make an estimate of the time it will take you to complete the feature, and record your start and finish times for that feature:
+
+Name of feature: ________________________________
+
+Estimate of time needed to complete: _____
+
+Start time: _____
+
+Finish time: _____
+
+Actual time needed to complete: _____
+
+Add this information to your README.
+
+**Submission Instructions**
+
+1. Complete your Feature Tasks for the lab, according to the Trello cards.
+2. Run your Lighthouse Accessibility report looking for a score of 65 or higher. Make adjustments as needed.
+3. Create a PR back to the main branch of your repository, showing ALL your work, and merge it cleanly.
+4. On Canvas, submit a link to your PR. Add a comment in your Canvas assignment which includes the following:
+    - A link to the deployed version of your latest code.
+    - A link to your public Trello board.
+    - A question within the context of this lab assignment.
+    - An observation about the lab assignment, or related ‘Ah-hah!’ moment.
+    - How long you spent working on this assignment.
+
+## Code Challenge - Regular Expressions, part 1
+
+Overview
+[Read this overview.](https://codefellows.github.io/code-301-guide/curriculum/class-13/challenges/)
+
+Video
+[Watch the video for this class from the demo playlist.](https://www.youtube.com/playlist?list=PLVngfM2hsbi-L6G8qlWd8RyRbuTamHt3k)
+
+Demonstration
+[Look through these sample problems.](https://codefellows.github.io/code-301-guide/curriculum/class-13/challenges/DEMO.html)
+
+Challenges
+Navigate to the javascript folder within your data-structures-and-algorithms repository.
+
+1. Create a new branch for this challenge called regex-1
+git checkout -b regex-1
+
+2. Retrieve the code challenge from the system
+npm run get-challenge 13
+
+3. In your terminal, from the javascript folder, run npm test 13 to execute the tests in this file for this challenge.
+
+4. At this point you will see the failed tests scroll through your terminal window with a brief report of the number of failed tests at the bottom.
+
+5. If you do not see this, verify your installation of Jest by typing npx jest --version in your terminal. Filename typos can make things break!
+
+6. Write code to make the tests pass, one at a time. Let the error messages guide you.
+
+7. Once the test is passing, refactor as needed, then move on to the next challenge.
+
+8. Note, you can also run npm test (without a challenge number) to run all of the tests for every code challenge file assignment during the course all at once. This can get “noisy”, but it’s an opportunity to get a view of your overall progress
+
+Submission
+When you have completed the entire set of code challenges and all tests pass, create a pull request from your current branch to the main branch and merge it into main.
+
+You will be able to see a test coverage report in GitHub on the Actions tab of your data-structures-and-algorithms repository. It should match what you saw on your terminal in the above steps. Your graders will be looking at this as well.
+
+Submit a link to your pull request.
 
 
 
 ## Written Class Notes
 
 
-## Read 1 - Readings Overview
+## Read 13 - Readings Overview
 
 ## Resources Link/Pages
 
-### Getting Started
+### CRUD Basics
 
-1. [Getting Started](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web)
-2. [How the Web Works](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works)
-3. [Website Design and Process](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-4. [JavaScript Basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
+1. [CRUD Basics](https://medium.com/geekculture/crud-operations-explained-2a44096e9c88)
 
-### Introduction to HTML
 
-1. [Introduction to HTML](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML)
-2. [Getting Started with HTML](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-3. [HTML Document Structure](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-4. [Metadata in HTML](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
+### Speed Coding: Building a CRUD API (Watch a Twitch streamer code an Express API in 20 minutes!)
 
-### Miscellaneous
 
-1. [How to Start to Design a Website](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Design_and_accessibility/Thinking_before_coding)
-2. [Semantics](https://developer.mozilla.org/en-US/docs/Glossary/Semantics)
-3. [What is JavaScript](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
+1. [Speed Coding: Building a CRUD API (Watch a Twitch streamer code an Express API in 20 minutes!)](https://www.youtube.com/watch?v=EzNcBhSv1Wo)
+
 
 ## Answer
 
 Statement on why this topic matter as it relates to what I'm studying in this module:
 
+Understanding CRUD is essential when working with databases to store, retrieve, modify, and delete data.
 
-### Getting Started
+### CRUD Basics
 
-1. Compose a short poem describing how HTTP sends data between computers.
-
-   - Client requests from server, server ponders requests, server approves and now client requests manifest
-
-
-### Introduction to HTML
-
-1. What is an HTML attribute?
-
-   - Additional information about the element and it goes before the closing bracket of the opening tag. Like for `<img src="image url or image file path" alt="attribute to descibe image">`, `src=" "` and `alt=" "` gives more information about the `<img>` element by specifying a file path and giving an image description with alternate text.
+1. Which HTTP method would you use to update a record through an API?
+    - PUT. This replaces all current data of the target resource with the uploaded content.
+1. Which REST methods require an ID parameter?
+    - Update (or Edit) and Delete methods. The ID parameter helps identify the specific resource that needs to be updated or deleted.
 
 
-### Miscellaneous
 
-1. What is the first step to designing a Website?
+### Speed Coding: Building a CRUD API (Watch a Twitch streamer code an Express API in 20 minutes!)
 
-   - Project Ideation which involves your goals with a website and tasks to reach that goal.
-
+1. What’s the relationship between REST and CRUD?
+    - REST (Representational State Transfer) is an architectural style that defines a set of constraints to be used when creating web services. CRUD (Create, Read, Update, Delete) is a set of basic operations commonly used in database interactions. The relationship between REST and CRUD lies in how RESTful APIs (Application Programming Interfaces) adhere to the principles of REST while implementing CRUD operations.
+    - In a RESTful API:
+      - Create is typically implemented using HTTP POST method.
+      - Read is implemented using HTTP GET method.
+      - Update is implemented using HTTP PUT or PATCH methods.
+      - Delete is implemented using HTTP DELETE method.
+1. If you had to describe the process of creating a RESTful API in 5 steps, what would they be?
+    - Define Resources
+    - Choose HTTP Methods
+    - Design URIs
+    - Implement CRUD Operations
+    - Handle Errors and Responses
 
 ## Things I want to know more about
 
-- How to write server-side code, like pulling data from somewhere and updating it on real-time on the webpage.
+- What exactly are nonrestful apis then. What have we been using so far?
 
-## Learning Journal
+## Retrospective
 
+Retrospectives are a critical part of Agile, and typically take the form of meetings held by a team at the end of a sprint cycle. To get us acclimated to that process, we will use the format of a retrospectives to guide today’s reflection.
 
-## Career 1 - Identify Your Accountability Partners
+This [article](https://www.benlinders.com/2013/which-questions-do-you-ask-in-retrospectives/) gives a nice overview to the role of retrospectives.
+
+1. What went well, that I might forget if I don’t write down?
+2. What did I learn today?
+3. What should I do differently next time?
+4. What still puzzles me, or what do I need to learn more about?
+5. Thinking about each of your assignments for the day, reflect on:
+    - Is the assignment complete? If not, where exactly did you leave off, and what work remains?
+    - Do not get bogged down in written analysis; instead, focus on capturing the moment with an eye toward how your observations can guide you toward future productivity.
+
+## Career 13 - Networking: Attend an Event
+
+Do some research on local meetups in your area. Attend one that you have never been to, off campus, with the intention of treating it as a networking opportunity. Set a goal of meeting at least 3 new people, and having one meaningful conversation. Get business cards if you can and connect with them on LinkedIn.
+
+**Assignment**
+
+Share the event name with a short review of your experience. Who did you meet, and what did you get to talk about. How can you follow up with the person that you connected with the most?
+
+TA’s will be grading you on your submission of the event name, review of your experience including the name of someone you met at the event and your plan to follow up with them.
 
