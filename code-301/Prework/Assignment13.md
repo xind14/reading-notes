@@ -14,4 +14,4 @@ As a reference, see [definitions of the proficiencies](https://codefellows.githu
 
 The key to growth is to break down each area to increase your emotional intelligence and take ownership of yourself. Write a summary about the ways you plan to make professional improvements to leverage your top three and strengthen your bottom three competencies from your self-assessment. Incorporate any previous instructor feedback. Write your summary in a Google doc (giving anyone with the URL “comment” access), and submit the doc URL.
 
-[Google Doc](https://docs.google.com/document/d/1y--xmhmPFdIMCIYef4j5bs9gLj-Fjiki7E2mPXQ-iJw/edit?usp=sharing)
+
