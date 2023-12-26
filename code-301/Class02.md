@@ -1,6 +1,4 @@
-Certainly! Here's the markdown for your Class 2 - State and Props:
 
-```markdown
 # Class 2 - State and Props
 
 ## Lab 2 - React State and Props

@@ -1,6 +1,4 @@
-Certainly! Here's your content formatted into a Markdown file:
 
-```markdown
 # Class 5 - Putting it all together
 
 ## Lab 5 - Deploy and Extend Your Portfolio
