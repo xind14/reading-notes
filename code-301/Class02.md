@@ -105,174 +105,165 @@ Submit a link to your pull request.
 
 ## Written Class Notes
 
-```javascript
-let numbers = [1, 2, 3, 4, 5];
 
-// .forEach does not return anything
-let forEachSquares = numbers.forEach((value, idx) => {
-  let s = value * value;
-  return s;
-})
+    let numbers = [1, 2, 3, 4, 5];
 
-// .map returns a new array of the same size as the original array.
-// That array contains whatever gets returned;
-let squares = numbers.map((value, idx) => {
-  // An array of bunnies
-  return "Bunnies";
+    // .forEach does not return anything
+    let forEachSquares = numbers.forEach((value, idx) => {
+      let s = value * value;
+      return s;
+    })
 
-  // An array of numbers based on the original array
-  // return value * value;
-});
+    // .map returns a new array of the same size as the original array.
+    // That array contains whatever gets returned;
+    let squares = numbers.map((value, idx) => {
+      // An array of bunnies
+      return "Bunnies";
 
-console.log(squares);
-```
+      // An array of numbers based on the original array
+      // return value * value;
+    });
 
-**Family Demo**
+    console.log(squares);
 
-**main.jsx**
 
-```
+    **Family Demo**
 
-javascript
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App.jsx';
+    **main.jsx**
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-);
-```
 
-**App.jsx**
 
-```javascript
-import { useState } from 'react';
 
-import Header from './components/Header.jsx';
-import Footer from './components/Footer.jsx';
-import People from './components/People.jsx';
+    import React from 'react';
+    import ReactDOM from 'react-dom/client';
+    import App from './App.jsx';
 
-import people from './assets/family.json';
+    ReactDOM.createRoot(document.getElementById('root')).render(
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>,
+    );
 
-import 'bootstrap/dist/css/bootstrap.min.css';
+    **App.jsx**
 
-function App() {
-  return (
-    <main>
-      <Header title="Our Family!" members={people.length} />
-      <People list={people} />
-      <Footer content="Copyright 2023: John and the 301's" />
-    </main>
-  );
-}
 
-export default App;
-```
+    import { useState } from 'react';
 
-**Header.jsx**
+    import Header from './components/Header.jsx';
+    import Footer from './components/Footer.jsx';
+    import People from './components/People.jsx';
 
-```javascript
-import React from 'react';
+    import people from './assets/family.json';
 
-function Header(props) {
-  return (
-    <header>
-      <h1>{props.title}</h1>
-      <div>We have {props.members} family members for you to meet</div>
-    </header>
-  );
-}
+    import 'bootstrap/dist/css/bootstrap.min.css';
 
-export default Header;
-```
-
-**People.jsx**
-
-```javascript
-import React from 'react';
-import Person from './Person.jsx';
-
-function People(props) {
-  return (
-    <>
-      {props.list.map((person, index) => {
-        return <Person key={index} name={person.name} hair={person.hair} />;
-      })}
-    </>
-  );
-}
-
-export default People;
-```
-
-**PeopleClean.jsx**
-
-```javascript
-import React from 'react';
-import Person from './Person.jsx';
-
-function People(props) {
-  return (
-    <>
-      {props.list.map((person, index) => (
-        <Person key={index} name={person.name} hair={person.hair} />
-      ))}
-    </>
-  );
-}
-
-export default People;
-```
-
-**Person.jsx**
-
-    import React, { useState } from 'react';
-    import Button from 'react-bootstrap/Button';
-    import Card from 'react-bootstrap/Card';
-
-    function Person(props) {
-      const [color, setColor] = useState("grey");
-      const [visible, setVisible] = useState("block");
-
-      function vote() {
-        setVisible("none");
-      }
-
+    function App() {
       return (
-        // <Card style={{ width: '18rem', margin: '1em', display: `${visible}` }}>
-          <Card.Img variant="top" src="https://placehold.co/100x100" />
-          <Card.Body>
-            <Card.Title>{props.name}</Card.Title>
-            <Card.Text>
-              Hair Color: {props.hair}
-            </Card.Text>
-            <Button onClick={vote} variant="primary">
-              Vote for {props.name}
-            </Button>
-          </Card.Body>
-        </Card>
+        <main>
+          <Header title="Our Family!" members={people.length} />
+          <People list={people} />
+          <Footer content="Copyright 2023: John and the 301's" />
+        </main>
       );
     }
 
-    export default Person;
+    export default App;
 
-**Footer.jsx**
 
-```javascript
-import React from 'react';
+    **Header.jsx**
 
-function Footer(props) {
-  return (
-    <footer>
-      <div>{props.content}</div>
-    </footer>
-  );
-}
+    import React from 'react';
 
-export default Footer;
-```
+    function Header(props) {
+      return (
+        <header>
+          <h1>{props.title}</h1>
+          <div>We have {props.members} family members for you to meet</div>
+        </header>
+      );
+    }
+
+    export default Header;
+
+    **People.jsx**
+
+    import React from 'react';
+    import Person from './Person.jsx';
+
+    function People(props) {
+      return (
+        <>
+          {props.list.map((person, index) => {
+            return <Person key={index} name={person.name} hair={person.hair} />;
+          })}
+        </>
+      );
+    }
+
+    export default People;
+
+    **PeopleClean.jsx**
+
+    import React from 'react';
+    import Person from './Person.jsx';
+
+    function People(props) {
+      return (
+        <>
+          {props.list.map((person, index) => (
+            <Person key={index} name={person.name} hair={person.hair} />
+          ))}
+        </>
+      );
+    }
+
+    export default People;
+
+    **Person.jsx**
+
+        import React, { useState } from 'react';
+        import Button from 'react-bootstrap/Button';
+        import Card from 'react-bootstrap/Card';
+
+        function Person(props) {
+          const [color, setColor] = useState("grey");
+          const [visible, setVisible] = useState("block");
+
+          function vote() {
+            setVisible("none");
+          }
+
+          return (
+            // <Card style={{ width: '18rem', margin: '1em', display: `${visible}` }}>
+              <Card.Img variant="top" src="https://placehold.co/100x100" />
+              <Card.Body>
+                <Card.Title>{props.name}</Card.Title>
+                <Card.Text>
+                  Hair Color: {props.hair}
+                </Card.Text>
+                <Button onClick={vote} variant="primary">
+                  Vote for {props.name}
+                </Button>
+              </Card.Body>
+            </Card>
+          );
+        }
+
+        export default Person;
+
+    **Footer.jsx**
+
+    import React from 'react';
+
+    function Footer(props) {
+      return (
+        <footer>
+          <div>{props.content}</div>
+        </footer>
+      );
+    }
+
+    export default Footer;
 
 **Important Notes:**
 
