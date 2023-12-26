@@ -228,7 +228,6 @@ export default People;
 
 **Person.jsx**
 
-    ```javascript
     import React, { useState } from 'react';
     import Button from 'react-bootstrap/Button';
     import Card from 'react-bootstrap/Card';
@@ -258,7 +257,6 @@ export default People;
     }
 
     export default Person;
-    ```
 
 **Footer.jsx**
 
