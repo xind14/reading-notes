@@ -1,0 +1,23 @@
+# Typing Practice
+
+![Python Lesson 1](/img/lesson1.png)
+![Python Lesson 2](/img/lesson2.png)
+![Python Lesson 3](/img/lesson3.png)
+![Python Lesson 4](/img/lesson4.png)
+![Python Lesson 5](/img/lesson5.png)
+![Python Lesson 6](/img/lesson6.png)
+![Python Lesson 7](/img/lesson7.png)
+![Python Lesson 8](/img/lesson8.png)
+![Python Lesson 9](/img/lesson9.png)
+![Python Lesson 10](/img/lesson10.png)
+![Python Lesson 11](/img/lesson11.png)
+![Python Lesson 12](/img/lesson12.png)
+![Python Lesson 13](/img/lesson13.png)
+![Python Lesson 14](/img/lesson14.png)
+![Python Lesson 15](/img/lesson15.png)
+![Python Lesson 16](/img/lesson16.png)
+![Python Lesson 17](/img/lesson17.png)
+![Python Lesson 18](/img/lesson18.png)
+![Python Lesson 19](/img/lesson19.png)
+![Python Lesson 20](/img/lesson20.png)
+
