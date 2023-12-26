@@ -12,8 +12,6 @@ In this lab assignment, you will show live weather and movie data in response to
 
 - [The Movie DB API Docs](https://developer.themoviedb.org/docs/getting-started)
 
-
-
 **Process**
 
 When available, your instructor will pair you with a partner for this lab. Review each other’s code from the previous lab and plan out an approach to this lab’s work on a whiteboard.
@@ -21,11 +19,11 @@ When available, your instructor will pair you with a partner for this lab. Revie
 1. Do a formal code review of each person’s code (10 minutes each).
 2. Open your partner’s GitHub pull request on your laptop.
 3. Identify an area in the code that:
-    - you don’t understand
-    - or seems overly complex
-    - or you see a way to improve
-    - or you want more information on
-    - or you really like or think is interesting
+   - you don’t understand
+   - or seems overly complex
+   - or you see a way to improve
+   - or you want more information on
+   - or you really like or think is interesting
 4. Add kind comments or questions inline using the GitHub review feature.
 5. Draw the web request-response cycle for the current lab tasks (about 10 minutes).
 6. Document the data flow: identify inputs and outputs for each part of the cycle.
@@ -40,7 +38,7 @@ When available, your instructor will pair you with a partner for this lab. Revie
 3. After creating an account, go to the [City Explorer Trello Board](https://trello.com/b/Ajj9Cbac/module-2-city-explorer), open the “… Show Menu” link, click the “… More” link, and then click “Copy Board”. Before you create it, be sure to “Change” from Private to “Public” (and click “Yes, Make Board Public”) so your instructional team can see your work. Now, click “Create” to add a copy to your personal account.
 4. This Trello board contains all of the features required to complete this lab assignment.
 5. Review the user stories and analyze the feature requests and requirements in the lab.
-Within each story, note the acceptance criteria (“Given … When … Then…”) and the checklist of feature tasks. Be careful to execute tasks in order as they are often dependencies of one another.
+   Within each story, note the acceptance criteria (“Given … When … Then…”) and the checklist of feature tasks. Be careful to execute tasks in order as they are often dependencies of one another.
 6. Throughout the lab time, check off tasks as you complete them, and move the story cards through the workflow.
 
 **Documentation**
@@ -53,35 +51,40 @@ Your README.md must include:
 **Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
 
 ## Overview
+
 <!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
 
 ## Getting Started
+
 <!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
 
 ## Architecture
+
 <!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
 
 ## Change Log
+
 <!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
 
 01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
 
 ## Credit and Collaborations
+
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 
 **Time Estimates**
 
 For each of the lab features, make an estimate of the time it will take you to complete the feature, and record your start and finish times for that feature:
 
-Name of feature: ________________________________
+Name of feature: **************\_\_\_\_**************
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: **\_**
 
-Start time: _____
+Start time: **\_**
 
-Finish time: _____
+Finish time: **\_**
 
-Actual time needed to complete: _____
+Actual time needed to complete: **\_**
 
 Add this information to your README.
 
@@ -93,11 +96,11 @@ Add this information to your README.
 3. Run your Lighthouse Accessibility report looking for a score of 65 or higher. Make adjustments as needed.
 4. Create a PR back to the main branch of your repository, showing ALL your work, and merge it cleanly.
 5. On Canvas, submit a link to your PR. Add a comment in your Canvas assignment which includes the following:
-    - A link to the deployed version of your latest code.
-    - A link to your public Trello board.
-    - A question within the context of this lab assignment.
-    - An observation about the lab assignment, or related ‘Ah-hah!’ moment.
-    - How long you spent working on this assignment.
+   - A link to the deployed version of your latest code.
+   - A link to your public Trello board.
+   - A question within the context of this lab assignment.
+   - An observation about the lab assignment, or related ‘Ah-hah!’ moment.
+   - How long you spent working on this assignment.
 
 ## Code Challenge - Array and String Methods Fun with split, join, slice, and splice!
 
@@ -114,10 +117,10 @@ Challenges
 Navigate to the javascript folder within your data-structures-and-algorithms repository.
 
 1. Create a new branch for this challenge called array-methods
-git checkout -b array-methods
+   git checkout -b array-methods
 
 2. Retrieve the code challenge from the system
-npm run get-challenge 08
+   npm run get-challenge 08
 
 3. In your terminal, from the javascript folder, run npm test 08 to execute the tests in this file for this challenge.
 
@@ -138,10 +141,15 @@ You will be able to see a test coverage report in GitHub on the Actions tab of y
 
 Submit a link to your pull request.
 
-
-
 ## Written Class Notes
 
+errors come from the server side
+200 success
+500 broken
+404 not found
+403 forbidden api wrong
+
+Use middle man to make it easier on client side, best practice to off load to backend service, no intelligence on client side
 
 ## Read 8 - Readings Overview
 
@@ -157,40 +165,38 @@ Submit a link to your pull request.
 
 1. [API Design Best Practices](https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design)
 
-
-
 ## Answer
 
 Statement on why this topic matter as it relates to what I'm studying in this module:
 
- APIs serve as the backbone for communication between different software components. REST provides a standardized architectural approach to designing these APIs.
+APIs serve as the backbone for communication between different software components. REST provides a standardized architectural approach to designing these APIs.
 
 ### API Design Best Practices
 
 1. What does REST stand for?
-    - Representational State Transfer.
+   - Representational State Transfer.
 1. REST APIs are designed around a **resource**.
 1. What is an identifier of a resource? Give an example.
-    -  URI (Uniform Resource Identifier). Example: `https://adventure-works.com/orders/1`
+   - URI (Uniform Resource Identifier). Example: `https://adventure-works.com/orders/1`
 1. What are the most common HTTP verbs?
-    - GET, POST, PUT, PATCH, DELETE.
+   - GET, POST, PUT, PATCH, DELETE.
 1. What should the URIs be based on?
-    - The nouns (the resource) and not verbs (the operations on the resource).
+
+   - The nouns (the resource) and not verbs (the operations on the resource).
 
 1. Give an example of a good URI.
-    - Good: `https://adventure-works.com/orders`
-    - Avoid: `https://adventure-works.com/create-order`
+   - Good: `https://adventure-works.com/orders`
+   - Avoid: `https://adventure-works.com/create-order`
 1. What does it mean to have a ‘chatty’ web API? Is this a good or a bad thing?
-    - When one that exposes a large number of small resources, leading to many requests. This is generally a bad thing as it increases the load on the server and may result in poor performance.
+   - When one that exposes a large number of small resources, leading to many requests. This is generally a bad thing as it increases the load on the server and may result in poor performance.
 1. What status code does a successful `GET` request return?
-    - HTTP status code 200 (OK).
+   - HTTP status code 200 (OK).
 1. What status code does an unsuccessful `GET` request return?
-    - HTTP status code 404 (Not Found) if the resource cannot be found.
+   - HTTP status code 404 (Not Found) if the resource cannot be found.
 1. What status code does a successful `POST` request return?
-    - HTTP status code 201 (Created).
+   - HTTP status code 201 (Created).
 1. What status code does a successful `DELETE` request return?
-    - HTTP status code 204 (No Content).
-
+   - HTTP status code 204 (No Content).
 
 #### The common HTTP methods used by most RESTful web APIs are:
 
@@ -199,7 +205,6 @@ Statement on why this topic matter as it relates to what I'm studying in this mo
 - **PUT** either creates or replaces the resource at the specified URI. The body of the request message specifies the resource to be created or updated.
 - **PATCH** performs a partial update of a resource. The request body specifies the set of changes to apply to the resource.
 - **DELETE** removes the resource at the specified URI.
-
 
 ## Things I want to know more about
 
@@ -212,15 +217,20 @@ Retrospectives are a critical part of Agile, and typically take the form of meet
 This [article](https://www.benlinders.com/2013/which-questions-do-you-ask-in-retrospectives/) gives a nice overview to the role of retrospectives.
 
 1. What went well, that I might forget if I don’t write down?
-2. What did I learn today?
-3. What should I do differently next time?
-4. What still puzzles me, or what do I need to learn more about?
-5. Thinking about each of your assignments for the day, reflect on:
-    - Is the assignment complete? If not, where exactly did you leave off, and what work remains?
-    - Do not get bogged down in written analysis; instead, focus on capturing the moment with an eye toward how your observations can guide you toward future productivity.
+   - Two things went well but I forgot to write them down and now I don't remember. I will blame that only getting two hours of sleep.
+1. What did I learn today?
+   - Some API sites make things so hard to use....
+1. What should I do differently next time?
+   - I should take notes when a TA is talking to me so I remember what helped.
+1. What still puzzles me, or what do I need to learn more about?
+   - I think no brainer everything about this week still confuses me.
+
+Thinking about each of your assignments for the day, reflect on:
+
+Is the assignment complete? If not, where exactly did you leave off, and what work remains?
+It is not complete, I still have to do the hard part of fixing the movie data feth and also rendering that.
 
 ## Career 8 - Professional Pitch and Introduction
-
 
 **Watch the videos:**
 
@@ -240,5 +250,3 @@ Remember that feedback is a gift. Being receptive to ways you can improve is imp
 Submit the reworked version of your video to complete the assignment.
 
 - Hello, I'm Xin Deng, transitioning from a career in veterinary clinic team management to the forward-thinking world of software development. In my role as a lead receptionist, I cultivated strong multitasking and problem-solving skills, but I felt a need for a more fulfilling and stable career. The allure of merging creativity with technology led me to software development, where I aspire to design user-friendly applications and contribute to groundbreaking innovations. My advantage lies in my extensive experience in client-facing roles, and understanding the importance of seamless user interactions. Thriving in collaborative environments, I am eager to leverage my problem-solving and communication skills to make a valuable impact on any software development team.
-
-
