@@ -234,7 +234,7 @@ Submit a link to your pull request.
           }
 
           return (
-            // <Card style={{ width: '18rem', margin: '1em', display: `${visible}` }}>
+            // <Card style={{ width: '18rem', margin: '1em', display: {visible}}}>
               <Card.Img variant="top" src="https://placehold.co/100x100" />
               <Card.Body>
                 <Card.Title>{props.name}</Card.Title>
