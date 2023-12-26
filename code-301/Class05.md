@@ -111,7 +111,9 @@ React state and static app concepts are essential for developing dynamic and eff
 
  represent the structure of the UI based on the initial data. The goal is to establish a solid foundation by ensuring that components can properly render the UI elements before introducing dynamic behavior or user interactions.
 3. **Once you have a static application, what do you need to add?**
-   - Add interactivity by introducing state to the components, allowing the application to respond to user input and dynamic changes. The static version serves as a baseline, and interactivity is layered on top, typically by incorporating state and event handling mechanisms to update the UI based on user actions.
+
+- Add interactivity by introducing state to the components, allowing the application to respond to user input and dynamic changes. The static version serves as a baseline, and interactivity is layered on top, typically by incorporating state and event handling mechanisms to update the UI based on user actions.
+
 4. **What are the three questions you can ask to determine if something is state?**
    - Does it remain unchanged over time? If so, it isn't state.
    - Is it passed in from a parent via props? If so, it isn't state.

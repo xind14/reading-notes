@@ -72,23 +72,29 @@ Add this information to your README.
 ## Code Challenge - Regular Expressions, part 1
 
 ### Overview
+
 [Read this overview.](https://codefellows.github.io/code-301-guide/curriculum/class-13/challenges/)
 
 ### Video
+
 [Watch the video for this class from the demo playlist.](https://www.youtube.com/playlist?list=PLVngfM2hsbi-L6G8qlWd8RyRbuTamHt3k)
 
 ### Demonstration
+
 [Look through these sample problems.](https://codefellows.github.io/code-301-guide/curriculum/class-13/challenges/DEMO.html)
 
 ### Challenges
+
 Navigate to the javascript folder within your data-structures-and-algorithms repository.
 
 1. Create a new branch for this challenge called regex-1
+
    ```bash
    git checkout -b regex-1
    ```
 
 2. Retrieve the code challenge from the system
+
    ```bash
    npm run get-challenge 13
    ```
@@ -106,6 +112,7 @@ Navigate to the javascript folder within your data-structures-and-algorithms rep
 8. Note, you can also run npm test (without a challenge number) to run all of the tests for every code challenge file assignment during the course all at once. This can get “noisy”, but it’s an opportunity to get a view of your overall progress
 
 ### Submission
+
 When you have completed the entire set of code challenges and all tests pass, create a pull request from your current branch to the main branch and merge it into main.
 
 You will be able to see a test coverage report in GitHub on the Actions tab of your data-structures-and-algorithms repository. It should match what you saw on your terminal in the above steps. Your graders will be looking at this as well.
@@ -151,11 +158,12 @@ Understanding CRUD is essential when working with databases to store, retrieve, 
 2. If you had to describe the process of creating a RESTful API in 5
 
  steps, what would they be?
-   - Define Resources
-   - Choose HTTP Methods
-   - Design URIs
-   - Implement CRUD Operations
-   - Handle Errors and Responses
+
+- Define Resources
+- Choose HTTP Methods
+- Design URIs
+- Implement CRUD Operations
+- Handle Errors and Responses
 
 ## Things I want to know more about
 

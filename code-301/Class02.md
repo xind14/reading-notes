@@ -277,6 +277,7 @@ export default Footer;
 ```
 
 **Important Notes:**
+
 - Don't touch `index.html`.
 - Remove CSS pages.
 - Delete all in `app.jsx`.
