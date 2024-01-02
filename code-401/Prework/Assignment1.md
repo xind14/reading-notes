@@ -112,29 +112,29 @@ SQL is a standard language used by most relational database management systems (
 
 ## Practice running common SQL commands using the following SQL Bolt tutorials
 
-![Task 1 SQL Bolt Tutorial](/img/task1.png)
+![Task 1 SQL Bolt Tutorial](img/task1.png)
 
-![Task 2 SQL Bolt Tutorial](/img/task2.png)
+![Task 2 SQL Bolt Tutorial](img/task2.png)
 
-![Task 3 SQL Bolt Tutorial](/img/task3.png)
+![Task 3 SQL Bolt Tutorial](img/task3.png)
 
-![Task 4 SQL Bolt Tutorial](/img/task4.png)
+![Task 4 SQL Bolt Tutorial](img/task4.png)
 
-![Task 5 SQL Bolt Tutorial](/img/task5.png)
+![Task 5 SQL Bolt Tutorial](img/task5.png)
 
-![Task 6 SQL Bolt Tutorial](/img/task6.png)
+![Task 6 SQL Bolt Tutorial](img/task6.png)
 
-![Task 13 SQL Bolt Tutorial](/img/task13.png)
+![Task 13 SQL Bolt Tutorial](img/task13.png)
 
-![Task 14 SQL Bolt Tutorial](/img/task14.png)
+![Task 14 SQL Bolt Tutorial](img/task14.png)
 
-![Task 15 SQL Bolt Tutorial](/img/task15.png)
+![Task 15 SQL Bolt Tutorial](img/task15.png)
 
-![Task 16 SQL Bolt Tutorial](/img/task16.png)
+![Task 16 SQL Bolt Tutorial](img/task16.png)
 
-![Task 17 SQL Bolt Tutorial](/img/task17.png)
+![Task 17 SQL Bolt Tutorial](img/task17.png)
 
-![Task 18 SQL Bolt Tutorial](/img/task18.png)
+![Task 18 SQL Bolt Tutorial](img/task18.png)
 
 ### Lessons 1 through 6 - SQL Queries
 
