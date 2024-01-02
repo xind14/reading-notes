@@ -44,21 +44,43 @@ Submit a link to your pull request.
 
 ## Resources Link/Pages
 
-**Bookmark and Review**
 
-- [React Tutorial through ‘Passing Data Through Props’](https://react.dev/learn/tutorial-tic-tac-toe)
-- [React Docs - Hello world](https://legacy.reactjs.org/docs/hello-world.html)
-- [React Docs - Introducing JSX](https://legacy.reactjs.org/docs/introducing-jsx.html)
-- [React Docs - Rendering elements](https://legacy.reactjs.org/docs/rendering-elements.html)
-- [React Docs - Components and props](https://legacy.reactjs.org/docs/components-and-props.html)
+ES6 Overview
 
-### Component-Based Architecture
+- [ES6 Syntax and Feature Overview](https://www.taniarascia.com/es6-syntax-and-feature-overview/)
 
-1. [Component-Based Architecture](https://www.tutorialspoint.com/software_architecture_design/component_based_architecture.htm)
+React
 
-### What is Props and How to Use it in React
 
-1. [What is Props and How to Use it in React](https://itnext.io/what-is-props-and-how-to-use-it-in-react-da307f500da0)
+- [React - Hello World](https://reactjs.org/docs/hello-world.html)
+- [React - JSX](https://reactjs.org/docs/introducing-jsx.html)
+- [React - Rendering Elements](https://reactjs.org/docs/rendering-elements.html)
+- [React - Components & Props](https://reactjs.org/docs/components-and-props.html)
+- [React - State & Lifecycle](https://reactjs.org/docs/state-and-lifecycle.html)
+- [React - Handling Events](https://reactjs.org/docs/handling-events.html)
+
+Tailwind CSS
+
+
+- [Utility First CSS](https://tailwindcss.com/docs/utility-first)
+- [Tailwind in a few min minutes](https://www.youtube.com/watch?v=pB1oed_10IA)
+
+Next.js
+
+- [Learn Next.js](https://nextjs.org/learn/basics/create-nextjs-app)
+- [Why to use Next.js](https://www.youtube.com/watch?v=rtgbaKBhdkk)
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Answer
 
@@ -66,17 +88,13 @@ Statement on why this topic matter as it relates to what I'm studying in this mo
 
 Adding on to what was learned in 201, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.
 
-### Component-Based Architecture
+1. In the context of ES6 Syntax and Feature Overview, what are three key features introduced in ES6 that improve upon the previous version of JavaScript, and briefly explain their benefits?
 
-1. What is a "component"?
+2. After reading “Tailwind in 15 minutes,” can you describe the purpose of utility classes in Tailwind CSS and provide an example of how to use them to style an HTML element?
 
-   - A replaceable and reusable set of functionality. It is a software object, interacting with other components. Components are designed to be independent, allowing them to be deployed and composed individually.
+3. Based on “Why to use Next.js,” explain the main advantages of using Next.js for web development, and provide a brief comparison between traditional client-side rendering and Next.js’s server-side rendering approach.
 
 
-### What is Props and How to Use it in React
-
-1. What is “props” short for?
-   - It is short for "properties." It is a special keyword used to pass data from one component to another.
 
 ## Things I want to know more about
 

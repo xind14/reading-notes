@@ -44,21 +44,22 @@ Submit a link to your pull request.
 
 ## Resources Link/Pages
 
-**Bookmark and Review**
+- [Django Custum User Model](https://learndjango.com/tutorials/django-custom-user-model)
+- [DjangoX](https://github.com/wsvincent/djangox)
 
-- [React Tutorial through ‘Passing Data Through Props’](https://react.dev/learn/tutorial-tic-tac-toe)
-- [React Docs - Hello world](https://legacy.reactjs.org/docs/hello-world.html)
-- [React Docs - Introducing JSX](https://legacy.reactjs.org/docs/introducing-jsx.html)
-- [React Docs - Rendering elements](https://legacy.reactjs.org/docs/rendering-elements.html)
-- [React Docs - Components and props](https://legacy.reactjs.org/docs/components-and-props.html)
+CHOOSE ONE
 
-### Component-Based Architecture
+- [Creating a Custom User Moel](https://www.youtube.com/watch?v=eCeRC7E8Z7Y&t=59s)
+- [Abstract User, User Profile and Signals in Django](https://www.youtube.com/watch?v=EudKs1HPUfE)
 
-1. [Component-Based Architecture](https://www.tutorialspoint.com/software_architecture_design/component_based_architecture.htm)
 
-### What is Props and How to Use it in React
+- [Substituting a custom User model](https://docs.djangoproject.com/en/3.0/topics/auth/customizing/#auth-custom-user)
 
-1. [What is Props and How to Use it in React](https://itnext.io/what-is-props-and-how-to-use-it-in-react-da307f500da0)
+
+
+
+
+
 
 ## Answer
 
@@ -66,17 +67,13 @@ Statement on why this topic matter as it relates to what I'm studying in this mo
 
 Adding on to what was learned in 201, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.
 
-### Component-Based Architecture
+1. What are the key benefits of using a Django Custom User Model, and how does it differ from the default Django User Model?
 
-1. What is a "component"?
+2. Explain the process of creating and implementing a Custom User Model in Django, including the necessary changes to settings.py and the required model fields.
 
-   - A replaceable and reusable set of functionality. It is a software object, interacting with other components. Components are designed to be independent, allowing them to be deployed and composed individually.
+3. What is DjangoX and how does it complement or extend the functionality of Django? Provide an example use case for incorporating DjangoX in a project.
 
 
-### What is Props and How to Use it in React
-
-1. What is “props” short for?
-   - It is short for "properties." It is a special keyword used to pass data from one component to another.
 
 ## Things I want to know more about
 

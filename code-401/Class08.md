@@ -44,21 +44,13 @@ Submit a link to your pull request.
 
 ## Resources Link/Pages
 
-**Bookmark and Review**
+- [List Comprehensions](https://www.pythonforbeginners.com/basics/list-comprehensions-in-python)
+- [Debugging with PySnooper](https://www.pythonpodcast.com/pysnooper-python-debugging-episode-241/) optional
 
-- [React Tutorial through ‘Passing Data Through Props’](https://react.dev/learn/tutorial-tic-tac-toe)
-- [React Docs - Hello world](https://legacy.reactjs.org/docs/hello-world.html)
-- [React Docs - Introducing JSX](https://legacy.reactjs.org/docs/introducing-jsx.html)
-- [React Docs - Rendering elements](https://legacy.reactjs.org/docs/rendering-elements.html)
-- [React Docs - Components and props](https://legacy.reactjs.org/docs/components-and-props.html)
 
-### Component-Based Architecture
 
-1. [Component-Based Architecture](https://www.tutorialspoint.com/software_architecture_design/component_based_architecture.htm)
 
-### What is Props and How to Use it in React
-
-1. [What is Props and How to Use it in React](https://itnext.io/what-is-props-and-how-to-use-it-in-react-da307f500da0)
+- [Primer on Decorators](https://realpython.com/primer-on-python-decorators/)
 
 ## Answer
 
@@ -66,17 +58,11 @@ Statement on why this topic matter as it relates to what I'm studying in this mo
 
 Adding on to what was learned in 201, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.
 
-### Component-Based Architecture
+1. What is the basic syntax of Python list comprehension, and how does it differ from using a for loop to create a list? Provide an example of a list comprehension that squares the elements in a given list of integers.
 
-1. What is a "component"?
+2. What is a decorator in Python?
 
-   - A replaceable and reusable set of functionality. It is a software object, interacting with other components. Components are designed to be independent, allowing them to be deployed and composed individually.
-
-
-### What is Props and How to Use it in React
-
-1. What is “props” short for?
-   - It is short for "properties." It is a special keyword used to pass data from one component to another.
+3. Explain the concept of decorators in Python. How do they work, and what are some common use cases for them? Provide an example of a simple decorator function from the reading.
 
 ## Things I want to know more about
 

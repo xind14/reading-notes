@@ -44,21 +44,20 @@ Submit a link to your pull request.
 
 ## Resources Link/Pages
 
-**Bookmark and Review**
+- [Getting started with Django](https://www.djangoproject.com/start/) Just the Intro to Django section.
+- [How Django Works Behind the Scenes](https://wsvincent.com/how-django-works-behind-the-scenes/)
+- [What is Tailwind CSS?](https://blog.hubspot.com/website/what-is-tailwind-css)
 
-- [React Tutorial through ‘Passing Data Through Props’](https://react.dev/learn/tutorial-tic-tac-toe)
-- [React Docs - Hello world](https://legacy.reactjs.org/docs/hello-world.html)
-- [React Docs - Introducing JSX](https://legacy.reactjs.org/docs/introducing-jsx.html)
-- [React Docs - Rendering elements](https://legacy.reactjs.org/docs/rendering-elements.html)
-- [React Docs - Components and props](https://legacy.reactjs.org/docs/components-and-props.html)
 
-### Component-Based Architecture
+- [What is Django](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Introduction)
+- [First Django App - Part 1](https://docs.djangoproject.com/en/4.1/intro/tutorial01/)
+- [First Django App - Part 2](https://docs.djangoproject.com/en/4.1/intro/tutorial02/)
+- [Tailwind CSS Django - Flowbite](https://flowbite.com/docs/getting-started/django/)
 
-1. [Component-Based Architecture](https://www.tutorialspoint.com/software_architecture_design/component_based_architecture.htm)
 
-### What is Props and How to Use it in React
 
-1. [What is Props and How to Use it in React](https://itnext.io/what-is-props-and-how-to-use-it-in-react-da307f500da0)
+
+
 
 ## Answer
 
@@ -66,17 +65,11 @@ Statement on why this topic matter as it relates to what I'm studying in this mo
 
 Adding on to what was learned in 201, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.
 
-### Component-Based Architecture
+1. What are the key components of the Django framework, and how do they contribute to building a web application?
 
-1. What is a "component"?
+2. Explain the role of Django’s MTV (Model-View-Template) architecture and how it handles a typical web request-response cycle.
 
-   - A replaceable and reusable set of functionality. It is a software object, interacting with other components. Components are designed to be independent, allowing them to be deployed and composed individually.
-
-
-### What is Props and How to Use it in React
-
-1. What is “props” short for?
-   - It is short for "properties." It is a special keyword used to pass data from one component to another.
+3. What is the purpose of Tailwind CSS, and how does it differ from Bootstrap CSS?
 
 ## Things I want to know more about
 

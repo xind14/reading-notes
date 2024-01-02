@@ -44,21 +44,16 @@ Submit a link to your pull request.
 
 ## Resources Link/Pages
 
-**Bookmark and Review**
 
-- [React Tutorial through ‘Passing Data Through Props’](https://react.dev/learn/tutorial-tic-tac-toe)
-- [React Docs - Hello world](https://legacy.reactjs.org/docs/hello-world.html)
-- [React Docs - Introducing JSX](https://legacy.reactjs.org/docs/introducing-jsx.html)
-- [React Docs - Rendering elements](https://legacy.reactjs.org/docs/rendering-elements.html)
-- [React Docs - Components and props](https://legacy.reactjs.org/docs/components-and-props.html)
+- [How to use Random Module](https://www.pythonforbeginners.com/random/how-to-use-the-random-module-in-python)
+- [What is Risk Analysis](https://www.edureka.co/blog/risk-analysis-in-software-testing/)
+- [Test Coverage](https://martinfowler.com/bliki/TestCoverage.html)
+- [Big O Notation](https://www.youtube.com/watch?v=v4cd1O4zkGw)
 
-### Component-Based Architecture
 
-1. [Component-Based Architecture](https://www.tutorialspoint.com/software_architecture_design/component_based_architecture.htm)
+- [Python Random](https://docs.python.org/3/library/random.html)
+- [What is Dependency Injection](https://www.freecodecamp.org/news/a-quick-intro-to-dependency-injection-what-it-is-and-when-to-use-it-7578c84fa88f/) We won’t be covering this concept in depth until following class but it’s a big concept and needs some time to settle in.
 
-### What is Props and How to Use it in React
-
-1. [What is Props and How to Use it in React](https://itnext.io/what-is-props-and-how-to-use-it-in-react-da307f500da0)
 
 ## Answer
 
@@ -66,17 +61,13 @@ Statement on why this topic matter as it relates to what I'm studying in this mo
 
 Adding on to what was learned in 201, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.
 
-### Component-Based Architecture
+1. How can the random module be utilized in Python to generate random numbers or make selections from a list, and what are some common functions available within the module?
 
-1. What is a "component"?
+2. In the context of software development, what is risk analysis, and what are the key steps involved in conducting a risk analysis for a software project?
 
-   - A replaceable and reusable set of functionality. It is a software object, interacting with other components. Components are designed to be independent, allowing them to be deployed and composed individually.
+3. What is test coverage and why is it an important (or potentially misleading) metric in software testing?
 
-
-### What is Props and How to Use it in React
-
-1. What is “props” short for?
-   - It is short for "properties." It is a special keyword used to pass data from one component to another.
+4. What is Big O notation, and how is it used to describe the performance of an algorithm? Give an example of an everyday task (not software related) that demonstrates O(n) time complexity.
 
 ## Things I want to know more about
 

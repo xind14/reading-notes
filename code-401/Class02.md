@@ -46,19 +46,27 @@ Submit a link to your pull request.
 
 **Bookmark and Review**
 
-- [React Tutorial through ‘Passing Data Through Props’](https://react.dev/learn/tutorial-tic-tac-toe)
-- [React Docs - Hello world](https://legacy.reactjs.org/docs/hello-world.html)
-- [React Docs - Introducing JSX](https://legacy.reactjs.org/docs/introducing-jsx.html)
-- [React Docs - Rendering elements](https://legacy.reactjs.org/docs/rendering-elements.html)
-- [React Docs - Components and props](https://legacy.reactjs.org/docs/components-and-props.html)
+- [In Tests We Trust - TDD with Python](https://code.likeagirl.io/in-tests-we-trust-tdd-with-python-af69f47e6932)
+- [If name equals main](https://www.geeksforgeeks.org/what-does-the-if-__name__-__main__-do/)
+- [Recursion](https://www.geeksforgeeks.org/recursion/)
+- [What on Earth is Recursion](https://www.youtube.com/watch?v=Mv9NEXX1VHc)
+- [Python Modules and Packages Companion Video](https://realpython.com/courses/python-modules-packages/)
 
-### Component-Based Architecture
 
-1. [Component-Based Architecture](https://www.tutorialspoint.com/software_architecture_design/component_based_architecture.htm)
 
-### What is Props and How to Use it in React
+- [Google for Education: Python Lists](https://developers.google.com/edu/python/lists)
+- [Google for Education: Python Strings](https://developers.google.com/edu/python/strings)
+- [Python Modules and Packages](https://realpython.com/python-modules-packages/)
+- [Pytest Documentation](https://docs.pytest.org/en/latest/)
+- [PyTest Tutorial](https://www.guru99.com/pytest-tutorial.html) Up to section Running tests in parallel
 
-1. [What is Props and How to Use it in React](https://itnext.io/what-is-props-and-how-to-use-it-in-react-da307f500da0)
+
+
+
+
+
+
+
 
 ## Answer
 
@@ -66,17 +74,17 @@ Statement on why this topic matter as it relates to what I'm studying in this mo
 
 Adding on to what was learned in 201, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.
 
-### Component-Based Architecture
+1. What are the key principles of Test-Driven Development (TDD) in Python, and how do they contribute to the overall quality of code?
 
-1. What is a "component"?
+2. Explain the purpose of the `if __name__ == '__main__':` statement in Python scripts. What are some use cases for including this conditional in your code?
 
-   - A replaceable and reusable set of functionality. It is a software object, interacting with other components. Components are designed to be independent, allowing them to be deployed and composed individually.
+3. Describe the concept of recursion in Python.
+
+4. What is the difference between Python modules and packages? Explain how to create, import, and use them in your Python programs.
 
 
-### What is Props and How to Use it in React
 
-1. What is “props” short for?
-   - It is short for "properties." It is a special keyword used to pass data from one component to another.
+
 
 ## Things I want to know more about
 

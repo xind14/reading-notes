@@ -44,21 +44,17 @@ Submit a link to your pull request.
 
 ## Resources Link/Pages
 
-**Bookmark and Review**
+- [Next.js - Dynamic Routes](https://nextjs.org/learn/basics/dynamic-routes)
+- [Next.js - Deployment](https://nextjs.org/learn/basics/deploying-nextjs-app)
 
-- [React Tutorial through ‘Passing Data Through Props’](https://react.dev/learn/tutorial-tic-tac-toe)
-- [React Docs - Hello world](https://legacy.reactjs.org/docs/hello-world.html)
-- [React Docs - Introducing JSX](https://legacy.reactjs.org/docs/introducing-jsx.html)
-- [React Docs - Rendering elements](https://legacy.reactjs.org/docs/rendering-elements.html)
-- [React Docs - Components and props](https://legacy.reactjs.org/docs/components-and-props.html)
 
-### Component-Based Architecture
 
-1. [Component-Based Architecture](https://www.tutorialspoint.com/software_architecture_design/component_based_architecture.htm)
+- [Optional: Next.js 10 is here](https://www.youtube.com/watch?v=JWCS5IdECVI)
+- [Next.js - Static File Serving](https://nextjs.org/docs/basic-features/static-file-serving)
 
-### What is Props and How to Use it in React
 
-1. [What is Props and How to Use it in React](https://itnext.io/what-is-props-and-how-to-use-it-in-react-da307f500da0)
+
+
 
 ## Answer
 
@@ -66,17 +62,11 @@ Statement on why this topic matter as it relates to what I'm studying in this mo
 
 Adding on to what was learned in 201, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.
 
-### Component-Based Architecture
+1. Explain the concept of dynamic routes in Next.js and how they differ from static routes.
 
-1. What is a "component"?
+2. Describe the process of deploying a Next.js application. What are the key steps involved, and what are some deployment platforms you can use?
 
-   - A replaceable and reusable set of functionality. It is a software object, interacting with other components. Components are designed to be independent, allowing them to be deployed and composed individually.
-
-
-### What is Props and How to Use it in React
-
-1. What is “props” short for?
-   - It is short for "properties." It is a special keyword used to pass data from one component to another.
+3. How does Next.js handle static file serving? Discuss the default folder structure for storing static assets and explain how to reference them in a Next.js application.
 
 ## Things I want to know more about
 

@@ -44,21 +44,16 @@ Submit a link to your pull request.
 
 ## Resources Link/Pages
 
-**Bookmark and Review**
+- [How to Run Linear Regression in Python](https://www.activestate.com/resources/quick-reads/how-to-run-linear-regressions-in-python-scikit-learn/) NOTE: The content to read ends at the Regression vs Classification section. After that it’s a product pitch for ActiveState which is not required, though you may find it interesting.
+- [Linear Regression in Python](https://realpython.com/linear-regression-in-python/)
+- [Introduction to Simple Linear Regressions](https://www.youtube.com/watch?v=KsVBBJRb9TE)
 
-- [React Tutorial through ‘Passing Data Through Props’](https://react.dev/learn/tutorial-tic-tac-toe)
-- [React Docs - Hello world](https://legacy.reactjs.org/docs/hello-world.html)
-- [React Docs - Introducing JSX](https://legacy.reactjs.org/docs/introducing-jsx.html)
-- [React Docs - Rendering elements](https://legacy.reactjs.org/docs/rendering-elements.html)
-- [React Docs - Components and props](https://legacy.reactjs.org/docs/components-and-props.html)
 
-### Component-Based Architecture
 
-1. [Component-Based Architecture](https://www.tutorialspoint.com/software_architecture_design/component_based_architecture.htm)
 
-### What is Props and How to Use it in React
+- [Understanding Train Test Split](https://builtin.com/data-science/train-test-split)
+- [What is Linear Regression](https://www.statisticssolutions.com/what-is-linear-regression/)
 
-1. [What is Props and How to Use it in React](https://itnext.io/what-is-props-and-how-to-use-it-in-react-da307f500da0)
 
 ## Answer
 
@@ -66,17 +61,11 @@ Statement on why this topic matter as it relates to what I'm studying in this mo
 
 Adding on to what was learned in 201, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.
 
-### Component-Based Architecture
+1. Can you explain the basic concept of linear regression and its purpose in the context of machine learning and data analysis?
 
-1. What is a "component"?
+2. Describe the process of implementing a linear regression model using Python’s Scikit Learn library, including the necessary steps and functions.
 
-   - A replaceable and reusable set of functionality. It is a software object, interacting with other components. Components are designed to be independent, allowing them to be deployed and composed individually.
-
-
-### What is Props and How to Use it in React
-
-1. What is “props” short for?
-   - It is short for "properties." It is a special keyword used to pass data from one component to another.
+3. What is the purpose of splitting the dataset into train and test sets, and how does this contribute to the evaluation of a machine learning model’s performance?
 
 ## Things I want to know more about
 

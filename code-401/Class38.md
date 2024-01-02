@@ -44,21 +44,20 @@ Submit a link to your pull request.
 
 ## Resources Link/Pages
 
-**Bookmark and Review**
+- [React - Conditional Rendering](https://reactjs.org/docs/conditional-rendering.html)
+- [React - Lists & Keys](https://reactjs.org/docs/lists-and-keys.html)
+- [React - Forms](https://reactjs.org/docs/forms.html)
+- [React - Lifting State](https://reactjs.org/docs/lifting-state-up.html)
+- [React - Composition vs Inheritance](https://reactjs.org/docs/composition-vs-inheritance.html)
+- [Thinking in React](https://reactjs.org/docs/thinking-in-react.html)
 
-- [React Tutorial through ‘Passing Data Through Props’](https://react.dev/learn/tutorial-tic-tac-toe)
-- [React Docs - Hello world](https://legacy.reactjs.org/docs/hello-world.html)
-- [React Docs - Introducing JSX](https://legacy.reactjs.org/docs/introducing-jsx.html)
-- [React Docs - Rendering elements](https://legacy.reactjs.org/docs/rendering-elements.html)
-- [React Docs - Components and props](https://legacy.reactjs.org/docs/components-and-props.html)
 
-### Component-Based Architecture
 
-1. [Component-Based Architecture](https://www.tutorialspoint.com/software_architecture_design/component_based_architecture.htm)
 
-### What is Props and How to Use it in React
+- [React - Comprehensive Guide](https://tylermcginnis.com/reactjs-tutorial-a-comprehensive-guide-to-building-apps-with-react/)
+- [Heroicons](https://heroicons.com/)
 
-1. [What is Props and How to Use it in React](https://itnext.io/what-is-props-and-how-to-use-it-in-react-da307f500da0)
+
 
 ## Answer
 
@@ -66,17 +65,11 @@ Statement on why this topic matter as it relates to what I'm studying in this mo
 
 Adding on to what was learned in 201, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.
 
-### Component-Based Architecture
+1. How does lifting state up in a React application help with managing data flow and what are the benefits of using this approach?
 
-1. What is a "component"?
+2. Explain the concept of conditional rendering in React and provide an example of how to implement it in a component.
 
-   - A replaceable and reusable set of functionality. It is a software object, interacting with other components. Components are designed to be independent, allowing them to be deployed and composed individually.
-
-
-### What is Props and How to Use it in React
-
-1. What is “props” short for?
-   - It is short for "properties." It is a special keyword used to pass data from one component to another.
+3. What are the main principles behind “Thinking in React” and how do they guide the process of designing and building a React application?
 
 ## Things I want to know more about
 

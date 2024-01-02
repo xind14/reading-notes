@@ -44,21 +44,28 @@ Submit a link to your pull request.
 
 ## Resources Link/Pages
 
-**Bookmark and Review**
 
-- [React Tutorial through ‘Passing Data Through Props’](https://react.dev/learn/tutorial-tic-tac-toe)
-- [React Docs - Hello world](https://legacy.reactjs.org/docs/hello-world.html)
-- [React Docs - Introducing JSX](https://legacy.reactjs.org/docs/introducing-jsx.html)
-- [React Docs - Rendering elements](https://legacy.reactjs.org/docs/rendering-elements.html)
-- [React Docs - Components and props](https://legacy.reactjs.org/docs/components-and-props.html)
+- [What is Serverless Computing?](https://www.ibm.com/cloud/learn/serverless) through the Pros and Cons section.
+- [venv - Creation of Virtual Environments](https://docs.python.org/3/library/venv.html)
+- [Vercel - Get Started](https://vercel.com/docs/get-started)
+- [http.server](https://pymotw.com/3/http.server/index.html)
+- [Requests){:target=”_blank”}](https://requests.readthedocs.io/en/latest/)
+- [Python & APIs](https://realpython.com/python-api/)
+- [What is Serverless?](https://www.youtube.com/watch?v=vxJobGtqKVM)
 
-### Component-Based Architecture
 
-1. [Component-Based Architecture](https://www.tutorialspoint.com/software_architecture_design/component_based_architecture.htm)
 
-### What is Props and How to Use it in React
 
-1. [What is Props and How to Use it in React](https://itnext.io/what-is-props-and-how-to-use-it-in-react-da307f500da0)
+
+- [Serverless Functions](https://vercel.com/docs/concepts/functions/serverless-functions)
+- [Effective Python Environment](https://realpython.com/effective-python-environment/)
+
+
+
+
+
+
+
 
 ## Answer
 
@@ -66,17 +73,13 @@ Statement on why this topic matter as it relates to what I'm studying in this mo
 
 Adding on to what was learned in 201, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.
 
-### Component-Based Architecture
+1. What are the key characteristics of serverless computing, and how does it differ from traditional server-based architectures?
 
-1. What is a "component"?
+2. How can one get started with Vercel, and what are the main steps involved in deploying a serverless function using Vercel?
 
-   - A replaceable and reusable set of functionality. It is a software object, interacting with other components. Components are designed to be independent, allowing them to be deployed and composed individually.
+3. What are APIs, and how can they be utilized in Python applications to access and manipulate data from external sources?
 
-
-### What is Props and How to Use it in React
-
-1. What is “props” short for?
-   - It is short for "properties." It is a special keyword used to pass data from one component to another.
+4. What is the Requests library in Python, and how can it be used to interact with APIs by sending HTTP requests? Can you provide an example of a basic GET request using the Requests library?
 
 ## Things I want to know more about
 
