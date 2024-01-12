@@ -243,10 +243,10 @@ Write a brief reflection on your learning today, or use the prompt below to get 
 
 Consider the following quote from the article linked above:
 
-“[Adult learners] are deeply involved not only in planning but also in evaluating their learning, as they know what knowledge they want to acquire.”
+“[Adult learners] demand that their learning is relevant to their real life issues, problems, and tasks, and that their education will boost their performance levels and help them live their lives in a better, and more satisfying way.”
 
-In other words, you should continuously evaluate your learning, and your learning journal is an excellent way to keep track of that. How do you see yourself planning and evaluating your learning? What details will you record and/or measure? How often will you evaluate what you want to learn?
+In other words, understanding your motivation for learning contributes to the effectiveness of your learning, and your learning journal is a place to explore those thoughts. What are your motivations for learning?
 
-- I like the way I am detailing my learning now. I think my notes and how much I put into them already kind of shows a learning plan where I list resources that I can use throughout my learning that I can always come back to. The way my notes are organized also details topics I do not understand and I can always refer back to those in that future. I think I need to start making goals to evaluate my learning and then for each learning journal reflection assignment I can assess whether I've met them or need more improvement. For now, I really want to understand the topics introduced in python first like different syntax.
+- Right now I want to learn out of embarrassment. I don't feel like I'm learning anything and I want to move away from this frustration of not knowing. I also want to move away from being a copy and paste coder which I get is normal when first learning, like getting ideas and sample solutions and I just feel like I rely on external resources so much that I'm not understanding what I'm doing
 
 ## Career 4 - Career Coaching Workshop I Prep Resume Review
