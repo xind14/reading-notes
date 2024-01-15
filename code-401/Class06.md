@@ -40,7 +40,7 @@ Submit a link to your pull request.
 ## Written Class Notes
 
 
-## Read 1 - Introduction to React and Components
+## Read 6 -  Ten Thousand Game 1
 
 ## Resources Link/Pages
 
@@ -50,6 +50,7 @@ Submit a link to your pull request.
 - [Test Coverage](https://martinfowler.com/bliki/TestCoverage.html)
 - [Big O Notation](https://www.youtube.com/watch?v=v4cd1O4zkGw)
 
+**Bookmark and Review**
 
 - [Python Random](https://docs.python.org/3/library/random.html)
 - [What is Dependency Injection](https://www.freecodecamp.org/news/a-quick-intro-to-dependency-injection-what-it-is-and-when-to-use-it-7578c84fa88f/) We won’t be covering this concept in depth until following class but it’s a big concept and needs some time to settle in.
@@ -160,4 +161,4 @@ Consider the following quote from the article linked above:
 
 In other words, adults are motivated by internal forces rather than by external expectations, and your learning journal provides an outlet for considering and noting those internal forces. Which of your internal forces for learning can you concretely identify?
 
-- My primary motivation lies in career advancement, self-development, self-confidence, and better quality of life. I aim to transition into a more fulfilling and lucrative field, and acquiring web development skills is a strategic move to align my career with current market demands. I also feel like no matter what it is I'm learning there's always some self-confidence I can gain from it that makes me feel like 'hey I learned something that might be useful someday' and the act of knowing something is always a great self-development booster as well. 
+- My primary motivation lies in career advancement, self-development, self-confidence, and better quality of life. I aim to transition into a more fulfilling and lucrative field, and acquiring web development skills is a strategic move to align my career with current market demands. I also feel like no matter what it is I'm learning there's always some self-confidence I can gain from it that makes me feel like 'hey I learned something that might be useful someday' and the act of knowing something is always a great self-development booster as well.
