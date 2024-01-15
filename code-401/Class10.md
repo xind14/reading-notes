@@ -4,80 +4,333 @@
 
 ## Setup
 
-
 ## Code Challenge
 
-Overview
-[Read this overview.](https://codefellows.github.io/code-301-guide/curriculum/class-01/challenges/)
+- **Branch Name:** stack-and-queue
 
-Video
-[Watch the video for this class from the demo playlist.](https://www.youtube.com/playlist?list=PLVngfM2hsbi-L6G8qlWd8RyRbuTamHt3k)
+Challenge Type: New Implementation
 
-Demonstration
-[Look through these sample problems.](https://codefellows.github.io/code-301-guide/curriculum/class-01/challenges/DEMO.html)
+### Features
 
-Challenges
+#### Node
 
-1. Navigate to the javascript folder within your data-structures-and-algorithms repository.
-2. Create a new branch for this challenge called for-each
-   git checkout -b for-each
-3. Retrieve the code challenge from the system
-   npm run get-challenge 01
-4. In your terminal, from the javascript folder, run npm test 01 to execute the tests in this file for this challenge.
-5. At this point you will see the failed tests scroll through your terminal window with a brief report of the number of failed tests at the bottom.
-6. If you do not see this, verify your installation of Jest by typing npx jest --version in your terminal. Filename typos can make things break!
-7. Write code to make the tests pass, one at a time. Let the error messages guide you.
-8. Once the test is passing, refactor as needed, then move on to the next challenge.
-9. Note, you can also run npm test (without a challenge number) to run all of the tests for every code challenge file assignment during the course all at once. This can get “noisy”, but it’s an opportunity to get a view of your overall progress
+Create a Node class that has properties for the value stored in the Node, and a pointer to the next node.
 
-Submission
-When you have completed the entire set of code challenges and all tests pass, create a pull request from your current branch to the main branch and merge it into main.
+#### Stack
 
-You will be able to see a test coverage report in GitHub on the Actions tab of your data-structures-and-algorithms repository. It should match what you saw on your terminal in the above steps. Your graders will be looking at this as well.
+Create a Stack class that has a top property. It creates an empty Stack when instantiated. This object should be aware of a default empty value assigned to top when the stack is created.
 
-Submit a link to your pull request.
+The class should contain the following methods:
+
+- **push**
+
+  - Arguments: value
+  - Adds a new node with that value to the top of the stack with an O(1) Time performance.
+
+- **pop**
+
+  - Arguments: none
+  - Returns: the value from the node from the top of the stack
+  - Removes the node from the top of the stack
+  - Should raise an exception when called on an empty stack
+
+- **peek**
+
+  - Arguments: none
+  - Returns: Value of the node located at the top of the stack
+  - Should raise an exception when called on an empty stack
+
+- **is_empty**
+  - Arguments: none
+  - Returns: Boolean indicating whether or not the stack is empty.
+
+#### Queue
+
+Create a Queue class that has a front property. It creates an empty Queue when instantiated. This object should be aware of a default empty value assigned to the front when the queue is created.
+
+The class should contain the following methods:
+
+- **enqueue**
+
+  - Arguments: value
+  - Adds a new node with that value to the back of the queue with an O(1) Time performance.
+
+- **dequeue**
+
+  - Arguments: none
+  - Returns: the value from the node from the front of the queue
+  - Removes the node from the front of the queue
+  - Should raise an exception when called on an empty queue
+
+- **peek**
+
+  - Arguments: none
+  - Returns: Value of the node located at the front of the queue
+  - Should raise an exception when called on an empty stack
+
+- **is_empty**
+  - Arguments: none
+  - Returns: Boolean indicating whether or not the queue is empty
+
+### Structure and Testing
+
+Utilize the Single-responsibility principle: any methods you write should be clean, reusable, abstract component parts to the whole challenge. You will be given feedback and marked down if you attempt to define a large, complex algorithm in one function definition.
+
+Be sure to follow your language/frameworks standard naming conventions (e.g. C# uses PascalCasing for all method and class names).
+
+Any exceptions or errors that come from your code should be contextual, descriptive, capture-able errors. For example, rather than a default error thrown by your language, your code should raise/throw a custom error that describes what went wrong in calling the methods you wrote for this lab.
+
+### Write tests to prove the following functionality:
+
+- Can successfully push onto a stack
+- Can successfully push multiple values onto a stack
+- Can successfully pop off the stack
+- Can successfully empty a stack after multiple pops
+- Can successfully peek the next item on the stack
+- Can successfully instantiate an empty stack
+- Calling pop or peek on an empty stack raises an exception
+- Can successfully enqueue into a queue
+- Can successfully enqueue multiple values into a queue
+- Can successfully dequeue out of a queue the expected value
+- Can successfully peek into a queue, seeing the expected value
+- Can successfully empty a queue after multiple dequeues
+- Can successfully instantiate an empty queue
+- Calling dequeue or peek on an empty queue raises an exception
+
+Ensure your tests are passing before you submit your solution.
 
 ## Written Class Notes
 
-
-## Read 1 - Introduction to React and Components
+## Read 10 - Implementation: Stacks and Queues
 
 ## Resources Link/Pages
 
-**Bookmark and Review**
+- [Stacks and Queues](https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Code_401/class-10/resources/stacks_and_queues.html)
 
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
+  - _What is a Stack_
 
+    - A stack is a data structure that consists of Nodes. Each Node references the next Node in the stack, but does not reference its previous.
+    - _Common terminology for a stack:_
+      - **Push**: Nodes or items added to the stack.
+      - **Pop**: Nodes or items removed from the stack.
+      - **Top**: The top of the stack.
+      - **Peek**: Viewing the value of the top Node.
+      - **IsEmpty**: Returns true if the stack is empty; otherwise, false.
+
+  - _Stack Concepts_
+
+    - **FILO**: First In Last Out.
+    - **LIFO**: Last In First Out.
+
+  - _Stack Visualization_
+
+    - The topmost item is denoted as the top.
+    - Pushing something to the stack makes it the new top.
+    - Popping removes the current top and sets the next top as top.next.
+
+  - _Push O(1)_
+
+    - Pushing a Node onto a stack is an O(1) operation.
+    - Steps:
+
+      1. Have the Node to add.
+      2. Assign the next property of the Node to reference the same Node that top is referencing.
+      3. Re-assign the top to the newly added Node.
+
+      - _Pseudocode_
+        ```python
+        ALGORITHM push(value)
+           node = new Node(value)
+           node.next <-- Top
+           top <-- Node
+        ```
+
+  - _Pop O(1)_
+
+    - Popping removes a Node from the top.
+    - Check `isEmpty` before popping to avoid exceptions.
+    - Steps:
+
+      1. Create a reference `temp` pointing to the Node top points to.
+      2. Re-assign top to the value that the next property is referencing (Node below top).
+      3. Clear the next property in the `temp` reference.
+      4. Return the value of the `temp` Node.
+
+      - _Pseudocode_
+        ```python
+        ALGORITHM pop()
+           Node temp <-- top
+           top <-- top.next
+           temp.next <-- null
+           return temp.value
+        ```
+
+  - _Peek O(1)_
+
+    - Peeking inspects the top Node of the stack.
+    - Check `isEmpty` before peeking to avoid exceptions.
+
+      - _Pseudocode_
+        ```python
+        ALGORITHM peek()
+           return top.value
+        ```
+
+  - _IsEmpty O(1)_
+
+    - _Pseudocode_
+      ```python
+      ALGORITHM isEmpty()
+         return top = NULL
+      ```
+
+  - _What is a Queue_
+
+    - _Common terminology for a queue:_
+      - **Enqueue**: Nodes or items added to the queue.
+      - **Dequeue**: Nodes or items removed from the queue.
+      - **Front**: The front/first Node of the queue.
+      - **Rear**: The rear/last Node of the queue.
+      - **Peek**: Viewing the value of the front Node.
+      - **IsEmpty**: Returns true if the queue is empty; otherwise, false.
+
+  - _Queue Concepts_
+
+    - **FIFO**: First In First Out.
+    - **LILO**: Last In Last Out.
+
+  - _Queue Visualization_
+
+    - ![Queue](image_link_to_be_inserted)
+
+  - _Enqueue O(1)_
+
+    - Adding an item to a queue is an O(1) operation.
+    - Steps:
+
+      1. Change the next property of the Node at the rear to point to the Node being added.
+      2. Re-assign the rear reference to point to the new Node.
+
+      - _Pseudocode_
+        ```python
+        ALGORITHM enqueue(value)
+           node = new Node(value)
+           rear.next <-- node
+           rear <-- node
+        ```
+
+  - _Dequeue O(1)_
+
+    - Removing an item from a queue is an O(1) operation.
+    - Check `isEmpty` before dequeueing to avoid exceptions.
+    - Steps:
+
+      1. Create a temporary reference `temp` pointing to the front Node.
+      2. Re-assign front to the next value that the front Node is referencing.
+      3. Re-assign the next property on the `temp` Node to null.
+      4. Return the value of the `temp` Node.
+
+      - _Pseudocode_
+        ```python
+        ALGORITHM dequeue()
+           Node temp <-- front
+           front <-- front.next
+           temp.next <-- null
+           return temp.value
+        ```
+
+  - _Peek O(1)_
+
+    - Peeking inspects the front Node of the queue.
+    - Check `isEmpty` before peeking to avoid exceptions.
+
+      - _Pseudocode_
+        ```python
+        ALGORITHM peek()
+           return front.value
+        ```
+
+  - _IsEmpty O(1)_
+    - _Pseudocode_
+      ```python
+      ALGORITHM isEmpty()
+         return front = NULL
+      ```
 
 ## Answer
 
-Statement on why this topic matter as it relates to what I'm studying in this module:
+To turn in your reading “Reply” to this discussion by teaching something that you learned. Then review what one of your classmates learned, and leave a comment.
 
-Adding on to what was learned in 201, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.
+Some ideas for how you might want to teach:
 
-### Component-Based Architecture
+- Use an analogy
+- Explain a detail in depth
+- Use WHY, WHAT, HOW structure
+- Tutorial / walk through an example
+- Write a quiz
+- Create a vocabulary/definition list
+- Write a cheat sheet
+- Create a diagram / visualization / cartoon of a topic
+- Anthropomorphize the concepts, and write a conversation between them
+- Build a map of the information
+- Construct a fill-in-the-blank worksheet for the topic
 
-1. What is a "component"?
+I apologize for the oversight. Here's the vocabulary list with analogies for the provided information:
 
-   - A replaceable and reusable set of functionality. It is a software object, interacting with other components. Components are designed to be independent, allowing them to be deployed and composed individually.
+1. **Stack:**
 
+   - _Definition:_ A data structure consisting of Nodes where each Node references the next Node but not its previous.
+   - **Common Terminology:**
+     - **Push:** Adding Nodes to the stack.
+     - **Pop:** Removing Nodes from the stack.
+     - **Top:** The top of the stack.
+     - **Peek:** Viewing the value of the top Node.
+     - **IsEmpty:** Returns true if the stack is empty, false otherwise.
+   - **Analogy:** Think of a stack as a stack of plates. You add a plate to the top (Push) and remove the top plate (Pop). The top plate is always visible (Peek), and the stack is empty when there are no plates (IsEmpty).
 
-### What is Props and How to Use it in React
+2. **Push O(1):**
 
-1. What is “props” short for?
-   - It is short for "properties." It is a special keyword used to pass data from one component to another.
+   - _Definition:_ Pushing a Node onto a stack is an O(1) operation.
+   - **Analogy:** It's like adding a book to the top of the book stack. No matter how many books are in the stack, adding a new one is a quick operation.
 
-## Things I want to know more about
+3. **Pop O(1):**
 
-- How does React handle the communication of data between sibling components if it's unidirectional?
+   - _Definition:_ Popping removes a Node from the top.
+   - **Analogy:** Similar to taking the top book off the book stack. The operation is quick and doesn't depend on the number of books in the stack.
+
+4. **Peek O(1):**
+
+   - _Definition:_ Peeking inspects the top Node of the stack.
+   - **Analogy:** Imagine checking the title of the top book on the stack without removing it. The process is swift and doesn't affect the stack.
+
+5. **IsEmpty O(1):**
+
+   - **Analogy:** It's like checking if the plate stack is empty by looking at the top. If there are no plates, the stack is empty.
+
+6. **What is a Queue:**
+
+   - **Common Terminology:**
+     - **Enqueue:** Adding Nodes to the queue.
+     - **Dequeue:** Removing Nodes from the queue.
+     - **Front:** The front/first Node of the queue.
+     - **Rear:** The rear/last Node of the queue.
+     - **Peek:** Viewing the value of the front Node.
+     - **IsEmpty:** Returns true if the queue is empty, false otherwise.
+   - **Analogy:** Think of a queue as a line of people waiting for a bus. People join the line at the rear (Enqueue), and the person at the front gets on the bus first (Dequeue).
+
+7. **Enqueue O(1):**
+
+   - _Definition:_ Adding an item to a queue is an O(1) operation.
+   - **Analogy:** Enqueueing is like adding a person to the line. It's a quick operation, regardless of how many people are in the queue.
+
+8. **Dequeue O(1):**
+
+   - _Definition:_ Removing an item from a queue is an O(1) operation.
+   - **Analogy:** Dequeueing is like letting the person at the front of the line board the bus. It's a swift process.
+
+9. **Peek O(1):**
+   - _Definition:_ Peeking inspects the front Node of the queue.
+   - **Analogy:** Peek is like checking who is at the front of the line without removing them. It's a quick process.
 
 ## Retrospective
 
