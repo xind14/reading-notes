@@ -1,46 +1,76 @@
 # Class 7 - Guided Project 2
 
-## Lab 7 - Automating behavior verification
+## Lab 7 - Ten Thousand 2
 
-## Setup
+### Overview
 
+Extend Ten Thousand game started in previous class to get the game in playable state.
+
+### Feature Tasks and Requirements
+
+- Application should implement all features from previous version
+- Application should allow user to set aside dice each roll
+- Application should allow “banking” current score or rolling again.
+- Application should keep track of total score
+- Application should keep track of current round
+
+### Implementation Notes
+
+- Review [rules of game](https://en.wikipedia.org/wiki/Dice_10000)
+- Play game [online](http://www.playonlinedicegames.com/farkle)
+
+#### User Acceptance Tests
+
+- Starter code contains “simulation” text files.
+  - E.g. tests/version_2/quitter.sim.txt
+- NOTE: Feel free to add more simuations, but you are required to pass all existing ones.
+- The simuations are the official documentation of the features for the day.
+
+#### Stretch Goals
+
+- Application should have automated tests to ensure proper operation
 
 ## Code Challenge
 
-Overview
-[Read this overview.](https://codefellows.github.io/code-301-guide/curriculum/class-01/challenges/)
+- **Branch Name:** linked-list-kth
+- **Challenge Type:** Extending an Implementation
 
-Video
-[Watch the video for this class from the demo playlist.](https://www.youtube.com/playlist?list=PLVngfM2hsbi-L6G8qlWd8RyRbuTamHt3k)
+## Feature Tasks
 
-Demonstration
-[Look through these sample problems.](https://codefellows.github.io/code-301-guide/curriculum/class-01/challenges/DEMO.html)
+### 1. Kth from End
 
-Challenges
+- **Argument:** a number, k, as a parameter.
+- Return the node’s value that is k places from the tail of the linked list.
 
-1. Navigate to the javascript folder within your data-structures-and-algorithms repository.
-2. Create a new branch for this challenge called for-each
-   git checkout -b for-each
-3. Retrieve the code challenge from the system
-   npm run get-challenge 01
-4. In your terminal, from the javascript folder, run npm test 01 to execute the tests in this file for this challenge.
-5. At this point you will see the failed tests scroll through your terminal window with a brief report of the number of failed tests at the bottom.
-6. If you do not see this, verify your installation of Jest by typing npx jest --version in your terminal. Filename typos can make things break!
-7. Write code to make the tests pass, one at a time. Let the error messages guide you.
-8. Once the test is passing, refactor as needed, then move on to the next challenge.
-9. Note, you can also run npm test (without a challenge number) to run all of the tests for every code challenge file assignment during the course all at once. This can get “noisy”, but it’s an opportunity to get a view of your overall progress
+## Example
 
-Submission
-When you have completed the entire set of code challenges and all tests pass, create a pull request from your current branch to the main branch and merge it into main.
+`ll.kthFromEnd(k)
+`
+Input ll | Arg k | Output
+------------------------------------------|-------|-------
+head -> {1} -> {3} -> {8} -> {2} -> X | 0 | 2
+head -> {1} -> {3} -> {8} -> {2} -> X | 2 | 3
+head -> {1} -> {3} -> {8} -> {2} -> X | 6 | Exception
 
-You will be able to see a test coverage report in GitHub on the Actions tab of your data-structures-and-algorithms repository. It should match what you saw on your terminal in the above steps. Your graders will be looking at this as well.
+## Unit Tests
 
-Submit a link to your pull request.
+Write tests for the following scenarios, and any other cases that help you ensure your code is working as expected.
+
+- Where k is greater than the length of the linked list
+- Where k and the length of the list are the same
+- Where k is not a positive integer
+- Where the linked list is of size 1
+- “Happy Path” where k is not at the end but somewhere in the middle of the linked list
+
+**Unit tests must be passing before you submit your final solution code.**
+
+## Stretch Goal
+
+Once you’ve achieved a working solution, implement a method that finds the node at the middle of the Linked List.
 
 ## Written Class Notes
 
-
-## Read 1 - Introduction to React and Components
+## Read 7 - Ten Thousand 2
 
 ## Resources Link/Pages
 
@@ -48,34 +78,130 @@ Submit a link to your pull request.
 - [Big O notation is simpler than you might think](https://www.youtube.com/watch?v=dNorFNlDbX0)
 
 
+**Bookmark and Review**
 
 - [Rolling Dice Examples](https://web.archive.org/web/20220608035657/https://artofproblemsolving.com/wiki/index.php/Basic_Programming_With_Python#Random)
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
 
 
 ## Answer
 
 Statement on why this topic matter as it relates to what I'm studying in this module:
 
-Adding on to what was learned in 201, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.
+Learning the global and nonlocal keywords in Python is important because they are crucial for understanding and controlling variable scope
+
+## Reading Questions
 
 1. Explain the concept of variable scope in Python and describe the difference between local and global scope. Provide an example illustrating the usage of both.
 
+   - Variable scope in Python defines the regions of code where a particular variable can be accessed or modified.
+   - There are two main scopes: local scope and global scope.
+      - **Local Scope:** Variables defined within a function have local scope and are accessible only within that function.
+      - **Global Scope:** Variables defined outside any function have global scope and can be accessed from any part of the code.
+
+   **Example:**
+   ```python
+   # Global Scope
+   global_var = 10
+
+   def example_function():
+       # Local Scope
+       local_var = 5
+       print("Local Variable:", local_var)
+       print("Global Variable:", global_var)
+
+   example_function()
+   ```
+
+   Output:
+   ```
+   Local Variable: 5
+   Global Variable: 10
+   ```
+   In this example, `global_var` has global scope and can be accessed inside the function, while `local_var` has local scope limited to the function.
+
+
 2. How do the global and nonlocal keywords work in Python, and in what situations might you use them?
+
+   - **Global Keyword:** Used to modify global names within functions. It maps a local variable to the corresponding global variable.
+     - Example:
+       ```python
+       global counter
+       counter = 0
+
+       def update_counter():
+           global counter
+           counter += 1
+
+       update_counter()
+       print(counter)  # Output: 1
+       ```
+
+   - **Nonlocal Keyword:** Used to modify nonlocal names within nested functions. It allows a nested function to access and modify a variable in its enclosing function's scope.
+     - Example:
+       ```python
+       def outer_function():
+           var = 100
+
+           def inner_function():
+               nonlocal var
+               var += 50
+
+           inner_function()
+           print(var)  # Output: 150
+
+       outer_function()
+       ```
+
+   **When to Use:**
+   - **Global:** Use when you need to modify a global variable within a function. However, it's generally considered better practice to avoid excessive use of global variables.
+   - **Nonlocal:** Use when dealing with nested functions and you want to modify a variable in the enclosing (nonlocal) scope.
+
 
 3. In your own words, describe the purpose and importance of Big O notation in the context of algorithm analysis.
 
+    - Big O notation is the assessment of an algorithm's efficiency by expressing its upper bound or worst-case performance concerning input size. It allows for the comparison of algorithms, aiding in the selection of the most suitable approach for specific scenarios.
+
 4. Based on the Rolling Dice Example, explain how you would simulate a dice roll using Python. Describe how you would use code to calculate the probability of rolling a specific number (e.g., the probability of rolling a 6) over a large number of trials.
+
+    - To simulate a dice roll in Python, you can use the `random` package to generate a random number between 1 and 6. The first program example demonstrates this:
+
+      ```python
+      import random
+      print(random.randint(1, 6))
+      ```
+
+    - This generates and prints a random integer between 1 and 6.
+
+    - For simulating multiple dice rolls and calculating the probability of rolling a specific number, like 6, you can create a function to roll a single die, then use a loop to roll the dice a specified number of times (e.g., 1000) and count how many times the desired outcome occurs. The second program example illustrates this:
+
+        ```python
+        import random
+        count = 0
+
+        def roll():
+            return random.randint(1, 6)
+
+        for i in range(1, 1001):
+            if roll() == 6:
+                count += 1
+
+        print(count)
+        ```
+
+    - In this example, the `roll()` function returns a random number between 1 and 6. The loop runs 1000 times, and each time the outcome is 6, the `count` variable is incremented. Finally, the program prints the count, representing the number of times 6 was rolled in 1000 attempts.
+
+    - To calculate the probability, you divide the count of successful outcomes (rolling a 6) by the total number of trials (1000 in this case). The probability can be expressed as a fraction or percentage. For example:
+
+      ```python
+      probability = count / 1000
+      print(f"The probability of rolling a 6 is: {probability}")
+      ```
+
 
 
 ## Things I want to know more about
 
-- How does React handle the communication of data between sibling components if it's unidirectional?
+- What exactly determines whether you use global or nonlocal scope?
 
 ## Retrospective
 
