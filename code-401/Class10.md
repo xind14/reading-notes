@@ -275,8 +275,6 @@ Some ideas for how you might want to teach:
 - Build a map of the information
 - Construct a fill-in-the-blank worksheet for the topic
 
-I apologize for the oversight. Here's the vocabulary list with analogies for the provided information:
-
 1. **Stack:**
 
    - _Definition:_ A data structure consisting of Nodes where each Node references the next Node but not its previous.
