@@ -275,6 +275,9 @@ Some ideas for how you might want to teach:
 - Build a map of the information
 - Construct a fill-in-the-blank worksheet for the topic
 
+
+### Vocabulary/Definition List for Linked Lists
+
 1. **Stack:**
 
    - _Definition:_ A data structure consisting of Nodes where each Node references the next Node but not its previous.
