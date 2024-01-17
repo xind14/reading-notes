@@ -347,4 +347,46 @@ This [article](https://www.benlinders.com/2013/which-questions-do-you-ask-in-ret
    - Is the assignment complete? If not, where exactly did you leave off, and what work remains?
    - Do not get bogged down in written analysis; instead, focus on capturing the moment with an eye toward how your observations can guide you toward future productivity.
 
-## Career 1 - Identify Your Accountability Partners
+## Career 10 - Partner Power Hour - Report #2
+
+> If there is no live presentation on campus in this module, select the appropriate presentation from the list below. All presenters are open to connections and invite you to reach out to them, so that you can to learn more about them, their company, and the industry.
+> You may find it difficult or challenging to connect with industry professionals and gain an inside look at how the tech world operates. We’ve drawn on our network to bring you speakers and topics relevant to this stage of your career transition. These presentations may serve to educate, enlighten, and motivate you along your journey. Take advantage of this opportunity, and make the most of the insights these presentations provide… you never know where a connection will lead.
+
+[Breaking Down the Tech Interview w/Rover - Rover Engineering Team](https://youtu.be/_6Fi8FFvdQs)
+[Whiteboarding Tips & Strategies - Roger Huba](https://youtu.be/aDL3403Q6xY)
+[Automate Yourself Out of a Job - Adam Eivy](https://youtu.be/2VJV-zNCtF8)
+[Communication Under Stress - Eve Denison](https://youtu.be/K0fnB3ygcm4)
+[Deep dive - Dev Tools - David Souther](https://youtu.be/nGNQCisfj8Q)
+[CI/CD History Lesson - Kat Cosgrove](https://youtu.be/_Md_NTWNgOE)
+[The 7 C’s of Cybersecurity & Coding - Courtney Hans](https://youtu.be/GqRDGi4ta5U)
+[Your Net Worth - John Cokos](https://youtu.be/Qu-_1b3xYGQ)
+
+> Whiteboarding Tips & Strategies - Roger Huba
+
+1. Share one or two ways the speaker’s information will change your approach to your career transition.
+
+    - After visualization ask interviewer is this solving the problem domain you want me to solve
+    - Communication is more important than solving the code
+    - Hiring manager is not looking at your code, wants to see how are you problem solving, what are you like when you get stuck, are you coachable if you are given steps when stuck
+
+1. List a few key take-aways from this presentation.
+
+    - Hiring manager is not looking at your code, wants to see how are you problem-solving, what are you like when you get stuck, are you coachable if you are given steps when stuck
+    - Sometimes the problem will be unsolvable
+    - **Steps**
+      - Problem domain - provided
+          - Write down word for word what the interviewer tells you
+          - Then summarize in a way you understand
+          - Ask if it's correct
+      - Test/edge cases: What will break the code
+      - Input/output: What is the datatype
+      - Visual: What it looks like and how things move
+      - Algorithm: English words of what will happen
+      - Big O: Looking at time and space
+      - Code: Syntax of your algorithm
+      - Walkthrough/verification
+
+1. Share a screenshot of your LinkedIn connection request, including a nicely worded note, sent to the speaker or someone else at their company.
+   ![Roger Huba](./img/roger-huba.png)
+
+## Career 5 - Resume Completed
