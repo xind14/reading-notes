@@ -40,54 +40,121 @@ Submit a link to your pull request.
 ## Written Class Notes
 
 
-## Read 1 - Introduction to React and Components
+## Read 15 - Tree Implementation
 
 ## Resources Link/Pages
 
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
+- [Trees](https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Code_401/class-15/resources/Trees.html)
+
 
 ## Answer
 
-Statement on why this topic matter as it relates to what I'm studying in this module:
+To turn in your reading “Reply” to this discussion by teaching something that you learned. Then review what one of your classmates learned, and leave a comment.
 
-Adding on to what was learned in 201, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.
+Some ideas for how you might want to teach:
 
-### Component-Based Architecture
+- Use an analogy
+- Explain a detail in depth
+- Use WHY, WHAT, HOW structure
+- Tutorial / walk through an example
+- Write a quiz
+- Create a vocabulary/definition list
+- Write a cheat sheet
+- Create a diagram / visualization / cartoon of a topic
+- Anthropomorphize the concepts, and write a conversation between them
+- Build a map of the information
+- Construct a fill-in-the-blank worksheet for the topic
 
-1. What is a "component"?
 
-   - A replaceable and reusable set of functionality. It is a software object, interacting with other components. Components are designed to be independent, allowing them to be deployed and composed individually.
+### Vocabulary/Definition List for Linked Lists
 
+## Learning Journal
 
-### What is Props and How to Use it in React
+### Reflection
 
-1. What is “props” short for?
-   - It is short for "properties." It is a special keyword used to pass data from one component to another.
-
-## Things I want to know more about
-
-- How does React handle the communication of data between sibling components if it's unidirectional?
-
-## Retrospective
-
-Retrospectives are a critical part of Agile, and typically take the form of meetings held by a team at the end of a sprint cycle. To get us acclimated to that process, we will use the format of a retrospectives to guide today’s reflection.
-
-This [article](https://www.benlinders.com/2013/which-questions-do-you-ask-in-retrospectives/) gives a nice overview to the role of retrospectives.
+Take 10-15 minutes at the end of lab to respond to the following questions, adapted from the article:
 
 1. What went well, that I might forget if I don’t write down?
+    - I understood the stack and queue challenge better than other code challenges I've ever done. Using the linked list as a template helped a lot and I just sorta figured out how to configure things to be used for stack and queue
 2. What did I learn today?
+    - I learned how to shorten my personal pitch which I had trouble before, and it didn't sound like I was reading from an essay
 3. What should I do differently next time?
+    - I need to use Fridays more efficiently as catch up or prep for next week to make sure my fridays aren't' swamped with HW
 4. What still puzzles me, or what do I need to learn more about?
+    - I still don't get how to efficiently write code to pass tests, it takes so long, feel like its efficient to just start writing code.
 5. Thinking about each of your assignments for the day, reflect on:
-   - Is the assignment complete? If not, where exactly did you leave off, and what work remains?
-   - Do not get bogged down in written analysis; instead, focus on capturing the moment with an eye toward how your observations can guide you toward future productivity.
+    - Is the assignment complete? If not, where exactly did you leave off, and what work remains?
+        - I need help on lab 8 so will get help on that today
 
-## Career 1 - Identify Your Accountability Partners
+## Career 15 - Partner Power Hour - Report #3
+
+> If there is no live presentation on campus in this module, select the appropriate presentation from the list below. All presenters are open to connections and invite you to reach out to them, so that you can to learn more about them, their company, and the industry.
+> You may find it difficult or challenging to connect with industry professionals and gain an inside look at how the tech world operates. We’ve drawn on our network to bring you speakers and topics relevant to this stage of your career transition. These presentations may serve to educate, enlighten, and motivate you along your journey. Take advantage of this opportunity, and make the most of the insights these presentations provide… you never know where a connection will lead.
+
+[Breaking Down the Tech Interview w/Rover - Rover Engineering Team](https://youtu.be/_6Fi8FFvdQs)
+[Whiteboarding Tips & Strategies - Roger Huba](https://youtu.be/aDL3403Q6xY)
+[Automate Yourself Out of a Job - Adam Eivy](https://youtu.be/2VJV-zNCtF8)
+[Communication Under Stress - Eve Denison](https://youtu.be/K0fnB3ygcm4)
+[Deep dive - Dev Tools - David Souther](https://youtu.be/nGNQCisfj8Q)
+[CI/CD History Lesson - Kat Cosgrove](https://youtu.be/_Md_NTWNgOE)
+[The 7 C’s of Cybersecurity & Coding - Courtney Hans](https://youtu.be/GqRDGi4ta5U)
+[Your Net Worth - John Cokos](https://youtu.be/Qu-_1b3xYGQ)
+
+> Automate Yourself Out of a Job - Adam Eivy
+
+1. Share one or two ways the speaker’s information will change your approach to your career transition.
+
+    - Advocates for being a "Jack of All Trades" in tech.
+    - Highlights the value of having a broad skill set for a holistic understanding.
+    - Encourages examining past code for continuous improvement.
+    - Demonstrating growth and adaptability through self-reflection.
+
+
+1. List a few key take-aways from this presentation.
+
+    - **Automation Principles:**
+      - Prioritizes automating daily tasks for efficiency.
+      - Advocates for integrating automation into the routine.
+
+    - **Customization Benefits:**
+      - Stresses the importance of tailoring automation tools.
+      - Customization enhances effectiveness by aligning with individual preferences.
+
+    - **User-Centric Approach:**
+      - Promotes learning from user experiences and feedback.
+      - Encourages iterative improvement based on real-world interactions.
+
+    - **Startup Strategies for Success:**
+      - Highlights the significance of early product-market fit tests.
+      - Emphasizes direct engagement with end-users for authentic feedback.
+
+    - **Customer-Driven Automation:**
+      - Suggests building automation based on personal needs.
+      - Recommends continuous testing with a genuine customer to ensure relevance.
+
+    - **Insights from User Interactions:**
+      - Warns against working in isolation without user input.
+      - Encourages understanding user nuances for effective product development.
+
+    - **Versatility as a Strength:**
+      - Advocates for being a "Jack of All Trades" in tech.
+      - Highlights the value of having a broad skill set for a holistic understanding.
+
+    - **Strategies for Career Growth:**
+      - Recommends learning from on-the-job experiences.
+      - Identifying and addressing inefficiencies within the team contributes to growth.
+
+    - **Networking and Marketability Tactics:**
+      - Emphasizes engagement with recruiters and industry professionals.
+      - Building an online portfolio, especially on GitHub, for showcasing skills.
+
+    - **Reflective Learning:**
+      - Encourages examining past code for continuous improvement.
+      - Demonstrating growth and adaptability through self-reflection.
+
+
+
+1. Share a screenshot of your LinkedIn connection request, including a nicely worded note, sent to the speaker or someone else at their company.
+   ![Adam Eivy](./img/adam-eivy.png)
+
+## Career 15 - Workshop #3: Job Searches, Networking, and Negotiations
