@@ -1,10 +1,9 @@
 # Class 10 - Stacks, Queues, Personal Pitch Workshop
 
-## Lab 10 - Stack, Queue Implementations
+## Lab 10 - None
 
-## Setup
+## Code Challenge - Stack, Queue Implementations
 
-## Code Challenge
 
 - **Branch Name:** stack-and-queue
 
@@ -333,19 +332,23 @@ Some ideas for how you might want to teach:
    - _Definition:_ Peeking inspects the front Node of the queue.
    - **Analogy:** Peek is like checking who is at the front of the line without removing them. It's a quick process.
 
-## Retrospective
+## Learning Journal
 
-Retrospectives are a critical part of Agile, and typically take the form of meetings held by a team at the end of a sprint cycle. To get us acclimated to that process, we will use the format of a retrospectives to guide today’s reflection.
+### Reflection
 
-This [article](https://www.benlinders.com/2013/which-questions-do-you-ask-in-retrospectives/) gives a nice overview to the role of retrospectives.
+Take 10-15 minutes at the end of lab to respond to the following questions, adapted from the article:
 
 1. What went well, that I might forget if I don’t write down?
+    - I understood the stack and queue challenge better than other code challenges I've ever done. Using the linked list as a template helped a lot and I just sorta figured out how to configure things to be used for stack and queue
 2. What did I learn today?
+    - I learned how to shorten my personal pitch which I had trouble before, and it didn't sound like I was reading from an essay
 3. What should I do differently next time?
+    - I need to use Fridays more efficiently as catch up or prep for next week to make sure my fridays aren't' swamped with HW
 4. What still puzzles me, or what do I need to learn more about?
+    - I still don't get how to efficiently write code to pass tests, it takes so long, feel like its efficient to just start writing code.
 5. Thinking about each of your assignments for the day, reflect on:
-   - Is the assignment complete? If not, where exactly did you leave off, and what work remains?
-   - Do not get bogged down in written analysis; instead, focus on capturing the moment with an eye toward how your observations can guide you toward future productivity.
+    - Is the assignment complete? If not, where exactly did you leave off, and what work remains?
+        - I need help on lab 8 so will get help on that today
 
 ## Career 10 - Partner Power Hour - Report #2
 

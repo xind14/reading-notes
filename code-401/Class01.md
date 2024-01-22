@@ -2,56 +2,365 @@
 
 ## Lab 1 - Ensuring our computers and minds are prepared for Python
 
+### Overview
+
+Today you’ll begin working on a command line utility which will mimic the functionality of a point of sale restaurant system using your basic Python tools and understanding of the basics of the language.
+
+### Feature Tasks and Requirements
+
+- When run, the program should print an intro message and the menu for the restaurant
+- The restaurant’s menu should include appetizers, entrees, desserts, and beverages.
+- The program should prompt the user for an order
+- When a user enters an item, the program should print an acknowledgment of their input
+- The program should tell the user how to exit
+- The program’s content should match included sample exactly
+- Actually, there’s one tiny spot that should be different - see if you can spot it.
+- The `>` character represents user input line and should be printed out with a trailing space.
+
+```bash
+$ python snakes_cafe.py
+**************************************
+**    Welcome to the Snakes Cafe!   **
+**    Please see our menu below.    **
+**
+** To quit at any time, type "quit" **
+**************************************
+
+Appetizers
+----------
+Wings
+Cookies
+Spring Rolls
+
+Entrees
+-------
+Salmon
+Steak
+Meat Tornado
+A Literal Garden
+
+Desserts
+--------
+Ice Cream
+Cake
+Pie
+
+Drinks
+------
+Coffee
+Tea
+Unicorn Tears
+
+***********************************
+** What would you like to order? **
+***********************************
+>
+```
+
+#### Entering an order
+
+```bash
+***********************************
+** What would you like to order? **
+***********************************
+> Cake
+
+** 1 order of Cake has been added to your meal **
+
+> Cake
+
+** 2 orders of Cake have been added to your meal **
+```
+
+#### Exiting
+
+```bash
+> quit
+```
+
+### Stretch Goals
+
+- Print out a summary of the complete order.
+- Only allow ordering items on the menu.
+- Allow ordering items not on the menu but give a custom reply.
+
+### Configuration
+
+Create a project named `snakes-cafe`.
+
+Create a `snakes_cafe.py` file inside the project folder. Note the hyphen vs. underscore
+
+Your file structure should look like this.
+
+```
+├── snakes-cafe
+│   ├── README.md
+│   └── snakes_cafe.py
+```
+
+### Repository set-up
+
+Create a repository on Github with the exact name of `snakes-cafe`.
+See the Github section of Lab Submission Instructions for additional details.
+
+### Submission Instructions
+
+Refer to the Lab Submission Instructions for the complete lab submission process and expectations.
+You may have noticed many references to Lab Submission Instructions. That’s on purpose. Getting the steps exactly right is crucial. So make sure you follow them closely.
+
 ## Setup
 
+[Python Setup guide](https://codefellows.github.io/code-401-python-guide/reference/submission-instructions/labs/)
+
+### Creating Project
+
+```bash
+mkdir example-lab
+cd example-lab
+touch README.md
+```
+
+### Create virtual environment
+
+```bash
+python3 -m venv .venv
+```
+
+**NOTE:** Replace `python3` with a more specific version as needed.
+
+#### Activate virtual environment
+
+**Mac/Linux:**
+
+```bash
+source .venv/bin/activate
+```
+
+**Windows:**
+
+```bash
+source .venv/Scripts/activate
+```
+
+### Create modules and scripts
+
+```bash
+mkdir example_lab
+touch example_lab/example_script.py
+```
+
+_Note the underscore vs hyphen_
+
+### Install packages
+
+For example:
+
+```bash
+pip install favorite-library
+```
+
+### Record package dependencies
+
+```bash
+pip freeze > requirements.txt
+```
+
+Should result in this file tree:
+
+```
+└── example-lab
+    ├── README.md
+    ├── requirements.txt
+    └── example_lab
+        └── example_script.py
+```
+
+### Tests
+
+Many labs will require automated testing. If your lab requires it, then install pytest or pytest-watch.
+
+```bash
+pip install pytest # or pytest-watch
+pip freeze > requirements.txt
+touch tests/__init__.py # (Note: 2 underscores on both sides.)
+touch tests/test_example.py
+```
+
+Should result in a file tree like this:
+
+```
+└── example-lab
+    ├── README.md
+    ├── requirements.txt
+    ├── example_lab
+    │   └── example_script.py
+    └── tests
+        ├── __init__.py
+        └── test_example.py
+```
+
+### README
+
+Your project’s README.md should match the structure of the template README.
+
+### Git
+
+#### On Local System
+
+```bash
+git init
+touch .gitignore
+```
+
+Add `.venv` folder to `.gitignore`
+
+```bash
+git add .
+git commit -m "first commit"
+```
+
+#### On Github site
+
+Create an EMPTY repository `example-lab` on Github. **DO NOT initialize with README, license, or gitignore.**
+Those will be added soon.
+
+The next screen will have a “Quick Setup” section with a URL available to copy. Copy it ;)
+
+#### On local system (again)
+
+```bash
+git remote add origin the_url_you_copied_that_ends_with_git
+git push -u origin main
+```
+
+Now everything is wired up between the local machine and Github.
+
+### Canvas Submission
+
+Submit a link to the `README.md` from your assignment branch in Canvas.
+
+#### Resubmits
+
+Any commits made to the submission branch will be updated in the PR.
+
+In the event of assignment resubmission, submit the submission branch PR on canvas.
+
+### Github Actions
+
+This step is optional early in the course. The instructor will inform you when it is required.
+
+Setup “Github Actions” so that your code can be properly tested in Github as you make new pushes to your branches and pull requests to master.
+
+Include the following YAML code:
+
+```yaml
+name: Run Python Tests
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "python/**"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "python/**"
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+        working-directory: ./python
+      - name: Test with pytest
+        run: pytest -vv
+        working-directory: ./python
+```
 
 ## Code Challenge
 
-Overview
-[Read this overview.](https://codefellows.github.io/code-301-guide/curriculum/class-01/challenges/)
+### Reverse an Array
 
-Video
-[Watch the video for this class from the demo playlist.](https://www.youtube.com/playlist?list=PLVngfM2hsbi-L6G8qlWd8RyRbuTamHt3k)
+#### Specifications
 
-Demonstration
-[Look through these sample problems.](https://codefellows.github.io/code-301-guide/curriculum/class-01/challenges/DEMO.html)
+- Read all of the following instructions carefully.
+- Name things exactly as described.
+- Do all your work in a public repository called data-structures-and-algorithms.
+- Create a new branch in your repo called array-reverse.
+- Make a directory for this challenge, named according to your language’s conventions, containing a README.md file.
+- Update the “Table of Contents” - in the README at the root of the repository - with a link to this challenge’s README file.
 
-Challenges
+**NOTE:** This challenge is whiteboard only. Write out code as part of your whiteboard process, but don’t worry about creating external program files.
 
-1. Navigate to the javascript folder within your data-structures-and-algorithms repository.
-2. Create a new branch for this challenge called for-each
-   git checkout -b for-each
-3. Retrieve the code challenge from the system
-   npm run get-challenge 01
-4. In your terminal, from the javascript folder, run npm test 01 to execute the tests in this file for this challenge.
-5. At this point you will see the failed tests scroll through your terminal window with a brief report of the number of failed tests at the bottom.
-6. If you do not see this, verify your installation of Jest by typing npx jest --version in your terminal. Filename typos can make things break!
-7. Write code to make the tests pass, one at a time. Let the error messages guide you.
-8. Once the test is passing, refactor as needed, then move on to the next challenge.
-9. Note, you can also run npm test (without a challenge number) to run all of the tests for every code challenge file assignment during the course all at once. This can get “noisy”, but it’s an opportunity to get a view of your overall progress
+#### Feature Tasks
 
-Submission
-When you have completed the entire set of code challenges and all tests pass, create a pull request from your current branch to the main branch and merge it into main.
+Write a function called `reverseArray` which takes an array as an argument. Without utilizing any of the built-in methods available to your language, return an array with elements in reversed order.
 
-You will be able to see a test coverage report in GitHub on the Actions tab of your data-structures-and-algorithms repository. It should match what you saw on your terminal in the above steps. Your graders will be looking at this as well.
+##### Example
 
-Submit a link to your pull request.
+| Input                                         | Output                                    |
+| --------------------------------------------- | ----------------------------------------- |
+| [1, 2, 3, 4, 5, 6]                            | [6, 5, 4, 3, 2, 1]                        |
+| [89, 2354, 3546, 23, 10, -923, 823, -12]      | [-12, 823, -923, 10, 23, 3546, 2354, 89]  |
+| [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, ...] | [199, 197, 193, 191, 181, ... 7, 5, 3, 2] |
 
-## Written Class Notes
+#### Structure and Testing
 
+- Utilize the Single-responsibility principle: any methods you write should be clean, reusable, abstract component parts to the whole challenge. You will be given feedback and marked down if you attempt to define a large, complex algorithm in one function definition.
 
-## Read 1 -
+#### Stretch Goal
+
+Once you’ve achieved a working solution, implement the same feature with a different methodology. (Hint: what different techniques do you have when working with arrays? Recursion, loops, indexes, modifying the array input directly…) In other words, use a different algorithm & pseudocode to solve the same problem. Then compare approaches for efficiency, readability, flexibility, etc.
+
+#### Submission Instructions
+
+- Work within the proper folder structure for your language, and as dictated by the challenge instructions.
+- Create a new README for this challenge, using the README TEMPLATE provided.
+- Embed an image of your completed whiteboard, matching the example whiteboard layout.
+- In addition to whiteboard drawing, optionally complete the code written on your whiteboard, along with a proper suite of tests.
+- Try giving your algorithm to a chatbot and see if it can produce working code and tests.
+- Create a pull request from your branch to the main branch.
+- In your open pull request, comment with the following checklist of tasks:
+
+  - [ ] Top-level README “Table of Contents” is updated.
+  - [ ] README for this challenge is complete.
+    - [ ] Summary, Description, Approach & Efficiency, Solution.
+    - [ ] Picture of whiteboard.
+    - [ ] Link to code.
+  - [ ] Feature tasks for this challenge are completed.
+  - [ ] Unit tests written and passing.
+    - [ ] “Happy Path” - Expected outcome.
+    - [ ] Expected failure.
+    - [ ] Edge Case (if applicable/obvious).
+
+- Submit your completed work:
+  - Copy the link to your open pull request and paste it into the assignment submission field.
+  - Leave a description of how long this assignment took you in the comments box.
+  - Add any additional comments to your grader about your process or any difficulties you may have had with the assignment.
+- Merge your branch into main, and delete your branch (don’t worry, the PR link will still work).
+
+## Written Class Notes - None
+
+## Read 1 - Big O
 
 ## Resources Link/Pages
-
-**Bookmark and Review**
 
 - [Pain and Suffering](https://react.dev/learn/tutorial-tic-tac-toe)
 - [Beginners Guide to Big O](https://legacy.reactjs.org/docs/hello-world.html)
 - [Season 1, Episode 6, A friendly intro to Big O Notation](https://legacy.reactjs.org/docs/introducing-jsx.html)
 - [Names and Values in Python](https://legacy.reactjs.org/docs/rendering-elements.html)
 
-
+**Bookmark and Review**
 
 - [Python Module of the Week](https://legacy.reactjs.org/docs/components-and-props.html)
 
@@ -59,230 +368,102 @@ Submit a link to your pull request.
 
 Statement on why this topic matter as it relates to what I'm studying in this module:
 
-Adding on to what was learned in 201, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.
+Understanding that growth involves some level of discomfort and challenges and you might face a lot of it learning python.
 
 ### Pain and Suffering
 
 1. In the context of the reading “Pain and Suffering,” describe the main challenges faced by beginners when learning Python and suggest at least two strategies for overcoming these obstacles.
 
+   - Mental Strain: mentally challenging to think their way through complex programming problems and when confronted with topics that are initially unfamiliar.
+   - Emotional Stress: The constant exposure to one's lack of understanding, collaboration with others, and dealing with uncertainty can lead to emotional stress.
+
+Strategies to Overcome:
+
+Collaborative Learning: collaborate with peers and engage in group discussions. Collaboration not only provides diverse perspectives but also helps in dealing with emotional challenges by fostering a sense of shared experience and collective growth.
+
+Mindset Shift: shift perspective and view the challenges as opportunities for growth rather than obstacles. Emphasize the importance of building a positive mindset that acknowledges the pain of growth but also recognizes it as a temporary phase leading to valuable skills and a better future. Encourage setting clear goals
 
 ### Beginners Guide to Big O
 
 1. After reading “Beginners Guide to Big O,” explain the concept of time complexity and space complexity.
 
+   - Time complexity is a measure of the amount of time an algorithm takes to complete as a function of the size of the input data. It provides an understanding of how the algorithm's performance scales with larger datasets.
+   - Space complexity is a measure of the amount of memory or space an algorithm requires concerning the size of the input data. It helps assess how efficiently an algorithm uses memory.
 
 ### Names and Values in Python
 
 1. Based on the “Names and Values in Python” reading, explain the difference between mutable and immutable data types in Python.
 
+- Mutable Data Types:
+  - Objects of mutable data types can be altered or modified after creation.
+  - Changes made to the object directly affect the original object.
+  - Examples of mutable data types include lists, dictionaries, and sets.
+- Immutable Data Types:
+  - Objects of immutable data types cannot be changed after they are created.
+  - Any operation that appears to modify the value of an immutable object actually creates a new object.
+  - Examples of immutable data types include strings, numbers (integers, floats), and tuples.
 
 ## Things I want to know more about
 
+What exactly is the application of big o notation, where is it used?
 
-## Retrospective
+## Read 1.1 - Data Structures and Algorithms Prep Reading and Videos
 
-Retrospectives are a critical part of Agile, and typically take the form of meetings held by a team at the end of a sprint cycle. To get us acclimated to that process, we will use the format of a retrospectives to guide today’s reflection.
+## Resources Link/Pages
 
-This [article](https://www.benlinders.com/2013/which-questions-do-you-ask-in-retrospectives/) gives a nice overview to the role of retrospectives.
+- [Basic Recursion](https://www.youtube.com/watch?v=vPEJSJMg4jY)
+- [Data Structures in 15 Minutes](https://www.youtube.com/watch?v=sVxBVvlnJsM)
+- [Big O Explained](https://www.youtube.com/watch?v=v4cd1O4zkGw)
+- [Basic Data Structures](https://towardsdatascience.com/8-common-data-structures-every-programmer-must-know-171acf6a1a42)
+- [Why Big O](https://web.archive.org/web/20230207075759/https://triplebyte.com/blog/why-you-should-learn-big-o-and-stop-hacking-your-way-through-algorithms)
 
-1. What went well, that I might forget if I don’t write down?
-2. What did I learn today?
-3. What should I do differently next time?
-4. What still puzzles me, or what do I need to learn more about?
-5. Thinking about each of your assignments for the day, reflect on:
-   - Is the assignment complete? If not, where exactly did you leave off, and what work remains?
-   - Do not get bogged down in written analysis; instead, focus on capturing the moment with an eye toward how your observations can guide you toward future productivity.
+## Answer
 
-## Career 1 - Identify Your Accountability Partners
+Statement on why this topic matter as it relates to what I'm studying in this module:
 
+Understanding the characteristics and performance of different data structures allows programmers to select the most appropriate one for a given problem.
 
+### Data Structures and Algorithms
 
+1. What is 1 of the more important things you should consider when deciding which data structure is best suited to solve a particular problem?
 
+   - the efficiency of the operations required to solve the problem. Different data structures excel in different operations. For example, arrays are great for random access, linked lists for sequential access, hash tables for fast lookups, and trees for hierarchical relationships. Analyzing the specific requirements of the problem and understanding the time and space complexity of operations will help in selecting the most appropriate data structure.
 
-# Class 4 - Object Oriented Programming
+2. How can we ensure that we’ll avoid an infinite recursive call stack?
+   - implement a base case in your recursive function. The base case defines a condition under which the function stops calling itself and returns a result. Without a proper base case, the recursion would continue indefinitely, leading to a stack overflow. Ensuring that your recursive function has a well-defined termination condition is essential for preventing infinite recursion.
 
-## Lab 4 - Modeling problem domain with classes
+## Things I want to know more about
 
-# Class 5 - Linked Lists, Big O, Resume Workshop
+I want to know more about advanced data structures like Graphs and Heaps
 
-## Lab 5 - Linked List Implementation
+## Learning Journal
 
-# Class 6 - Guided Project 1
+### Today I Learned
 
-## Lab 6 - Assessing risk and prioritizing features
+One of the most effective tools in adult learning is reflection. By writing coherent summaries of lessons learned, we cement that learning and deepen our understanding of a subject. It also helps us to measure our progress.
 
-# Class 7 - Guided Project 2
+#### Andragogy vs. Pedagogy
 
-## Lab 7 - Automating behavior verification
+Maybe you’ve seen a graphic similar to this before?
 
-# Class 8 - Guided Project 3
+![Andragogy vs. Pedagogy](img/learningjournal1.jpeg)
 
-## Lab 8 - Handling cheaters and losers
+![Kolb's Adult Learning Cycle](https://elearningindustry.com/pedagogy-vs-andragogy-in-elearning-can-you-tell-the-difference)
 
-# Class 9 - Guided Project 4
+This is a learning style model developed by researcher David Kolb, and it is a core principle in the way our curriculum is designed and our instruction is delivered at Code Fellows. Note the “Reflective Observation” component; it is that piece that is a primary differentiator between the way adults learn and the way children learn.
 
-## Lab 9 - Wrapping up with a Bot
+As an adult, learning is different for you now than it was when you were younger. Do a quick read of [this article](link to the article) that describes the differences between andragogy (adult-focused learning) and pedagogy (child-focused learning).
 
-# Class 10 - Stacks, Queues, Personal Pitch Workshop
+Over the duration of this course, there will be a series of learning journal assignments where you will be prompted to reflect on your learning. The reflection is a critical part of adult learning, and the self-awareness that results is a key component of emotional intelligence. Initially, these journal assignments will give you prompts to get you started, but as time goes by, some assignments will be less structured so that you explore your thoughts with more self-determination and freedom.
 
-## Lab 10 - Stack, Queue Implementations
+### Reflection
 
-# Class 11 - Intro to Data Science
+Write a brief reflection on your learning today, or use the prompt below to get started.
 
-## Lab 11 - Scientific computing with Numpy
+Consider the following quote from the article linked above:
 
-# Class 12 - Data Analysis
+“[Adult learners] are deeply involved not only in planning but also in evaluating their learning, as they know what knowledge they want to acquire.”
 
-## Lab 12 - Data Frames with Pandas
+In other words, you should continuously evaluate your learning, and your learning journal is an excellent way to keep track of that. How do you see yourself planning and evaluating your learning? What details will you record and/or measure? How often will you evaluate what you want to learn?
 
-# Class 13 - Linear Regressions
-
-## Lab 13 - Machine Learning with scikit-learn
-
-# Class 14 - Data Visualization
-
-## Lab 14 - Visualizing statistical data with Seaborn
-
-# Class 15 - Trees, Job Search Workshop
-
-## Lab 15 - Tree Implementation
-
-# Class 16 - Serverless Functions
-
-## Lab 16 - Computing in the cloud
-
-# Class 17 - Web Scraping
-
-## Lab 17 - Automating collecting data from web page
-
-# Class 18 - Cryptography
-
-## Lab 18 - Cracking the Caesar cipher
-
-# Class 19 - Automation
-
-## Lab 19 - Getting machine to handle the boring stuff
-
-# Class 20 - Project Kickoffs
-
-## Lab 20 - Team Setup, Ideation, Wireframes, Tooling
-
-# Class 21 - Wireframes, User Stories, Architecture Plan, DevOps, Documentation, Agreements
-
-## Lab 21 - Phase 1
-
-# Class 22 - MVP
-
-## Lab 22 - Final Polish, Presentation Practice
-
-# Class 23 - Live Project Presentations
-
-## Lab 23 -
-
-# Class 24 - Intro to Django
-
-## Lab 24 - Build better web apps more quickly with less code
-
-# Class 25 - Django Models
-
-## Lab 25 - Object Relational Mapping
-
-# Class 26 - Django CRUD and Forms
-
-## Lab 26 - Create, Read, Update, and Delete
-
-# Class 27 - DjangoX
-
-## Lab 27 - Customizing Django to make it your own
-
-# Class 28 - Hash Tables, Behavioral Interviewing
-
-## Lab 28 - Hash Tables Implementation
-
-# Class 29 - Django REST Framework & Docker
-
-## Lab 29 - Leveling up Django for APIs & Containerization
-
-# Class 30 - Permissions & Postgresql
-
-## Lab 30 - Controlling access to your API & enterprise Database
-
-# Class 31 - Authentication & Production Server
-
-## Lab 31 - JSON Web Tokens & Moving beyond development server
-
-# Class 32 - Back End Deployment
-
-## Lab 32 - Moving API to the cloud
-
-# Class 33 - Graphs, Technical Interviewing
-
-## Lab 33 - Graph Implementation
-
-# Class 34 - DS&A Review
-
-## Lab 34 - Data Structures & Algorithms Workshop
-
-# Class 35 - React + Next.JS
-
-## Lab 35 - Intro to Next.js & Tailwind CSS
-
-# Class 36 - React - Forms and Conditional Rendering
-
-## Lab 36 - Projecting application state
-
-# Class 37 - Resource Fetching & Authentication
-
-## Lab 37 - Consuming Authenticated Resources
-
-# Class 38 - Personal Presentation
-
-## Lab 38 - Final Exam Prep
-
-# Class 39 - Full Stack Deployment
-
-## Lab 39 - Deploying Front End, Back End and Database
-
-# Class 40 - Pythonisms
-
-## Lab 40 - Generators, Iterators and Magic Methods
-
-# Class 41 - Open Source
-
-## Lab 41 - Research, contribute to OSS
-
-# Class 42 - Ethics
-
-## Lab 42 - Final Exam
-
-# Class 43 - Project Kickoffs
-
-## Lab 43 - Team Setup, Ideation, Wireframes, Tooling
-
-# Class 44 - Wireframes, User Stories, Architecture Plan, DevOps, Documentation, Agreements
-
-## Lab 44 - Phase 1
-
-# Class 45 - MVP
-
-## Lab 45 - Final Polish, Presentation Practice
-
-# Class 46 - Live Project Presentations
-
-## Lab 46 -
-
-# Class 47 - Wireframes, User Stories, Architecture Plan, DevOps, Documentation, Agreements
-
-## Lab 47 - Phase 1
-
-# Class 48 - MVP
-
-## Lab 48 - Final Polish, Presentation Practice
-
-# Class 49 - Live Project Presentations
-
-## Lab 49 -
-
-# Class 50 -
-
-## Lab 50 - Live Project Presentations
+- I like the way I am detailing my learning now. I think my notes and how much I put into them already kind of shows a learning plan where I list resources that I can use throughout my learning that I can always come back to. The way my notes are organized also details topics I do not understand and I can always refer back to those in that future. I think I need to start making goals to evaluate my learning and then for each learning journal reflection assignment I can assess whether I've met them or need more improvement. For now, I really want to understand the topics introduced in python first like different syntax.

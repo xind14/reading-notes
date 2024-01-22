@@ -2,41 +2,318 @@
 
 ## Lab 2 - Test Driven Development
 
+
+### Overview
+
+The Fibonacci Series is a numeric series starting with the integers 0 and 1. In this series, the next integer is determined by summing the previous two. This gives us:
+
+```
+0, 1, 1, 2, 3, 5, 8, 13, ...
+```
+
+**Note:** When asking for the nth number in the series, presume starting at zero.
+
+- `fibonacci(0) == 0`
+- `fibonacci(1) == 1`
+- `fibonacci(2) == 1`, etc.
+
+The Lucas Numbers are a related series of integers that start with the values 2 and 1 rather than 0 and 1. The resulting series looks like this:
+
+```
+2, 1, 3, 4, 7, 11, 18, 29, ...
+```
+
+#### Configuration
+
+- Create a local git repo with the root folder named `math-series`.
+- Create a new repository named `math-series`.
+- Link your local and remote repositories.
+
+### Feature Tasks and Requirements
+
+1. Create a module `series.py`.
+2. Add a file `test_series.py` to your repository. Use Test-Driven Development (TDD) practices. Write tests first, then implement code. Make small changes with many cycles of Red-Green-Refactor.
+3. Create a function called `fibonacci`. The function should have one parameter `n`. Return the nth value in the Fibonacci series. You may implement the function using recursion or iteration. If you are feeling particularly frisky, do both as separate functions. Ensure that your function(s) have well-formed docstrings.
+4. In your `series.py` module, add a new function `lucas` that returns the nth value in the Lucas numbers. Again, you may use recursion or iteration, or both. Ensure that your function has a well-formed docstring.
+5. Both the Fibonacci series and the Lucas numbers are based on an identical formula. Add a third function called `sum_series` with one required parameter and two optional parameters. The required parameter will determine which element in the series to print. The two optional parameters will have default values of 0 and 1 and will determine the first two values for the series to be produced. Calling this function with no optional parameters will produce numbers from the Fibonacci series. Calling it with the optional arguments 2 and 1 will produce values from the Lucas numbers. Other values for the optional parameters will produce other series. Ensure that your function has a well-formed docstring.
+6. Add your `series.py` and `test_series.py` modules to your repository and commit frequently while working on your implementation. Include good commit messages that explain concisely both what you are doing and why.
+
+
 ## Setup
+
+[Python Setup guide](https://codefellows.github.io/code-401-python-guide/reference/submission-instructions/labs/)
+
+### Creating Project
+
+```bash
+mkdir example-lab
+cd example-lab
+touch README.md
+```
+
+### Create virtual environment
+
+```bash
+python3 -m venv .venv
+```
+
+**NOTE:** Replace `python3` with a more specific version as needed.
+
+#### Activate virtual environment
+
+**Mac/Linux:**
+
+```bash
+source .venv/bin/activate
+```
+
+**Windows:**
+
+```bash
+source .venv/Scripts/activate
+```
+
+### Create modules and scripts
+
+```bash
+mkdir example_lab
+touch example_lab/example_script.py
+```
+
+_Note the underscore vs hyphen_
+
+### Install packages
+
+For example:
+
+```bash
+pip install favorite-library
+```
+
+### Record package dependencies
+
+```bash
+pip freeze > requirements.txt
+```
+
+Should result in this file tree:
+
+```
+└── example-lab
+    ├── README.md
+    ├── requirements.txt
+    └── example_lab
+        └── example_script.py
+```
+
+### Tests
+
+Many labs will require automated testing. If your lab requires it, then install pytest or pytest-watch.
+
+```bash
+pip install pytest # or pytest-watch
+pip freeze > requirements.txt
+touch tests/__init__.py # (Note: 2 underscores on both sides.)
+touch tests/test_example.py
+```
+
+Should result in a file tree like this:
+
+```
+└── example-lab
+    ├── README.md
+    ├── requirements.txt
+    ├── example_lab
+    │   └── example_script.py
+    └── tests
+        ├── __init__.py
+        └── test_example.py
+```
+
+### README
+
+Your project’s README.md should match the structure of the template README.
+
+### Git
+
+#### On Local System
+
+```bash
+git init
+touch .gitignore
+```
+
+Add `.venv` folder to `.gitignore`
+
+```bash
+git add .
+git commit -m "first commit"
+```
+
+#### On Github site
+
+Create an EMPTY repository `example-lab` on Github. **DO NOT initialize with README, license, or gitignore.**
+Those will be added soon.
+
+The next screen will have a “Quick Setup” section with a URL available to copy. Copy it ;)
+
+#### On local system (again)
+
+```bash
+git remote add origin the_url_you_copied_that_ends_with_git
+git push -u origin main
+```
+
+Now everything is wired up between the local machine and Github.
+
+### Canvas Submission
+
+Submit a link to the `README.md` from your assignment branch in Canvas.
+
+#### Resubmits
+
+Any commits made to the submission branch will be updated in the PR.
+
+In the event of assignment resubmission, submit the submission branch PR on canvas.
+
+### Github Actions
+
+This step is optional early in the course. The instructor will inform you when it is required.
+
+Setup “Github Actions” so that your code can be properly tested in Github as you make new pushes to your branches and pull requests to master.
+
+Include the following YAML code:
+
+```yaml
+name: Run Python Tests
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "python/**"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "python/**"
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+        working-directory: ./python
+      - name: Test with pytest
+        run: pytest -vv
+        working-directory: ./python
+```
+## Code Challenge
+
+### Reverse an Array
+
+#### Specifications
+
+- Read all of the following instructions carefully.
+- Name things exactly as described.
+- Do all your work in a public repository called data-structures-and-algorithms.
+- Create a new branch in your repo called array-reverse.
+- Make a directory for this challenge, named according to your language’s conventions, containing a README.md file.
+- Update the “Table of Contents” - in the README at the root of the repository - with a link to this challenge’s README file.
+
+**NOTE:** This challenge is whiteboard only. Write out code as part of your whiteboard process, but don’t worry about creating external program files.
+
+#### Feature Tasks
+Write a function called `reverseArray` which takes an array as an argument. Without utilizing any of the built-in methods available to your language, return an array with elements in reversed order.
+
+##### Example
+
+| Input | Output |
+|-------|--------|
+| [1, 2, 3, 4, 5, 6] | [6, 5, 4, 3, 2, 1] |
+| [89, 2354, 3546, 23, 10, -923, 823, -12] | [-12, 823, -923, 10, 23, 3546, 2354, 89] |
+| [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, ...] | [199, 197, 193, 191, 181, ... 7, 5, 3, 2] |
+
+#### Structure and Testing
+
+- Utilize the Single-responsibility principle: any methods you write should be clean, reusable, abstract component parts to the whole challenge. You will be given feedback and marked down if you attempt to define a large, complex algorithm in one function definition.
+
+#### Stretch Goal
+
+Once you’ve achieved a working solution, implement the same feature with a different methodology. (Hint: what different techniques do you have when working with arrays? Recursion, loops, indexes, modifying the array input directly…) In other words, use a different algorithm & pseudocode to solve the same problem. Then compare approaches for efficiency, readability, flexibility, etc.
+
+#### Submission Instructions
+
+- Work within the proper folder structure for your language, and as dictated by the challenge instructions.
+- Create a new README for this challenge, using the README TEMPLATE provided.
+- Embed an image of your completed whiteboard, matching the example whiteboard layout.
+- In addition to whiteboard drawing, optionally complete the code written on your whiteboard, along with a proper suite of tests.
+- Try giving your algorithm to a chatbot and see if it can produce working code and tests.
+- Create a pull request from your branch to the main branch.
+- In your open pull request, comment with the following checklist of tasks:
+
+  - [ ] Top-level README “Table of Contents” is updated.
+  - [ ] README for this challenge is complete.
+    - [ ] Summary, Description, Approach & Efficiency, Solution.
+    - [ ] Picture of whiteboard.
+    - [ ] Link to code.
+  - [ ] Feature tasks for this challenge are completed.
+  - [ ] Unit tests written and passing.
+    - [ ] “Happy Path” - Expected outcome.
+    - [ ] Expected failure.
+    - [ ] Edge Case (if applicable/obvious).
+
+- Submit your completed work:
+  - Copy the link to your open pull request and paste it into the assignment submission field.
+  - Leave a description of how long this assignment took you in the comments box.
+  - Add any additional comments to your grader about your process or any difficulties you may have had with the assignment.
+- Merge your branch into main, and delete your branch (don’t worry, the PR link will still work).
+
+## Written Class Notes
+
+
+
+
 
 ## Code Challenge
 
-Overview
-[Read this overview.](https://codefellows.github.io/code-301-guide/curriculum/class-01/challenges/)
+### Insert Shift Array
 
-Video
-[Watch the video for this class from the demo playlist.](https://www.youtube.com/playlist?list=PLVngfM2hsbi-L6G8qlWd8RyRbuTamHt3k)
+- Insert and Shift an Array in the Middle at Index
 
-Demonstration
-[Look through these sample problems.](https://codefellows.github.io/code-301-guide/curriculum/class-01/challenges/DEMO.html)
+#### Specifications
 
-Challenges
+Read all of the following instructions carefully.
 
-1. Navigate to the javascript folder within your data-structures-and-algorithms repository.
-2. Create a new branch for this challenge called for-each
-   git checkout -b for-each
-3. Retrieve the code challenge from the system
-   npm run get-challenge 01
-4. In your terminal, from the javascript folder, run npm test 01 to execute the tests in this file for this challenge.
-5. At this point you will see the failed tests scroll through your terminal window with a brief report of the number of failed tests at the bottom.
-6. If you do not see this, verify your installation of Jest by typing npx jest --version in your terminal. Filename typos can make things break!
-7. Write code to make the tests pass, one at a time. Let the error messages guide you.
-8. Once the test is passing, refactor as needed, then move on to the next challenge.
-9. Note, you can also run npm test (without a challenge number) to run all of the tests for every code challenge file assignment during the course all at once. This can get “noisy”, but it’s an opportunity to get a view of your overall progress
+- Name things exactly as described.
+- Do all your work in a public repository called `data-structures-and-algorithms`.
+- Create a new branch in your repo called `array-insert-shift`.
+- Make a directory for this challenge, named according to your language’s conventions, containing a `README.md` file.
+- Update the “Table of Contents” - in the `README` at the root of the repository - with a link to this challenge’s `README` file.
 
-Submission
-When you have completed the entire set of code challenges and all tests pass, create a pull request from your current branch to the main branch and merge it into main.
+**NOTE:** This challenge is whiteboard only. Write out code as part of your whiteboard process, but don’t worry about creating external program files.
 
-You will be able to see a test coverage report in GitHub on the Actions tab of your data-structures-and-algorithms repository. It should match what you saw on your terminal in the above steps. Your graders will be looking at this as well.
+### Feature Tasks
 
-Submit a link to your pull request.
+Write a function called `insertShiftArray` which takes in an array and a value to be added. Without utilizing any of the built-in methods available to your language, return an array with the new value added at the middle index.
 
-## Written Class Notes
+#### Example
+
+| Input           | Output             |
+| --------------- | ------------------ |
+| [2,4,6,-8], 5   | [2,4,5,6,-8]       |
+| [42,8,15,23,42], 16 | [42,8,15,16,23,42] |
+
+
 
 ## Read 2 - Testing and Modules
 
@@ -150,19 +427,24 @@ Embracing test-driven development builds a solid foundation for understanding Py
 
 I got really confused reading the different types of recursion like tail, implicit, etc so I need to know more about that
 
-## Retrospective
+## Learning Journal
 
-Retrospectives are a critical part of Agile, and typically take the form of meetings held by a team at the end of a sprint cycle. To get us acclimated to that process, we will use the format of a retrospectives to guide today’s reflection.
+### Today I Learned
 
-This [article](https://www.benlinders.com/2013/which-questions-do-you-ask-in-retrospectives/) gives a nice overview to the role of retrospectives.
+One of the most effective tools in adult learning is reflection. By writing coherent summaries of lessons learned, we cement that learning and deepen our understanding of a subject. It also helps us to measure our progress.
 
-1. What went well, that I might forget if I don’t write down?
-2. What did I learn today?
-3. What should I do differently next time?
-4. What still puzzles me, or what do I need to learn more about?
-5. Thinking about each of your assignments for the day, reflect on:
- - Is the assignment complete? If not, where exactly did you leave off, and what work remains?
- - Do not get bogged down in written analysis; instead, focus on capturing the moment with an eye toward how your observations can guide you toward future productivity.
+### Reflection
 
-## Career 1 - Identify Your Accountability Partners
+Write a brief reflection on your learning today, or use the prompt below to get started.
+
+
+[“For adult learners, their experience becomes the main resource of both their learning and the personal identity they have developed, as the richer and more diverse their experience, the more the diversity they can bring to their own learning.”](https://elearningindustry.com/pedagogy-vs-andragogy-in-elearning-can-you-tell-the-difference)
+
+
+In other words, your life experience in learning the things you did before learning code will make this new experience more meaningful for you, and reflection on all of your experiences is essential in maximizing what you can gain from your study at Code Fellows. How do you think your prior life and professional experience will help you in this new endeavor?
+
+
+- This is only class 2 and I'm already stressed because I feel like I'm already expected to know a lot by self-teaching with the prework prep. But I have trouble staying focused when I try to learn new things so I don't remember anything from the prep work. I had to watch a 4 hour learn python for beginners on Youtube to catch up. My past experience has thought me patience. I think if I wasn't patient I would be way more stressed then I am now. My past jobs have also thought me how to be accountable and reliable so I do have good documentation habits.
+
+## Career 2 - Identify Your Accountability Partners
 

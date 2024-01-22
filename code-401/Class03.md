@@ -4,172 +4,89 @@
 
 ### Overview
 
-Today you’ll begin working on a command line utility which will mimic the functionality of a point of sale restaurant system using your basic Python tools and understanding of the basics of the language.
+In this lab assignment, you will be creating a command line application that takes advantage of Python’s built-in capabilities for reading and writing files.
+
+#### Resources
+
+- A starter test script is supplied and should be moved to your application’s tests folder.
+- **NOTE:** All included tests must pass as written, though you can add more tests if you like.
+- [Python String `format()` Method](https://docs.python.org/3/library/stdtypes.html#str.format)
+- [Unpacking Arrays](https://docs.python.org/3/tutorial/controlflow.html#tut-unpacking-arguments)
+
+#### Configuration
+
+- Create a project named `madlib-cli`.
+
+#### Repository Set-up
+
+- Create a repository on Github with the name `madlib-cli`.
 
 ### Feature Tasks and Requirements
 
-- When run, the program should print an intro message and the menu for the restaurant
-- The restaurant’s menu should include appetizers, entrees, desserts, and beverages.
-- The program should prompt the user for an order
-- When a user enters an item, the program should print an acknowledgment of their input
-- The program should tell the user how to exit
-- The program’s content should match included sample exactly
-- Actually, there’s one tiny spot that should be different - see if you can spot it.
-- The `>` character represents user input line and should be printed out with a trailing space.
+- Create a file called `madlib.py` at the root of the `madlib_cli` folder, which will contain all of the Python code that you will write relating to your Madlib game.
+- Keeping in mind the concept of Single Responsibility Principle, build a command-line tool which will perform the following:
+  - Print a welcome message to the user, explaining the Madlib process and command line interactions.
+  - Read a template Madlib file (Example), and parse that file into usable parts.
+  - Prompt the user to submit a series of words to fit each of the required components of the Madlib template.
+  - With the collected user inputs, populate the template such that each provided input is placed into the correct position within the template.
+  - After the resulting Madlib has been completed, provide the completed response back to the user in the command line.
+  - Write the completed text (Example) to a new file on your file system (in the repo).
+    - **Note:** A smaller example file is included as well, which can be handy when developing/testing.
 
-```bash
-$ python snakes_cafe.py
-**************************************
-**    Welcome to the Snakes Cafe!   **
-**    Please see our menu below.    **
-**
-** To quit at any time, type "quit" **
-**************************************
+#### Testing Details
 
-Appetizers
-----------
-Wings
-Cookies
-Spring Rolls
+- You are NOT required to test terminal input/output, AKA print and input functions.
+- However, you ARE expected to have meaningful tests for your application.
 
-Entrees
--------
-Salmon
-Steak
-Meat Tornado
-A Literal Garden
+#### How to Skip Testing Print and Output Functionality
 
-Desserts
---------
-Ice Cream
-Cake
-Pie
+The resolution to that dilemma is to break down your code so that it is more easily testable.
 
-Drinks
-------
-Coffee
-Tea
-Unicorn Tears
+1. Create and test a `read_template` function that takes in a path to a text file and returns a stripped string of the file’s contents.
+   - `read_template` should raise a `FileNotFoundError` if the path is invalid.
 
-***********************************
-** What would you like to order? **
-***********************************
->
-```
+2. Create and test a `parse_template` function that takes in a template string and returns a string with language parts removed and a separate tuple of those language parts.
 
-#### Entering an order
-
-```bash
-***********************************
-** What would you like to order? **
-***********************************
-> Cake
-
-** 1 order of Cake has been added to your meal **
-
-> Cake
-
-** 2 orders of Cake have been added to your meal **
-```
-
-#### Exiting
-
-```bash
-> quit
-```
-
-### Stretch Goals
-
-- Print out a summary of the complete order.
-- Only allow ordering items on the menu.
-- Allow ordering items not on the menu but give a custom reply.
-
-### Configuration
-
-Create a project named `snakes-cafe`.
-
-Create a `snakes_cafe.py` file inside the project folder. Note the hyphen vs. underscore
-
-Your file structure should look like this.
-
-```
-├── snakes-cafe
-│   ├── README.md
-│   └── snakes_cafe.py
-```
-
-### Repository set-up
-
-Create a repository on Github with the exact name of `snakes-cafe`.
-See the Github section of Lab Submission Instructions for additional details.
-
-### Submission Instructions
-
-Refer to the Lab Submission Instructions for the complete lab submission process and expectations.
-You may have noticed many references to Lab Submission Instructions. That’s on purpose. Getting the steps exactly right is crucial. So make sure you follow them closely.
+3. Create and test a `merge` function that takes in a “bare” template and a list of user-entered language parts, and returns a string with the language parts inserted into the template.
 
 
 ## Code Challenge
 
-### Reverse an Array
+### Array Binary Search
+
+
+- Binary Search in a Sorted 1D Array
 
 #### Specifications
 
-- Read all of the following instructions carefully.
+Read all of the following instructions carefully.
+
 - Name things exactly as described.
-- Do all your work in a public repository called data-structures-and-algorithms.
-- Create a new branch in your repo called array-reverse.
-- Make a directory for this challenge, named according to your language’s conventions, containing a README.md file.
-- Update the “Table of Contents” - in the README at the root of the repository - with a link to this challenge’s README file.
+- Do all your work in a public repository called `data-structures-and-algorithms`.
+- Create a new branch in your repo called `array-binary-search`.
+- Make a directory for this challenge, named according to your language’s conventions, containing a `README.md` file.
+- Update the “Table of Contents” - in the `README` at the root of the repository - with a link to this challenge’s `README` file.
 
 **NOTE:** This challenge is whiteboard only. Write out code as part of your whiteboard process, but don’t worry about creating external program files.
 
-#### Feature Tasks
-Write a function called `reverseArray` which takes an array as an argument. Without utilizing any of the built-in methods available to your language, return an array with elements in reversed order.
+### Feature Tasks
 
-##### Example
+Write a function called `BinarySearch` which takes in 2 parameters: a sorted array and the search key. Without utilizing any of the built-in methods available to your language, return the index of the array’s element that is equal to the value of the search key, or -1 if the element is not in the array.
 
-| Input | Output |
-|-------|--------|
-| [1, 2, 3, 4, 5, 6] | [6, 5, 4, 3, 2, 1] |
-| [89, 2354, 3546, 23, 10, -923, 823, -12] | [-12, 823, -923, 10, 23, 3546, 2354, 89] |
-| [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, ...] | [199, 197, 193, 191, 181, ... 7, 5, 3, 2] |
+**NOTE:** The search algorithm used in your function should be a binary search. Check the [Resources section](#resources) for details.
 
-#### Structure and Testing
+#### Example
 
-- Utilize the Single-responsibility principle: any methods you write should be clean, reusable, abstract component parts to the whole challenge. You will be given feedback and marked down if you attempt to define a large, complex algorithm in one function definition.
+| Input                                  | Output |
+| -------------------------------------- | ------ |
+| [4, 8, 15, 16, 23, 42], 15              | 2      |
+| [-131, -82, 0, 27, 42, 68, 179], 42     | 4      |
+| [11, 22, 33, 44, 55, 66, 77], 90        | -1     |
+| [1, 2, 3, 5, 6, 7], 4                   | -1     |
 
-#### Stretch Goal
+#### Resources
 
-Once you’ve achieved a working solution, implement the same feature with a different methodology. (Hint: what different techniques do you have when working with arrays? Recursion, loops, indexes, modifying the array input directly…) In other words, use a different algorithm & pseudocode to solve the same problem. Then compare approaches for efficiency, readability, flexibility, etc.
-
-#### Submission Instructions
-
-- Work within the proper folder structure for your language, and as dictated by the challenge instructions.
-- Create a new README for this challenge, using the README TEMPLATE provided.
-- Embed an image of your completed whiteboard, matching the example whiteboard layout.
-- In addition to whiteboard drawing, optionally complete the code written on your whiteboard, along with a proper suite of tests.
-- Try giving your algorithm to a chatbot and see if it can produce working code and tests.
-- Create a pull request from your branch to the main branch.
-- In your open pull request, comment with the following checklist of tasks:
-
-  - [ ] Top-level README “Table of Contents” is updated.
-  - [ ] README for this challenge is complete.
-    - [ ] Summary, Description, Approach & Efficiency, Solution.
-    - [ ] Picture of whiteboard.
-    - [ ] Link to code.
-  - [ ] Feature tasks for this challenge are completed.
-  - [ ] Unit tests written and passing.
-    - [ ] “Happy Path” - Expected outcome.
-    - [ ] Expected failure.
-    - [ ] Edge Case (if applicable/obvious).
-
-- Submit your completed work:
-  - Copy the link to your open pull request and paste it into the assignment submission field.
-  - Leave a description of how long this assignment took you in the comments box.
-  - Add any additional comments to your grader about your process or any difficulties you may have had with the assignment.
-- Merge your branch into main, and delete your branch (don’t worry, the PR link will still work).
-
+- [Binary Search Algorithm](https://www.geeksforgeeks.org/binary-search/)
 
 
 ## Written Class Notes
@@ -233,7 +150,7 @@ Knowing how to use 'with' for managing resources, reading files with 'read' and 
 
 ## Things I want to know more about
 
-I watched the video and I want to know what you use to decide in how many increments you would breakdown large datasets when using loops to process. 
+I watched the video and I want to know what you use to decide in how many increments you would breakdown large datasets when using loops to process.
 
 ## Learning Journal
 
@@ -247,7 +164,8 @@ Write a brief reflection on your learning today, or use the prompt below to get 
 
 In other words, understanding your motivation for learning contributes to the effectiveness of your learning, and your learning journal is a place to explore those thoughts. What are your motivations for learning?
 
-- If I am completely honest my motivations are money. I am gambling on the chance that I can make a decent income because the average for this industry is on the higher end. But I recognize that is a short-term motivator to have because it might not be a strong driver later. I guess other motivations would be to advance my career or at least start one. I feel like I haven't had an adult job and I need to start building connections that'll give my future more stability. Along with money, I do like problem solving so I hope that becomes a better driving force for me later. I feel like I haven't had the time to sit down and reflect on how to stay motivated in my learning because of how fast pace this program is. I understand these assignments are time set side for those reflections but because I feel so slammed, the journal reflections feel like a chore rather than an opportunity to think. I do recognize it might be too early in the class for me to feel appreciative yet and it will get easier as I practice more the further into this class we go.
+
+- Right now I want to learn out of embarrassment. I don't feel like I'm learning anything and I want to move away from this frustration of not knowing. I also want to move away from being a copy and paste coder which I get is normal when first learning, like getting ideas and sample solutions and I just feel like I rely on external resources so much that I'm not understanding what I'm doing
 
 ## Career 3 - Networking Gameplan
 

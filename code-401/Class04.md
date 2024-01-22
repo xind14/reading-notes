@@ -4,171 +4,89 @@
 
 ### Overview
 
-Today you’ll begin working on a command line utility which will mimic the functionality of a point of sale restaurant system using your basic Python tools and understanding of the basics of the language.
+Creating a Garage Band with Object-Oriented Programming.
+
+#### Configuration
+
+- Create a project named `pythonic-garage-band`.
+
+#### Repository Set-up
+
+- Create a new repository named `pythonic-garage-band`.
+- Use feature branches for your work.
 
 ### Feature Tasks and Requirements
 
-- When run, the program should print an intro message and the menu for the restaurant
-- The restaurant’s menu should include appetizers, entrees, desserts, and beverages.
-- The program should prompt the user for an order
-- When a user enters an item, the program should print an acknowledgment of their input
-- The program should tell the user how to exit
-- The program’s content should match included sample exactly
-- Actually, there’s one tiny spot that should be different - see if you can spot it.
-- The `>` character represents user input line and should be printed out with a trailing space.
+Use Python classes to model a Band made up of different kinds of musicians.
 
-```bash
-$ python snakes_cafe.py
-**************************************
-**    Welcome to the Snakes Cafe!   **
-**    Please see our menu below.    **
-**
-** To quit at any time, type "quit" **
-**************************************
+Start with Guitarist, Bassist, and Drummer.
 
-Appetizers
-----------
-Wings
-Cookies
-Spring Rolls
+Make use of a Musician base class to handle common functionality which particular kinds of musicians will inherit.
 
-Entrees
--------
-Salmon
-Steak
-Meat Tornado
-A Literal Garden
+#### User Acceptance Tests
 
-Desserts
---------
-Ice Cream
-Cake
-Pie
+Unit tests will be supplied for this lab. Your job is to make them pass. Do NOT modify the supplied tests (except to enable for stretch goals).
 
-Drinks
-------
-Coffee
-Tea
-Unicorn Tears
+#### Band Tests
 
-***********************************
-** What would you like to order? **
-***********************************
->
-```
+- A Band instance should have a `name` attribute which is a string.
+- A Band instance should have a `members` attribute which is a list of instances that inherit from Musician base (or super) class.
+- A Band instance should have a `play_solos` method that asks each member musician to play a solo, in the order they were added to the band.
+- A Band instance should have appropriate `__str__` and `__repr__` methods.
+- A Band should have a class method `to_list` which returns a list of previously created Band instances.
 
-#### Entering an order
+#### Musician Subclass Tests
 
-```bash
-***********************************
-** What would you like to order? **
-***********************************
-> Cake
+- Each kind of Musician instance should have appropriate `__str__` and `__repr__` methods.
+- Each kind of Musician instance should have a `get_instrument` method that returns a string.
+- Each kind of Musician instance should have a `play_solo` method that returns a string.
 
-** 1 order of Cake has been added to your meal **
 
-> Cake
+## Code Challenge - Optional Mock Interview
 
-** 2 orders of Cake have been added to your meal **
-```
+### Matrix Row Sum
 
-#### Exiting
-
-```bash
-> quit
-```
-
-### Stretch Goals
-
-- Print out a summary of the complete order.
-- Only allow ordering items on the menu.
-- Allow ordering items not on the menu but give a custom reply.
-
-### Configuration
-
-Create a project named `snakes-cafe`.
-
-Create a `snakes_cafe.py` file inside the project folder. Note the hyphen vs. underscore
-
-Your file structure should look like this.
-
-```
-├── snakes-cafe
-│   ├── README.md
-│   └── snakes_cafe.py
-```
-
-### Repository set-up
-
-Create a repository on Github with the exact name of `snakes-cafe`.
-See the Github section of Lab Submission Instructions for additional details.
-
-### Submission Instructions
-
-Refer to the Lab Submission Instructions for the complete lab submission process and expectations.
-You may have noticed many references to Lab Submission Instructions. That’s on purpose. Getting the steps exactly right is crucial. So make sure you follow them closely.
-
-## Code Challenge
-
-### Reverse an Array
+- Given a matrix, find the sum of each row.
 
 #### Specifications
 
-- Read all of the following instructions carefully.
-- Name things exactly as described.
-- Do all your work in a public repository called data-structures-and-algorithms.
-- Create a new branch in your repo called array-reverse.
-- Make a directory for this challenge, named according to your language’s conventions, containing a README.md file.
-- Update the “Table of Contents” - in the README at the root of the repository - with a link to this challenge’s README file.
 
-**NOTE:** This challenge is whiteboard only. Write out code as part of your whiteboard process, but don’t worry about creating external program files.
+Read all of the following instructions carefully.
 
-#### Feature Tasks
+- Act as an interviewer, giving a candidate a code challenge.
+- Score the candidate according to the Whiteboard Rubric.
+- You are free to offer suggestions or guidance (and see how they respond), but don’t solve the challenge for the candidate.
 
-Write a function called `reverseArray` which takes an array as an argument. Without utilizing any of the built-in methods available to your language, return an array with elements in reversed order.
+### Feature Tasks
 
-##### Example
+Ask the candidate to write a function to add up the sum of each row in a matrix of arbitrary size and return an array with the appropriate values.
 
-| Input                                         | Output                                    |
-| --------------------------------------------- | ----------------------------------------- |
-| [1, 2, 3, 4, 5, 6]                            | [6, 5, 4, 3, 2, 1]                        |
-| [89, 2354, 3546, 23, 10, -923, 823, -12]      | [-12, 823, -923, 10, 23, 3546, 2354, 89]  |
-| [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, ...] | [199, 197, 193, 191, 181, ... 7, 5, 3, 2] |
+- Avoid utilizing any of the built-in methods available to your language.
+- Don’t let the candidate get scared by the term “matrix”… It’s just an array of arrays.
+- The matrix will always be full of integers.
+- Negative values are possible.
+- All nulls will be counted as zeros.
 
-#### Structure and Testing
+#### Structure
 
-- Utilize the Single-responsibility principle: any methods you write should be clean, reusable, abstract component parts to the whole challenge. You will be given feedback and marked down if you attempt to define a large, complex algorithm in one function definition.
+Familiarize yourself with the grading rubric so you know how to score the interview.
 
-#### Stretch Goal
+Look for effective problem-solving, efficient use of time, and effective communication with the whiteboard space available.
 
-Once you’ve achieved a working solution, implement the same feature with a different methodology. (Hint: what different techniques do you have when working with arrays? Recursion, loops, indexes, modifying the array input directly…) In other words, use a different algorithm & pseudocode to solve the same problem. Then compare approaches for efficiency, readability, flexibility, etc.
+Every solution might look a little different, but the candidate should be able to at least convince you that their code works to solve the problem.
 
-#### Submission Instructions
+Assign points for each item on the Rubric, according to how well the candidate executed on that skill.
 
-- Work within the proper folder structure for your language, and as dictated by the challenge instructions.
-- Create a new README for this challenge, using the README TEMPLATE provided.
-- Embed an image of your completed whiteboard, matching the example whiteboard layout.
-- In addition to whiteboard drawing, optionally complete the code written on your whiteboard, along with a proper suite of tests.
-- Try giving your algorithm to a chatbot and see if it can produce working code and tests.
-- Create a pull request from your branch to the main branch.
-- In your open pull request, comment with the following checklist of tasks:
+Add up all the points at the end and record the total at the bottom of the page.
 
-  - [ ] Top-level README “Table of Contents” is updated.
-  - [ ] README for this challenge is complete.
-    - [ ] Summary, Description, Approach & Efficiency, Solution.
-    - [ ] Picture of whiteboard.
-    - [ ] Link to code.
-  - [ ] Feature tasks for this challenge are completed.
-  - [ ] Unit tests written and passing.
-    - [ ] “Happy Path” - Expected outcome.
-    - [ ] Expected failure.
-    - [ ] Edge Case (if applicable/obvious).
+#### Example
 
-- Submit your completed work:
-  - Copy the link to your open pull request and paste it into the assignment submission field.
-  - Leave a description of how long this assignment took you in the comments box.
-  - Add any additional comments to your grader about your process or any difficulties you may have had with the assignment.
-- Merge your branch into main, and delete your branch (don’t worry, the PR link will still work).
+| Input                                        | Output          |
+| -------------------------------------------- | --------------- |
+| [ [1, 2, 3], [3, 5, 7], [1, 7, 10] ]         | [6, 15, 18]     |
+| [ [0, 1, 5], [-4, 7, 2], [-3, 12, 11] ]      | [6, 5, 20]      |
+
+The candidate should draw the input and output as a square of integers.
 
 ## Written Class Notes
 
@@ -243,10 +161,97 @@ Write a brief reflection on your learning today, or use the prompt below to get 
 
 Consider the following quote from the article linked above:
 
-“[Adult learners] demand that their learning is relevant to their real life issues, problems, and tasks, and that their education will boost their performance levels and help them live their lives in a better, and more satisfying way.”
+“Adults need to know why to learn something; as soon as they answer this question, they are ready to start.”
 
-In other words, understanding your motivation for learning contributes to the effectiveness of your learning, and your learning journal is a place to explore those thoughts. What are your motivations for learning?
+The why applies to both large-scale (learning web development as a new profession) and small-scale (learning a particular tool or technique), and your learning journal is an excellent place to identify and contemplate those whys. They are important. So… what is your why?
 
-- Right now I want to learn out of embarrassment. I don't feel like I'm learning anything and I want to move away from this frustration of not knowing. I also want to move away from being a copy and paste coder which I get is normal when first learning, like getting ideas and sample solutions and I just feel like I rely on external resources so much that I'm not understanding what I'm doing
+- My primary motivation lies in career advancement. I aim to transition into a more fulfilling and lucrative field, and acquiring web development skills is a strategic move to align my career with current market demands. But also I wanted to go to the advanced fullstack Javascript route but it didn't match my schedule and I thought I'm not confident on the back end so I might as well.
 
 ## Career 4 - Career Coaching Workshop I Prep Resume Review
+
+
+
+
+
+
+
+Algorithm:
+Initialize an empty list to store the sum of each row.
+Iterate through each row in the matrix.
+Initialize a variable row_sum to 0 for the current row.
+Iterate through each element in the row.
+If the element is None, treat it as 0.
+Add the element to row_sum.
+Append row_sum to the result list.
+Return the result list containing the sum of each row.
+
+
+def row_sums(matrix):
+    result = []
+    for row in matrix:
+        row_sum = 0
+        for element in row:
+            row_sum += element if element is not None else 0
+        result.append(row_sum)
+    return result
+
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+matrix = [
+    [-1, -2, -3],
+    [-4, -5, -6],
+    [-7, -8, -9]
+]
+
+
+matrix = [
+    [1, 2, 3],
+    [4, None, 6],
+    [7, 8, 9]
+]
+
+
+Row Sums:
+[1 + 2 + 3 = 6]
+[4 + 0 + 6 = 10]
+[7 + 8 + 9 = 24]
+
+Walkthrough:
+We initialize an empty list (result) to store the row sums.
+For each row in the matrix, we initialize row_sum to 0.
+We iterate through each element in the row, treating None as 0 and adding the values to row_sum.
+After processing each row, we append the row_sum to the result list.
+Finally, we return the list containing the row sums.
+
+Time Complexity (Big O):
+Let's denote the number of rows as m and the number of elements in each row as n. The time complexity is O(m * n) because we iterate through each element in the matrix once.
+
+Space Complexity:
+The space complexity is O(m), where m is the number of rows, as we only use a single list to store the row sums.
+
+1. Code Challenge 4: [Linked List Kth]()
+1. Code Challenge 4: [Linked List Zip]()
+1. Code Challenge 4: [Queue]()
+1. Code Challenge 4: [Stack]()
+1. Code Challenge 4: [Stack Queue Pseduo]()
+1. Code Challenge 4: [Stack Queue Animal Shelter]()
+1. Code Challenge 4: [Stack Queue Brackets]()
+1. Code Challenge 4: [Binary Tree]()
+1. Code Challenge 4: [Binary Search Tree]()
+1. Code Challenge 4: [Binary Tree Max]()
+1. Code Challenge 4: [Tree Breadth First]()
+1. Code Challenge 4: [Tree Fizz Buzz]()
+1. Code Challenge 4: [Hashtable]()
+1. Code Challenge 4: [Hashtable Repeated Word]()
+1. Code Challenge 4: [Tree Intersection]()
+1. Code Challenge 4: [Hastable Left Join Two Arrays]()
+1. Code Challenge 4: [Graph]()
+1. Code Challenge 4: [Three Odds DSA Practice]()
+1. Code Challenge 4: [Computational Thinking Lab 36.1]()
+1. Code Challenge 4: [Computational Thinking Lab 36.2]()
+1. Code Challenge 4: [Peak Index]()
+1. Code Challenge 4: [Construct BST]()

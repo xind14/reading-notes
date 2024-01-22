@@ -40,7 +40,7 @@ Submit a link to your pull request.
 ## Written Class Notes
 
 
-## Read 1 - Introduction to React and Components
+## Read 9 - Bots and Automation
 
 ## Resources Link/Pages
 
@@ -48,6 +48,7 @@ Submit a link to your pull request.
 - [How to Build a Bot and Automate your Everyday Work](https://www.freecodecamp.org/news/building-bots/)
 - [Monkey Patching in Python](https://medium.com/@bits_code/https-medium-com-bits-code-monkey-patching-in-python-9a28dc0cbe4f)
 
+**Bookmark and Review**
 
 
 - [How to Test Printed Output in Python with Pytest and its Capsys Fixture](https://pavolkutaj.medium.com/how-to-test-printed-output-in-python-with-pytest-and-its-capsys-fixture-161010cfc5ad)
@@ -58,6 +59,9 @@ Submit a link to your pull request.
 Statement on why this topic matter as it relates to what I'm studying in this module:
 
 Adding on to what was learned in 201, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.
+
+
+## Reading Questions
 
 1. Describe the types of automation in Python to automate everyday tasks. What are some possible applications of this knowledge in the real-world context?
 
@@ -71,18 +75,12 @@ Adding on to what was learned in 201, components are like JavaScript functions. 
 
 - How does React handle the communication of data between sibling components if it's unidirectional?
 
-## Retrospective
+## Learning Journal
 
-Retrospectives are a critical part of Agile, and typically take the form of meetings held by a team at the end of a sprint cycle. To get us acclimated to that process, we will use the format of a retrospectives to guide today’s reflection.
+### Reflection
 
-This [article](https://www.benlinders.com/2013/which-questions-do-you-ask-in-retrospectives/) gives a nice overview to the role of retrospectives.
+Write a brief reflection on your learning today, or use the prompt below to get started.
 
-1. What went well, that I might forget if I don’t write down?
-2. What did I learn today?
-3. What should I do differently next time?
-4. What still puzzles me, or what do I need to learn more about?
-5. Thinking about each of your assignments for the day, reflect on:
-   - Is the assignment complete? If not, where exactly did you leave off, and what work remains?
-   - Do not get bogged down in written analysis; instead, focus on capturing the moment with an eye toward how your observations can guide you toward future productivity.
+Motivation and goals are an important part of adult learning; so is adapting to and gaining insight from things you did not anticipate. What would you say is the most unexpected part of this experience, and how have you learned from it?
 
-## Career 1 - Identify Your Accountability Partners
+- The most unexpected part so far is that I was never prepared for the intensity of this even after each class in this program. I knew though a few months to learn coding was already too short because there is just so much to learn, and I knew it was an intensive bootcamp, but I still am not ready and feel like a fish out of water. There is just so much homework that I don't have time for myself sometimes which is fine. I now know that I might need more learning after this possibly and I don't mind. I found free courses for JS/React that I'm excited to refresh myself on and free sources for Python for refreshers after the program as well.

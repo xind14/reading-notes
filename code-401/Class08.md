@@ -79,7 +79,7 @@ Once you’ve achieved a working solution, implement another function that merge
 ## Written Class Notes
 
 
-## Read 1 - Introduction to React and Components
+## Read 8 - List Comprehensions
 
 ## Resources Link/Pages
 
@@ -172,18 +172,10 @@ List comprehensions and decorators are crucial in Python learning, offering conc
 
 - How many of the decorators are we suppose to know for sure because theres a lot.
 
-## Retrospective
+## Learning Journal
 
-Retrospectives are a critical part of Agile, and typically take the form of meetings held by a team at the end of a sprint cycle. To get us acclimated to that process, we will use the format of a retrospectives to guide today’s reflection.
+### Reflection
 
-This [article](https://www.benlinders.com/2013/which-questions-do-you-ask-in-retrospectives/) gives a nice overview to the role of retrospectives.
+For this journal entry, no specific prompt other than to start off with “Today I learned…” or “Recently I learned…” and go from there.
 
-1. What went well, that I might forget if I don’t write down?
-2. What did I learn today?
-3. What should I do differently next time?
-4. What still puzzles me, or what do I need to learn more about?
-5. Thinking about each of your assignments for the day, reflect on:
-   - Is the assignment complete? If not, where exactly did you leave off, and what work remains?
-   - Do not get bogged down in written analysis; instead, focus on capturing the moment with an eye toward how your observations can guide you toward future productivity.
-
-## Career 1 - Identify Your Accountability Partners
+- I recently learned to step away and figure things out the next day if I have been working on it for too long. I only got one feature task finished today and I'm submitting it as it is. Putting myself first. Last class I stayed up till 6 am most days figuring out labs but I don't want to do that now.

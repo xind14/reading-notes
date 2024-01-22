@@ -1,10 +1,10 @@
 # Class 5 - Linked Lists, Big O, Resume Workshop
 
-## Lab 5 - Linked List Implementation
+## Lab 5 - None
 
-## Setup
 
-## Code Challenge
+## Code Challenge - Linked List Implementation
+
 
 Overview
 [Read this overview.](https://codefellows.github.io/code-301-guide/curriculum/class-01/challenges/)
@@ -281,12 +281,16 @@ Retrospectives are a critical part of Agile, and typically take the form of meet
 This [article](https://www.benlinders.com/2013/which-questions-do-you-ask-in-retrospectives/) gives a nice overview to the role of retrospectives.
 
 1. What went well, that I might forget if I don’t write down?
+    - I was following along with the demo, so I didn't fully pay attention so I need to go back to look at that.
 2. What did I learn today?
+    - I learned tips to redo resume like using gpt to tailor resume to job posting
 3. What should I do differently next time?
+    - I really don't know. I don't think this new method of just lecturing/reading off slides is working because I fell asleep so many times.
 4. What still puzzles me, or what do I need to learn more about?
+    - Everything. I felt like I wasn't taught anything and we're just expected to know it by reading articles or documentation but I don't learn that way so I've been just watching youtube videos
 5. Thinking about each of your assignments for the day, reflect on:
    - Is the assignment complete? If not, where exactly did you leave off, and what work remains?
-   - Do not get bogged down in written analysis; instead, focus on capturing the moment with an eye toward how your observations can guide you toward future productivity.
+      - the code challenge is complete and so is the resume and power hour
 
 ## Career 5 - Partner Power Hour - Report #1
 
