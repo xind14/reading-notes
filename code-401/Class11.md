@@ -7,40 +7,11 @@
 
 ## Code Challenge
 
-Overview
-[Read this overview.](https://codefellows.github.io/code-301-guide/curriculum/class-01/challenges/)
-
-Video
-[Watch the video for this class from the demo playlist.](https://www.youtube.com/playlist?list=PLVngfM2hsbi-L6G8qlWd8RyRbuTamHt3k)
-
-Demonstration
-[Look through these sample problems.](https://codefellows.github.io/code-301-guide/curriculum/class-01/challenges/DEMO.html)
-
-Challenges
-
-1. Navigate to the javascript folder within your data-structures-and-algorithms repository.
-2. Create a new branch for this challenge called for-each
-   git checkout -b for-each
-3. Retrieve the code challenge from the system
-   npm run get-challenge 01
-4. In your terminal, from the javascript folder, run npm test 01 to execute the tests in this file for this challenge.
-5. At this point you will see the failed tests scroll through your terminal window with a brief report of the number of failed tests at the bottom.
-6. If you do not see this, verify your installation of Jest by typing npx jest --version in your terminal. Filename typos can make things break!
-7. Write code to make the tests pass, one at a time. Let the error messages guide you.
-8. Once the test is passing, refactor as needed, then move on to the next challenge.
-9. Note, you can also run npm test (without a challenge number) to run all of the tests for every code challenge file assignment during the course all at once. This can get “noisy”, but it’s an opportunity to get a view of your overall progress
-
-Submission
-When you have completed the entire set of code challenges and all tests pass, create a pull request from your current branch to the main branch and merge it into main.
-
-You will be able to see a test coverage report in GitHub on the Actions tab of your data-structures-and-algorithms repository. It should match what you saw on your terminal in the above steps. Your graders will be looking at this as well.
-
-Submit a link to your pull request.
 
 ## Written Class Notes
 
 
-## Read 1 - Introduction to React and Components
+## Read 11 - Scientific computing with Numpy
 
 ## Resources Link/Pages
 
@@ -49,6 +20,7 @@ Submit a link to your pull request.
 - [Numpy Tutorial](https://www.dataquest.io/blog/numpy-tutorial-python/)
 
 
+**Bookmark and Review**
 
 
 - [Numpy Arrays](https://www.tutorialspoint.com/numpy/index.htm)
@@ -58,30 +30,78 @@ Submit a link to your pull request.
 
 Statement on why this topic matter as it relates to what I'm studying in this module:
 
-Adding on to what was learned in 201, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.
+- Jupyter Lab and NumPy are integral components of the Python data science ecosystem. Many other libraries, such as Pandas, Matplotlib, and SciPy, seamlessly integrate with NumPy. Jupyter Lab provides an ideal environment for working with these libraries and developing data science projects.
+
+## Reading Questions
 
 1. What are the key features and benefits of Jupyter Lab, and how does it differ from Jupyter Notebook?
+    - Key Features and Benefits of Jupyter Lab
+        - **Unified Interface:** provides a unified and flexible interface that integrates various components, including notebooks, text editors, terminals, and custom components, in a single environment.
+
+        - **Extensibility:** highly extensible, allowing users to customize and enhance their environment through extensions.
+
+        - **Rich Text Support:** includes a text editor with features like syntax highlighting, configurable indentation, and support for markdown, making it suitable for both code and narrative text.
+
+        - **File Browser and Console:** The interface incorporates a file browser for easy navigation and management of files. It also supports consoles and terminals, providing full support for system shells.
+
+    - Differences from Jupyter Notebook
+
+        - **Interface Structure:**  provides a more structured interface with a sidebar that can contain multiple panels, making it more versatile for various tasks. In contrast, Jupyter Notebook has a simpler structure with tabs for open notebooks.
+
+        - **Document Handling:**  extends beyond notebooks and allows the handling of various document types, including notebooks, scripts, and markdown files, within the same environment. Jupyter Notebook primarily focuses on notebook documents.
+
+        - **Cell Drag-and-Drop:**  supports cell drag-and-drop capabilities, enabling users to rearrange cells easily. This feature enhances the organization and structure of notebooks, which is not as seamless in Jupyter Notebook.
+
+        - **Advanced Text Editor:**  features a more advanced text editor with enhanced capabilities, including syntax highlighting and configurable indentation. Jupyter Notebook has a simpler text editor.
+
+        - **Extension Management:**  improved extension management, making it easier for users to discover, install, and manage extensions directly from the interface. Jupyter Notebook extensions often require additional command-line steps for installation.
+
 
 2. What are the main functionalities provided by the NumPy library, and how can it be useful in Python programming, particularly for scientific computing and data manipulation tasks?
 
+    - NumPy is a powerful Python library for numerical computing that provides support for large, multi-dimensional arrays and matrices, along with a collection of mathematical functions to operate on these elements.
+    - **Main Functionalities of NumPy:**
+        - **Multidimensional Arrays**: NumPy's primary feature is the `ndarray` object for representing N-dimensional arrays.
+        - **Mathematical Operations**: Wide range of mathematical functions for array operations, including element-wise, linear algebra, and statistical operations.
+        - **Broadcasting**: Powerful capability for operations on arrays of different shapes and sizes.
+        - **Indexing and Slicing**: Supports advanced indexing and slicing operations for easy access and manipulation.
+        - **Integration with Other Libraries**: Seamless integration with libraries like SciPy, Matplotlib, and scikit-learn for comprehensive data analysis and machine learning.
+
+
 3. Explain the basic structure and properties of NumPy arrays, and provide examples of how to create, manipulate, and perform operations on them.
+    - **Basic Structure and Properties of NumPy Arrays:**
+      - Creation: Arrays can be created using functions like `numpy.array()`, `numpy.zeros()`, `numpy.ones()`, `numpy.arange()`, etc.
+      - Attributes: Arrays have attributes such as `shape`, `dtype`, and `size`.
+      - Indexing and Slicing: Elements can be accessed using indexing, and subarrays can be extracted using slicing.
+      - Operations: Support for element-wise and mathematical operations between arrays.
+
+        **Examples:**
+        ```python
+        import numpy as np
+
+        # Creating arrays
+        arr1 = np.array([1, 2, 3])
+        arr2 = np.zeros((3, 3))
+        arr3 = np.arange(0, 10, 2)
+
+        # Basic properties
+        print(arr1.shape)  # (3,)
+        print(arr2.dtype)  # float64
+
+        # Indexing and slicing
+        print(arr1[0])     # 1
+        print(arr2[:, 1])  # Second column of arr2
+
+        # Mathematical operations
+        result = arr1 + arr3
+        print(result)  # [1 5 9 13 17]
+        ```
 
 ## Things I want to know more about
 
-- How does React handle the communication of data between sibling components if it's unidirectional?
+- What will we be using numpy for? Data science or more math calculations in this class
 
-## Retrospective
+## Learning Journal
 
-Retrospectives are a critical part of Agile, and typically take the form of meetings held by a team at the end of a sprint cycle. To get us acclimated to that process, we will use the format of a retrospectives to guide today’s reflection.
+### Reflection
 
-This [article](https://www.benlinders.com/2013/which-questions-do-you-ask-in-retrospectives/) gives a nice overview to the role of retrospectives.
-
-1. What went well, that I might forget if I don’t write down?
-2. What did I learn today?
-3. What should I do differently next time?
-4. What still puzzles me, or what do I need to learn more about?
-5. Thinking about each of your assignments for the day, reflect on:
-   - Is the assignment complete? If not, where exactly did you leave off, and what work remains?
-   - Do not get bogged down in written analysis; instead, focus on capturing the moment with an eye toward how your observations can guide you toward future productivity.
-
-## Career 1 - Identify Your Accountability Partners
