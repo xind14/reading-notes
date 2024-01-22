@@ -4,7 +4,6 @@
 
 ## Setup
 
-
 ## Code Challenge
 
 Overview
@@ -39,13 +38,11 @@ Submit a link to your pull request.
 
 ## Written Class Notes
 
-
 ## Read 15 - Tree Implementation
 
 ## Resources Link/Pages
 
 - [Trees](https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Code_401/class-15/resources/Trees.html)
-
 
 ## Answer
 
@@ -65,8 +62,50 @@ Some ideas for how you might want to teach:
 - Build a map of the information
 - Construct a fill-in-the-blank worksheet for the topic
 
-
 ### Vocabulary/Definition List for Linked Lists
+
+1. **Trees:**
+
+   - **Definition:** A hierarchical data structure composed of nodes, where each node has a value and references to other nodes.
+   - **Analogy:** Think of a family tree where each person is a node, and relationships (edges) connect parents to children.
+
+2. **Node:** A component in a tree containing values and references.
+3. **Root:** The starting node of the tree.
+4. **K** - A number that specifies the maximum number of children any node may have in a k-ary tree. In a binary tree, `k = 2`.
+5. **Left** - A reference to one child node, in a binary tree
+6. **Right** - A reference to the other child node, in a binary tree
+7. **Leaf:** A node without any children.
+8. **Edge:** The link between a parent and child node.
+9. **Height:** The number of edges from the root to the furthest leaf.
+
+10. **Traversals:**
+
+    - **Definition:** The process of visiting nodes in a specific order.
+    - **Analogy:** Navigating through a library by either exploring shelves from left to right (Breadth First) or going deep into each aisle (Depth First).
+
+11. **Depth First:**
+
+    - **Definition:** Traversal prioritizing the depth (height) of the tree first.
+    - **Analogy:** Exploring a maze by choosing paths that go deeper before exploring other branches.
+
+12. **Breadth First:**
+
+    - **Definition:** Traversal iterating through each level of the tree.
+    - **Analogy:** Searching a building floor by floor, covering all rooms on one level before moving to the next.
+
+13. **Binary Tree Vs K-ary Trees:**
+
+    - **Definition:** Binary Tree restricts nodes to have at most two children, while K-ary Trees allow more than two.
+    - **Analogy:** Binary is like a road intersection with only left and right turns, while K-ary is like an intersection allowing multiple directions.
+
+14. **Binary Search Trees:**
+
+    - **Definition:** A type of tree where values smaller than the root go left, and larger go right.
+    - **Analogy:** Organizing a bookshelf where books with titles starting with A-L are on the left and M-Z are on the right.
+
+15. **Searching a BST:**
+    - **Definition:** Locating a specific value in a Binary Search Tree.
+    - **Analogy:** Finding a word in a well-organized dictionary by comparing and narrowing down sections.
 
 ## Learning Journal
 
@@ -75,16 +114,16 @@ Some ideas for how you might want to teach:
 Take 10-15 minutes at the end of lab to respond to the following questions, adapted from the article:
 
 1. What went well, that I might forget if I don’t write down?
-    - I understood the stack and queue challenge better than other code challenges I've ever done. Using the linked list as a template helped a lot and I just sorta figured out how to configure things to be used for stack and queue
+   - I understood the stack and queue challenge better than other code challenges I've ever done. Using the linked list as a template helped a lot and I just sorta figured out how to configure things to be used for stack and queue
 2. What did I learn today?
-    - I learned how to shorten my personal pitch which I had trouble before, and it didn't sound like I was reading from an essay
+   - I learned how to shorten my personal pitch which I had trouble before, and it didn't sound like I was reading from an essay
 3. What should I do differently next time?
-    - I need to use Fridays more efficiently as catch up or prep for next week to make sure my fridays aren't' swamped with HW
+   - I need to use Fridays more efficiently as catch up or prep for next week to make sure my fridays aren't' swamped with HW
 4. What still puzzles me, or what do I need to learn more about?
-    - I still don't get how to efficiently write code to pass tests, it takes so long, feel like its efficient to just start writing code.
+   - I still don't get how to efficiently write code to pass tests, it takes so long, feel like its efficient to just start writing code.
 5. Thinking about each of your assignments for the day, reflect on:
-    - Is the assignment complete? If not, where exactly did you leave off, and what work remains?
-        - I need help on lab 8 so will get help on that today
+   - Is the assignment complete? If not, where exactly did you leave off, and what work remains?
+     - I need help on lab 8 so will get help on that today
 
 ## Career 15 - Partner Power Hour - Report #3
 
@@ -104,55 +143,61 @@ Take 10-15 minutes at the end of lab to respond to the following questions, adap
 
 1. Share one or two ways the speaker’s information will change your approach to your career transition.
 
-    - Advocates for being a "Jack of All Trades" in tech.
-    - Highlights the value of having a broad skill set for a holistic understanding.
-    - Encourages examining past code for continuous improvement.
-    - Demonstrating growth and adaptability through self-reflection.
-
+   - Advocates for being a "Jack of All Trades" in tech.
+   - Highlights the value of having a broad skill set for a holistic understanding.
+   - Encourages examining past code for continuous improvement.
+   - Demonstrating growth and adaptability through self-reflection.
 
 1. List a few key take-aways from this presentation.
 
-    - **Automation Principles:**
-      - Prioritizes automating daily tasks for efficiency.
-      - Advocates for integrating automation into the routine.
+   - **Automation Principles:**
 
-    - **Customization Benefits:**
-      - Stresses the importance of tailoring automation tools.
-      - Customization enhances effectiveness by aligning with individual preferences.
+     - Prioritizes automating daily tasks for efficiency.
+     - Advocates for integrating automation into the routine.
 
-    - **User-Centric Approach:**
-      - Promotes learning from user experiences and feedback.
-      - Encourages iterative improvement based on real-world interactions.
+   - **Customization Benefits:**
 
-    - **Startup Strategies for Success:**
-      - Highlights the significance of early product-market fit tests.
-      - Emphasizes direct engagement with end-users for authentic feedback.
+     - Stresses the importance of tailoring automation tools.
+     - Customization enhances effectiveness by aligning with individual preferences.
 
-    - **Customer-Driven Automation:**
-      - Suggests building automation based on personal needs.
-      - Recommends continuous testing with a genuine customer to ensure relevance.
+   - **User-Centric Approach:**
 
-    - **Insights from User Interactions:**
-      - Warns against working in isolation without user input.
-      - Encourages understanding user nuances for effective product development.
+     - Promotes learning from user experiences and feedback.
+     - Encourages iterative improvement based on real-world interactions.
 
-    - **Versatility as a Strength:**
-      - Advocates for being a "Jack of All Trades" in tech.
-      - Highlights the value of having a broad skill set for a holistic understanding.
+   - **Startup Strategies for Success:**
 
-    - **Strategies for Career Growth:**
-      - Recommends learning from on-the-job experiences.
-      - Identifying and addressing inefficiencies within the team contributes to growth.
+     - Highlights the significance of early product-market fit tests.
+     - Emphasizes direct engagement with end-users for authentic feedback.
 
-    - **Networking and Marketability Tactics:**
-      - Emphasizes engagement with recruiters and industry professionals.
-      - Building an online portfolio, especially on GitHub, for showcasing skills.
+   - **Customer-Driven Automation:**
 
-    - **Reflective Learning:**
-      - Encourages examining past code for continuous improvement.
-      - Demonstrating growth and adaptability through self-reflection.
+     - Suggests building automation based on personal needs.
+     - Recommends continuous testing with a genuine customer to ensure relevance.
 
+   - **Insights from User Interactions:**
 
+     - Warns against working in isolation without user input.
+     - Encourages understanding user nuances for effective product development.
+
+   - **Versatility as a Strength:**
+
+     - Advocates for being a "Jack of All Trades" in tech.
+     - Highlights the value of having a broad skill set for a holistic understanding.
+
+   - **Strategies for Career Growth:**
+
+     - Recommends learning from on-the-job experiences.
+     - Identifying and addressing inefficiencies within the team contributes to growth.
+
+   - **Networking and Marketability Tactics:**
+
+     - Emphasizes engagement with recruiters and industry professionals.
+     - Building an online portfolio, especially on GitHub, for showcasing skills.
+
+   - **Reflective Learning:**
+     - Encourages examining past code for continuous improvement.
+     - Demonstrating growth and adaptability through self-reflection.
 
 1. Share a screenshot of your LinkedIn connection request, including a nicely worded note, sent to the speaker or someone else at their company.
    ![Adam Eivy](./img/adam-eivy.png)
