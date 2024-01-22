@@ -40,7 +40,7 @@ Submit a link to your pull request.
 ## Written Class Notes
 
 
-## Read 1 - Introduction to React and Components
+## Read 13 - Machine Learning with scikit-learn
 
 ## Resources Link/Pages
 
@@ -50,6 +50,7 @@ Submit a link to your pull request.
 
 
 
+**Bookmark and Review**
 
 - [Understanding Train Test Split](https://builtin.com/data-science/train-test-split)
 - [What is Linear Regression](https://www.statisticssolutions.com/what-is-linear-regression/)
@@ -59,30 +60,55 @@ Submit a link to your pull request.
 
 Statement on why this topic matter as it relates to what I'm studying in this module:
 
-Adding on to what was learned in 201, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.
+Linear regression is a fundamental algorithm in machine learning. It provides a simple and intuitive introduction to the concepts of modeling relationships between variables.
+
+## Reading Questions
 
 1. Can you explain the basic concept of linear regression and its purpose in the context of machine learning and data analysis?
+    - a machine learning algorithm used for predictive data analysis. It aims to find the best-fit straight line that minimizes the deviation between scattered data points. The core idea is to model the relationship between an independent variable (predictor) and a dependent variable (response). This line can then be used to predict new data points.
 
 2. Describe the process of implementing a linear regression model using Python’s Scikit Learn library, including the necessary steps and functions.
+   - *Process:*
+     - *Import LinearRegression Class:* Start by importing the LinearRegression class from the scikit-learn library.
+     - *Create Data:* Prepare your data, usually as NumPy arrays, with independent variable(s) (`x`) and dependent variable (`y`).
+     - *Create Model Instance:* Instantiate a linear regression model using `LinearRegression().fit(x, y)`.
+     - *Interpret Results:* Retrieve results, including the coefficient of determination (`r_sq`), intercept, and slope.
+     - *Predict Response:* Use the model to predict responses for new data points.
+
+   - *Code Example:*
+     ```python
+     import numpy as np
+     from sklearn.linear_model import LinearRegression
+
+     x = np.array([6, 16, 26, 36, 46, 56]).reshape((-1, 1))
+     y = np.array([4, 23, 10, 12, 22, 35])
+
+     model = LinearRegression().fit(x, y)
+     r_sq = model.score(x, y)
+     print('coefficient of determination:', r_sq)
+     print('intercept:', model.intercept_)
+     print('slope:', model.coef_)
+     y_pred = model.predict(x)
+     print('Predicted response:', y_pred, sep='\n')
+     ```
 
 3. What is the purpose of splitting the dataset into train and test sets, and how does this contribute to the evaluation of a machine learning model’s performance?
+   - to evaluate the model's performance. The training set is used to train the model, while the testing set is used to assess how well the model generalizes to new, unseen data. This helps detect overfitting or underfitting issues. Commonly used functions for splitting include `train_test_split` from scikit-learn.
+
+   - *Code Example:*
+     ```python
+     from sklearn.model_selection import train_test_split
+
+     x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=42)
+     ```
+
 
 ## Things I want to know more about
 
-- How does React handle the communication of data between sibling components if it's unidirectional?
+- What are the key assumptions of linear regression, and how can one diagnose and interpret residuals to assess the model's validity?
 
-## Retrospective
+## Learning Journal
 
-Retrospectives are a critical part of Agile, and typically take the form of meetings held by a team at the end of a sprint cycle. To get us acclimated to that process, we will use the format of a retrospectives to guide today’s reflection.
-
-This [article](https://www.benlinders.com/2013/which-questions-do-you-ask-in-retrospectives/) gives a nice overview to the role of retrospectives.
-
-1. What went well, that I might forget if I don’t write down?
-2. What did I learn today?
-3. What should I do differently next time?
-4. What still puzzles me, or what do I need to learn more about?
-5. Thinking about each of your assignments for the day, reflect on:
-   - Is the assignment complete? If not, where exactly did you leave off, and what work remains?
-   - Do not get bogged down in written analysis; instead, focus on capturing the moment with an eye toward how your observations can guide you toward future productivity.
+### Reflection
 
 ## Career 1 - Identify Your Accountability Partners
