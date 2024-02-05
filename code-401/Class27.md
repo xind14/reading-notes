@@ -1,9 +1,9 @@
-# Class 27 - DjangoX
+# Class 27 - Django Models	
 
-## Lab 27 - Customizing Django to make it your own
+## Lab 27 - Object Relational Mapping
+
 
 ## Setup
-
 
 ## Code Challenge
 
@@ -39,8 +39,7 @@ Submit a link to your pull request.
 
 ## Written Class Notes
 
-
-## Read 1 - Introduction to React and Components
+## Read 27 - Django Models
 
 ## Resources Link/Pages
 
@@ -48,32 +47,58 @@ Submit a link to your pull request.
 - [Django Admin](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Admin_site) `Advanced configuration` section is optional
 
 The tutorial is really good but some of the tools are dated so when reading try to understand the concepts more than the code.
+
 - [(Optional): Beginner’s Guide to Django - Part 1](https://simpleisbetterthancomplex.com/series/2017/09/04/a-complete-beginners-guide-to-django-part-1.html)
 
+**Bookmark and Review**
 
 - [Beginner’s Guide to Django - Part 2](https://simpleisbetterthancomplex.com/series/2017/09/11/a-complete-beginners-guide-to-django-part-2.html)
-
-
-
-
-
-
 
 ## Answer
 
 Statement on why this topic matter as it relates to what I'm studying in this module:
 
-Adding on to what was learned in 201, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.
+Django models serve as a crucial bridge between the application's Python code and its database.
+
+## Reading Questions
 
 1. Explain the purpose and basic structure of Django models. How do they help in creating and managing database schema in a Django application?
 
+   - Django models represent the data structure of a Django application. They define the entities and relationships in the application, serving as an abstraction layer for database interactions.
+   - **Basic Structure:** Models are Python classes that inherit from `django.db.models.Model`. Each class attribute represents a field in the database table. Fields can include data types, relationships, and constraints.
+   - **Database Schema Management:** Models help in creating and managing the database schema by automatically generating database tables based on the defined models. Migrations are used to apply changes to the database schema over time.
+
 2. Describe the primary features and functionality of the Django Admin interface. How can it be customized to suit the specific needs of a project?
+
+   - Django Admin provides a web-based interface for managing Django models' data.
+   - It automatically generates a CRUD (Create, Read, Update, Delete) interface for each registered model.
+   - Features include search, filters, and sorting capabilities, making it easy to navigate and manipulate data.
+   - **Customization:**
+     - The admin interface can be customized to suit project needs.
+     - Developers can customize the look and feel using CSS, override templates, and even extend functionality by creating custom admin views.
+     - Admin classes are used to define how models appear and behave in the admin interface.
 
 3. Briefly outline the key components and workflow of a Django application, as discussed in the Beginner’s Guide to Django. How do these components interact with each other to create a functional web application?
 
+   - **Key Components:**
+     - **Models:** Define data structure.
+     - **Views:** Handle user requests and return appropriate responses.
+     - **Templates:** Define the presentation layer, generating HTML dynamically.
+     - **URLs:** Map URLs to views, directing user requests.
+   - **Workflow:**
+     - A user makes a request, which is directed to a specific view by the URL mapping.
+     - The view processes the request, interacts with models if necessary, and returns a response.
+     - The template generates HTML using data from the view.
+     - The final HTML is sent as a response to the user.
+   - **Interactions:**
+     - Models interact with the database to store and retrieve data.
+     - Views handle the request-response cycle, using models to fetch or update data.
+     - Templates use data from views to generate dynamic HTML.
+     - URLs map user requests to appropriate views.
+
 ## Things I want to know more about
 
-- How does React handle the communication of data between sibling components if it's unidirectional?
+- What are the pros and cons of creating a website with python vs JS?
 
 ## Retrospective
 
@@ -89,4 +114,22 @@ This [article](https://www.benlinders.com/2013/which-questions-do-you-ask-in-ret
    - Is the assignment complete? If not, where exactly did you leave off, and what work remains?
    - Do not get bogged down in written analysis; instead, focus on capturing the moment with an eye toward how your observations can guide you toward future productivity.
 
-## Career 1 - Identify Your Accountability Partners
+## Career 27 - Workshop #4 Prep: Winning the Interview
+
+```
+Knowledge is power
+If you have an understanding for how things work, you can tip the scale in your favor. The recruitment process can seem scary as an outsider but in reality … it is process like all other process. Know the formula and you have a better chance at success.
+
+Read these articles to pull back the curtain and learn how to capitalize opportunities that you have generated:
+```
+
+1. [9 Secrets Recruiters Don’t Want You to Know](https://www.thejobnetwork.com/9-secrets-recruiters-dont-want-you-to-know/)
+2. [The Ultimate Interview Guide: 30 Prep Tips for Job Interview Success](https://www.themuse.com/advice/the-ultimate-interview-guide-30-prep-tips-for-job-interview-success)
+
+Submit a small summary of three new things you’ve learned and will be implementing in your process.
+
+1. **Researching:** Do extensive research before an interview, not only about the company but also about the interviewers and the specific job role. This goes beyond the information available on the company's website, encouraging reaching out to current and previous employees and exploring multiple sources. I'll be incorporating a more comprehensive research strategy to gain a deeper understanding of the company culture, potential challenges, and the expectations associated with the position.
+
+2. **Interview Prep:** Identify key selling points to practicing answers to common questions and use the STAR method for behavioral questions. I'll focus on tailoring my responses to showcase relevant skills and experiences, ensuring a coherent and compelling narrative during interviews.
+
+3. **Presentation and Logistics:** The importance of personal presentation, including attire, grooming, and body language, is highlighted. Additionally, the emphasis on planning for interview logistics, such as testing technology, preparing reference lists, and organizing interview essentials, is crucial. I'll pay closer attention to these details to present myself professionally and handle practical aspects effectively, contributing to a smoother overall interview experience.

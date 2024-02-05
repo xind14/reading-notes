@@ -1,9 +1,9 @@
-# Class 28 - Hash Tables, Behavioral Interviewing
+# Class 28 - Django CRUD and Forms	
 
-## Lab 28 - Hash Tables Implementation
+## Lab 28 - Create, Read, Update, and Delete
+
 
 ## Setup
-
 
 ## Code Challenge
 
@@ -39,13 +39,12 @@ Submit a link to your pull request.
 
 ## Written Class Notes
 
-
-## Read 1 - Introduction to React and Components
+## Read 28 - Django CRUD and Forms
 
 ## Resources Link/Pages
 
 - [Django Forms](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Forms)
-
+  **Bookmark and Review**
 
 - [Django Templates](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Home_page)
 - [Django Views](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Generic_views)
@@ -54,17 +53,55 @@ Submit a link to your pull request.
 
 Statement on why this topic matter as it relates to what I'm studying in this module:
 
-Adding on to what was learned in 201, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.
+Learning Django forms, templates, and views is crucial when learning Python as it empowers developers to efficiently handle user input, create dynamic and reusable web interfaces, and manage server-side logic, providing a comprehensive skill set for building robust and interactive web applications.
+
+## Reading Questions
 
 1. How do Django Forms facilitate user input handling, and what are some key components of creating a form using the Django framework?
 
+   - Django Forms facilitate user input handling by providing a high-level, object-oriented way to define and handle forms on the website. Key components of creating a form using Django include:
+
+     - **Form Class:** Forms are created by defining a Python class that inherits from `django.forms.Form`. This class contains fields, each representing a form input.
+
+     - **Field Types:** Django provides various field types (e.g., CharField, DateField) to define the type of data the form should accept.
+
+     - **Validation:** Forms automatically handle validation, ensuring that data entered adheres to specified criteria, such as required fields or specific data formats.
+
+     - **Rendering:** Forms can render HTML for display on web pages, making it easier to integrate them into the site's frontend.
+
+     - **CSRF Protection:** Django Forms include built-in protection against Cross-Site Request Forgery (CSRF) attacks.
+
 2. Explain the purpose of Django Templates in web development and describe how template inheritance can be utilized to improve code reusability and maintainability.
+
+   - Django Templates in web development serve the purpose of dynamically generating HTML by embedding Python-like code within HTML files. Template inheritance is a powerful feature to improve code reusability and maintainability:
+
+     - **Template Tags:** Django Templates use template tags enclosed in `{% %}` for logic and `{{ }}` for variable rendering. This allows embedding Python-like control structures directly into HTML.
+
+     - **Template Inheritance:** Templates can extend and override other templates using the `{% extends "base.html" %}` and `{% block content %}` tags. This promotes modular design and avoids duplication of code.
+
+     - **Reusability:** By creating a base template that includes the common structure and blocks for different pages, template inheritance enables reusing code across multiple pages.
+
+     - **Maintainability:** Changes made to the base template automatically reflect in all templates that extend it, reducing the need for redundant updates.
 
 3. Describe the function of Django Views in handling HTTP requests, and outline the differences between function-based views and class-based views.
 
+   - Django Views handle HTTP requests and contain the logic for processing these requests. In the context of Django, there are two main types of views:
+
+     - **Function-Based Views (FBVs):**
+     - Implemented as Python functions.
+     - Simpler and straightforward for smaller applications.
+     - Easier to understand due to linear flow.
+     - Suitable for simple tasks.
+
+     - **Class-Based Views (CBVs):**
+     - Implemented as classes.
+     - Provide more structure and organization for complex applications.
+     - Encourage code reuse through mixins and inheritance.
+     - Can be more reusable and maintainable for larger projects.
+
 ## Things I want to know more about
 
-- How does React handle the communication of data between sibling components if it's unidirectional?
+- How can form data be processed and validated before being saved to the database in a Django web application?
 
 ## Retrospective
 
@@ -80,4 +117,4 @@ This [article](https://www.benlinders.com/2013/which-questions-do-you-ask-in-ret
    - Is the assignment complete? If not, where exactly did you leave off, and what work remains?
    - Do not get bogged down in written analysis; instead, focus on capturing the moment with an eye toward how your observations can guide you toward future productivity.
 
-## Career 1 - Identify Your Accountability Partners
+## Career 28 - Workshop #4 Prep: Behavioral Questions
