@@ -1,9 +1,8 @@
-# Class 43 - Project Kickoffs
+# Class 43 - Open Source
 
-## Lab 43 - Team Setup, Ideation, Wireframes, Tooling
+## Lab 43 - Research, contribute to OSS
 
 ## Setup
-
 
 ## Code Challenge
 
@@ -39,48 +38,22 @@ Submit a link to your pull request.
 
 ## Written Class Notes
 
-
-## Read 1 - Introduction to React and Components
+## Read 43 - Open-Source Software Contribution
 
 ## Resources Link/Pages
 
-**Bookmark and Review**
+1. [First Timers Only](https://www.firsttimersonly.com/)
+2. [GitHub’s Guide to Open Source](https://www.github.com/open-source)
+3. [What Motivates a Developer to Contribute to Open-Source Software?](https://clearcode.cc/blog/why-developers-contribute-open-source-software/)
+4. Review: [List of Beginner-Friendly Projects](https://github.com/search?q=label%3Agood-first-issue+archived%3Afalse) (select your language of choice, also search for label:first-timers-only)
+5. Review: [Call for Code: Open Source for Good](https://callforcode.org/) (follow the “Get started” button)
 
-- [React Tutorial through ‘Passing Data Through Props’](https://react.dev/learn/tutorial-tic-tac-toe)
-- [React Docs - Hello world](https://legacy.reactjs.org/docs/hello-world.html)
-- [React Docs - Introducing JSX](https://legacy.reactjs.org/docs/introducing-jsx.html)
-- [React Docs - Rendering elements](https://legacy.reactjs.org/docs/rendering-elements.html)
-- [React Docs - Components and props](https://legacy.reactjs.org/docs/components-and-props.html)
+## Reading Questions
 
-### Component-Based Architecture
+1. List one (or more) open source projects that look interesting.
 
-1. [Component-Based Architecture](https://www.tutorialspoint.com/software_architecture_design/component_based_architecture.htm)
-
-### What is Props and How to Use it in React
-
-1. [What is Props and How to Use it in React](https://itnext.io/what-is-props-and-how-to-use-it-in-react-da307f500da0)
-
-## Answer
-
-Statement on why this topic matter as it relates to what I'm studying in this module:
-
-Adding on to what was learned in 201, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.
-
-### Component-Based Architecture
-
-1. What is a "component"?
-
-   - A replaceable and reusable set of functionality. It is a software object, interacting with other components. Components are designed to be independent, allowing them to be deployed and composed individually.
-
-
-### What is Props and How to Use it in React
-
-1. What is “props” short for?
-   - It is short for "properties." It is a special keyword used to pass data from one component to another.
-
-## Things I want to know more about
-
-- How does React handle the communication of data between sibling components if it's unidirectional?
+[Cluster Duck Protocol](https://github.com/ClusterDuck-Protocol/ClusterDuck-Protocol)
+[Call for code](https://developer.ibm.com/callforcode/)
 
 ## Retrospective
 
@@ -95,5 +68,3 @@ This [article](https://www.benlinders.com/2013/which-questions-do-you-ask-in-ret
 5. Thinking about each of your assignments for the day, reflect on:
    - Is the assignment complete? If not, where exactly did you leave off, and what work remains?
    - Do not get bogged down in written analysis; instead, focus on capturing the moment with an eye toward how your observations can guide you toward future productivity.
-
-## Career 1 - Identify Your Accountability Partners
