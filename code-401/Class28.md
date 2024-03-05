@@ -94,9 +94,9 @@ Learning Django forms, templates, and views is crucial when learning Python as i
 
    - Django Templates in web development serve the purpose of dynamically generating HTML by embedding Python-like code within HTML files. Template inheritance is a powerful feature to improve code reusability and maintainability:
 
-     - **Template Tags:** Django Templates use template tags enclosed in `\\{% %\\}` for logic and `{{ }}` for variable rendering. This allows embedding Python-like control structures directly into HTML.
+     - **Template Tags:** Django Templates use template tags enclosed in `\\{% %\\}` for logic and `\\{{ }}\\` for variable rendering. This allows embedding Python-like control structures directly into HTML.
 
-     - **Template Inheritance:** Templates can extend and override other templates using the `{% extends "base.html" %}` and `{% block content %}` tags. This promotes modular design and avoids duplication of code.
+     - **Template Inheritance:** Templates can extend and override other templates using the `\\{% extends "base.html" %\\}` tag.
 
      - **Reusability:** By creating a base template that includes the common structure and blocks for different pages, template inheritance enables reusing code across multiple pages.
 
