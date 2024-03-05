@@ -1,40 +1,38 @@
 # Class 15 - Trees, Job Search Workshop
 
-## Lab 15 - Tree Implementation
+## Lab 15 - None
 
 ## Setup
 
 ## Code Challenge
 
-Overview
-[Read this overview.](https://codefellows.github.io/code-301-guide/curriculum/class-01/challenges/)
+- **Branch Name:** trees
+- **Challenge Type:** New Implementation
 
-Video
-[Watch the video for this class from the demo playlist.](https://www.youtube.com/playlist?list=PLVngfM2hsbi-L6G8qlWd8RyRbuTamHt3k)
+### Feature Tasks
 
-Demonstration
-[Look through these sample problems.](https://codefellows.github.io/code-301-guide/curriculum/class-01/challenges/DEMO.html)
+1. **Node**
+   - Create a Node class that has properties for the value stored in the node, the left child node, and the right child node.
 
-Challenges
+2. **Binary Tree**
+   - Create a Binary Tree class
+   - Define a method for each of the depth first traversals:
+     - pre order
+     - in order
+     - post order
+   - Each depth first traversal method should return an array of values, ordered appropriately.
 
-1. Navigate to the javascript folder within your data-structures-and-algorithms repository.
-2. Create a new branch for this challenge called for-each
-   git checkout -b for-each
-3. Retrieve the code challenge from the system
-   npm run get-challenge 01
-4. In your terminal, from the javascript folder, run npm test 01 to execute the tests in this file for this challenge.
-5. At this point you will see the failed tests scroll through your terminal window with a brief report of the number of failed tests at the bottom.
-6. If you do not see this, verify your installation of Jest by typing npx jest --version in your terminal. Filename typos can make things break!
-7. Write code to make the tests pass, one at a time. Let the error messages guide you.
-8. Once the test is passing, refactor as needed, then move on to the next challenge.
-9. Note, you can also run npm test (without a challenge number) to run all of the tests for every code challenge file assignment during the course all at once. This can get “noisy”, but it’s an opportunity to get a view of your overall progress
+3. **Binary Search Tree**
+   - Create a Binary Search Tree class
+   - This class should be a sub-class (or your language's equivalent) of the Binary Tree Class, with the following additional methods:
+     - Add
+       - Arguments: value
+       - Return: nothing
+       - Adds a new node with that value in the correct location in the binary search tree.
+     - Contains
+       - Argument: value
+       - Returns: boolean indicating whether or not the value is in the tree at least once.
 
-Submission
-When you have completed the entire set of code challenges and all tests pass, create a pull request from your current branch to the main branch and merge it into main.
-
-You will be able to see a test coverage report in GitHub on the Actions tab of your data-structures-and-algorithms repository. It should match what you saw on your terminal in the above steps. Your graders will be looking at this as well.
-
-Submit a link to your pull request.
 
 ## Written Class Notes
 
@@ -114,30 +112,30 @@ Some ideas for how you might want to teach:
 Take 10-15 minutes at the end of lab to respond to the following questions, adapted from the article:
 
 1. What went well, that I might forget if I don’t write down?
-   - I understood the stack and queue challenge better than other code challenges I've ever done. Using the linked list as a template helped a lot and I just sorta figured out how to configure things to be used for stack and queue
+   - I liked learning the career stuff today, but I forgot to write most of it down so will rewatch recording later to take notes again.
 2. What did I learn today?
-   - I learned how to shorten my personal pitch which I had trouble before, and it didn't sound like I was reading from an essay
+   - No matter the skills you have most of your chances of getting hired is through networking, which I don't know how to do well so that's going to be such a challenge.
 3. What should I do differently next time?
-   - I need to use Fridays more efficiently as catch up or prep for next week to make sure my fridays aren't' swamped with HW
+   - Take screenshots of the slides.
 4. What still puzzles me, or what do I need to learn more about?
-   - I still don't get how to efficiently write code to pass tests, it takes so long, feel like its efficient to just start writing code.
+   - I'm not understanding trees like I did stacks and queues so I will look at it more.
 5. Thinking about each of your assignments for the day, reflect on:
    - Is the assignment complete? If not, where exactly did you leave off, and what work remains?
-     - I need help on lab 8 so will get help on that today
+     - Assignments are complete. Will work on readings for next week.
 
 ## Career 15 - Partner Power Hour - Report #3
 
 > If there is no live presentation on campus in this module, select the appropriate presentation from the list below. All presenters are open to connections and invite you to reach out to them, so that you can to learn more about them, their company, and the industry.
 > You may find it difficult or challenging to connect with industry professionals and gain an inside look at how the tech world operates. We’ve drawn on our network to bring you speakers and topics relevant to this stage of your career transition. These presentations may serve to educate, enlighten, and motivate you along your journey. Take advantage of this opportunity, and make the most of the insights these presentations provide… you never know where a connection will lead.
 
-[Breaking Down the Tech Interview w/Rover - Rover Engineering Team](https://youtu.be/_6Fi8FFvdQs)
-[Whiteboarding Tips & Strategies - Roger Huba](https://youtu.be/aDL3403Q6xY)
-[Automate Yourself Out of a Job - Adam Eivy](https://youtu.be/2VJV-zNCtF8)
-[Communication Under Stress - Eve Denison](https://youtu.be/K0fnB3ygcm4)
-[Deep dive - Dev Tools - David Souther](https://youtu.be/nGNQCisfj8Q)
-[CI/CD History Lesson - Kat Cosgrove](https://youtu.be/_Md_NTWNgOE)
-[The 7 C’s of Cybersecurity & Coding - Courtney Hans](https://youtu.be/GqRDGi4ta5U)
-[Your Net Worth - John Cokos](https://youtu.be/Qu-_1b3xYGQ)
+1. [Breaking Down the Tech Interview w/Rover - Rover Engineering Team](https://youtu.be/_6Fi8FFvdQs)
+2. [Whiteboarding Tips & Strategies - Roger Huba](https://youtu.be/aDL3403Q6xY)
+3. [Automate Yourself Out of a Job - Adam Eivy](https://youtu.be/2VJV-zNCtF8)
+4. [Communication Under Stress - Eve Denison](https://youtu.be/K0fnB3ygcm4)
+5. [Deep dive - Dev Tools - David Souther](https://youtu.be/nGNQCisfj8Q)
+6. [CI/CD History Lesson - Kat Cosgrove](https://youtu.be/_Md_NTWNgOE)
+7. [The 7 C’s of Cybersecurity & Coding - Courtney Hans](https://youtu.be/GqRDGi4ta5U)
+8. [Your Net Worth - John Cokos](https://youtu.be/Qu-_1b3xYGQ)
 
 > Automate Yourself Out of a Job - Adam Eivy
 
@@ -203,3 +201,175 @@ Take 10-15 minutes at the end of lab to respond to the following questions, adap
    ![Adam Eivy](./img/adam-eivy.png)
 
 ## Career 15 - Workshop #3: Job Searches, Networking, and Negotiations
+
+**My scrambled notes**
+
+linkedin search : Javascript AND (web OR application OR software OR full* OR front* OR back*) AND (develop* OR programm* OR eng*)
+
+creative circle, karat
+
+linedin job search
+
+- create 2 -3 saved searches
+- only 1 search shoid filter expereince level
+  - entry level, associate, intern
+- aply to all aplplicable jobs in the 2-7 and 8-15 range for each search
+- everyday run each search and filter by posted today
+
+1. Offer and Negotiations?
+
+   - A: Research and know the market
+   - B: Be confident because you have the skills. Documentation, teamwork, leadership, projects.
+   - C: Always try to negotiate. They expect it, draw attention to why you applied.
+
+2. Targeted job search?
+
+   - A: Customize application materials. Customize your resume, cover letter, and portfolio for each application, highlighting relevant experiences and skills that match the specific job requirements.
+   - B: Connect with professionals in your industry through platforms like LinkedIn. Engage in conversations, seek advice, and inquire about potential job opportunities. Networking can open doors that traditional job searches might not.
+   - C: Make multiple points of contact within the company, dont worry about if they have job postings live, subscribe to newsletters blogs news alert
+
+3. Networking?
+   - A: Sadly, most jobs are filled before they are posted. They are mostly filled internally
+   - B: Start before you need it. Start with existing base
+   - C: Questions to ask in coffee interviews: What does a junior do? I'm entering this workforce and i have no idea what to expect so what does the hiring process looks like, what problems are you solving, what's the tech stack, what do code reviews look like, who does them
+
+add contact as underscore _first name_ last name company they are from
+eddit and track interactions
+
+10-15 companies of interst
+vission and mission product clients marketing linkedin job listing not needed
+
+- understand what linkedin page is telling you, loko at 10-15 emplotess to see what they are doing
+
+cover letter; follow directions, customize for position, languages frameworks, tools, no more than 3 para - reserach and thinl through what you can build make suggest for the company
+offer a detailed feature suggestion
+find and describe a bug in their product or websitre
+
+    make multiple points of contact within the company
+    dont worry about if they have job postings live
+
+write and review cover letters
+subscribe to newsletters blogs news alert
+
+gpt
+here is my resume
+here is this job posting customzie my resume to it
+help me write two para cover leter for this job that highlights my...
+
+network tips
+
+most jobs are filled before they are posted
+jobs filled internally
+85 percent of jobs come from neetworking
+
+what networking is not
+not selling
+not collecting business cards
+
+how do i network at events
+start before you need it
+start with existing base
+
+questions to ask during coffee interviews
+whats the tech stack
+code reviews?
+what does a junior do
+im entering this workforce and i have no idea what to expect
+what hiring process looks like
+what problems are you solving
+
+offer
+
+research and know the market
+do you know CF grad average
+what do you think is market rate
+
+offer dependent on where the HQ of the job is
+
+
+1. Add contact as underscore _first name_ last name company they are from
+
+   - Edit and track interactions
+
+2. 10-15 Companies of Interest
+
+   - Vision and mission
+   - Product
+   - Clients
+   - Marketing (LinkedIn and job listings not needed)
+   - Understand what LinkedIn page is telling you; look at 10-15 employees to see what they are doing
+
+3. Cover Letter
+
+   - Follow directions, customize for position, languages, frameworks, tools (no more than 3 paragraphs)
+     - Research and think through what you can build; make suggestions for the company
+     - Offer a detailed feature suggestion
+     - Find and describe a bug in their product or website
+   - Make multiple points of contact within the company
+   - Don't worry about if they have job postings live
+   - Write and review cover letters
+   - Subscribe to newsletters, blogs, and news alerts
+
+4. GPT
+
+   - Share resume
+   - Customize resume for a specific job posting
+   - Help write a two-paragraph cover letter for a job, highlighting relevant skills
+
+5. Networking Tips
+
+   - Most jobs are filled before they are posted
+   - Jobs filled internally
+   - 85 percent of jobs come from networking
+   - What networking is not: not selling, not collecting business cards
+
+6. How to Network at Events
+
+   - Start before you need it
+   - Start with an existing base
+
+7. Questions to Ask During Coffee Interviews
+
+   - What's the tech stack?
+   - Code reviews?
+   - What does a junior do?
+   - I'm entering this workforce and have no idea what to expect.
+   - What does the hiring process look like?
+   - What problems are you solving?
+
+8. Job Offer
+   - Research and know the market
+   - Know the Computer Science graduate average
+   - What do you think is the market rate?
+   - Offer dependent on where the HQ of the job is
+
+sdet software development and test
+
+QA quality assurance - software
+
+learn wordpress
+php language
+content producing jobs (hey this is our content add a page or something)
+
+technical writer
+
+certified in agile
+
+linked list, stack, tree , dictionaries
+
+1. I noticed you have a lot of internships under your belt. How did you get those opportunities? I was under the impression that internships were for people still in school.
+2. How did your internship experiences at Google and Instagram shape your career path?
+3. You also worked mostly on iOS/Android development. Can I ask why you went down that specialty?
+   - Follow-up: Do you think it's more likely to get jobs if you work on something more specialized instead of broad like there are a ton of full-stack devs out there compared to devs working with mobile apps?
+4. How important are data structures and algorithms in your day-to-day work as a software developer?
+5. What is the tech stack used in your projects?
+6. Could you elaborate on the code review process within your team?
+7. As a junior developer, what would my typical responsibilities include?
+8. What advice would you give to someone new to the workforce, especially in this industry?
+9. Can you walk me through your company's hiring process?
+10. What kind of problems or challenges are you currently working on solving?
+11. How do you foster collaboration and communication among team members?
+12. What learning and growth opportunities are available for junior developers within your organization?
+13. Could you share some examples of recent projects the team has been working on?
+14. How does your team approach project management and task prioritization?
+15. Are there any ongoing initiatives or goals that the team is focusing on?

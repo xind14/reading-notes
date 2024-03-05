@@ -2,43 +2,43 @@
 
 ## Lab 14 - Visualizing statistical data with Seaborn
 
-## Setup
+Today you’ll be telling a story visually. Choose two datasets and visualize them as effectively as you can.
 
+### Feature Tasks and Requirements
 
-## Code Challenge
+- Select 2 [Kaggle data sets](https://www.kaggle.com/datasets){:target="\_blank"} that are suitable for the stories you want to tell.
+  - **Note**: Make sure the data set has csv file/s to download.
+  - Optionally use a dataset from another source.
+- Load the data you receive into a Pandas DataFrame.
+- Analyze dataset.
+- Verbalize your insights in Markdown cells.
+- Visualize your insights in several ways.
+  - Have at least two visualizations per data set.
+  - Use [Seaborn Example Gallery](https://seaborn.pydata.org/examples/index.html) for inspiration.
+- Notebook should have professional polish.
+  - In other words, imagine you are presenting it on the job.
 
-Overview
-[Read this overview.](https://codefellows.github.io/code-301-guide/curriculum/class-01/challenges/)
+### User Acceptance Tests
 
-Video
-[Watch the video for this class from the demo playlist.](https://www.youtube.com/playlist?list=PLVngfM2hsbi-L6G8qlWd8RyRbuTamHt3k)
+No automated tests
 
-Demonstration
-[Look through these sample problems.](https://codefellows.github.io/code-301-guide/curriculum/class-01/challenges/DEMO.html)
+### Configuration
 
-Challenges
+1. Create an account (if you haven’t already) at [Kaggle](https://www.kaggle.com/).
+2. Create two new Notebooks named as you choose.
+3. Click Share button and select Public access.
+4. Submit the Public URLs for Notebooks.
 
-1. Navigate to the javascript folder within your data-structures-and-algorithms repository.
-2. Create a new branch for this challenge called for-each
-   git checkout -b for-each
-3. Retrieve the code challenge from the system
-   npm run get-challenge 01
-4. In your terminal, from the javascript folder, run npm test 01 to execute the tests in this file for this challenge.
-5. At this point you will see the failed tests scroll through your terminal window with a brief report of the number of failed tests at the bottom.
-6. If you do not see this, verify your installation of Jest by typing npx jest --version in your terminal. Filename typos can make things break!
-7. Write code to make the tests pass, one at a time. Let the error messages guide you.
-8. Once the test is passing, refactor as needed, then move on to the next challenge.
-9. Note, you can also run npm test (without a challenge number) to run all of the tests for every code challenge file assignment during the course all at once. This can get “noisy”, but it’s an opportunity to get a view of your overall progress
+### Stretch Goals
 
-Submission
-When you have completed the entire set of code challenges and all tests pass, create a pull request from your current branch to the main branch and merge it into main.
+- Use a different visualization library.
+  - E.g. Plotly, Bokeh.
+- Stream data from URL instead of csv file.
+- Join a Kaggle competition.
 
-You will be able to see a test coverage report in GitHub on the Actions tab of your data-structures-and-algorithms repository. It should match what you saw on your terminal in the above steps. Your graders will be looking at this as well.
-
-Submit a link to your pull request.
+## Code Challenge - Mock Interview
 
 ## Written Class Notes
-
 
 ## Read 14 - Visualizing statistical data with Seaborn
 
@@ -48,11 +48,9 @@ Submit a link to your pull request.
 
 **Bookmark and Review**
 
-
 - [Seaborn Tutorial](https://seaborn.pydata.org/tutorial.html)
 - [Bokeh Tutorial](https://mybinder.org/v2/gh/bokeh/bokeh-notebooks/master?filepath=tutorial%2F00%20-%20Introduction%20and%20Setup.ipynb)
 - [Seaborn Cheat Sheet](https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Python_Seaborn_Cheat_Sheet.pdf)
-
 
 ## Answer
 
@@ -64,96 +62,96 @@ Seaborn provides a high-level interface for drawing informative and attractive s
 
 1. What are the key differences between Matplotlib, Seaborn, and Bokeh libraries in terms of their features and use cases? Provide an example of a specific visualization that is more suitable for each library.
 
-    - Matplotlib
-        - **Key Features:** Fundamental plotting library, highly customizable.
-        - **Use Cases:** General-purpose plotting, complex visualizations.
-        - **Example:** A complex, customized line chart displaying multiple trends over time with custom markers, colors, and annotations.
+   - Matplotlib
 
-          ```python
-          import matplotlib.pyplot as plt
-          import numpy as np
+     - **Key Features:** Fundamental plotting library, highly customizable.
+     - **Use Cases:** General-purpose plotting, complex visualizations.
+     - **Example:** A complex, customized line chart displaying multiple trends over time with custom markers, colors, and annotations.
 
-          x = np.linspace(0, 10, 100)
-          y1 = np.sin(x)
-          y2 = np.cos(x)
+       ```python
+       import matplotlib.pyplot as plt
+       import numpy as np
 
-          plt.plot(x, y1, marker='o', color='b', label='Sin(x)')
-          plt.plot(x, y2, marker='s', color='r', label='Cos(x)')
-          plt.title('Customized Trends Over Time')
-          plt.xlabel('Time')
-          plt.ylabel('Values')
-          plt.legend()
-          plt.show()
-          ```
+       x = np.linspace(0, 10, 100)
+       y1 = np.sin(x)
+       y2 = np.cos(x)
 
-    - Seaborn
-        - **Key Features:** High-level interface for statistical graphics, based on Matplotlib.
-        - **Use Cases:** Statistical data visualization, aesthetically pleasing plots.
-        - **Example:** A regression plot showing the relationship between two variables along with a linear fit and confidence intervals.
+       plt.plot(x, y1, marker='o', color='b', label='Sin(x)')
+       plt.plot(x, y2, marker='s', color='r', label='Cos(x)')
+       plt.title('Customized Trends Over Time')
+       plt.xlabel('Time')
+       plt.ylabel('Values')
+       plt.legend()
+       plt.show()
+       ```
 
-          ```python
-          import seaborn as sns
-          import matplotlib.pyplot as plt
-          import pandas as pd
+   - Seaborn
 
-          tips = sns.load_dataset("tips")
-          sns.set(style="whitegrid")
-          g = sns.lmplot(x="total_bill", y="tip", data=tips)
-          plt.title('Linear Relationship Between Total Bill and Tip')
-          plt.show()
-          ```
+     - **Key Features:** High-level interface for statistical graphics, based on Matplotlib.
+     - **Use Cases:** Statistical data visualization, aesthetically pleasing plots.
+     - **Example:** A regression plot showing the relationship between two variables along with a linear fit and confidence intervals.
 
+       ```python
+       import seaborn as sns
+       import matplotlib.pyplot as plt
+       import pandas as pd
 
-    - Bokeh
-        - **Key Features:** Interactive, browser-based visualizations.
-        - **Use Cases:** Web-based interactive visualizations, dashboards.
-        - **Example:** An interactive scatter plot where points can be clicked to reveal additional information, suitable for a web-based dashboard.
+       tips = sns.load_dataset("tips")
+       sns.set(style="whitegrid")
+       g = sns.lmplot(x="total_bill", y="tip", data=tips)
+       plt.title('Linear Relationship Between Total Bill and Tip')
+       plt.show()
+       ```
 
-          ```python
-          from bokeh.plotting import figure, output_file, show
-          from bokeh.models import ColumnDataSource
+   - Bokeh
 
-          output_file("interactive_scatter_plot.html")
+     - **Key Features:** Interactive, browser-based visualizations.
+     - **Use Cases:** Web-based interactive visualizations, dashboards.
+     - **Example:** An interactive scatter plot where points can be clicked to reveal additional information, suitable for a web-based dashboard.
 
-          source = ColumnDataSource(data=dict(x=[1, 2, 3, 4, 5], y=[2, 4, 6, 8, 10]))
+       ```python
+       from bokeh.plotting import figure, output_file, show
+       from bokeh.models import ColumnDataSource
 
-          plot = figure(tooltips=[("x", "@x"), ("y", "@y")])
-          plot.circle('x', 'y', size=10, source=source)
+       output_file("interactive_scatter_plot.html")
 
-          show(plot)
-          ```
+       source = ColumnDataSource(data=dict(x=[1, 2, 3, 4, 5], y=[2, 4, 6, 8, 10]))
 
+       plot = figure(tooltips=[("x", "@x"), ("y", "@y")])
+       plot.circle('x', 'y', size=10, source=source)
+
+       show(plot)
+       ```
 
 2. In the Seaborn library, what are the main functions to create relational, categorical, and distribution plots? Briefly explain the purpose of each type of plot and provide an example use case.
 
+   - Relational Plots
 
-    - Relational Plots
-        - **`sns.lmplot`**: Creates a scatter plot with a linear fit.
-          - *Example:* Visualizing the relationship between tip and total bill using `lmplot`.
+     - **`sns.lmplot`**: Creates a scatter plot with a linear fit.
+       - _Example:_ Visualizing the relationship between tip and total bill using `lmplot`.
 
-    - Categorical Plots
-        - **`sns.barplot`**: Shows point estimates and confidence intervals with bars.
-          - *Example:* Plotting survival rates based on class and gender using `barplot`.
+   - Categorical Plots
 
-    - Distribution Plots
-        - **`sns.distplot`**: Plots univariate distribution (histogram or kernel density).
-          - *Example:* Displaying the distribution of 'y' variable using `distplot`.
+     - **`sns.barplot`**: Shows point estimates and confidence intervals with bars.
+       - _Example:_ Plotting survival rates based on class and gender using `barplot`.
 
+   - Distribution Plots
+     - **`sns.distplot`**: Plots univariate distribution (histogram or kernel density).
+       - _Example:_ Displaying the distribution of 'y' variable using `distplot`.
 
 3. Discuss the role of the Seaborn Cheat Sheet in a Python developer’s workflow. What are some key sections or elements featured in the cheat sheet that can help a developer quickly reference Seaborn functionalities?
 
-    - Quick reference for Seaborn functions and parameters.
-    - Helps developers efficiently create aesthetically pleasing statistical visualizations.
-    - Streamlines the process of preparing data, controlling aesthetics, and customizing plots.
-    - Key sections:
+   - Quick reference for Seaborn functions and parameters.
+   - Helps developers efficiently create aesthetically pleasing statistical visualizations.
+   - Streamlines the process of preparing data, controlling aesthetics, and customizing plots.
+   - Key sections:
 
-        - **Figure Aesthetics:** Controlling overall plot aesthetics.
-        - **Plotting With Seaborn:** Basic steps for creating plots.
-        - **Context Functions:** Setting the visual context for plots.
-        - **Axis Grids:** Customizing axis grids and labels.
-        - **Color Palette:** Managing color schemes for plots.
-        - **Categorical Plots, Regression Plots, Distribution Plots:** Specific functions for each plot type.
-
+     - **Figure Aesthetics:** Controlling overall plot aesthetics.
+     - **Plotting With Seaborn:** Basic steps for creating plots.
+     - **Context Functions:** Setting the visual context for plots.
+     - **Axis Grids:** Customizing axis grids and labels.
+     - **Color Palette:** Managing color schemes for plots.
+     - **Categorical Plots, Regression Plots, Distribution Plots:** Specific functions for each plot type.
 
 ## Things I want to know more about
 
@@ -162,5 +160,11 @@ Seaborn provides a high-level interface for drawing informative and attractive s
 ## Learning Journal
 
 ### Reflection
+
+Write a brief reflection on your learning today, or use the prompt below to get started.
+
+Sometimes, something is easier to learn than we expected it to be. Sometimes, something is more difficult to learn than we expected it to be. Briefly write about an experience with each extreme that you have had in this course.
+
+- I didn't find anything easier to learn than I expected in terms of important concepts, I don't know if I should feel better that I've been hearing others feeling the same way too or just discouraging to hear that so many feel this way. I feel lost because it feels like I'm given a shovel to build a house and I'm expected to know how to use that shovel to do so many tasks after being shown said task what feels like only once. I sound like a broken record but it isn't a I don't know what I am doing anymore but a collective we don't know what are we doing. But again like last week it was only week 2, it's only week 3 this week. I hope I'm not feeling this way still and saying later "it's only week 8"
 
 ## Career 14 - Workshop #3 Prep - Targeted Job Search

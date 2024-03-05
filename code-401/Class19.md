@@ -2,100 +2,53 @@
 
 ## Lab 19 - Getting machine to handle the boring stuff
 
-### Overview - Chess Board
+### Overview - Automation
 
-Today we’ll be constructing chess boards like it’s 1980.
-
-No prebuilt images, just the power of arrays and pixel art.
+Your team is working on a project to improve the organization and automation of various tasks. This includes handling user data, sorting files, parsing logs, and other miscellaneous tasks. You’ll be writing Python scripts to automate these tasks and make your team’s work more
+efficient.
 
 ### Feature Tasks and Requirements
 
-1. Your job is to render out chess boards with red and blue queens on them.
+1. Automate the creation of a folder.
 
-2. We’re keeping it really basic here so the only pieces are queens and each queen is represented by a blue or red square.
+   - Write a Python script to create a new folder with a specified name.
 
-3. Chess board is an 8 by 8 grid of alternating black and white squares. The queens are red and blue squares.
+2. Handle a deleted user.
 
-4. Each board will have one red and one blue queen at different coordinates. In addition to displaying the board you’ll need to identify if the queens are “under attack” based on their coordinates.
+   - `user2` is a deleted user and needs to move their documents from their user folder to a temporary folder.
+   - Your script will create the temporary folder, effectively deleting the user from the system while still maintaining a record of their documents.
 
-### Implementation Notes
+3. Sort documents into appropriate folders.
 
-- Define a ChessBoard class
+   - Go through a given folder and sort the documents into additional folders based on their file type.
+   - Move log files into a `logs` folder. If a `logs` folder doesn’t exist, your script should create one.
+   - Move email files into a `mail` folder. If a `mail` folder doesn’t exist, your script should create one.
 
-- Should contain an 8x8 grid.
+4. Parse a log file for errors and warnings.
 
-  - Each cell in the grid should have a color represented in RGB format.
-    - Black: (0, 0, 0)
-    - White: (1, 1, 1)
-    - Blue: (0, 1, 1)
-    - Red: (1, 0.2, 0)
+   - From the previous task, you’ve moved a log file into the `logs` folder.
+   - Now, parse the log file for errors and warnings and create two separate log files in a target directory:
+     - `errors.log`: Contains all error messages.
+     - `warnings.log`: Contains all warning messages.
 
-- Should have an `add_red` method that accepts a row and column as input which colors the corresponding cell.
-- Should have an `add_blue` method that accepts a row and column as input which colors the corresponding cell.
-- Should have a `render` method that displays the chess board on the screen with red and blue shown in correct locations.
-- Should have an `is_under_attack` method that returns a boolean if red is under attack by a blue piece horizontally, vertically, or diagonally.
-- Diagonal attacks can come from four directions. Make sure to handle all of them.
-
-- Render your board for each `is_under_attack` scenario:
-
-  1. Horizontal (aka same row).
-  2. Vertical (aka same column).
-  3. Four Diagonals.
-  4. A "Not Under Attack" scenario.
+5. Create a menu-driven application.
+   - Give the user a list of automation tasks (1-4) and let them choose one to execute.
+   - Customize your application by incorporating an additional automation task, choose one:
+     - Counting the number of specific file types in a directory.
+     - Renaming files based on a specific pattern.
+     - Automatically backing up specific folders.
 
 ### User Acceptance Tests
 
-There are no acceptance tests required. The notebook should clearly show that the various `is_under_attack` scenarios have been handled.
+1. Write tests that assert your CLI application is working.
 
-## Code Challenge
+### Configuration
 
-- **Branch Name:** stack-queue-pseudo
-- **Challenge Type:** Code Challenge / Algorithm
+1. Create a project named automation.
+2. Copy the folders and files from lab/assets/user-docs.
+3. Create the necessary folders and files to demonstrate and test your automation tasks according to the Feature Tasks and Requirements.
 
-### Feature Tasks
-
-Implement a Queue using two Stacks.
-
-1. Create a new class called pseudo queue.
-2. Do not use an existing Queue.
-3. Instead, this PseudoQueue class will implement our standard queue interface (the two methods listed below),
-4. Internally, utilize 2 Stack instances to create and manage the queue
-
-- `enqueue`
-
-  - **Arguments:** value
-  - Inserts a value into the PseudoQueue, using a first-in, first-out approach.
-
-- `dequeue`
-  - **Arguments:** none
-  - Extracts a value from the PseudoQueue, using a first-in, first-out approach.
-
-**NOTE:** The Stack instances have only push, pop, and peek methods. You should use your own Stack implementation. Instantiate these Stack objects in your PseudoQueue constructor.
-
-### Example
-
-```python
-# Example
-queue = PseudoQueue()
-queue.enqueue(5)
-queue.enqueue(10)
-queue.enqueue(15)
-value = queue.dequeue() # Output: 5
-```
-
-#### Enqueue
-
-| Input            | Args | Internal State        |
-| ---------------- | ---- | --------------------- |
-| [10]->[15]->[20] | 5    | [5]->[10]->[15]->[20] |
-|                  | 5    | [5]                   |
-
-#### Dequeue
-
-| Input                 | Output | Internal State  |
-| --------------------- | ------ | --------------- |
-| [5]->[10]->[15]->[20] | 20     | [5]->[10]->[15] |
-| [5]->[10]->[15]       | 15     | [5]->[10]       |
+## Code Challenge - Mock Interview
 
 ## Written Class Notes
 
@@ -161,16 +114,6 @@ Regex, shutil, and os are important modules in Python because they provide funct
 
 ### Reflection
 
-Take 10-15 minutes at the end of lab to respond to the following questions, adapted from the article:
+For this journal entry, no specific prompt other than to start off with “Today I learned…” or “Recently I learned…” and go from there.
 
-1. What went well, that I might forget if I don’t write down?
-   - I liked learning the career stuff today, but I forgot to write most of it down so will rewatch recording later to take notes again.
-2. What did I learn today?
-   - No matter the skills you have most of your chances of getting hired is through networking, which I don't know how to do well so that's going to be such a challenge.
-3. What should I do differently next time?
-   - Take screenshots of the slides.
-4. What still puzzles me, or what do I need to learn more about?
-   - I'm not understanding trees like I did stacks and queues so I will look at it more.
-5. Thinking about each of your assignments for the day, reflect on:
-   - Is the assignment complete? If not, where exactly did you leave off, and what work remains?
-     - Assignments are complete. Will work on readings for next week.
+- Today I learned that automation is definitely a handy thing to learn. We only scratched the surface today but if someone is knowledgeable about this I bet it can make so many aspects of coding much easier. Definitely something I will learn more about and a skill I should be proficient at just because it'll be so helpful.

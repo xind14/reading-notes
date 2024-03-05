@@ -1,40 +1,101 @@
 # Class 34 - Back End Deployment
 
-## Lab 34 - Moving API to the cloud
+## Lab 34 - Moving API to the cloud: Putting it All Together
 
-## Setup
+It’s time to show off your skills by bringing “Vanilla” Django and Django Rest Framework together in the same project.
 
-## Code Challenge
+You’ll build out a Restful API as well as a user-facing site.
 
-Overview
-[Read this overview.](https://codefellows.github.io/code-301-guide/curriculum/class-01/challenges/)
+Along the way you’ll see how easy Django makes it to move to a remote database.
 
-Video
-[Watch the video for this class from the demo playlist.](https://www.youtube.com/playlist?list=PLVngfM2hsbi-L6G8qlWd8RyRbuTamHt3k)
+The project will be an old favorite with a Python twist - a Cookie Stand management site.
 
-Demonstration
-[Look through these sample problems.](https://codefellows.github.io/code-301-guide/curriculum/class-01/challenges/DEMO.html)
+### Feature Tasks and Requirements
 
-Challenges
+#### Choice 1: Use your own Template/s
 
-1. Navigate to the javascript folder within your data-structures-and-algorithms repository.
-2. Create a new branch for this challenge called for-each
-   git checkout -b for-each
-3. Retrieve the code challenge from the system
-   npm run get-challenge 01
-4. In your terminal, from the javascript folder, run npm test 01 to execute the tests in this file for this challenge.
-5. At this point you will see the failed tests scroll through your terminal window with a brief report of the number of failed tests at the bottom.
-6. If you do not see this, verify your installation of Jest by typing npx jest --version in your terminal. Filename typos can make things break!
-7. Write code to make the tests pass, one at a time. Let the error messages guide you.
-8. Once the test is passing, refactor as needed, then move on to the next challenge.
-9. Note, you can also run npm test (without a challenge number) to run all of the tests for every code challenge file assignment during the course all at once. This can get “noisy”, but it’s an opportunity to get a view of your overall progress
+- If you’ve built a template repository for your Django sites, or APIs, or both - now’s the time to put them to work.
+- See what it would take to combine the two approaches into one starter kit to rule them all.
 
-Submission
-When you have completed the entire set of code challenges and all tests pass, create a pull request from your current branch to the main branch and merge it into main.
+#### Choice 2: Use API Quick Start Template
 
-You will be able to see a test coverage report in GitHub on the Actions tab of your data-structures-and-algorithms repository. It should match what you saw on your terminal in the above steps. Your graders will be looking at this as well.
+- The API Quick Start is a built-out skeleton project with lots of the tools we’ve been using in class. Check it out. If you like it, use it. But better yet, use it as an inspiration to build your own that’s a perfect fit.
+- **WARNING**: There is no guarantee that the API Quick Start is a perfect fit for your needs, is bug-free, etc. It’s a great jumping-off point though. And if you spot any bugs or have ideas for improvements make a PR!
 
-Submit a link to your pull request.
+#### Modify your application paying close attention to the instructions in README.md found in the root of the repository.
+
+- Install from `requirements.txt`.
+- Export (aka freeze) requirements.
+- Change `things` app folder to be `cookie_stands`.
+- Go through the codebase looking for `Thing`, `thing`, and `things` change to cookie-stand related names.
+  - E.g. `Thing` model becomes `CookieStand`
+  - E.g. `ThingList` becomes `CookieStandList`
+  - **Pro Tip**: Do a global text search looking for `thing`. Search should be case insensitive.
+- **WARNING**: Do NOT just cut and paste. Think through each change carefully.
+- Create/rename `.env` using `.env.sample` as a starting point.
+  - Here’s a handy way to generate a secret key:
+    ```
+    python -c “import secrets; print(secrets.token_urlsafe())”
+    ```
+
+#### CookieStand Model Details
+
+The `CookieStand` model must contain:
+
+- `location = models.CharField(max_length=256)`
+- `owner = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, null=True, blank=True)`
+- `description = models.TextField(blank=True)`
+- `hourly_sales = models.JSONField(default=list, null=True)`
+- `minimum_customers_per_hour = models.IntegerField(default=0)`
+- `maximum_customers_per_hour = models.IntegerField(default=0)`
+- `average_cookies_per_sale = models.FloatField(default=0)`
+
+```python
+def __str__(self):
+    return self.location
+```
+
+- Notice the use of `JSONField`.
+- Once changes are complete make migrations, migrate, and test locally.
+
+#### Database Deployment Requirements
+
+- Host your Database at ElephantSQL.
+
+#### Site Deployment Requirements
+
+- We’ll handle deployment a little later. For now, run your site locally, but the Database should be remote.
+
+### Stretch Goals
+
+- Add functionality so that when a JSON array of `hourly_sales` is not provided at creation time it will be generated with random numbers based on minimum/maximum customers per hour and average cookies per sale.
+
+### Implementation Notes
+
+- Name your repo `cookie-stand-api`.
+- Site must use environment variables.
+
+### Useful Terminal Commands
+
+- `docker compose up --build`
+- `docker compose down`
+- `docker compose restart`
+- `docker compose run web python manage.py migrate`
+- `docker compose run web python manage.py collectstatic`
+
+### User Acceptance Tests
+
+- Add Unit Tests to `cookie_stands/tests.py`.
+- Manually confirm API using API Tester, Postman, or HTTPie.
+
+### Submission Requirements
+
+- Make sure a user exists in Database. E.g., `createsuperuser` has been run.
+- Provide username and password in Canvas submission.
+- Rename `.env` contents or provide in Canvas submission.
+- Include GitHub repo in Canvas submission.
+
+## Code Challenge - Mock Interview
 
 ## Written Class Notes
 
@@ -99,7 +160,7 @@ Understanding Django settings, WhiteNoise, and CORS in is crucial for building s
         STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
         ```
 
-3.  What is the purpose of Cross-Origin Resource Sharing (CORS) in web applications, and how can it be implemented and configured in a Django project to control access to resources?
+3. What is the purpose of Cross-Origin Resource Sharing (CORS) in web applications, and how can it be implemented and configured in a Django project to control access to resources?
 
     - a mechanism that allows web servers to specify which origins are permitted to access resources on a web page from another domain. CORS is important for controlling access to resources and enhancing security in web applications. It enables more freedom and functionality in cross-origin requests while maintaining a level of security higher than allowing all cross-origin requests.
     - can be implemented and configured using middleware or third-party packages. The Django CORS headers package is a popular choice for handling CORS in Django projects. It allows developers to specify which origins are allowed to access resources, configure allowed methods and headers, and control other aspects of CORS behavior.
@@ -147,4 +208,3 @@ This [article](https://www.benlinders.com/2013/which-questions-do-you-ask-in-ret
    - Is the assignment complete? If not, where exactly did you leave off, and what work remains?
    - Do not get bogged down in written analysis; instead, focus on capturing the moment with an eye toward how your observations can guide you toward future productivity.
 
-## Career 1 - Identify Your Accountability Partners

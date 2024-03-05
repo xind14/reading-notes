@@ -1,41 +1,111 @@
-# Class 27 - Django Models	
+# Class 27 - Django Models
 
 ## Lab 27 - Object Relational Mapping
 
+Django has a powerful Object Relational Mapper that allows us to persist data using Python instead of SQL.
 
-## Setup
+Today you’ll build out a project with one model and wire up that model using Django Views.
 
-## Code Challenge
+### Implementation Notes
 
-Overview
-[Read this overview.](https://codefellows.github.io/code-301-guide/curriculum/class-01/challenges/)
+- The instructions are becoming more conceptual.
+- All the concepts listed relate to key Django steps covered in the demo.
+- If there is confusion about what, exactly, is required then ask the client (aka the instructors.)
+- TLDR - make your lab project like the demo project.
 
-Video
-[Watch the video for this class from the demo playlist.](https://www.youtube.com/playlist?list=PLVngfM2hsbi-L6G8qlWd8RyRbuTamHt3k)
+### Feature Tasks and Requirements
 
-Demonstration
-[Look through these sample problems.](https://codefellows.github.io/code-301-guide/curriculum/class-01/challenges/DEMO.html)
+#### Model
 
-Challenges
+- Create `snack_tracker_project` project
+  - This will involve some preliminary steps.
+  - Review previous class lab for details.
+- Create `snacks` app
+- Add `snacks` app to project
+- Create `Snack` model
+  - Make sure it extends from proper base class
+  - Add `name` as a `CharField` with maximum length of 64 characters.
+  - Add `purchaser` `ForeignKey` related to Django’s built-in user model with `CASCADE` delete option.
+    - `from django.contrib.auth import get_user_model`
+  - Add `description` `TextField`
+  - Add model to admin
+  - Modify `Snack` model to have user-friendly display in admin
+- Create migrations and migrate data
+- Create a super user
+- Run development server
+- Add a few snacks via Admin panel
+- Create another user and more snacks via Admin panel
+- Confirm that snacks behave as expected with proper name, purchaser, and description.
+  - Looks like your model is in good shape. Congrats!
 
-1. Navigate to the javascript folder within your data-structures-and-algorithms repository.
-2. Create a new branch for this challenge called for-each
-   git checkout -b for-each
-3. Retrieve the code challenge from the system
-   npm run get-challenge 01
-4. In your terminal, from the javascript folder, run npm test 01 to execute the tests in this file for this challenge.
-5. At this point you will see the failed tests scroll through your terminal window with a brief report of the number of failed tests at the bottom.
-6. If you do not see this, verify your installation of Jest by typing npx jest --version in your terminal. Filename typos can make things break!
-7. Write code to make the tests pass, one at a time. Let the error messages guide you.
-8. Once the test is passing, refactor as needed, then move on to the next challenge.
-9. Note, you can also run npm test (without a challenge number) to run all of the tests for every code challenge file assignment during the course all at once. This can get “noisy”, but it’s an opportunity to get a view of your overall progress
+#### Views for Snacks App
 
-Submission
-When you have completed the entire set of code challenges and all tests pass, create a pull request from your current branch to the main branch and merge it into main.
+- Where to create these views?
+  - Dig around and see if there’s a sensible spot.
+  - **HINT**: There is one correct place for your app’s views.
+- Create `SnackListView`
+  - Extend `ListView`
+  - Give a template of `snack_list.html`
+  - Associate `Snack` model
+  - Update url patterns for project
+    - Empty path should include `snacks.urls`
+  - Update `snacks` app urls
+    - Empty sub-path should be handled by `SnackListView`
+  - Don’t forget to use `as_view()`
+- Add detail view
+  - Link `snack_detail.html` template
+  - Associate `Snack` model
+  - Update app urlpatterns to handle detail view
+  - Account for primary key in URL
+    - Path would look like `localhost:8000/1/` to get to snack with id of 1
 
-You will be able to see a test coverage report in GitHub on the Actions tab of your data-structures-and-algorithms repository. It should match what you saw on your terminal in the above steps. Your graders will be looking at this as well.
+#### Templates
 
-Submit a link to your pull request.
+- Add `templates` folder in root of project
+- Register `templates` folder in project settings `TEMPLATES` section
+- Create `base.html` ancestor template
+  - Add main HTML document
+  - Use Django Templating Language to allow child templates to insert content
+- Create `snack_list.html` template
+  - Extend base template
+  - Use Django Templating Language to display each snack’s name
+  - View home page (aka `snack_list`) and confirm snacks showing properly
+- Create `snack_detail.html` template
+  - Template should extend base
+  - Content should display snack’s name, description, and purchaser
+  - Add link in `snack_list` template to related detail page for each snack
+  - Add a link back to Home (aka `snack_list`) page from detail page.
+
+### User Acceptance Tests
+
+- Test Snack pages
+  - **NOTE**: Make sure test extends `TestCase` instead of `SimpleTestCase` used in previous class.
+  - Verify status code
+  - Verify correct template use
+  - Use url name instead of hard coded path
+    - **TIP**: `django.urls.reverse` will help with that.
+- We can’t easily test `SnackDetailView` just yet.
+  - Can you figure out why?
+
+### Configuration
+
+- Create `django-models` GitHub repository.
+- Create a virtual environment inside `django-models`.
+
+### Stretch Goals
+
+- Add styling
+  - Create `static` folder at root of project
+  - Update `STATICFILES_DIRS`
+  - Create `base.css` file which styles `base.html` elements
+  - Load static css in `base.html` file
+- Test `SnackDetailView`
+- Test `Snack` model
+- Add multiple models
+- Use an alternate test runner
+- Add more advanced fields to models, e.g., created timestamp
+
+## Code Challenge - Linked List practice with Neetcode.
 
 ## Written Class Notes
 

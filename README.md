@@ -4,7 +4,7 @@
 
 # Overview
 
-This `reading-notes` repository will contain all my notes and assignments for the entirety of the Code Fellows program. I've taken 102, and will start 201 on October 23rd, 2023! This page as well as others will be updated as the program goes on.
+This `reading-notes` repository will contain all my notes and assignments for the entirety of the Code Fellows program. I've taken 102, 201, 301, and 401 in Python. This page as well as others will be updated as the program goes on.
 
 The general layout of my notes will be:
 

@@ -2,39 +2,89 @@
 
 ## Lab 12 - Data Frames with Pandas
 
-## Setup
+Today we’re taking a tour into Data Science to learn a bit more about the field and tools used in this space!
+
+The best way to hone your data analysis skills is consistent, deliberate practice.
+
+One of the best places to acquire data for analysis is Kaggle, so practice your abilities with some Kaggle data sets.
+
+- Sign up for a Kaggle account (if you don’t already have one).
+
+###  Feature Tasks and Requirements
+
+Use the following data set:
+[Video Game Sales - Sales data from more than 16,500 games](https://www.kaggle.com/gregorut/videogamesales)
+
+1. Create new Notebook called `vg-stats`.
+2. Add a markdown cell at the top of notebook with the title of this assignment, an appropriate name for the data set, as well as your name and the date.
+
+In the `vg-stats` notebook answer the following questions/do the following tasks. Note that the numbers quoted for sales are in the millions, and apply only for those games with over 10,000 sales.:
+
+- Which company is the most common video game publisher?
+- What’s the most common platform?
+- What about the most common genre?
+- What are the top 20 highest grossing games?
+- For North American video game sales, what’s the median?
+- Provide a secondary output showing ten games surrounding the median sales output.
+  - Assume that games with same median value are sorted in descending order.
+- For the top-selling game of all time, how many standard deviations above/below the mean are its sales for North America?
+- The Nintendo Wii seems to have outdone itself with games. How does its average number of sales compare with all of the other platforms?
+- Come up with 3 more questions that can be answered with this data set.
+
+When you’re done answering all of the questions for each data set, clean up your notebooks leaving only cells that contain relevant data and calculations. Then restart and run your notebook so that the cell numbering is sequential from top to bottom.
+
+Have fun with the data!! Play around a bit, and see if there’s anything else you can/want to do with the info available!
+
+### Publish with Kaggle
+
+1. Create an account (if you haven’t already) at [Kaggle](https://www.kaggle.com/).
+2. Create a new Notebook.
+   - Easiest way is by choosing New Notebook option from Video Game Sales page.
+   - Alternately, create a new project by clicking + Create button.
+3. Use File: Add or Upload Data in menu to store data sets using the links above in Feature Tasks and Requirements section.
+4. Name project `Video Game Stats`.
+5. Click Share button and select Public access.
+6. Submit the Public URLs for Notebooks.
+
+### User Acceptance Tests
+
+No tests are required. But all questions in Feature Tasks and Requirements must be clearly answered in your notebook.
+
+### Stretch
+
+Cycle Share Data set - Bicycle Trip Data from Seattle’s Cycle Share System
+In the `bike-stats` notebook, answer the following questions/do the following tasks:
+- What is the average trip duration for a borrowed bicycle?
+- What’s the most common age of a bicycle-sharer?
+- Given all the weather data here, find the average precipitation per month, and the median precipitation.
+- What’s the average number of bikes at a given bike station?
+- When a bike station is modified, is it more likely that it’ll lose bikes or gain bikes? How do you know?
+- Come up with 3 more questions that can be answered with this data set.
+
+**NOTE:** There’s an issue with one of the CSV files. You will need to find a way to handle that error… Google it, and work around it!
 
 ## Code Challenge
 
-Overview
-[Read this overview.](https://codefellows.github.io/code-301-guide/curriculum/class-01/challenges/)
+- **Branch Name:** stack-queue-animal-shelter
+- **Challenge Type:** Code Challenge / Algorithm
 
-Video
-[Watch the video for this class from the demo playlist.](https://www.youtube.com/playlist?list=PLVngfM2hsbi-L6G8qlWd8RyRbuTamHt3k)
+### Feature Tasks
 
-Demonstration
-[Look through these sample problems.](https://codefellows.github.io/code-301-guide/curriculum/class-01/challenges/DEMO.html)
+Implement a Queue using two Stacks.
 
-Challenges
-
-1. Navigate to the javascript folder within your data-structures-and-algorithms repository.
-2. Create a new branch for this challenge called for-each
-   git checkout -b for-each
-3. Retrieve the code challenge from the system
-   npm run get-challenge 01
-4. In your terminal, from the javascript folder, run npm test 01 to execute the tests in this file for this challenge.
-5. At this point you will see the failed tests scroll through your terminal window with a brief report of the number of failed tests at the bottom.
-6. If you do not see this, verify your installation of Jest by typing npx jest --version in your terminal. Filename typos can make things break!
-7. Write code to make the tests pass, one at a time. Let the error messages guide you.
-8. Once the test is passing, refactor as needed, then move on to the next challenge.
-9. Note, you can also run npm test (without a challenge number) to run all of the tests for every code challenge file assignment during the course all at once. This can get “noisy”, but it’s an opportunity to get a view of your overall progress
-
-Submission
-When you have completed the entire set of code challenges and all tests pass, create a pull request from your current branch to the main branch and merge it into main.
-
-You will be able to see a test coverage report in GitHub on the Actions tab of your data-structures-and-algorithms repository. It should match what you saw on your terminal in the above steps. Your graders will be looking at this as well.
-
-Submit a link to your pull request.
+1. Create a class called AnimalShelter which holds only dogs and cats.
+2. The shelter operates using a first-in, first-out approach.
+3. Implement the following methods:
+    - enqueue
+      - Arguments: animal
+        - animal can be either a dog or a cat object.
+        - It must have a species property that is either "cat" or "dog"
+        - It must have a name property that is a string.
+    - dequeue
+      - Arguments: pref
+        - pref can be either "dog" or "cat"
+      - Return: either a dog or a cat, based on preference.
+        - If pref is not "dog" or "cat" then return null.
 
 ## Written Class Notes
 
@@ -103,26 +153,26 @@ Pandas provides powerful data structures (DataFrame and Series) for efficient da
 
 3. Describe the process of loading a dataset into a Pandas DataFrame. What are some common file formats that can be used, and which Pandas functions are utilized to read these formats?
 
-- processes:
+    - processes:
 
-  ```python
-  # Reading data from CSV
-  data_csv = pd.read_csv('data.csv')
+      ```python
+      # Reading data from CSV
+      data_csv = pd.read_csv('data.csv')
 
-  # Reading data from Excel
-  data_excel = pd.read_excel('data.xlsx')
+      # Reading data from Excel
+      data_excel = pd.read_excel('data.xlsx')
 
-  # Reading data from SQL
-  data_sql = pd.read_sql('SELECT * FROM table', connection)
-  ```
+      # Reading data from SQL
+      data_sql = pd.read_sql('SELECT * FROM table', connection)
+      ```
 
-- Common File Formats:
-  - CSV (Comma-Separated Values)
-  - Excel
-  - SQL databases
-  - JSON
-  - HTML
-  - And more
+    - Common File Formats:
+      - CSV (Comma-Separated Values)
+      - Excel
+      - SQL databases
+      - JSON
+      - HTML
+      - And more
 
 ## Things I want to know more about
 
@@ -131,6 +181,10 @@ Pandas provides powerful data structures (DataFrame and Series) for efficient da
 ## Learning Journal
 
 ### Reflection
+
+For this journal entry, no specific prompt other than to start off with “Today I learned…” or “Recently I learned…” and go from there.
+
+- Today I learned how to use the pandas library. I found it funny how much math skills I've lost but it was fine, I just had to google. I liked learning all the different pandas functions and data manipulation but analysis still feels a bit daunting since it's still new syntax I'm looking at. I'm interested in what the rest of the week will be like with data learning though.
 
 ## Career 12 - Workshop #3 Prep - Professional and Personal Development
 

@@ -1,9 +1,8 @@
-# Class 40 - Pythonisms
+# Class 40 - Personal Presentation
 
-## Lab 40 - Generators, Iterators and Magic Methods
+## Lab 40 - Final Exam Prep
 
 ## Setup
-
 
 ## Code Challenge
 
@@ -39,7 +38,6 @@ Submit a link to your pull request.
 
 ## Written Class Notes
 
-
 ## Read 1 - Introduction to React and Components
 
 ## Resources Link/Pages
@@ -68,7 +66,6 @@ Adding on to what was learned in 201, components are like JavaScript functions. 
 
    - A replaceable and reusable set of functionality. It is a software object, interacting with other components. Components are designed to be independent, allowing them to be deployed and composed individually.
 
-
 ### What is Props and How to Use it in React
 
 1. What is “props” short for?
@@ -92,4 +89,45 @@ This [article](https://www.benlinders.com/2013/which-questions-do-you-ask-in-ret
    - Is the assignment complete? If not, where exactly did you leave off, and what work remains?
    - Do not get bogged down in written analysis; instead, focus on capturing the moment with an eye toward how your observations can guide you toward future productivity.
 
-## Career 1 - Identify Your Accountability Partners
+## Career 35 - Partner Power Hour - Report #8
+
+> If there is no live presentation on campus in this module, select the appropriate presentation from the list below. All presenters are open to connections and invite you to reach out to them, so that you can to learn more about them, their company, and the industry.
+> You may find it difficult or challenging to connect with industry professionals and gain an inside look at how the tech world operates. We’ve drawn on our network to bring you speakers and topics relevant to this stage of your career transition. These presentations may serve to educate, enlighten, and motivate you along your journey. Take advantage of this opportunity, and make the most of the insights these presentations provide… you never know where a connection will lead.
+
+1. [Breaking Down the Tech Interview w/Rover - Rover Engineering Team](https://youtu.be/_6Fi8FFvdQs)
+2. [Whiteboarding Tips & Strategies - Roger Huba](https://youtu.be/aDL3403Q6xY)
+3. [Automate Yourself Out of a Job - Adam Eivy](https://youtu.be/2VJV-zNCtF8)
+4. [Communication Under Stress - Eve Denison](https://youtu.be/K0fnB3ygcm4)
+5. [Deep dive - Dev Tools - David Souther](https://youtu.be/nGNQCisfj8Q)
+6. [CI/CD History Lesson - Kat Cosgrove](https://youtu.be/_Md_NTWNgOE)
+7. [The 7 C’s of Cybersecurity & Coding - Courtney Hans](https://youtu.be/GqRDGi4ta5U)
+8. [Your Net Worth - John Cokos](https://youtu.be/Qu-_1b3xYGQ)
+
+> The 7 C’s of Cybersecurity & Coding - Courtney Hans
+
+1. Share one or two ways the speaker’s information will change your approach to your career transition.
+
+   - She mentioned getting good at debugging and it was a good reminder that I need to start doing that more and learning how to be efficient about it and learn different ways in approaching it.
+   - I always think I don’t have enough experience for things and she was right that I don’t apply if I don’t check off all the requirements but I just need to evaluate how to translate my existing skills.
+
+1. List a few key take-aways from this presentation.
+
+   - Conversion - translate your existing skill set. You are never starting from scratch
+   - Courage - keep imposter syndrome at bay , reach for jobs that seem out of grasp but really aren’t. Women often wont apply for a job if they don't check off every requirement. Do it anyways
+   - Conversation - ask questions
+   - Coordination - not an individual effort, seek out help
+   - Consistency - commit to addressing complexity, to tackling hard problems, make a decision and commit to seeing it through, dedicate yourself to your goals
+   - Confession - ok to say IDK and be comfortable with it
+   - Cryptography - five primary functions of Cryptography
+     - Authentication: The process of proving one’s identity
+     - Integrity: Assuring the receiver that the received message has not been altered in any way from the original
+     - Key exchange: The method by which crypto keys are shared between sender and receiver
+     - Non repudiation: A mechanism to prove that the sender really sent this message
+     - Privacy/confidentiality: Ensuring that no one can read the message except the intended receiver
+     - Symmetric encryption uses the same key for both encryption and decryption.
+     - Asymmetric encryption uses different keys for encryption and decryption, providing higher security.
+       - In asymmetric encryption, there's a public key for encryption and a private key for decryption. The public key is shared openly, while the private key is kept secret.
+   - Learn human skills
+   - Learn to debug
+
+1. Share a screenshot of your LinkedIn connection request, including a nicely worded note, sent to the speaker or someone else at their company.

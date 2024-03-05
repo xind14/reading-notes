@@ -1,40 +1,52 @@
 # Class 37 - React + Next.JS
 
-## Lab 37 - Intro to Next.js & Tailwind CSS
+## Lab 37 - Intro to Next.js & Tailwind CSS: Cookie Stand Admin Version 1
 
-## Setup
+React is great! And though it does A LOT, it’s not a full framework. In other words, many common tasks are not handled out of the box by React. So it’s up to us devs to make some decisions about how to use React in combination with other tools.
 
-## Code Challenge
+One great “stack” is to use Next.js (which builds on top of React) and style with Tailwind.
 
-Overview
-[Read this overview.](https://codefellows.github.io/code-301-guide/curriculum/class-01/challenges/)
+### Feature Tasks and Requirements
 
-Video
-[Watch the video for this class from the demo playlist.](https://www.youtube.com/playlist?list=PLVngfM2hsbi-L6G8qlWd8RyRbuTamHt3k)
+- The spec for lab is screen shot of Cookie Stand Admin Version 1
+- `pages/Index.js` should…
+  - Have `<Head>` component with page title set to Cookie Stand Admin
+  - Have a `<header>` component that matches spec.
+  - Have a `<main>` component containing `<form>` and a placeholder component showing JSON string of last created Cookie Stand.
+  - Have a `<footer>` component that matches spec.
+- Style app using TailwindCSS utility classes.
 
-Demonstration
-[Look through these sample problems.](https://codefellows.github.io/code-301-guide/curriculum/class-01/challenges/DEMO.html)
+### Implementation Notes
 
-Challenges
+- Initialize Next.js project with the following command.
+  ```
+  npx create-next-app@latest --js --no-app
+  ```
+  NOTE: there is no need to create a containing folder.
+- Name your project `cookie-stand-admin`
+- Accept defaults for remaining options.
+- Strip out unused files
+  - The app won’t break if they get left in, but a good practice to remove stuff you’re not using.
+- Pro tips:
+  - Tailwind CSS Extension Pack
+  - React, Etc. Snippets
 
-1. Navigate to the javascript folder within your data-structures-and-algorithms repository.
-2. Create a new branch for this challenge called for-each
-   git checkout -b for-each
-3. Retrieve the code challenge from the system
-   npm run get-challenge 01
-4. In your terminal, from the javascript folder, run npm test 01 to execute the tests in this file for this challenge.
-5. At this point you will see the failed tests scroll through your terminal window with a brief report of the number of failed tests at the bottom.
-6. If you do not see this, verify your installation of Jest by typing npx jest --version in your terminal. Filename typos can make things break!
-7. Write code to make the tests pass, one at a time. Let the error messages guide you.
-8. Once the test is passing, refactor as needed, then move on to the next challenge.
-9. Note, you can also run npm test (without a challenge number) to run all of the tests for every code challenge file assignment during the course all at once. This can get “noisy”, but it’s an opportunity to get a view of your overall progress
+### User Acceptance Tests
 
-Submission
-When you have completed the entire set of code challenges and all tests pass, create a pull request from your current branch to the main branch and merge it into main.
+- No testing required.
 
-You will be able to see a test coverage report in GitHub on the Actions tab of your data-structures-and-algorithms repository. It should match what you saw on your terminal in the above steps. Your graders will be looking at this as well.
+### Configuration
 
-Submit a link to your pull request.
+- Refer to Next Lab Submission Instructions for detailed instructions.
+
+### Stretch Goals
+
+- Refactor to move components to own functions.
+- Refactor to move components to own files.
+- Add more styling
+- Link to another page within the app
+
+## Code Challenge - Student Choice
 
 ## Written Class Notes
 

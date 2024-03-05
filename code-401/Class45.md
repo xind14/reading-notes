@@ -31,14 +31,14 @@ This [article](https://www.benlinders.com/2013/which-questions-do-you-ask-in-ret
 > If there is no live presentation on campus in this module, select the appropriate presentation from the list below. All presenters are open to connections and invite you to reach out to them, so that you can to learn more about them, their company, and the industry.
 > You may find it difficult or challenging to connect with industry professionals and gain an inside look at how the tech world operates. We’ve drawn on our network to bring you speakers and topics relevant to this stage of your career transition. These presentations may serve to educate, enlighten, and motivate you along your journey. Take advantage of this opportunity, and make the most of the insights these presentations provide… you never know where a connection will lead.
 
-[Breaking Down the Tech Interview w/Rover - Rover Engineering Team](https://youtu.be/_6Fi8FFvdQs)
-[Whiteboarding Tips & Strategies - Roger Huba](https://youtu.be/aDL3403Q6xY)
-[Automate Yourself Out of a Job - Adam Eivy](https://youtu.be/2VJV-zNCtF8)
-[Communication Under Stress - Eve Denison](https://youtu.be/K0fnB3ygcm4)
-[Deep dive - Dev Tools - David Souther](https://youtu.be/nGNQCisfj8Q)
-[CI/CD History Lesson - Kat Cosgrove](https://youtu.be/_Md_NTWNgOE)
-[The 7 C’s of Cybersecurity & Coding - Courtney Hans](https://youtu.be/GqRDGi4ta5U)
-[Your Net Worth - John Cokos](https://youtu.be/Qu-_1b3xYGQ)
+1. [Breaking Down the Tech Interview w/Rover - Rover Engineering Team](https://youtu.be/_6Fi8FFvdQs)
+2. [Whiteboarding Tips & Strategies - Roger Huba](https://youtu.be/aDL3403Q6xY)
+3. [Automate Yourself Out of a Job - Adam Eivy](https://youtu.be/2VJV-zNCtF8)
+4. [Communication Under Stress - Eve Denison](https://youtu.be/K0fnB3ygcm4)
+5. [Deep dive - Dev Tools - David Souther](https://youtu.be/nGNQCisfj8Q)
+6. [CI/CD History Lesson - Kat Cosgrove](https://youtu.be/_Md_NTWNgOE)
+7. [The 7 C’s of Cybersecurity & Coding - Courtney Hans](https://youtu.be/GqRDGi4ta5U)
+8. [Your Net Worth - John Cokos](https://youtu.be/Qu-_1b3xYGQ)
 
 > Your Net Worth - John Cokos
 

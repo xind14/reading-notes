@@ -2,39 +2,75 @@
 
 ## Lab 33 - JSON Web Tokens & Moving beyond development server
 
-## Setup
+Let’s move our API closer to production grade by adding Authentication and switching to a Production Server.
+
+### Feature Tasks and Requirements
+
+#### Features - Django
+
+- Add JWT Authentication to your API.
+  - Install needed libraries in project configuration and/or site settings.
+  - Keep any pre-existing authentication so DRF Browsable API is still usable.
+
+#### Features - Docker
+
+- Switch to using Gunicorn instead of Django’s built-in development server.
+  - Mind the number of workers to avoid sluggishness.
+  - **Warning**: You will run into styling issues when you switch over to Gunicorn.
+- On Django side, you’ll need to properly handle static files using Whitenoise.
+
+#### Storage Options
+
+- Your choice of SQLite or PostgreSQL.
+- Adjust `docker-compose.yml` so that data is persisted in a volume outside of the container.
+  - These steps are different depending on whether SQLite or PostgreSQL is being used.
+
+### Stretch Goals
+
+- Create a boilerplate `Dockerfile` and `docker-compose.yml` so you don’t need to start from scratch each time.
+  - E.g. as a VS Code snippet, or a gist.
+- Research deployment options for Docker/Postgres/Django and report findings to the class.
+- Research separate PostgreSQL hosting.
+- Create/Find a seed project so that you can have a running start on the next DRF project.
+
+### Implementation Notes
+
+- Remember to update the Django settings for JWT Authentication.
+- Make sure to properly configure Gunicorn and Whitenoise.
+
+### User Acceptance Tests
+
+- README should include steps to manually test using HTTP Client such as httpie, ThunderClient, etc.
+- List the routes (including HTTP method and note whether token is required) for:
+  - Get tokens
+  - Refresh tokens
+  - CRUD routes for resource
+
+### Configuration
+
+- Name GitHub repo `drf-auth`.
 
 ## Code Challenge
 
-Overview
-[Read this overview.](https://codefellows.github.io/code-301-guide/curriculum/class-01/challenges/)
+- **Branch Name:** hashmap-left-join
 
-Video
-[Watch the video for this class from the demo playlist.](https://www.youtube.com/playlist?list=PLVngfM2hsbi-L6G8qlWd8RyRbuTamHt3k)
+- **Challenge Type:** Code Challenge / Algorithm
 
-Demonstration
-[Look through these sample problems.](https://codefellows.github.io/code-301-guide/curriculum/class-01/challenges/DEMO.html)
+### Features
 
-Challenges
+1. Write a function that LEFT JOINs two hashmaps into a single data structure.
 
-1. Navigate to the javascript folder within your data-structures-and-algorithms repository.
-2. Create a new branch for this challenge called for-each
-   git checkout -b for-each
-3. Retrieve the code challenge from the system
-   npm run get-challenge 01
-4. In your terminal, from the javascript folder, run npm test 01 to execute the tests in this file for this challenge.
-5. At this point you will see the failed tests scroll through your terminal window with a brief report of the number of failed tests at the bottom.
-6. If you do not see this, verify your installation of Jest by typing npx jest --version in your terminal. Filename typos can make things break!
-7. Write code to make the tests pass, one at a time. Let the error messages guide you.
-8. Once the test is passing, refactor as needed, then move on to the next challenge.
-9. Note, you can also run npm test (without a challenge number) to run all of the tests for every code challenge file assignment during the course all at once. This can get “noisy”, but it’s an opportunity to get a view of your overall progress
+   - Write a function called left join
+   - Arguments: two hash maps
+     - The first parameter is a hashmap that has word strings as keys, and a synonym of the key as values.
+     - The second parameter is a hashmap that has word strings as keys, and antonyms of the key as values.
+   - Return: The returned data structure that holds the results is up to you. It doesn’t need to exactly match the output below, so long as it achieves the LEFT JOIN logic
 
-Submission
-When you have completed the entire set of code challenges and all tests pass, create a pull request from your current branch to the main branch and merge it into main.
+2. NOTES:
 
-You will be able to see a test coverage report in GitHub on the Actions tab of your data-structures-and-algorithms repository. It should match what you saw on your terminal in the above steps. Your graders will be looking at this as well.
-
-Submit a link to your pull request.
+   - Combine the key and corresponding values (if they exist) into a new data structure according to LEFT JOIN logic.
+   - LEFT JOIN means all the values in the first hashmap are returned, and if values exist in the “right” hashmap, they are appended to the result row.
+   - If no values exist in the right hashmap, then some flavor of NULL should be appended to the result row.
 
 ## Written Class Notes
 
@@ -67,7 +103,6 @@ JWTs provide a secure way to authenticate users and authorize access to resource
    - When a user authenticates, the server generates a JWT containing the necessary information (e.g., user ID, expiration time) and signs it with a secret key. This JWT is then sent to the client, usually as part of an HTTP header.
    - When the client sends subsequent requests to the server, it includes the JWT in the request headers. The server can then decode and verify the JWT to authenticate the user and authorize access to resources.
 
-
 2. How does JWT Authentication integrate with Django REST Framework to secure API endpoints, and what are the key components involved in this process?
 
    - by providing a mechanism for token-based authentication.
@@ -78,7 +113,6 @@ JWTs provide a secure way to authenticate users and authorize access to resource
      - **Token Generation:** During authentication, a JWT is generated by the server and provided to the client upon successful login. This token is then included in subsequent requests to authenticate the user.
      - **Token Verification:** When receiving requests with JWTs, the server verifies the token's signature and checks its validity (e.g., expiration time) before granting access to protected resources.
 
-
 3. Why is Django’s built-in runserver not suitable for production environments, and what are some alternative server options that should be considered for deploying a Django application?
 
    - **Lack of Scalability:** The runserver command is single-threaded and synchronous, making it unsuitable for handling high traffic loads typical in production environments.
@@ -87,7 +121,6 @@ JWTs provide a secure way to authenticate users and authorize access to resource
      - **WSGI Servers:** Web Server Gateway Interface (WSGI) servers like Gunicorn (Green Unicorn) or uWSGI are commonly used to serve Django applications in production. These servers are designed for concurrency, scalability, and performance.
      - **Reverse Proxy Servers:** Servers like Nginx or Apache can be used as reverse proxies in front of WSGI servers to handle tasks such as load balancing, caching, and SSL termination. They enhance security and improve performance by offloading tasks from the application server.
      - **Cloud Platforms:** Cloud platforms like Heroku, AWS (Amazon Web Services), or Google Cloud Platform provide managed hosting solutions for deploying Django applications. They offer scalability, reliability, and various deployment options tailored to specific application needs.
-
 
 ## Things I want to know more about
 
@@ -106,4 +139,3 @@ This [article](https://www.benlinders.com/2013/which-questions-do-you-ask-in-ret
 5. Thinking about each of your assignments for the day, reflect on:
    - Is the assignment complete? If not, where exactly did you leave off, and what work remains?
    - Do not get bogged down in written analysis; instead, focus on capturing the moment with an eye toward how your observations can guide you toward future productivity.
-

@@ -1,40 +1,51 @@
 # Class 38 - React - Forms and Conditional Rendering
 
-## Lab 38 - Projecting application state
+## Lab 38 - Projecting application state: Cookie Stand Admin Version 2
 
-## Setup
+Your job is to continue work on Cookie Stand Admin app using Next.js and style using Tailwind CSS.
 
-## Code Challenge
+### Feature Tasks and Requirements
 
-Overview
-[Read this overview.](https://codefellows.github.io/code-301-guide/curriculum/class-01/challenges/)
+- The specs for lab are screen shots Cookie Stand Admin Version 2 and Cookie Stand Admin No Stands
+- `pages/Index.js` should return top level component `<CookieStandAdmin>`
+  - `<CookieStandAdmin>` details…
+    - Will contain the following components:
+      - `<Head>`, `<Header>`, `<main>`, `<CreateForm>`, `<ReportTable>`, and `<Footer>` component that matches spec.
+    - Import time slot data from supplied `data.js` file.
+  - `<CreateForm>` component details…
+    - Object should have `hourly_sales` property with hard coded `[48, 42, 30, 24, 42, 24, 36, 42, 42, 48, 36, 42, 24, 36]`
+  - `<ReportTable>` details…
+    - If reports is empty then render `<h2>No Cookie Stands Available</h2>`
+    - If reports is not empty then render a table with `<thead>`, `<tbody>` and `<tfoot>` components.
+  - Components should render to match spec.
+- Style all components using TailwindCSS utility classes to match spec.
 
-Video
-[Watch the video for this class from the demo playlist.](https://www.youtube.com/playlist?list=PLVngfM2hsbi-L6G8qlWd8RyRbuTamHt3k)
+### Implementation Notes
 
-Demonstration
-[Look through these sample problems.](https://codefellows.github.io/code-301-guide/curriculum/class-01/challenges/DEMO.html)
+- Continue work in `cookie-stand-admin` repository
+- IMPORTANT Complete version 1 tasks before moving to version 2 features.
+- Pro tip: Tailwind CSS Extension Pack
 
-Challenges
+### User Acceptance Tests
 
-1. Navigate to the javascript folder within your data-structures-and-algorithms repository.
-2. Create a new branch for this challenge called for-each
-   git checkout -b for-each
-3. Retrieve the code challenge from the system
-   npm run get-challenge 01
-4. In your terminal, from the javascript folder, run npm test 01 to execute the tests in this file for this challenge.
-5. At this point you will see the failed tests scroll through your terminal window with a brief report of the number of failed tests at the bottom.
-6. If you do not see this, verify your installation of Jest by typing npx jest --version in your terminal. Filename typos can make things break!
-7. Write code to make the tests pass, one at a time. Let the error messages guide you.
-8. Once the test is passing, refactor as needed, then move on to the next challenge.
-9. Note, you can also run npm test (without a challenge number) to run all of the tests for every code challenge file assignment during the course all at once. This can get “noisy”, but it’s an opportunity to get a view of your overall progress
+- No testing required.
 
-Submission
-When you have completed the entire set of code challenges and all tests pass, create a pull request from your current branch to the main branch and merge it into main.
+### Configuration
 
-You will be able to see a test coverage report in GitHub on the Actions tab of your data-structures-and-algorithms repository. It should match what you saw on your terminal in the above steps. Your graders will be looking at this as well.
+- Continue work in `cookie-stand-admin` repository in Github
 
-Submit a link to your pull request.
+### Stretch Goals
+
+- Flesh out Overview page to do more
+- Remove hard coding from `<CreateForm>` and properly calculate hourly sales per cookie stand.
+- Add delete icons.
+  - Pro Tip: Heroicons
+- Really stretch out and make delete icons functional.
+- Persist Cookie Stand data.
+
+
+## Code Challenge - Student Choice
+
 
 ## Written Class Notes
 

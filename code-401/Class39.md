@@ -1,40 +1,60 @@
 # Class 39 - Resource Fetching & Authentication
 
-## Lab 39 - Consuming Authenticated Resources
+## Lab 39 - Consuming Authenticated Resources: Cookie Stand Admin Version 2
 
-## Setup
+Your job is to continue work on Cookie Stand Admin app using Next.js and style using Tailwind CSS.
 
-## Code Challenge
+But now you’ll be working with data from a remote API!
 
-Overview
-[Read this overview.](https://codefellows.github.io/code-301-guide/curriculum/class-01/challenges/)
+### Annoying Change Explanation
 
-Video
-[Watch the video for this class from the demo playlist.](https://www.youtube.com/playlist?list=PLVngfM2hsbi-L6G8qlWd8RyRbuTamHt3k)
+The layout of Cookie Stand Form has changed a bit. Sometimes the client will change their mind. This WILL happen all the time as devs. We may as well get used to it now.
 
-Demonstration
-[Look through these sample problems.](https://codefellows.github.io/code-301-guide/curriculum/class-01/challenges/DEMO.html)
+### Feature Tasks and Requirements
 
-Challenges
+- All features from versions 1 an 2 should be complete.
+- The specs for lab are screen shots Cookie Stand Admin Version 3 and Cookie Stand Admin Login
+- `pages/index.js` should export a `<Home>` component.
+- `<Home>` requirements
 
-1. Navigate to the javascript folder within your data-structures-and-algorithms repository.
-2. Create a new branch for this challenge called for-each
-   git checkout -b for-each
-3. Retrieve the code challenge from the system
-   npm run get-challenge 01
-4. In your terminal, from the javascript folder, run npm test 01 to execute the tests in this file for this challenge.
-5. At this point you will see the failed tests scroll through your terminal window with a brief report of the number of failed tests at the bottom.
-6. If you do not see this, verify your installation of Jest by typing npx jest --version in your terminal. Filename typos can make things break!
-7. Write code to make the tests pass, one at a time. Let the error messages guide you.
-8. Once the test is passing, refactor as needed, then move on to the next challenge.
-9. Note, you can also run npm test (without a challenge number) to run all of the tests for every code challenge file assignment during the course all at once. This can get “noisy”, but it’s an opportunity to get a view of your overall progress
+      - If user is NOT logged in then `<LoginForm>` should render.
+      - If user IS logged in then `<CookieStandAdmin>` component should render.
 
-Submission
-When you have completed the entire set of code challenges and all tests pass, create a pull request from your current branch to the main branch and merge it into main.
+- `<LoginForm>` requirements - Should receive a function passed in to call when form is submitted. - The function should be called with username and password arguments.
 
-You will be able to see a test coverage report in GitHub on the Actions tab of your data-structures-and-algorithms repository. It should match what you saw on your terminal in the above steps. Your graders will be looking at this as well.
+- `<CookieStandAdmin>` requirements - When user fills out form to add location then the data should be posted to API - When API response is complete then `<CookieStandTable>` should render latest data immediately. - Should NOT require a page refresh.
 
-Submit a link to your pull request.
+- `<CookieStandTable>` requirements - Component should continue to display Cookie Stand info as in version 2 - Add a delete icon in each stand’s location cell. - Clicking delete icon should immediately delete the Cookie Stand. - Should NOT require a page refresh.
+
+- Continue to style all components using TailwindCSS utility classes to match spec.
+
+### Implementation Notes
+
+- Continue work in `cookie-stand-admin` repository
+- Ideally, you will have front end communicate with your API.
+  - If your API is not fully functional then communicate with instructor to get access to a test API.
+- You can use Icon of your choosing for the delete functionality.
+  - One recommendation is [Hero Icons](https://heroicons.com/)
+- IMPORTANT Complete version 1 & 2 tasks before moving on to version 3 features.
+- Pro tip: Tailwind CSS Extension Pack
+
+### User Acceptance Tests
+
+- No testing required.
+
+### Configuration
+
+- Continue work in `cookie-stand-admin` repository in Github
+
+### Stretch Goals
+
+- Use your own deployed API instead of one running on localhost or that has been supplied by instructor.
+- Add a confirmation dialog when deleting a Cookie Stand.
+- Add a list of Cookie Stand locations to Overview page.
+  - There is some trickiness here regarding logged in status. Try to figure it out!
+- Add edit feature.
+
+## Code Challenge - Mock Interview
 
 ## Written Class Notes
 
@@ -73,24 +93,24 @@ React Context enables sharing data across the component tree without prop drilli
    - It provides a way to access the value of a Context without needing to use a Context.Consumer component.
    - It takes a Context object (created using `React.createContext`) as an argument and returns the current context value for that context.
 
-      ```javascript
-      import React, { useContext } from "react";
-      import MyContext from "./MyContext";
+     ```javascript
+     import React, { useContext } from "react";
+     import MyContext from "./MyContext";
 
-      const MyComponent = () => {
-      // Using useContext to access data from MyContext
-      const contextData = useContext(MyContext);
+     const MyComponent = () => {
+       // Using useContext to access data from MyContext
+       const contextData = useContext(MyContext);
 
-      return (
+       return (
          <div>
-            <h1>{contextData.title}</h1>
-            <p>{contextData.description}</p>
+           <h1>{contextData.title}</h1>
+           <p>{contextData.description}</p>
          </div>
-      );
-      };
+       );
+     };
 
-      export default MyComponent;
-      ```
+     export default MyComponent;
+     ```
 
 3. Describe the purpose of Next.js, and provide an example from the Vercel Next.js Examples reading on how it can be used to build a scalable web application.
 
@@ -104,14 +124,14 @@ React Context enables sharing data across the component tree without prop drilli
    - By using Next.js with Tailwind CSS, developers can quickly set up a project preconfigured with Tailwind CSS, TypeScript or JavaScript, and the App Router.
    - This allows for efficient development of responsive and visually appealing web applications with minimal setup and configuration.
    - Here's an example of how to create a Next.js project with Tailwind CSS:
-      ```bash
-      npx create-next-app --tailwind with-tailwindcss-app
-      ```
+     ```bash
+     npx create-next-app --tailwind with-tailwindcss-app
+     ```
    - This command initializes a new Next.js project with Tailwind CSS already set up, providing a solid foundation for building a scalable and well-styled web application.
 
 ## Things I want to know more about
 
-- How does all of this and the python we've learned so far come together? Cna they be combined?
+- How does all of this and the python we've learned so far come together? Can they be combined?
 
 ## Retrospective
 

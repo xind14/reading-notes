@@ -1,41 +1,38 @@
-# Class 29 - DjangoX	
+# Class 29 - DjangoX
 
 ## Lab 29 - Customizing Django to make it your own
 
+Django does a great job at allowing to get started with a solid foundation. But a foundation is just the beginning. We still need to “build the house.”
 
-## Setup
+One of the first things many developers choose to do is to create a custom user model.
 
-## Code Challenge
+### Feature Tasks and Requirements
 
-Overview
-[Read this overview.](https://codefellows.github.io/code-301-guide/curriculum/class-01/challenges/)
+- Create Django application `django-custom-user` from scratch that has a custom user model named `CustomUser`
+- Application should work with Django Admin
+- Use the very helpful tutorial at [LearnDjango](https://learndjango.com/tutorials/django-custom-user-model)
+  - But check the Implementation Notes below about Django 5 tweak.
 
-Video
-[Watch the video for this class from the demo playlist.](https://www.youtube.com/playlist?list=PLVngfM2hsbi-L6G8qlWd8RyRbuTamHt3k)
+### Implementation Notes
 
-Demonstration
-[Look through these sample problems.](https://codefellows.github.io/code-301-guide/curriculum/class-01/challenges/DEMO.html)
+- Make sure to create custom user model before migrating data
+- **WARNING**: Django version 5 no longer supports logging out with a GET request.
+  - Refer to demo for safe logging out in Django 5.
 
-Challenges
+### User Acceptance Tests
 
-1. Navigate to the javascript folder within your data-structures-and-algorithms repository.
-2. Create a new branch for this challenge called for-each
-   git checkout -b for-each
-3. Retrieve the code challenge from the system
-   npm run get-challenge 01
-4. In your terminal, from the javascript folder, run npm test 01 to execute the tests in this file for this challenge.
-5. At this point you will see the failed tests scroll through your terminal window with a brief report of the number of failed tests at the bottom.
-6. If you do not see this, verify your installation of Jest by typing npx jest --version in your terminal. Filename typos can make things break!
-7. Write code to make the tests pass, one at a time. Let the error messages guide you.
-8. Once the test is passing, refactor as needed, then move on to the next challenge.
-9. Note, you can also run npm test (without a challenge number) to run all of the tests for every code challenge file assignment during the course all at once. This can get “noisy”, but it’s an opportunity to get a view of your overall progress
+- No acceptance tests required.
 
-Submission
-When you have completed the entire set of code challenges and all tests pass, create a pull request from your current branch to the main branch and merge it into main.
+### Configuration
 
-You will be able to see a test coverage report in GitHub on the Actions tab of your data-structures-and-algorithms repository. It should match what you saw on your terminal in the above steps. Your graders will be looking at this as well.
+- Refer to Lab Submission Instructions for detailed instructions.
 
-Submit a link to your pull request.
+### Stretch
+
+- Create a Django application using DjangoX
+- Style form using Django Widget Tweaks
+
+## Code Challenge - Mock Interview
 
 ## Written Class Notes
 
@@ -194,5 +191,3 @@ This [article](https://www.benlinders.com/2013/which-questions-do-you-ask-in-ret
 1. [Interview Question Examples](https://codefellows.github.io/common_curriculum/career_coaching/401/workshop-4/assignments/behavioral-interview-questions)
 1. [Technical Question Examples](https://codefellows.github.io/common_curriculum/career_coaching/401/workshop-4/assignments/technical-interview-questions)
 1. [Mock Interview Guide](https://codefellows.github.io/common_curriculum/career_coaching/401/workshop-4/assignments/mock-interview-guide)
-
-

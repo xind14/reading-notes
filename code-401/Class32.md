@@ -2,39 +2,85 @@
 
 ## Lab 32 - Controlling access to your API & enterprise Database
 
-## Setup
+Let’s move our site closer to production grade by adding Permissions and Postgresql Database.
+
+### Feature Tasks and Requirements
+
+#### Features - General
+
+- You have been supplied with two demos, each presenting a key new feature.
+- One demonstrates how to restrict access to portions of your APIs data.
+- The other demonstrates switching over to using Postgres vs SQLite.
+- Your job is to merge the functionality of both demos.
+- Customize your project to use different application features/models than what was used in demos.
+
+#### Features - Django REST Framework
+
+- Make your site a DRF powered API as you did in the previous lab.
+- Adjust project’s permissions so that only authenticated users have access to API.
+- Add a custom permission so that only appropriate users can update or delete it.
+  - Exactly what this means will depend on your application, so if you have any questions about “appropriate users” means reach out to TA/Instructor.
+- Add the ability to switch users directly from the browsable API.
+
+#### Features - Docker
+
+- **NOTE**: Refer to demo for built-out `Dockerfile` and `docker-compose.yml` examples.
+- Create `Dockerfile` based off `python:3.10-slim`.
+- Create `docker-compose.yml` to run Django app as a web service.
+  - Enter `docker compose up --build` to start your site.
+- Add Postgres as a service.
+  - **Note**: It is not required to include a volume so that data can persist when the container is shut down.
+- Go to browsable API and confirm site properly restricts users based on their permissions.
+
+### Stretch Goals
+
+- Try different permission levels, including custom ones.
+- Figure out how to directly access Postgres running inside the container.
+  - **Hint**: It will take research.
+- Add a volume to persist data when the container is shut down.
+
+### Implementation Notes
+
+- You should NOT be running Postgres directly on the host machine.
+- This means that operations like `createsuperuser` and `migrate` will need to happen inside the container.
+  - For example…
+    ```
+    docker compose run web python manage.py migrate
+    ```
+    or:
+    ```
+    docker compose run web bash
+    ```
+
+### User Acceptance Tests
+
+- Adjust any tests provided in the demo to work with your project.
+
+### Configuration
+
+- Name GitHub repo `drf-api-permissions-postgres`.
 
 ## Code Challenge
 
-Overview
-[Read this overview.](https://codefellows.github.io/code-301-guide/curriculum/class-01/challenges/)
+Find common values in 2 binary trees.
 
-Video
-[Watch the video for this class from the demo playlist.](https://www.youtube.com/playlist?list=PLVngfM2hsbi-L6G8qlWd8RyRbuTamHt3k)
+### Specifications
 
-Demonstration
-[Look through these sample problems.](https://codefellows.github.io/code-301-guide/curriculum/class-01/challenges/DEMO.html)
+1. Read all of the following instructions carefully. Name things exactly as described.
+2. Do all your work in a public repository (matching the example provided by your instructor) called data-structures-and-algorithms, with a well-formatted, detailed top-level README.md
+3. Create a branch in your repository called tree-intersection
+4. On your branch, create…
+   - C#: Create a new class library with a class file named TreeIntersection.cs
+   - JavaScript: a folder named treeIntersection which contains a file called tree-intersection.js
+   - Python: a folder named tree_intersection which contains a file called tree_intersection.py
+   - Java: a folder named TreeIntersection which contains a file called TreeIntersection.java
+5. Include any language-specific configuration files required for this challenge to become an individual component, module, library, etc.
+   - NOTE: You can find an example of this configuration for your course in your class lecture repository.
 
-Challenges
+### Feature Tasks
 
-1. Navigate to the javascript folder within your data-structures-and-algorithms repository.
-2. Create a new branch for this challenge called for-each
-   git checkout -b for-each
-3. Retrieve the code challenge from the system
-   npm run get-challenge 01
-4. In your terminal, from the javascript folder, run npm test 01 to execute the tests in this file for this challenge.
-5. At this point you will see the failed tests scroll through your terminal window with a brief report of the number of failed tests at the bottom.
-6. If you do not see this, verify your installation of Jest by typing npx jest --version in your terminal. Filename typos can make things break!
-7. Write code to make the tests pass, one at a time. Let the error messages guide you.
-8. Once the test is passing, refactor as needed, then move on to the next challenge.
-9. Note, you can also run npm test (without a challenge number) to run all of the tests for every code challenge file assignment during the course all at once. This can get “noisy”, but it’s an opportunity to get a view of your overall progress
-
-Submission
-When you have completed the entire set of code challenges and all tests pass, create a pull request from your current branch to the main branch and merge it into main.
-
-You will be able to see a test coverage report in GitHub on the Actions tab of your data-structures-and-algorithms repository. It should match what you saw on your terminal in the above steps. Your graders will be looking at this as well.
-
-Submit a link to your pull request.
+1. Write a function called tree_intersection that takes two binary trees as parameters.
+2. Using your Hashmap implementation as a part of your algorithm, return a set of values found in both trees.
 
 ## Written Class Notes
 
@@ -129,4 +175,3 @@ This [article](https://www.benlinders.com/2013/which-questions-do-you-ask-in-ret
 5. Thinking about each of your assignments for the day, reflect on:
    - Is the assignment complete? If not, where exactly did you leave off, and what work remains?
    - Do not get bogged down in written analysis; instead, focus on capturing the moment with an eye toward how your observations can guide you toward future productivity.
-

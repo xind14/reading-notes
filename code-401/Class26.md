@@ -1,41 +1,66 @@
-# Class 26 - Intro to Django	
+# Class 26 - Intro to Django
 
 ## Lab 26 - Build better web apps more quickly with less code
 
+The first words you see on the Django website are
 
-## Setup
+> Django makes it easier to build better Web apps more quickly and with less code.
 
-## Code Challenge
+The next quote you’ll see is
 
-Overview
-[Read this overview.](https://codefellows.github.io/code-301-guide/curriculum/class-01/challenges/)
+> The web framework for perfectionists with deadlines.
 
-Video
-[Watch the video for this class from the demo playlist.](https://www.youtube.com/playlist?list=PLVngfM2hsbi-L6G8qlWd8RyRbuTamHt3k)
+In this class we’ll build out a small, but functional, multi page web site using Django.
 
-Demonstration
-[Look through these sample problems.](https://codefellows.github.io/code-301-guide/curriculum/class-01/challenges/DEMO.html)
+We’ll get a feel for the “Django Way” and see the dramatic performance gains you can get with a mature, robust framework.
 
-Challenges
+Along the way you’ll style your site in a new way using the utility first framework TailwindCSS.
 
-1. Navigate to the javascript folder within your data-structures-and-algorithms repository.
-2. Create a new branch for this challenge called for-each
-   git checkout -b for-each
-3. Retrieve the code challenge from the system
-   npm run get-challenge 01
-4. In your terminal, from the javascript folder, run npm test 01 to execute the tests in this file for this challenge.
-5. At this point you will see the failed tests scroll through your terminal window with a brief report of the number of failed tests at the bottom.
-6. If you do not see this, verify your installation of Jest by typing npx jest --version in your terminal. Filename typos can make things break!
-7. Write code to make the tests pass, one at a time. Let the error messages guide you.
-8. Once the test is passing, refactor as needed, then move on to the next challenge.
-9. Note, you can also run npm test (without a challenge number) to run all of the tests for every code challenge file assignment during the course all at once. This can get “noisy”, but it’s an opportunity to get a view of your overall progress
+### Feature Tasks and Requirements
 
-Submission
-When you have completed the entire set of code challenges and all tests pass, create a pull request from your current branch to the main branch and merge it into main.
+- Create web site in Django with 2 pages
+  - home page
+  - about page
+- Create views/urls/templates as needed for home and about pages
+- Use ancestor template to contain navigation elements
+- Should be built the “Django way” aka match the structure of in-class demo
+- Configure your project to use TailwindCSS/Flowbite
+  - Just basic styling is sufficient for today, but stretch out if you’ve got time!
 
-You will be able to see a test coverage report in GitHub on the Actions tab of your data-structures-and-algorithms repository. It should match what you saw on your terminal in the above steps. Your graders will be looking at this as well.
+### Implementation Notes
 
-Submit a link to your pull request.
+Typical Steps to Start Django Project:
+
+1. Create project
+2. Add dependencies if needed
+3. Define app
+4. Add app to project
+5. Add views
+6. Add urlpatterns
+7. Add templates
+8. Add tests
+
+### User Acceptance Tests
+
+- Use Django’s built-in testing tools
+- Test that home and about url status codes
+- Test home and about url template use, including ancestor template.
+
+### Configuration
+
+1. Create a Github repo named `django-snacks`
+2. Create Django project named `snacks_project` (using Django)
+3. Create Django app named `snacks` (Using Django)
+
+### Stretch Goals
+
+- Create additional apps in project
+- Pass additional info along to views and render it
+- Extend additional blocks in templates
+- Add dark mode to your site
+- Add Flowbite components
+
+## Code Challenge - Trees practice with Neetcode.
 
 ## Written Class Notes
 
@@ -105,10 +130,13 @@ Retrospectives are a critical part of Agile, and typically take the form of meet
 This [article](https://www.benlinders.com/2013/which-questions-do-you-ask-in-retrospectives/) gives a nice overview to the role of retrospectives.
 
 1. What went well, that I might forget if I don’t write down?
+   - I forgot almost all the steps and had to rewatch the lecture. The how to .md helped a lot but there was extra things in there I didn't need so I will create my own template.
 2. What did I learn today?
+   - It seems easier to create a site than react but I still need time to figure out where things need to go.
 3. What should I do differently next time?
+   - Set up took me a bit so will write down a cheatsheet for it.
 4. What still puzzles me, or what do I need to learn more about?
+   - I'm confused on the CSS classes. I still don't get where did all the styling in the output come from.
 5. Thinking about each of your assignments for the day, reflect on:
    - Is the assignment complete? If not, where exactly did you leave off, and what work remains?
-   - Do not get bogged down in written analysis; instead, focus on capturing the moment with an eye toward how your observations can guide you toward future productivity.
-
+     - I think everything is finished. I'm gonna go back and work on the rest of the code challenges though.

@@ -2,41 +2,132 @@
 
 ## Lab 31 - Leveling up Django for APIs & Containerization
 
-## Setup
+Use Django REST Framework to create an API, then “containerize” it with Docker.
+
+### Feature Tasks and Requirements
+
+- Rebuild a custom version of Things API demo project from scratch.
+- Replace `things_project` and `Thing` with your own application and model.
+  - Your model must have at least as many fields as demo’s model.
+  - Your model must have one field that is a foreign key to user.
+- **NOTE**: You are not required to build any templates for this lab.
+
+- **NOTE**: Refer to the class demo for built-out `Dockerfile` and `docker-compose.yml` examples.
+- Update `Dockerfile` and `docker-compose.yml` if needed.
+
+### Stretch Goals
+
+- Research using a production server vs. the built-in development server.
+- Research using Postgres instead of SQLite as the database.
+
+### Implementation Notes
+
+- If you get an allowed host error, examine the bug details and update code as needed.
+- When Docker installed and docker files are ready to go then run…
+
+  ```
+  $ docker compose up
+  ```
+  
+  - To shut Docker down, enter `ctrl+c`
+  - You’ll learn a better way soon
+
+### User Acceptance Tests
+
+- Modify provided unit tests in demo to work for your project.
+
+### Configuration
+
+- Create a virtual environment inside `drf-api`.
+- Use the `drf-api` folder as the root of your project’s git repository.
 
 ## Code Challenge
 
-Overview
-[Read this overview.](https://codefellows.github.io/code-301-guide/curriculum/class-01/challenges/)
+- **Branch Name:** hashmap-repeated-word
+- **Challenge Type:** Code Challenge / Algorithm
 
-Video
-[Watch the video for this class from the demo playlist.](https://www.youtube.com/playlist?list=PLVngfM2hsbi-L6G8qlWd8RyRbuTamHt3k)
+### Feature Tasks
 
-Demonstration
-[Look through these sample problems.](https://codefellows.github.io/code-301-guide/curriculum/class-01/challenges/DEMO.html)
-
-Challenges
-
-1. Navigate to the javascript folder within your data-structures-and-algorithms repository.
-2. Create a new branch for this challenge called for-each
-   git checkout -b for-each
-3. Retrieve the code challenge from the system
-   npm run get-challenge 01
-4. In your terminal, from the javascript folder, run npm test 01 to execute the tests in this file for this challenge.
-5. At this point you will see the failed tests scroll through your terminal window with a brief report of the number of failed tests at the bottom.
-6. If you do not see this, verify your installation of Jest by typing npx jest --version in your terminal. Filename typos can make things break!
-7. Write code to make the tests pass, one at a time. Let the error messages guide you.
-8. Once the test is passing, refactor as needed, then move on to the next challenge.
-9. Note, you can also run npm test (without a challenge number) to run all of the tests for every code challenge file assignment during the course all at once. This can get “noisy”, but it’s an opportunity to get a view of your overall progress
-
-Submission
-When you have completed the entire set of code challenges and all tests pass, create a pull request from your current branch to the main branch and merge it into main.
-
-You will be able to see a test coverage report in GitHub on the Actions tab of your data-structures-and-algorithms repository. It should match what you saw on your terminal in the above steps. Your graders will be looking at this as well.
-
-Submit a link to your pull request.
+1. Write a function called repeated word that finds the first word to occur more than once in a string
+2. Arguments: string
+3. Return: string
 
 ## Written Class Notes
+
+1.create folder mkdir things-api
+
+1.python3.11 -m venv .venv
+
+1.source .venv/bin/activate
+
+1.pip install django
+
+1.django-admin startproject things_api_project .
+
+1.python manage.py startapp things
+
+1.python manage.py migrate
+1.python manage.py showmigrations
+
+1.code .
+
+1.in things models
+
+from django.contrib.auth import get_user_model
+from django.db import models
+
+class Thing(models.Model):
+owner = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
+name = models.CharField(max_length=64)
+description = models.TextField()
+created_at = models.DateTimeField(auto_now_add=True)
+updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.name
+
+1.in things admin
+
+from django.contrib import admin
+from .models import Thing
+
+admin.site.register(Thing)
+
+1. add app to settings
+
+1.python manage.py makemigrations things
+1.python manage.py migrate
+
+1. in project urls add
+
+from django.contrib import admin
+from django.urls import include, path
+
+urlpatterns = [
+path('admin/', admin.site.urls),
+path("api/v1/things/", include("things.urls")),
+]
+
+1.in app urls add
+from django.urls import path
+from .views import SnackList, SnackDetail
+
+urlpatterns = [
+path("", SnackList.as_view(), name="snack_list"),
+path("<int:pk>/", SnackDetail.as_view(), name="snack_detail"),
+]
+
+1.pip install djangorestframework
+
+1. add views in app
+
+1.python manage.py createsuperuser
+
+http :8000/api/v1/snacks
+
+docker compose up --build
+
+1. add '0.0.0.0', to settings
 
 ## Read 31 - Django REST Framework & Docker
 
@@ -101,4 +192,3 @@ This [article](https://www.benlinders.com/2013/which-questions-do-you-ask-in-ret
 5. Thinking about each of your assignments for the day, reflect on:
    - Is the assignment complete? If not, where exactly did you leave off, and what work remains?
    - Do not get bogged down in written analysis; instead, focus on capturing the moment with an eye toward how your observations can guide you toward future productivity.
-
