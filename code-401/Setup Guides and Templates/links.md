@@ -18,6 +18,9 @@
 15. [**Hashtables**](https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Code_401/class-30/resources/Hashtables.html)
 16. [**Graphs**](https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Code_401/class-35/resources/graphs.html)
 
+17. [**Next.js Lab Submission Instructions**](https://codefellows.github.io/seattle-code-python-401d24/class-37/lab/README-NEXT)
+
+
 
 
 
